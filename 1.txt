@@ -1,12 +1,4 @@
 test1
 test2
 test3
-<<<<<<< HEAD
-<<<<<<< HEAD
 test4
-=======
-test4
->>>>>>> honggu
-=======
-test4
->>>>>>> b97387f5d1e14511a33fc3ef53d2520e0ab00dbb
