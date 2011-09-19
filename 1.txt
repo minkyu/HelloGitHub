@@ -1,4 +1,8 @@
 test1
 test2
 test3
+<<<<<<< HEAD
 test4
+=======
+test4
+>>>>>>> honggu
