@@ -58,7 +58,7 @@
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">ㅡ,.ㅡ</string>
+						<string key="IBUIText">^,.ㅡ</string>
 						<object class="NSFont" key="IBUIFont">
 							<string key="NSName">NanumGothic</string>
 							<double key="NSSize">17</double>

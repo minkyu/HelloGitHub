@@ -60,10 +60,10 @@
 
 -(void) faceTimerInvoked:(NSTimer*)timer
 {
-	if([self.detailDescriptionLabel.text isEqualToString:@"ㅡ,.ㅡ"])
-		self.detailDescriptionLabel.text = @"ㅡ.,ㅡ";
-	else if([self.detailDescriptionLabel.text isEqualToString:@"ㅡ.,ㅡ"])
-		self.detailDescriptionLabel.text = @"ㅡ,.ㅡ";
+	if([self.detailDescriptionLabel.text isEqualToString:@"^,.ㅡ"])
+		self.detailDescriptionLabel.text = @"ㅡ.,^";
+	else if([self.detailDescriptionLabel.text isEqualToString:@"ㅡ.,^"])
+		self.detailDescriptionLabel.text = @"^,.ㅡ";
 }
 
 - (void)viewDidAppear:(BOOL)animated
