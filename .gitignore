@@ -12,4 +12,6 @@ build/
 *.mode1v3
 *.mode2v3
 
+*.xcuserstate
+
 xcuserdata
