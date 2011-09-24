@@ -16,7 +16,7 @@
 @end
 
 @implementation DetailViewController
-
+@synthesize faceTimer;
 @synthesize toolbar = _toolbar;
 @synthesize detailItem = _detailItem;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
@@ -54,6 +54,16 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+	[self.faceTimer invalidate];
+	self.faceTimer = [NSTimer scheduledTimerWithTimeInterval:0.17 target:self selector:@selector(faceTimerInvoked:) userInfo:nil repeats:YES];
+}
+
+-(void) faceTimerInvoked:(NSTimer*)timer
+{
+	if([self.detailDescriptionLabel.text isEqualToString:@"ㅡ,.ㅡ"])
+		self.detailDescriptionLabel.text = @"ㅡ.,ㅡ";
+	else if([self.detailDescriptionLabel.text isEqualToString:@"ㅡ.,ㅡ"])
+		self.detailDescriptionLabel.text = @"ㅡ,.ㅡ";
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -64,6 +74,8 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
 	[super viewWillDisappear:animated];
+	[self.faceTimer invalidate];
+	self.faceTimer = nil;
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -126,6 +138,8 @@
 
 - (void)dealloc
 {
+	[self.faceTimer invalidate];
+	self.faceTimer = nil;
 	[_myPopoverController release];
 	[_toolbar release];
 	[_detailItem release];

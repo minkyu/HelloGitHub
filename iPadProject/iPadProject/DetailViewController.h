@@ -13,6 +13,11 @@
 @class RootViewController;
 
 @interface DetailViewController : UIViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate>
+{
+	NSTimer *faceTimer;
+}
+
+@property (nonatomic, retain) NSTimer *faceTimer;
 
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
 
