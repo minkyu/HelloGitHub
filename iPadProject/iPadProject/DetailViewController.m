@@ -54,16 +54,23 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+	winksLeft = 10;
 	[self.faceTimer invalidate];
 	self.faceTimer = [NSTimer scheduledTimerWithTimeInterval:0.17 target:self selector:@selector(faceTimerInvoked:) userInfo:nil repeats:YES];
 }
 
 -(void) faceTimerInvoked:(NSTimer*)timer
 {
-	if([self.detailDescriptionLabel.text isEqualToString:@"^,.ㅡ"])
-		self.detailDescriptionLabel.text = @"ㅡ.,^";
-	else if([self.detailDescriptionLabel.text isEqualToString:@"ㅡ.,^"])
-		self.detailDescriptionLabel.text = @"^,.ㅡ";
+	if(winksLeft>0){
+		if([self.detailDescriptionLabel.text isEqualToString:@"^,.ㅡ"])
+			self.detailDescriptionLabel.text = @"ㅡ.,^";
+		else if([self.detailDescriptionLabel.text isEqualToString:@"ㅡ.,^"])
+			self.detailDescriptionLabel.text = @"^,.ㅡ";
+		winksLeft--;
+	}
+	else{
+		self.detailDescriptionLabel.text = @"   ㅡ..ㅡ zzz";
+	}
 }
 
 - (void)viewDidAppear:(BOOL)animated
