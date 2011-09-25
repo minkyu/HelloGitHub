@@ -69,6 +69,8 @@
 		winksLeft--;
 	}
 	else{
+		[self.faceTimer invalidate];
+		self.faceTimer = nil;
 		self.detailDescriptionLabel.text = @"   ㅡ..ㅡ zzz";
 	}
 }
