@@ -163,4 +163,12 @@
 	[self.rootViewController insertNewObject:sender];	
 }
 
+- (IBAction)wakeUp:(id)sender {
+	winksLeft = 10;
+	self.detailDescriptionLabel.text = @"ㅡ.,^";
+	[self.faceTimer invalidate];
+	self.faceTimer = [NSTimer scheduledTimerWithTimeInterval:0.17 target:self selector:@selector(faceTimerInvoked:) userInfo:nil repeats:YES];
+
+}
+
 @end
