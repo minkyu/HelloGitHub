@@ -15,9 +15,11 @@
 @interface DetailViewController : UIViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate>
 {
 	NSTimer *faceTimer;
+
 	
 	int winksLeft;
 }
+
 
 @property (nonatomic, retain) NSTimer *faceTimer;
 

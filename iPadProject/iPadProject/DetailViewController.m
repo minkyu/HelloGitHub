@@ -17,6 +17,7 @@
 
 @implementation DetailViewController
 @synthesize faceTimer;
+
 @synthesize toolbar = _toolbar;
 @synthesize detailItem = _detailItem;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
@@ -24,6 +25,8 @@
 @synthesize rootViewController = _rootViewController;
 
 #pragma mark - Managing the detail item
+
+
 
 /*
  When setting the detail item, update the view and dismiss the popover controller if it's showing.
@@ -118,13 +121,13 @@
     self.popoverController = nil;
 }
 
-/*
  // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"viewDidLoaded");
+
 }
- */
 
 - (void)viewDidUnload
 {
@@ -149,6 +152,7 @@
 {
 	[self.faceTimer invalidate];
 	self.faceTimer = nil;
+
 	[_myPopoverController release];
 	[_toolbar release];
 	[_detailItem release];
@@ -166,6 +170,7 @@
 - (IBAction)wakeUp:(id)sender {
 	winksLeft = 10;
 	self.detailDescriptionLabel.text = @"ㅡ.,^";
+
 	[self.faceTimer invalidate];
 	self.faceTimer = [NSTimer scheduledTimerWithTimeInterval:0.17 target:self selector:@selector(faceTimerInvoked:) userInfo:nil repeats:YES];
 
