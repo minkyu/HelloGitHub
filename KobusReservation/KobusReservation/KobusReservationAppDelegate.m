@@ -12,6 +12,8 @@
 
 #import "DetailViewController.h"
 
+#import "KobusWeb.h"
+
 @implementation KobusReservationAppDelegate
 
 @synthesize window = _window;
@@ -26,6 +28,7 @@
 {
 	// Override point for customization after application launch.
 	// Add the split view controller's view to the window and display.
+	KobusWeb *web = [[KobusWeb alloc] init];
 	self.window.rootViewController = self.splitViewController;
 	[self.window makeKeyAndVisible];
     return YES;

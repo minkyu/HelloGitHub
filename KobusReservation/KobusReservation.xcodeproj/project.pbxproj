@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3D943791435D31700568CE0 /* KobusWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D943781435D31700568CE0 /* KobusWeb.m */; };
 		ED332E041435C299009A82E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E031435C299009A82E5 /* UIKit.framework */; };
 		ED332E061435C299009A82E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E051435C299009A82E5 /* Foundation.framework */; };
 		ED332E081435C299009A82E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E071435C299009A82E5 /* CoreGraphics.framework */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D3D943771435D31700568CE0 /* KobusWeb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KobusWeb.h; sourceTree = "<group>"; };
+		D3D943781435D31700568CE0 /* KobusWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KobusWeb.m; sourceTree = "<group>"; };
 		ED332DFF1435C299009A82E5 /* KobusReservation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KobusReservation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED332E031435C299009A82E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ED332E051435C299009A82E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -137,6 +140,8 @@
 				ED332E241435C29A009A82E5 /* RootViewController.m */,
 				ED332E171435C299009A82E5 /* KobusReservation.xcdatamodeld */,
 				ED332E0C1435C299009A82E5 /* Supporting Files */,
+				D3D943771435D31700568CE0 /* KobusWeb.h */,
+				D3D943781435D31700568CE0 /* KobusWeb.m */,
 			);
 			path = KobusReservation;
 			sourceTree = "<group>";
@@ -284,6 +289,7 @@
 				ED332E191435C299009A82E5 /* KobusReservation.xcdatamodeld in Sources */,
 				ED332E1F1435C29A009A82E5 /* DetailViewController.m in Sources */,
 				ED332E251435C29A009A82E5 /* RootViewController.m in Sources */,
+				D3D943791435D31700568CE0 /* KobusWeb.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +470,7 @@
 				ED332E421435C29A009A82E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ED332E431435C29A009A82E5 /* Build configuration list for PBXNativeTarget "KobusReservationTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +479,7 @@
 				ED332E451435C29A009A82E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
