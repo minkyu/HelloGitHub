@@ -12,20 +12,52 @@
 
 @implementation KobusWeb
 
+@synthesize responseData,Origins,Destinations;
+
 - (id)init
 {
     self = [super init];
-    if (self) {
-        responseData = [[NSMutableData data] retain];
-//		NSURL *baseURL = [[NSURL URLWithString:@"http://store.apple.com"] retain];
-		
-		NSURLRequest *request =
-        [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://kobus.co.kr/web/index.jsp"]];
-		[[NSURLConnection alloc] initWithRequest:request delegate:self];
+    if (self) 
+	{
+
     }
     
     return self;
 }
+
+- (void)dealloc
+{
+	[responseData release];
+	[Origins release];
+	[Destinations release];
+	[super dealloc];
+}
+
+
+
+- (void)loadWeb
+{
+	self.responseData = [[NSMutableData alloc] init];
+	
+	NSURLRequest *request =
+	[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://kobus.co.kr/web/index.jsp"]];
+	[[NSURLConnection alloc] initWithRequest:request delegate:self];
+}
+
+- (void)loadOrigins
+{
+	self.Origins = [[NSMutableDictionary alloc]init];
+	//responseData
+	
+}
+
+- (void)loadDestinations
+{
+	self.Destinations = [[NSMutableDictionary alloc]init];
+	//responseData
+}
+
+#pragma - NSURLConnection deletage
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
@@ -49,19 +81,10 @@
 {
 	NSString *webstring = [[NSString alloc] initWithData:responseData encoding:EucKrEncoding];
 //	NSString *webstring = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
-	
     NSLog(@"%@",webstring);
-}
-
-- (void)loadOrigin
-{
+	[connection release];
 	
+	[self loadOrigins];
 }
-
-- (void)loadDestination
-{
-	
-}
-
 
 @end

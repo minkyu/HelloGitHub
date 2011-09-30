@@ -11,9 +11,16 @@
 @interface KobusWeb : NSObject 
 {
 	NSMutableData *responseData;
+	NSMutableDictionary *Origins;
+	NSMutableDictionary *Destinations;
 }
 
-- (void)loadOrigin;
-- (void)loadDestination;
+@property (nonatomic,retain) NSMutableData *responseData;
+@property (nonatomic,retain) NSMutableDictionary *Origins;
+@property (nonatomic,retain) NSMutableDictionary *Destinations;
+
+- (void)loadWeb;
+- (void)loadOrigins;
+- (void)loadDestinations;
 
 @end
