@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED332E041435C299009A82E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E031435C299009A82E5 /* UIKit.framework */; };
+		ED332E061435C299009A82E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E051435C299009A82E5 /* Foundation.framework */; };
+		ED332E081435C299009A82E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E071435C299009A82E5 /* CoreGraphics.framework */; };
+		ED332E0A1435C299009A82E5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E091435C299009A82E5 /* CoreData.framework */; };
+		ED332E101435C299009A82E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED332E0E1435C299009A82E5 /* InfoPlist.strings */; };
+		ED332E121435C299009A82E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED332E111435C299009A82E5 /* main.m */; };
+		ED332E161435C299009A82E5 /* KobusReservationAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED332E151435C299009A82E5 /* KobusReservationAppDelegate.m */; };
+		ED332E191435C299009A82E5 /* KobusReservation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED332E171435C299009A82E5 /* KobusReservation.xcdatamodeld */; };
+		ED332E1C1435C29A009A82E5 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED332E1A1435C29A009A82E5 /* MainWindow.xib */; };
+		ED332E1F1435C29A009A82E5 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED332E1E1435C29A009A82E5 /* DetailViewController.m */; };
+		ED332E221435C29A009A82E5 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED332E201435C29A009A82E5 /* DetailView.xib */; };
+		ED332E251435C29A009A82E5 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED332E241435C29A009A82E5 /* RootViewController.m */; };
+		ED332E2D1435C29A009A82E5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E2C1435C29A009A82E5 /* SenTestingKit.framework */; };
+		ED332E2E1435C29A009A82E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E031435C299009A82E5 /* UIKit.framework */; };
+		ED332E2F1435C29A009A82E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E051435C299009A82E5 /* Foundation.framework */; };
+		ED332E301435C29A009A82E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E071435C299009A82E5 /* CoreGraphics.framework */; };
+		ED332E311435C29A009A82E5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E091435C299009A82E5 /* CoreData.framework */; };
+		ED332E391435C29A009A82E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED332E371435C29A009A82E5 /* InfoPlist.strings */; };
+		ED332E3B1435C29A009A82E5 /* KobusReservationTests.h in Resources */ = {isa = PBXBuildFile; fileRef = ED332E3A1435C29A009A82E5 /* KobusReservationTests.h */; };
+		ED332E3D1435C29A009A82E5 /* KobusReservationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED332E3C1435C29A009A82E5 /* KobusReservationTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED332E321435C29A009A82E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED332DF61435C299009A82E5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED332DFE1435C299009A82E5;
+			remoteInfo = KobusReservation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ED332DFF1435C299009A82E5 /* KobusReservation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KobusReservation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED332E031435C299009A82E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		ED332E051435C299009A82E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ED332E071435C299009A82E5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ED332E091435C299009A82E5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		ED332E0D1435C299009A82E5 /* KobusReservation-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KobusReservation-Info.plist"; sourceTree = "<group>"; };
+		ED332E0F1435C299009A82E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ED332E111435C299009A82E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ED332E131435C299009A82E5 /* KobusReservation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KobusReservation-Prefix.pch"; sourceTree = "<group>"; };
+		ED332E141435C299009A82E5 /* KobusReservationAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KobusReservationAppDelegate.h; sourceTree = "<group>"; };
+		ED332E151435C299009A82E5 /* KobusReservationAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KobusReservationAppDelegate.m; sourceTree = "<group>"; };
+		ED332E181435C299009A82E5 /* KobusReservation.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KobusReservation.xcdatamodel; sourceTree = "<group>"; };
+		ED332E1B1435C29A009A82E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		ED332E1D1435C29A009A82E5 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		ED332E1E1435C29A009A82E5 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		ED332E211435C29A009A82E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailView.xib; sourceTree = "<group>"; };
+		ED332E231435C29A009A82E5 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		ED332E241435C29A009A82E5 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		ED332E2B1435C29A009A82E5 /* KobusReservationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KobusReservationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED332E2C1435C29A009A82E5 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		ED332E361435C29A009A82E5 /* KobusReservationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KobusReservationTests-Info.plist"; sourceTree = "<group>"; };
+		ED332E381435C29A009A82E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ED332E3A1435C29A009A82E5 /* KobusReservationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KobusReservationTests.h; sourceTree = "<group>"; };
+		ED332E3C1435C29A009A82E5 /* KobusReservationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KobusReservationTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED332DFC1435C299009A82E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED332E041435C299009A82E5 /* UIKit.framework in Frameworks */,
+				ED332E061435C299009A82E5 /* Foundation.framework in Frameworks */,
+				ED332E081435C299009A82E5 /* CoreGraphics.framework in Frameworks */,
+				ED332E0A1435C299009A82E5 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED332E271435C29A009A82E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED332E2D1435C29A009A82E5 /* SenTestingKit.framework in Frameworks */,
+				ED332E2E1435C29A009A82E5 /* UIKit.framework in Frameworks */,
+				ED332E2F1435C29A009A82E5 /* Foundation.framework in Frameworks */,
+				ED332E301435C29A009A82E5 /* CoreGraphics.framework in Frameworks */,
+				ED332E311435C29A009A82E5 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED332DF41435C299009A82E5 = {
+			isa = PBXGroup;
+			children = (
+				ED332E0B1435C299009A82E5 /* KobusReservation */,
+				ED332E341435C29A009A82E5 /* KobusReservationTests */,
+				ED332E021435C299009A82E5 /* Frameworks */,
+				ED332E001435C299009A82E5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED332E001435C299009A82E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED332DFF1435C299009A82E5 /* KobusReservation.app */,
+				ED332E2B1435C29A009A82E5 /* KobusReservationTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED332E021435C299009A82E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED332E031435C299009A82E5 /* UIKit.framework */,
+				ED332E051435C299009A82E5 /* Foundation.framework */,
+				ED332E071435C299009A82E5 /* CoreGraphics.framework */,
+				ED332E091435C299009A82E5 /* CoreData.framework */,
+				ED332E2C1435C29A009A82E5 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED332E0B1435C299009A82E5 /* KobusReservation */ = {
+			isa = PBXGroup;
+			children = (
+				ED332E141435C299009A82E5 /* KobusReservationAppDelegate.h */,
+				ED332E151435C299009A82E5 /* KobusReservationAppDelegate.m */,
+				ED332E1A1435C29A009A82E5 /* MainWindow.xib */,
+				ED332E1D1435C29A009A82E5 /* DetailViewController.h */,
+				ED332E1E1435C29A009A82E5 /* DetailViewController.m */,
+				ED332E201435C29A009A82E5 /* DetailView.xib */,
+				ED332E231435C29A009A82E5 /* RootViewController.h */,
+				ED332E241435C29A009A82E5 /* RootViewController.m */,
+				ED332E171435C299009A82E5 /* KobusReservation.xcdatamodeld */,
+				ED332E0C1435C299009A82E5 /* Supporting Files */,
+			);
+			path = KobusReservation;
+			sourceTree = "<group>";
+		};
+		ED332E0C1435C299009A82E5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED332E0D1435C299009A82E5 /* KobusReservation-Info.plist */,
+				ED332E0E1435C299009A82E5 /* InfoPlist.strings */,
+				ED332E111435C299009A82E5 /* main.m */,
+				ED332E131435C299009A82E5 /* KobusReservation-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED332E341435C29A009A82E5 /* KobusReservationTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED332E3A1435C29A009A82E5 /* KobusReservationTests.h */,
+				ED332E3C1435C29A009A82E5 /* KobusReservationTests.m */,
+				ED332E351435C29A009A82E5 /* Supporting Files */,
+			);
+			path = KobusReservationTests;
+			sourceTree = "<group>";
+		};
+		ED332E351435C29A009A82E5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED332E361435C29A009A82E5 /* KobusReservationTests-Info.plist */,
+				ED332E371435C29A009A82E5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED332DFE1435C299009A82E5 /* KobusReservation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED332E401435C29A009A82E5 /* Build configuration list for PBXNativeTarget "KobusReservation" */;
+			buildPhases = (
+				ED332DFB1435C299009A82E5 /* Sources */,
+				ED332DFC1435C299009A82E5 /* Frameworks */,
+				ED332DFD1435C299009A82E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KobusReservation;
+			productName = KobusReservation;
+			productReference = ED332DFF1435C299009A82E5 /* KobusReservation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED332E2A1435C29A009A82E5 /* KobusReservationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED332E431435C29A009A82E5 /* Build configuration list for PBXNativeTarget "KobusReservationTests" */;
+			buildPhases = (
+				ED332E261435C29A009A82E5 /* Sources */,
+				ED332E271435C29A009A82E5 /* Frameworks */,
+				ED332E281435C29A009A82E5 /* Resources */,
+				ED332E291435C29A009A82E5 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED332E331435C29A009A82E5 /* PBXTargetDependency */,
+			);
+			name = KobusReservationTests;
+			productName = KobusReservationTests;
+			productReference = ED332E2B1435C29A009A82E5 /* KobusReservationTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED332DF61435C299009A82E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "앱달";
+			};
+			buildConfigurationList = ED332DF91435C299009A82E5 /* Build configuration list for PBXProject "KobusReservation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ED332DF41435C299009A82E5;
+			productRefGroup = ED332E001435C299009A82E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED332DFE1435C299009A82E5 /* KobusReservation */,
+				ED332E2A1435C29A009A82E5 /* KobusReservationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED332DFD1435C299009A82E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED332E101435C299009A82E5 /* InfoPlist.strings in Resources */,
+				ED332E1C1435C29A009A82E5 /* MainWindow.xib in Resources */,
+				ED332E221435C29A009A82E5 /* DetailView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED332E281435C29A009A82E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED332E391435C29A009A82E5 /* InfoPlist.strings in Resources */,
+				ED332E3B1435C29A009A82E5 /* KobusReservationTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ED332E291435C29A009A82E5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED332DFB1435C299009A82E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED332E121435C299009A82E5 /* main.m in Sources */,
+				ED332E161435C299009A82E5 /* KobusReservationAppDelegate.m in Sources */,
+				ED332E191435C299009A82E5 /* KobusReservation.xcdatamodeld in Sources */,
+				ED332E1F1435C29A009A82E5 /* DetailViewController.m in Sources */,
+				ED332E251435C29A009A82E5 /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED332E261435C29A009A82E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED332E3D1435C29A009A82E5 /* KobusReservationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED332E331435C29A009A82E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED332DFE1435C299009A82E5 /* KobusReservation */;
+			targetProxy = ED332E321435C29A009A82E5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ED332E0E1435C299009A82E5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED332E0F1435C299009A82E5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ED332E1A1435C29A009A82E5 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED332E1B1435C29A009A82E5 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		ED332E201435C29A009A82E5 /* DetailView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED332E211435C29A009A82E5 /* en */,
+			);
+			name = DetailView.xib;
+			sourceTree = "<group>";
+		};
+		ED332E371435C29A009A82E5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED332E381435C29A009A82E5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED332E3E1435C29A009A82E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		ED332E3F1435C29A009A82E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED332E411435C29A009A82E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KobusReservation/KobusReservation-Prefix.pch";
+				INFOPLIST_FILE = "KobusReservation/KobusReservation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ED332E421435C29A009A82E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KobusReservation/KobusReservation-Prefix.pch";
+				INFOPLIST_FILE = "KobusReservation/KobusReservation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		ED332E441435C29A009A82E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KobusReservation.app/KobusReservation";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KobusReservation/KobusReservation-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "KobusReservationTests/KobusReservationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		ED332E451435C29A009A82E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KobusReservation.app/KobusReservation";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KobusReservation/KobusReservation-Prefix.pch";
+				INFOPLIST_FILE = "KobusReservationTests/KobusReservationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED332DF91435C299009A82E5 /* Build configuration list for PBXProject "KobusReservation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED332E3E1435C29A009A82E5 /* Debug */,
+				ED332E3F1435C29A009A82E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED332E401435C29A009A82E5 /* Build configuration list for PBXNativeTarget "KobusReservation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED332E411435C29A009A82E5 /* Debug */,
+				ED332E421435C29A009A82E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ED332E431435C29A009A82E5 /* Build configuration list for PBXNativeTarget "KobusReservationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED332E441435C29A009A82E5 /* Debug */,
+				ED332E451435C29A009A82E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ED332E171435C299009A82E5 /* KobusReservation.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ED332E181435C299009A82E5 /* KobusReservation.xcdatamodel */,
+			);
+			currentVersion = ED332E181435C299009A82E5 /* KobusReservation.xcdatamodel */;
+			path = KobusReservation.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = ED332DF61435C299009A82E5 /* Project object */;
+}
