@@ -57,6 +57,13 @@
 	//responseData
 }
 
+- (NSString*)webDataEncoding
+{
+	NSString *webstring = [[[NSString alloc] initWithData:responseData encoding:EucKrEncoding] autorelease];
+	NSAssert([webstring length], @"에러 발생");
+	return webstring;
+}
+
 #pragma - NSURLConnection deletage
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
@@ -73,15 +80,19 @@
 {
 	NSString * errorString = [NSString stringWithFormat:@"Error code %i", [error code]];
 	
-    UIAlertView * errorAlert = [[UIAlertView alloc] initWithTitle:@"Error loading content" message:errorString delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    UIAlertView * errorAlert = [[UIAlertView alloc] initWithTitle:@"Error loading content" 
+														  message:errorString delegate:self 
+												cancelButtonTitle:@"OK" 
+												otherButtonTitles:nil];
+	
     [errorAlert show];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-	NSString *webstring = [[NSString alloc] initWithData:responseData encoding:EucKrEncoding];
+	
 //	NSString *webstring = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
-    NSLog(@"%@",webstring);
+    NSLog(@"%@",[self webDataEncoding]);
 	[connection release];
 	
 	[self loadOrigins];

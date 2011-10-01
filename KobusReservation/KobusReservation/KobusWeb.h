@@ -22,5 +22,6 @@
 - (void)loadWeb;
 - (void)loadOrigins;
 - (void)loadDestinations;
+- (NSString*)webDataEncoding;
 
 @end
