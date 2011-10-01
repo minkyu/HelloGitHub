@@ -48,6 +48,7 @@
 {
 	self.Origins = [[NSMutableDictionary alloc]init];
 	//responseData
+	[self paserOrigins:[self webDataEncoding]];
 	
 }
 
@@ -55,6 +56,30 @@
 {
 	self.Destinations = [[NSMutableDictionary alloc]init];
 	//responseData
+}
+
+- (void)paserOrigins:(NSString*)aStr
+
+{
+	
+	NSLog(@"paser start");
+	NSError *error = NULL;
+	NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(?<=<option value\=\"[\\d]{3}\" >).*(?=</option>)"
+																		   options:0
+																			 error:&error];
+	NSArray *matches = [regex matchesInString:aStr options:0 range:NSMakeRange(0, [aStr length])];
+	
+	for (NSTextCheckingResult *match in matches) 
+	{
+		NSString *str = [aStr substringWithRange:[match range]];
+		NSString *value = [[str componentsSeparatedByCharactersInSet:
+								  [[NSCharacterSet characterSetWithCharactersInString:@"0123456789"] invertedSet]] componentsJoinedByString:@""];
+		[Origins setValue:value forKey:str];
+		NSLog(@"%@ = %@",value,str);
+//		
+	}
+//	NSLog(@"%@",Origins);
+	NSLog(@"paser end");
 }
 
 - (NSString*)webDataEncoding
@@ -92,7 +117,7 @@
 {
 	
 //	NSString *webstring = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
-    NSLog(@"%@",[self webDataEncoding]);
+//	NSLog(@"%@",[self webDataEncoding]);
 	[connection release];
 	
 	[self loadOrigins];
