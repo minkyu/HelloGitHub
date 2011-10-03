@@ -62,7 +62,7 @@
 // 출발지를 가져온다
 - (void)parseOrigins:(NSString*)aStr {
 	
-	NSLog(@"parser start");
+	NSLog(@"parser start - %d", [aStr length]);
 	NSError *error = NULL;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"<option value=\"([\\d]{3})\" >(.*)</option>"
                                                                            options:NSRegularExpressionCaseInsensitive
@@ -109,9 +109,12 @@
 {
 
     //if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "200") { ~~  }
-    NSLog(@"parse dests");
+    //if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "190") {
+    //document.InputForm.Tim_date_Month.options[document.InputForm.Tim_date_Month.selectedIndex].value); k++) {
+    
+    NSLog(@"parse dests - %d", [aStr length]);
     NSError *error = NULL;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"if[(]d.TER_FR.options.*\"([\\d]{3})\"(.*)[}]" 
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"d.TER_FR.selectedIndex].value == \"([\\d]{3})\"[)] [{](.*)[}]" 
                                                                            options:NSRegularExpressionCaseInsensitive + NSRegularExpressionDotMatchesLineSeparators
                                                                              error:&error];
     NSArray *matches = [regex matchesInString:aStr options:0 range:NSMakeRange(0, [aStr length])];
