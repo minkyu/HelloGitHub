@@ -39,8 +39,8 @@
 {
 	self.responseData = [[NSMutableData alloc] init];
 	
-	NSURLRequest *request =
-	[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://kobus.co.kr/web/index.jsp"]];
+	NSURLRequest *request =	[NSURLRequest requestWithURL:
+                             [NSURL URLWithString:@"http://kobus.co.kr/web/index.jsp"]];
 	[[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
 
@@ -64,7 +64,7 @@
 	
 	NSLog(@"paser start");
 	NSError *error = NULL;
-	NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(?<=<option value\=\"[\\d]{3}\" >).*(?=</option>)"
+	NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(?<=<option value=\"[\\d]{3}\" >).*(?=</option>)"
 																		   options:0
 																			 error:&error];
 	NSArray *matches = [regex matchesInString:aStr options:0 range:NSMakeRange(0, [aStr length])];
