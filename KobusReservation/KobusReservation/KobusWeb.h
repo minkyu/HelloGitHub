@@ -23,5 +23,6 @@
 - (void)loadOrigins;
 - (void)loadDestinations;
 - (NSString*)webDataEncoding;
-- (void)paserOrigins:(NSString*)aStr;
+- (void)parseOrigins:(NSString*)aStr;
+- (void)parseDestinations:(NSString*)aStr;
 @end
