@@ -6,7 +6,7 @@
 //  Copyright 2011년 앱달. All rights reserved.
 //
 
-#import "KobusReservationTests.h"
+#import "KobusWebTests.h"
 #import "KobusWeb.h"
 
 @implementation KobusWebTests
@@ -15,7 +15,7 @@
 {
     [super setUp];
     kobusWeb = [[KobusWeb alloc] init];
-	kobusWeb.responseData = [NSMutableData dataWithContentsOfFile:@""];
+	kobusWeb.responseData = [NSMutableData dataWithContentsOfFile:@"KobusWebSampleInput"];
     // Set-up code here.
 }
 
