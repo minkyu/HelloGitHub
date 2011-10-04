@@ -15,8 +15,13 @@
 {
     [super setUp];
     kobusWeb = [[KobusWeb alloc] init];
-	kobusWeb.responseData = [NSMutableData dataWithContentsOfFile:@"KobusWebSampleInput"];
-    // Set-up code here.
+	//NSString *path = @"KobusReservation/KobusReservation/KobusWebSampleInput.data";
+	NSString *path = [[NSBundle mainBundle] pathForResource:@"KobusWebSampleInput" ofType:@"data"];
+	NSLog(@"path=%@",path);
+	kobusWeb.responseData = [NSMutableData dataWithContentsOfFile: path];
+
+	//[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+	//[[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"KobusReservation.sqlite"];
 }
 
 - (void)tearDown
@@ -26,9 +31,15 @@
     [super tearDown];
 }
 
+-(void) testSetUp
+{
+	STAssertNotNil(kobusWeb, nil);
+	STAssertNotNil(kobusWeb.responseData, nil);
+}
+
 - (void)testLoadOrigins
 {
-	[kobusWeb loadWeb];
+	[kobusWeb loadOrigins];
 }
 
 @end

@@ -1,0 +1,5277 @@
+
+
+
+
+ 
+
+
+
+
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<title>::::: Welcome to KOBUS #3</title>
+<!--<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">-->
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" src="/js/flash.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function goHome()
+{
+		document.location ='http://www.kobus.co.kr/web/index.jsp';
+}
+
+//이용안내
+function go1(chk)
+{
+       if (chk==0) {
+			document.location ='#';
+		}  else if (chk==1) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info01.jsp';
+		} else if (chk==2) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info02.jsp';
+		} else if (chk==3) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info03.jsp';
+		} else if (chk==4) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info04.jsp';
+		} else if (chk==5) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info05.jsp';
+		}else if (chk==6) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info06.jsp';
+		}else if (chk==7) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info07.jsp';
+		}else if (chk==8) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info08.jsp';   //무인발권기 설치장소
+       		}else if (chk==9) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info09.jsp';   //고속버스운송회사안내
+		}else if (chk==10) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info10.jsp';   //터미널안내
+		}else if (chk==11) {
+			window.open("http://www.kobus.co.kr/web/01_info/card_pop.jsp","new","width=550,height=490,scrollbars=no");   //신용카드환불안내
+		}else if (chk==12) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info12.jsp';   //현금영수증처리
+		}else if (chk==121) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info12_1.jsp';   //현금영수증승인완료
+		}else if (chk==12) {
+			window.open("pay.asp","new","width=703,height=350,scrollbars=yes");   //현금영수증도움말
+		}else if (chk==13) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info13.jsp';   //팝업설정안내
+		}else if (chk==14) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info14.jsp';   //운송 약관안내
+		}else if (chk==15) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info16.jsp';   //고속버스 홈티켓 안내
+		}
+}
+
+
+
+// 고속버스운행정보
+
+function  go2(chk)
+{
+if (chk==0) {
+		document.location = '#';
+		}else if (chk==1) {
+			document.location ='http://www.kobus.co.kr/web/02_bus/bus01.jsp'; //운행정보
+		}else if (chk==11) {
+			document.location ='http://www.kobus.co.kr/web/02_bus/bus01_1.jsp'; //운행정보조회
+		}
+}
+
+// 승차권예약
+function  go3(chk)
+{
+		if (chk==0) {
+			document.location ='#';
+		} else if (chk==1) {
+			document.location ='http://www.kobus.co.kr/web/03_reservation/reservation01.jsp';     //승차권에약
+		}else if (chk==11) {
+			document.location ='http://www.kobus.co.kr/web/03_reservation/reservation01_1.jsp';     //버스,좌석선택
+		}else if (chk==12) {
+			document.location ='http://www.kobus.co.kr/web/03_reservation/reservation01_2.jsp';     //좌석선택
+		}else if (chk==13) {
+			document.location ='http://www.kobus.co.kr/web/03_reservation/reservation01_3.jsp';     //결제
+		}else if (chk==14) {
+			document.location ='http://www.kobus.co.kr/web/03_reservation/reservation01_4.jsp';     //결제완료
+		}else if (chk==15) {
+			document.location ='https://www.kobus.co.kr/web/03_reservation/reservation01_5.jsp';     //왕복권예매승차권예약
+		}else if (chk==16) {
+			document.location ='http://www.kobus.co.kr/web/03_reservation/reservation01_6.jsp';     //왕복권예매
+		}else if (chk==2) {
+			document.location ='https://www.kobus.co.kr/web/04_inquiry/inquiry01.jsp';    //예약조회
+		}else if (chk ==3){
+			document.location ='https://home.kobus.co.kr/web/10_HomeTicketSearch/HomeTckTax.jsp';
+		}
+}
+
+// 예약조회/변경/취소
+function  go4(chk)
+{
+if (chk==0) {
+			document.location ='#';
+		}  else if (chk==1) {
+			document.location ='https://www.kobus.co.kr/web/04_inquiry/inquiry01.jsp';   //카드예약조회
+		}else if (chk==11) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry01_1.jsp';   //계좌이체예약조회
+		}  else if (chk==12) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry01_2.jsp';    //카드예약조회
+		} else if (chk==2) {
+			document.location ='https://www.kobus.co.kr/web/04_inquiry/inquiry01.jsp';    //매수변경
+		}else if (chk==201) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry02_1.jsp';    //매수변경계속
+		}else if (chk==21) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry021.jsp';   //시간변경
+		}else if (chk==211) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry021_1.jsp';   //시간변경계속
+		}else if (chk==212) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry021_2.jsp';   //시간변경
+		}else if (chk==213) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry021_3.jsp';   //시간변경변경
+		}else if (chk==214) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry021_4.jsp';   //시간변경변경 완료
+		}else if (chk==22) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry022.jsp';   //시간/매수변경
+		}else if (chk==221) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry022_1.jsp';   //시간/매수변경계속
+		}else if (chk==222) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry022_2.jsp';   //시간/매수변경
+		}else if (chk==223) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry022_3.jsp';   //시간/매수변경
+		}else if (chk==224) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry022_4.jsp';    //시간/매수변경  완료
+		}else if (chk==3) {
+			document.location ='https://www.kobus.co.kr/web/04_inquiry/inquiry01.jsp';   //예약취소
+	 	}
+}
+
+
+
+
+// 고객의소리
+function  go5(chk)
+{
+if (chk==0) {
+			document.location = '#';
+		}  else if (chk==1) {
+			document.location ='http://www.kobus.co.kr/web/05_customer/customer01.jsp';
+		} else if (chk==2) {
+			document.location ='http://www.kobus.co.kr/web/05_customer/customer02.jsp';
+		}else if (chk==21) {
+			document.location ='http://www.kobus.co.kr/web/05_customer/customer02_1.jsp';
+		}else if (chk==22) {
+			document.location ='http://www.kobus.co.kr/web/05_customer/customer02_2.jsp';
+		} else if (chk==3) {
+			document.location ='http://www.kobus.co.kr/web/05_customer/customer03.jsp';
+		} else if (chk==4) {
+			document.location ='http://www.kobus.co.kr/web/05_customer/customer04.jsp';
+		}
+}
+
+
+// 전국고속버스운송사업조합
+function  go6(chk)
+{
+if (chk==0) {
+			document.location ='http://www.kobus.co.kr/web/06_introduction/introduction.jsp';
+		}  else if (chk==1) {
+			document.location ='http://www.kobus.co.kr/web/06_introduction/introduction01.jsp';
+		} else if (chk==2) {
+			document.location ='http://www.kobus.co.kr/web/06_introduction/introduction02.jsp';
+		} else if (chk==3) {
+			document.location ='http://www.kobus.co.kr/web/06_introduction/introduction03.jsp';
+		} else if (chk==4) {
+			document.location ='http://www.kobus.co.kr/web/06_introduction/introduction04.jsp';
+		} else if (chk==5) {
+			document.location ='http://www.kobus.co.kr/web/06_introduction/introduction05.jsp';
+		} else if (chk==6) {
+			document.location ='http://www.kobus.co.kr/web/06_introduction/introduction06.jsp';   //알림마당-공지사항
+		}else if (chk==61) {
+			document.location ='http://www.kobus.co.kr/web/06_introduction/introduction06_1.jsp';     //알림마당-이벤트
+		}else if (chk==62) {
+			document.location ='http://www.kobus.co.kr/web/06_introduction/introduction06_2.jsp';     //알림마당-보도자료
+		}else if (chk==63) {
+			document.location ='http://www.kobus.co.kr/web/06_introduction/introduction06_3.jsp';     //알림마당-채용안내
+		} else if (chk==7) {
+			document.location ='http://www.kobus.co.kr/web/06_introduction/introduction07.jsp';
+		}  else if (chk==8) {
+			document.location ='http://www.kobus.co.kr/web/06_introduction/introduction08.jsp';
+		}
+}
+
+
+//사이트맵
+function  go7(chk)
+{
+		if (chk==1) {
+			document.location ='http://www.kobus.co.kr/web/07_sitemap/sitemap01.jsp';
+		}
+}
+
+
+
+
+
+//공지사항
+function  go8(chk)
+{
+		if (chk==1) {
+			document.location = 'http://www.kobus.co.kr/web/08_notice/notice01.jsp';
+		}
+}
+
+//인터넷 승차권
+function  go9(chk)
+{
+		if (chk==1) {
+			document.location ='http://home.kobus.co.kr/web/09_HomeTicket/HTBusSelect.jsp';
+		} else if (chk==2) {
+			document.location ='https://home.kobus.co.kr/web/10_HomeTicketSearch/HomeTckCanSearch.jsp';
+		} else if (chk==3) {
+			document.location ='https://home.kobus.co.kr/web/10_HomeTicketSearch/HomeTckSearch.jsp';
+		} else if (chk==4) {
+			document.location ='https://home.kobus.co.kr/web/10_HomeTicketSearch/HomeTckTax.jsp';
+		} else if (chk==5) {
+			document.location ='https://home.kobus.co.kr/web/10_HomeTicketSearch/HomeTckTax.jsp';
+		}
+}
+
+
+//기타,,약관등
+
+function  etc(chk)
+{
+		if (chk==1) {
+			document.location ='http://www.kobus.co.kr/web/08_etc/etc01.jsp';
+		} else if (chk==2) {
+			document.location ='http://www.kobus.co.kr/web/eng/index.jsp';
+		} else if (chk==3) {
+			document.location ='http://www.kobus.co.kr/web/index.jsp';
+		}
+}
+
+/// mail
+function mail(chk)
+{
+		if (chk==1) {
+			document.location = 'mailto:@';
+		}
+}
+
+//top_btn
+function GoTop()
+{
+		document.location = '#top';
+}
+
+
+
+// 메인에 스크롤되는 이미지 3개
+function  quick(chk)
+{
+if (chk==0) {
+			document.location = '#';
+		}  else if (chk==1) {
+			window.open("popup.asp","new","width=703,height=350,scrollbars=yes");   //서울-부산 소요시간단축
+		} else if (chk==2) {
+			document.location ='#';   //서울-점촌 노선신설
+		} else if (chk==3) {
+			document.location ='#';   //광주-전주 요금인하
+		}
+}
+
+
+///메인협력사배너
+function banner(chk)
+{
+		if (chk==1) {
+		window.open("http://www.kobus.co.kr/web/etc/chunil.jsp","com","width=567,height=500,scrollbars=yes");   //천일고속
+		}
+}
+
+//-->
+</script>
+
+<script language="JavaScript" src="/js/javascript.js"></script>
+<script language="JavaScript" src="/js/main.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+} 
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+
+<script language="JavaScript">
+
+<!--
+function fc_SeatCheck50(){
+     var d = document.InputForm;
+     Child = d.pCnt_050.selectedIndex;
+     Man   = d.pCnt_100.selectedIndex;
+     Bus_cod = d.BUS_GRA_I.selectedIndex ;
+     Total = Child + Man;
+
+     if(Bus_cod == 0 || Bus_cod == 1 || Bus_cod == 4){
+        ticket_num = 45;
+     }else {
+        ticket_num = 27;
+     }
+
+     if(Total > ticket_num){
+     alert(" 해당 버스등급에 좌석수 (" + ticket_num + ") 을 초과하였습니다.");
+     d.pCnt_050.selectedIndex =0;
+     d.pCnt_050.focus();
+     return false;
+     }
+     return true;
+}
+
+function fc_SeatCheck100(){
+     var d = document.InputForm;
+     Child = d.pCnt_050.selectedIndex;
+     Man   = d.pCnt_100.selectedIndex;
+     Bus_cod = d.BUS_GRA_I.selectedIndex ;
+     Total = Child + Man;
+
+     if(Bus_cod == 0 || Bus_cod == 1 || Bus_cod == 4){
+        ticket_num = 45;
+     }else {
+        ticket_num = 27;
+     }
+
+     if(Total > ticket_num){
+     alert(" 해당 버스등급에 좌석수 (" + ticket_num + ") 을 초과하였습니다.");
+     d.pCnt_100.selectedIndex =0;
+     d.pCnt_100.focus();
+     return false;
+     }
+     return true;
+}
+
+function  fc_Select(flag){
+
+	var d	= document.InputForm;
+
+	
+	if(flag == "2"){
+
+		Child = d.pCnt_050.selectedIndex;
+		Man   = d.pCnt_100.selectedIndex;
+		Bus_cod = d.BUS_GRA_I.selectedIndex ;
+		Total = Child + Man;
+	
+		if(d.TER_FR.selectedIndex == 0) {
+			alert("출발지를 선택하세요");
+			d.TER_FR.focus();
+			return false;
+		}
+	
+		if(d.TER_TO.selectedIndex == -1 || (d.TER_TO.selectedIndex == 0 && d.TER_TO.options[d.TER_TO.selectedIndex].value == "")) {
+			alert("도착지를 선택하세요");
+			d.TER_TO.focus();
+			return false;
+		}
+	
+		if(d.TIM_TIM_I.selectedIndex == 0) {
+			alert("출발시간을 선택하세요");
+			d.TIM_TIM_I.focus();
+			return false;
+		}
+	
+		if(Bus_cod == 0 || Bus_cod == 1 || Bus_cod == 4){
+	        	ticket_num = 45;
+		}else {
+			ticket_num = 27;
+		}
+	
+		if(Total > ticket_num){
+			alert(" 해당 버스등급에 좌석수 (" + ticket_num + ") 을 초과하였습니다.");
+			d.pCnt_100.selectedIndex =0;
+			d.pCnt_100.focus();
+			return false;
+		}
+	
+		fc_CadRes();
+	}else if(flag == "1"){
+		d.method = "post";
+        d.action = "./01_info/info16.jsp";
+        d.submit();
+	}else{
+		alert("고속버스 홈티켓은 전산 사정으로 인해 잠시 홈티켓 작업을 중단합니다. 조회/발행/재발행/취소는 가능합니다.");
+	}
+
+}
+
+////이지인터넷연계추가소스
+function fc_CadRes(){
+
+	var frm = document.InputForm;
+	var d1 = document.easy;
+
+	var sTim_day =  frm.Tim_date_Year.options[frm.Tim_date_Year.selectedIndex].value +
+				frm.Tim_date_Month.options[frm.Tim_date_Month.selectedIndex].value +
+				frm.Tim_date_Day.options[frm.Tim_date_Day.selectedIndex].value +
+				frm.TIM_TIM_I.options[frm.TIM_TIM_I.selectedIndex].value;
+
+	var sToday = frm.Tim_date_Year.options[frm.Tim_date_Year.selectedIndex].value +
+				frm.Tim_date_Month.options[frm.Tim_date_Month.selectedIndex].value +
+				frm.Tim_date_Day.options[frm.Tim_date_Day.selectedIndex].value ;
+
+	if(frm.pCnt_100.selectedIndex == 0 && frm.pCnt_050.selectedIndex == 0){
+		alert("예약 매수를 선택하세요");
+		frm.pCnt_100.focus();
+		return false;
+	}
+
+	if(sTim_day <= 201110042228){
+		alert("출발 한시간 이전에만 예약 하실수 있습니다.");
+		frm.Tim_date_Year.focus();
+		return false;
+	}
+	
+	//이지인터넷연계추가소스
+	if(frm.TER_FR.value == "310" || frm.TER_FR.value == "020" || frm.TER_FR.value == "032" || frm.TER_FR.value == "190" || frm.TER_FR.value == "456") {
+		if (confirm("               출발지 중 센트럴*ⓔ[020], 천안*ⓔ[310], 동서울*ⓔ[032], 안산*ⓔ[190],                 \n\n               정안(휴)*ⓔ[456] 출발노선은 저희 코버스 사이트에서 예약을 하실 수가 없습니다.                 \n\n               위의 출발지에서 예약을 하기 원하 시면 아래의 <확인> 버튼을 클릭하십시오.                 \n\n               <확인> 버튼을 클릭하시면  www.hticket.co.kr [이지티켓] 사이트로 넘어가셔서                 \n\n               예약을 진행 하시게 됩니다.(만일, <확인>버튼을 누르셨을때 사이트가 열리지 않는다면                 \n\n               ☎(02)2088-2635 번 으로 문의하시기 바랍니다.)                 \n\n               예약을 원하시지 않는다면 <아니오> 버튼을 클릭 하시고 다른 노선을 조회 해 주십시요.") == true)
+		{
+			var vsTer_fr = '0' + frm.TER_FR.value;
+			var vsTer_to = '0' + frm.TER_TO.value;
+			var vsTim_date = sToday;
+			var vsTim_tim = frm.TIM_TIM_I.value;
+			
+			
+			d1.searchStTermNbr.value = vsTer_fr;
+			d1.searchArTermNbr.value = vsTer_to;
+			d1.searchDate.value = vsTim_date;
+			d1.searchTime.value = vsTim_tim;
+			
+			d1.submit();			
+						
+			window.opener = "nothing";
+      window.open('', '_parent', '');
+      window.close();
+      
+			return false;
+		}else{
+			return false;                                                                                   
+   	}				
+	}else{
+
+		 if(sToday == 20111004){
+				alert(" 당일출발차량의 경우 예약후 당일취소를 하셔도 취소위약금이 청구되오니 예약시 유의 바랍니다.");
+		
+			}
+		
+			if (confirm("  취소 수수료: 예약당일(단, 당일출발차량 예약 후 예약 1시간 이내) 또는 승차일 2일전은 수수료 없음\n\n                    출발일1일 전일 또는 출발당일, 출발시각 전까지 승차권 요금의10%\n\n  부도 위약금: 출발시각까지 발권 또는 취소하지도 않았을 경우에는 예약 승차권에 대해 부도처리 되며,\n\n                    총 승차권 요금의 20%가 부도 위약금으로 청구됩니다.\n\n                    취소승차권 예약에 따른 취소수수료 및 부도위약금 내용에 동의 하십니까?\n\n\n                         [체크/직불카드 사용 제한시간 안내]\n\n   - 카드사 사정으로 일부 체크/직불카드의 사용 시간이 제한됩니다.\n   - 사용 불가 시간\n\n   1. 국민 : (매일)00시00분~00시05분, (매월 3째주 일요일) 00시~06시\n   2. 외환 : (매일)00시30분~00시35분\n   3. BC  : (매일) 23시50분~ 03시00분 *일부카드는 사용가능 ") == true){
+		
+				frm.method = "post";
+      	frm.action = "./03_reservation/reservation01_1.jsp";
+      	frm.submit();
+		
+			}else{
+				return false;
+		  }
+	}
+}
+
+function fc_HomeTicket(){
+
+	var frm = document.InputForm;
+
+	var sTim_day =  frm.Tim_date_Year.options[frm.Tim_date_Year.selectedIndex].value +
+				frm.Tim_date_Month.options[frm.Tim_date_Month.selectedIndex].value +
+				frm.Tim_date_Day.options[frm.Tim_date_Day.selectedIndex].value +
+				frm.TIM_TIM_I.options[frm.TIM_TIM_I.selectedIndex].value;
+
+	var sToday = frm.Tim_date_Year.options[frm.Tim_date_Year.selectedIndex].value +
+				frm.Tim_date_Month.options[frm.Tim_date_Month.selectedIndex].value +
+				frm.Tim_date_Day.options[frm.Tim_date_Day.selectedIndex].value ;
+
+	Child = frm.pCnt_050.selectedIndex;
+     	Man   = frm.pCnt_100.selectedIndex;
+
+     	Total = Child + Man;
+
+     	if(frm.pCnt_100.selectedIndex == 0 && frm.pCnt_050.selectedIndex == 0){
+		alert("예매 매수를 선택하세요");
+		frm.pCnt_100.focus();
+		return false;
+	}
+
+	//alert(sToday);
+
+	if(sToday >= 20081201){
+		alert("2008년 12월 1일 부터 홈티켓 변경 작업으로 인하여 홈티켓 예매를 하실 수 없습니다. ");
+		frm.Tim_date_Year.focus();
+		return false;
+	}
+
+	if(sTim_day <= 201110042228){
+		alert("출발 한시간 이전에만 예매 하실수 있습니다.");
+		frm.Tim_date_Year.focus();
+		return false;
+	}
+
+    	if(sToday == 20111004){
+		alert(" 당일출발차량의 경우 예매후 당일취소를 하셔도 취소위약금이 청구되오니 예매시 유의 바랍니다.");
+
+	}
+
+     	 if( Total > 6 ){
+
+     		alert(" 고속버스 홈티켓 총 발행수는 6석을 초과할 수 없습니다..");
+
+     		frm.pCnt_100.selectedIndex =0;
+     		frm.pCnt_050.selectedIndex =0;
+     		frm.pCnt_100.focus();
+
+     		return false;
+     	}
+
+	if (confirm("  취소 수수료: 예약당일(단, 당일출발차량 예약 후 예약 1시간 이내) 또는 승차일 2일전은 수수료 없음\n\n                    출발일1일 전일 또는 출발당일, 출발시각 전까지 승차권 요금의10%\n\n  부도 위약금: 출발시각까지 발권 또는 취소하지도 않았을 경우에는 예약 승차권에 대해 부도처리 되며,\n\n                    총 승차권 요금의 20%가 부도 위약금으로 청구됩니다.\n\n                    취소승차권 예약에 따른 취소수수료 및 부도위약금 내용에 동의 하십니까?\n\n\n                                        [고속버스 홈티켓 안내]\n\n   - 인터넷상에서 취소/환불 및 변경이 불가하며 터미널에서만 가능합니다.\n\n   - 프린터 장애로 인한 미출력시 1회에 한해 재발행이(전산실 연락후 조치) 가능하며, \n\n     재발행이 다시 실패시 터미널(홈티켓 카드 소지)에 방문하시여 발행을 요청하셔야 합니다.") == true){
+
+		frm.method = "post";
+		frm.action = "/web/09_HomeTicket/HTBusResult.jsp";
+		frm.submit();
+
+	}else{
+		return false;
+        }
+
+}
+
+function fc_ChangeDate(obj) {
+
+	var year, month, day, date;
+	year  = obj.Tim_date_Year.options[obj.Tim_date_Year.selectedIndex].value;
+	month = obj.Tim_date_Month.options[obj.Tim_date_Month.selectedIndex].value;
+	day   = obj.Tim_date_Day.options[obj.Tim_date_Day.selectedIndex].value;
+	date  = obj.Tim_date_Day;
+
+	date.length = checkMonth(year, month);
+	for(i=0; i<date.length; i++) {
+		date.options[i].value = addZero(i + 1);
+		date.options[i].text  = i + 1;
+	}
+	if(parseInt(day) > date.length) {
+		date.selectedIndex = 0;
+	}
+
+}
+
+//현재시간+1시간으로셋팅
+function fc_ChgDay(obj1) {
+	obj1.TIM_TIM_I.options.selectedIndex = 1;
+}
+
+function fc_ChangeTer() {
+	var str = "";
+	var d = document.InputForm;
+
+	if(d.TER_FR.options[d.TER_FR.selectedIndex].value !=  "") {
+
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "200") {
+
+					d.TER_TO.length = 8;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "115";
+							d.TER_TO.options[0].text 	=  "고양    [115]";
+
+
+							d.TER_TO.options[1].value	= "125";
+							d.TER_TO.options[1].text 	=  "광명    [125]";
+
+
+							d.TER_TO.options[2].value	= "300";
+							d.TER_TO.options[2].text 	=  "대전    [300]";
+
+
+							d.TER_TO.options[3].value	= "032";
+							d.TER_TO.options[3].text 	=  "동서울  [032]";
+
+
+							d.TER_TO.options[4].value	= "010";
+							d.TER_TO.options[4].text 	=  "서울경부[010]";
+
+
+							d.TER_TO.options[5].value	= "240";
+							d.TER_TO.options[5].text 	=  "원주    [240]";
+
+
+							d.TER_TO.options[6].value	= "126";
+							d.TER_TO.options[6].text 	=  "철산    [126]";
+
+	
+							d.TER_TO.options[7].value	= "239";
+							d.TER_TO.options[7].text 	=  "횡성(상)휴게소[239]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "535") {
+
+					d.TER_TO.length = 2;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+		
+							d.TER_TO.options[1].value	= "316";
+							d.TER_TO.options[1].text 	=  "정안(상)휴게소[316]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "815") {
+
+					d.TER_TO.length = 6;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[1].value	= "300";
+							d.TER_TO.options[1].text 	=  "대전    [300]";
+
+
+							d.TER_TO.options[2].value	= "802";
+							d.TER_TO.options[2].text 	=  "대구동양[802]";
+
+
+							d.TER_TO.options[3].value	= "700";
+							d.TER_TO.options[3].text 	=  "부산    [700]";
+
+
+							d.TER_TO.options[4].value	= "010";
+							d.TER_TO.options[4].text 	=  "서울경부[010]";
+
+		
+							d.TER_TO.options[5].value	= "813";
+							d.TER_TO.options[5].text 	=  "선산(상)휴게소[813]";
+
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "355") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "010";
+							d.TER_TO.options[0].text 	=  "서울경부[010]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "115") {
+
+					d.TER_TO.length = 5;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "200";
+							d.TER_TO.options[0].text 	=  "강릉    [200]";
+
+
+							d.TER_TO.options[1].value	= "500";
+							d.TER_TO.options[1].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[2].value	= "602";
+							d.TER_TO.options[2].text 	=  "전주    [602]";
+
+		
+							d.TER_TO.options[3].value	= "315";
+							d.TER_TO.options[3].text 	=  "정안(하)휴게소[315]";
+
+		
+							d.TER_TO.options[4].value	= "238";
+							d.TER_TO.options[4].text 	=  "횡성(하)휴게소[238]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "540") {
+
+					d.TER_TO.length = 2;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+		
+							d.TER_TO.options[1].value	= "316";
+							d.TER_TO.options[1].text 	=  "정안(상)휴게소[316]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "320") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "010";
+							d.TER_TO.options[0].text 	=  "서울경부[010]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "125") {
+
+					d.TER_TO.length = 4;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "200";
+							d.TER_TO.options[0].text 	=  "강릉    [200]";
+
+
+							d.TER_TO.options[1].value	= "230";
+							d.TER_TO.options[1].text 	=  "속초    [230]";
+
+
+							d.TER_TO.options[2].value	= "127";
+							d.TER_TO.options[2].text 	=  "오산    [127]";
+
+
+							d.TER_TO.options[3].value	= "602";
+							d.TER_TO.options[3].text 	=  "전주공용[602]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "520") {
+
+					d.TER_TO.length = 6;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "032";
+							d.TER_TO.options[0].text 	=  "동서울  [032]";
+
+
+							d.TER_TO.options[1].value	= "050";
+							d.TER_TO.options[1].text 	=  "서울남부[050]";
+
+
+							d.TER_TO.options[2].value	= "106";
+							d.TER_TO.options[2].text 	=  "송도    [106]";
+
+
+							d.TER_TO.options[3].value	= "105";
+							d.TER_TO.options[3].text 	=  "인천공항[105]";
+
+		
+							d.TER_TO.options[4].value	= "316";
+							d.TER_TO.options[4].text 	=  "정안(상)휴게소[316]";
+
+
+							d.TER_TO.options[5].value	= "730";
+							d.TER_TO.options[5].text 	=  "통영    [730]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "500") {
+
+					d.TER_TO.length = 39;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "815";
+							d.TER_TO.options[0].text 	=  "경주    [815]";
+
+
+							d.TER_TO.options[1].value	= "115";
+							d.TER_TO.options[1].text 	=  "고양    [115]";
+
+
+							d.TER_TO.options[2].value	= "732";
+							d.TER_TO.options[2].text 	=  "고현    [732]";
+
+
+							d.TER_TO.options[3].value	= "810";
+							d.TER_TO.options[3].text 	=  "구미    [810]";
+
+
+							d.TER_TO.options[4].value	= "706";
+							d.TER_TO.options[4].text 	=  "내서    [706]";
+
+
+							d.TER_TO.options[5].value	= "370";
+							d.TER_TO.options[5].text 	=  "논산    [370]";
+
+
+							d.TER_TO.options[6].value	= "300";
+							d.TER_TO.options[6].text 	=  "대전    [300]";
+
+
+							d.TER_TO.options[7].value	= "305";
+							d.TER_TO.options[7].text 	=  "대전청사[305]";
+
+
+							d.TER_TO.options[8].value	= "803";
+							d.TER_TO.options[8].text 	=  "대구금호[803]";
+
+
+							d.TER_TO.options[9].value	= "032";
+							d.TER_TO.options[9].text 	=  "동서울  [032]";
+
+
+							d.TER_TO.options[10].value	= "705";
+							d.TER_TO.options[10].text 	=  "마산    [705]";
+
+
+							d.TER_TO.options[11].value	= "700";
+							d.TER_TO.options[11].text 	=  "부산    [700]";
+
+
+							d.TER_TO.options[12].value	= "703";
+							d.TER_TO.options[12].text 	=  "부산사상[703]";
+
+
+							d.TER_TO.options[13].value	= "040";
+							d.TER_TO.options[13].text 	=  "상봉    [040]";
+
+
+							d.TER_TO.options[14].value	= "805";
+							d.TER_TO.options[14].text 	=  "서대구  [805]";
+
+
+							d.TER_TO.options[15].value	= "020";
+							d.TER_TO.options[15].text 	=  "서울    [020]";
+
+
+							d.TER_TO.options[16].value	= "120";
+							d.TER_TO.options[16].text 	=  "성남(분당)[120]";
+
+
+							d.TER_TO.options[17].value	= "106";
+							d.TER_TO.options[17].text 	=  "송도    [106]";
+
+
+							d.TER_TO.options[18].value	= "110";
+							d.TER_TO.options[18].text 	=  "수원    [110]";
+
+
+							d.TER_TO.options[19].value	= "195";
+							d.TER_TO.options[19].text 	=  "시흥(시화)[195]";
+
+
+							d.TER_TO.options[20].value	= "190";
+							d.TER_TO.options[20].text 	=  "안산    [190]";
+
+
+							d.TER_TO.options[21].value	= "130";
+							d.TER_TO.options[21].text 	=  "안성    [130]";
+
+
+							d.TER_TO.options[22].value	= "380";
+							d.TER_TO.options[22].text 	=  "연무대  [380]";
+
+
+							d.TER_TO.options[23].value	= "150";
+							d.TER_TO.options[23].text 	=  "용인    [150]";
+
+
+							d.TER_TO.options[24].value	= "715";
+							d.TER_TO.options[24].text 	=  "울산    [715]";
+
+
+							d.TER_TO.options[25].value	= "240";
+							d.TER_TO.options[25].text 	=  "원주    [240]";
+
+
+							d.TER_TO.options[26].value	= "360";
+							d.TER_TO.options[26].text 	=  "유성    [360]";
+
+
+							d.TER_TO.options[27].value	= "170";
+							d.TER_TO.options[27].text 	=  "의정부  [170]";
+
+
+							d.TER_TO.options[28].value	= "100";
+							d.TER_TO.options[28].text 	=  "인천    [100]";
+
+
+							d.TER_TO.options[29].value	= "105";
+							d.TER_TO.options[29].text 	=  "인천공항[105]";
+
+
+							d.TER_TO.options[30].value	= "731";
+							d.TER_TO.options[30].text 	=  "장승포  [731]";
+
+
+							d.TER_TO.options[31].value	= "602";
+							d.TER_TO.options[31].text 	=  "전주    [602]";
+
+		
+							d.TER_TO.options[32].value	= "316";
+							d.TER_TO.options[32].text 	=  "정안(상)휴게소[316]";
+
+
+							d.TER_TO.options[33].value	= "722";
+							d.TER_TO.options[33].text 	=  "진주    [722]";
+
+
+							d.TER_TO.options[34].value	= "310";
+							d.TER_TO.options[34].text 	=  "천안    [310]";
+
+
+							d.TER_TO.options[35].value	= "400";
+							d.TER_TO.options[35].text 	=  "청주    [400]";
+
+
+							d.TER_TO.options[36].value	= "250";
+							d.TER_TO.options[36].text 	=  "춘천    [250]";
+
+
+							d.TER_TO.options[37].value	= "730";
+							d.TER_TO.options[37].text 	=  "통영    [730]";
+
+
+							d.TER_TO.options[38].value	= "830";
+							d.TER_TO.options[38].text 	=  "포항    [830]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "169") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "700";
+							d.TER_TO.options[0].text 	=  "부산    [700]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "810") {
+
+					d.TER_TO.length = 4;
+
+				d.TER_TO.selectedIndex = 0;
+
+							d.TER_TO.options[0].value	= "010";
+							d.TER_TO.options[0].text 	=  "서울경부[010]";
+							d.TER_TO.options[1].value	= "105";
+							d.TER_TO.options[1].text 	=  "인천공항[105]";
+							d.TER_TO.options[2].value	= "440";
+							d.TER_TO.options[2].text 	=  "황간      [440]";
+							d.TER_TO.options[3].value	= "500";
+							d.TER_TO.options[3].text 	=  "광주      [500]";
+
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "610") {
+
+					d.TER_TO.length = 2;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+		
+							d.TER_TO.options[1].value	= "316";
+							d.TER_TO.options[1].text 	=  "정안(상)휴게소[316]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "330") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "010";
+							d.TER_TO.options[0].text 	=  "서울경부[010]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "620") {
+
+					d.TER_TO.length = 2;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+		
+							d.TER_TO.options[1].value	= "316";
+							d.TER_TO.options[1].text 	=  "정안(상)휴게소[316]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "820") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "010";
+							d.TER_TO.options[0].text 	=  "서울경부[010]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "735") {
+
+					d.TER_TO.length = 2;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "010";
+							d.TER_TO.options[0].text 	=  "서울경부[010]";
+
+		
+							d.TER_TO.options[1].value	= "813";
+							d.TER_TO.options[1].text 	=  "선산(상)휴게소[813]";
+
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "736") {
+
+					d.TER_TO.length = 2;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "010";
+							d.TER_TO.options[0].text 	=  "서울경부[010]";
+
+		
+							d.TER_TO.options[1].value	= "813";
+							d.TER_TO.options[1].text 	=  "선산(상)휴게소[813]";
+
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "530") {
+
+					d.TER_TO.length = 2;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+		
+							d.TER_TO.options[1].value	= "316";
+							d.TER_TO.options[1].text 	=  "정안(상)휴게소[316]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "625") {
+
+					d.TER_TO.length = 6;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "626";
+							d.TER_TO.options[0].text 	=  "덕과    [626]";
+
+
+							d.TER_TO.options[1].value	= "109";
+							d.TER_TO.options[1].text 	=  "서수원  [109]";
+
+
+							d.TER_TO.options[2].value	= "020";
+							d.TER_TO.options[2].text 	=  "서울    [020]";
+
+
+							d.TER_TO.options[3].value	= "127";
+							d.TER_TO.options[3].text 	=  "오산    [127]";
+
+
+							d.TER_TO.options[4].value	= "100";
+							d.TER_TO.options[4].text 	=  "인천    [100]";
+
+		
+							d.TER_TO.options[5].value	= "316";
+							d.TER_TO.options[5].text 	=  "정안(상)휴게소[316]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "706") {
+
+					d.TER_TO.length = 8;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[1].value	= "300";
+							d.TER_TO.options[1].text 	=  "대전    [300]";
+
+
+							d.TER_TO.options[2].value	= "802";
+							d.TER_TO.options[2].text 	=  "대구동양[802]";
+
+
+							d.TER_TO.options[3].value	= "031";
+							d.TER_TO.options[3].text 	=  "동서울  [031]";
+
+
+							d.TER_TO.options[4].value	= "805";
+							d.TER_TO.options[4].text 	=  "서대구  [805]";
+
+
+							d.TER_TO.options[5].value	= "010";
+							d.TER_TO.options[5].text 	=  "서울경부[010]";
+
+		
+							d.TER_TO.options[6].value	= "813";
+							d.TER_TO.options[6].text 	=  "선산(상)휴게소[813]";
+
+
+
+							d.TER_TO.options[7].value	= "120";
+							d.TER_TO.options[7].text 	=  "성남(분당)[120]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "579") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "545") {
+
+					d.TER_TO.length = 2;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+		
+							d.TER_TO.options[1].value	= "316";
+							d.TER_TO.options[1].text 	=  "정안(상)휴게소[316]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "370") {
+
+					d.TER_TO.length = 3;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[1].value	= "020";
+							d.TER_TO.options[1].text 	=  "서울    [020]";
+
+		
+							d.TER_TO.options[2].value	= "316";
+							d.TER_TO.options[2].text 	=  "정안(상)휴게소[316]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "587") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울호남[020]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "582") {
+
+					d.TER_TO.length = 2;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+		
+							d.TER_TO.options[1].value	= "316";
+							d.TER_TO.options[1].text 	=  "정안(상)휴게소[316]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "300") {
+
+					d.TER_TO.length = 19;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "200";
+							d.TER_TO.options[0].text 	=  "강릉    [200]";
+
+
+							d.TER_TO.options[1].value	= "815";
+							d.TER_TO.options[1].text 	=  "경주    [815]";
+
+
+							d.TER_TO.options[2].value	= "500";
+							d.TER_TO.options[2].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[3].value	= "706";
+							d.TER_TO.options[3].text 	=  "내서    [706]";
+
+
+							d.TER_TO.options[4].value	= "802";
+							d.TER_TO.options[4].text 	=  "대구동양[802]";
+
+
+							d.TER_TO.options[5].value	= "031";
+							d.TER_TO.options[5].text 	=  "동서울  [031]";
+
+
+							d.TER_TO.options[6].value	= "705";
+							d.TER_TO.options[6].text 	=  "마산    [705]";
+
+
+							d.TER_TO.options[7].value	= "700";
+							d.TER_TO.options[7].text 	=  "부산    [700]";
+
+
+							d.TER_TO.options[8].value	= "040";
+							d.TER_TO.options[8].text 	=  "상봉    [040]";
+
+
+							d.TER_TO.options[9].value	= "805";
+							d.TER_TO.options[9].text 	=  "서대구  [805]";
+
+
+							d.TER_TO.options[10].value	= "010";
+							d.TER_TO.options[10].text 	=  "서울경부[010]";
+
+
+							d.TER_TO.options[11].value	= "840";
+							d.TER_TO.options[11].text 	=  "안동    [840]";
+
+
+							d.TER_TO.options[12].value	= "835";
+							d.TER_TO.options[12].text 	=  "영주    [835]";
+
+
+							d.TER_TO.options[13].value	= "715";
+							d.TER_TO.options[13].text 	=  "울산    [715]";
+
+
+							d.TER_TO.options[14].value	= "100";
+							d.TER_TO.options[14].text 	=  "인천    [100]";
+
+
+							d.TER_TO.options[15].value	= "602";
+							d.TER_TO.options[15].text 	=  "전주공용[602]";
+
+
+							d.TER_TO.options[16].value	= "310";
+							d.TER_TO.options[16].text 	=  "천안    [310]";
+
+
+							d.TER_TO.options[17].value	= "830";
+							d.TER_TO.options[17].text 	=  "포항    [830]";
+
+		
+							d.TER_TO.options[18].value	= "238";
+							d.TER_TO.options[18].text 	=  "횡성(하)휴게소[238]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "305") {
+
+					d.TER_TO.length = 4;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[1].value	= "010";
+							d.TER_TO.options[1].text 	=  "서울경부[010]";
+
+
+							d.TER_TO.options[2].value	= "020";
+							d.TER_TO.options[2].text 	=  "서울호남[020]";
+
+
+							d.TER_TO.options[3].value	= "602";
+							d.TER_TO.options[3].text 	=  "전주    [602]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "626") {
+
+					d.TER_TO.length = 4;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "625";
+							d.TER_TO.options[0].text 	=  "남원    [625]";
+
+
+							d.TER_TO.options[1].value	= "109";
+							d.TER_TO.options[1].text 	=  "서수원  [109]";
+
+
+							d.TER_TO.options[2].value	= "127";
+							d.TER_TO.options[2].text 	=  "오산    [127]";
+
+
+							d.TER_TO.options[3].value	= "100";
+							d.TER_TO.options[3].text 	=  "인천    [100]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "525") {
+
+					d.TER_TO.length = 6;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "032";
+							d.TER_TO.options[0].text 	=  "동서울  [032]";
+
+
+							d.TER_TO.options[1].value	= "050";
+							d.TER_TO.options[1].text 	=  "서울남부[050]";
+
+
+							d.TER_TO.options[2].value	= "106";
+							d.TER_TO.options[2].text 	=  "송도    [106]";
+
+
+							d.TER_TO.options[3].value	= "105";
+							d.TER_TO.options[3].text 	=  "인천공항[105]";
+
+		
+							d.TER_TO.options[4].value	= "316";
+							d.TER_TO.options[4].text 	=  "정안(상)휴게소[316]";
+
+
+							d.TER_TO.options[5].value	= "730";
+							d.TER_TO.options[5].text 	=  "통영    [730]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "802") {
+
+					d.TER_TO.length = 6;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "815";
+							d.TER_TO.options[0].text 	=  "경주    [815]";
+
+
+							d.TER_TO.options[1].value	= "706";
+							d.TER_TO.options[1].text 	=  "내서    [706]";
+
+
+							d.TER_TO.options[2].value	= "300";
+							d.TER_TO.options[2].text 	=  "대전    [300]";
+
+
+							d.TER_TO.options[3].value	= "705";
+							d.TER_TO.options[3].text 	=  "마산    [705]";
+
+
+							d.TER_TO.options[4].value	= "700";
+							d.TER_TO.options[4].text 	=  "부산    [700]";
+
+
+							d.TER_TO.options[5].value	= "602";
+							d.TER_TO.options[5].text 	=  "전주공용[602]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "801") {
+
+					d.TER_TO.length = 12;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "115";
+							d.TER_TO.options[0].text 	=  "고양    [115]";
+
+
+							d.TER_TO.options[1].value	= "740";
+							d.TER_TO.options[1].text 	=  "김해공항[740]";
+
+
+							d.TER_TO.options[2].value	= "031";
+							d.TER_TO.options[2].text 	=  "동서울  [031]";
+
+
+							d.TER_TO.options[3].value	= "101";
+							d.TER_TO.options[3].text 	=  "부천    [101]";
+
+
+							d.TER_TO.options[4].value	= "010";
+							d.TER_TO.options[4].text 	=  "서울경부[010]";
+
+		
+							d.TER_TO.options[5].value	= "813";
+							d.TER_TO.options[5].text 	=  "선산(상)휴게소[813]";
+
+
+
+							d.TER_TO.options[6].value	= "120";
+							d.TER_TO.options[6].text 	=  "성남(분당)[120]";
+
+
+							d.TER_TO.options[7].value	= "106";
+							d.TER_TO.options[7].text 	=  "송도    [106]";
+
+
+							d.TER_TO.options[8].value	= "190";
+							d.TER_TO.options[8].text 	=  "안산    [190]";
+
+
+							d.TER_TO.options[9].value	= "100";
+							d.TER_TO.options[9].text 	=  "인천    [100]";
+
+
+							d.TER_TO.options[10].value	= "105";
+							d.TER_TO.options[10].text 	=  "인천공항[105]";
+
+
+							d.TER_TO.options[11].value	= "310";
+							d.TER_TO.options[11].text 	=  "천안    [310]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "803") {
+
+					d.TER_TO.length = 6;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+		
+							d.TER_TO.options[1].value	= "813";
+							d.TER_TO.options[1].text 	=  "선산(상)휴게소[813]";
+
+
+
+							d.TER_TO.options[2].value	= "515";
+							d.TER_TO.options[2].text 	=  "순천    [515]";
+
+
+							d.TER_TO.options[3].value	= "715";
+							d.TER_TO.options[3].text 	=  "울산    [715]";
+
+
+							d.TER_TO.options[4].value	= "170";
+							d.TER_TO.options[4].text 	=  "의정부  [170]";
+
+
+							d.TER_TO.options[5].value	= "400";
+							d.TER_TO.options[5].text 	=  "청주    [400]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "804") {
+
+					d.TER_TO.length = 7;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "110";
+							d.TER_TO.options[0].text 	=  "수원    [110]";
+
+
+							d.TER_TO.options[1].value	= "840";
+							d.TER_TO.options[1].text 	=  "안동    [840]";
+
+
+							d.TER_TO.options[2].value	= "835";
+							d.TER_TO.options[2].text 	=  "영주    [835]";
+
+
+							d.TER_TO.options[3].value	= "150";
+							d.TER_TO.options[3].text 	=  "용인    [150]";
+
+
+							d.TER_TO.options[4].value	= "450";
+							d.TER_TO.options[4].text 	=  "제천    [450]";
+
+
+							d.TER_TO.options[5].value	= "722";
+							d.TER_TO.options[5].text 	=  "진주    [722]";
+
+
+							d.TER_TO.options[6].value	= "250";
+							d.TER_TO.options[6].text 	=  "춘천    [250]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "031") {
+
+					d.TER_TO.length = 11;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "706";
+							d.TER_TO.options[0].text 	=  "내서    [706]";
+
+
+							d.TER_TO.options[1].value	= "801";
+							d.TER_TO.options[1].text 	=  "대구한진[801]";
+
+
+							d.TER_TO.options[2].value	= "300";
+							d.TER_TO.options[2].text 	=  "대전    [300]";
+
+
+							d.TER_TO.options[3].value	= "705";
+							d.TER_TO.options[3].text 	=  "마산    [705]";
+
+
+							d.TER_TO.options[4].value	= "700";
+							d.TER_TO.options[4].text 	=  "부산    [700]";
+
+
+							d.TER_TO.options[5].value	= "805";
+							d.TER_TO.options[5].text 	=  "서대구  [805]";
+
+		
+							d.TER_TO.options[6].value	= "812";
+							d.TER_TO.options[6].text 	=  "선산(하)휴게소[812]";
+
+
+							d.TER_TO.options[7].value	= "722";
+							d.TER_TO.options[7].text 	=  "진주    [722]";
+
+
+							d.TER_TO.options[8].value	= "710";
+							d.TER_TO.options[8].text 	=  "창원    [710]";
+
+
+							d.TER_TO.options[9].value	= "711";
+							d.TER_TO.options[9].text 	=  "창원역  [711]";
+
+
+							d.TER_TO.options[10].value	= "400";
+							d.TER_TO.options[10].text 	=  "청주    [400]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "210") {
+
+					d.TER_TO.length = 3;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "032";
+							d.TER_TO.options[0].text 	=  "동서울  [032]";
+
+
+							d.TER_TO.options[1].value	= "010";
+							d.TER_TO.options[1].text 	=  "서울경부[010]";
+
+	
+							d.TER_TO.options[2].value	= "239";
+							d.TER_TO.options[2].text 	=  "횡성(상)휴게소[239]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "705") {
+
+					d.TER_TO.length = 9;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[1].value	= "802";
+							d.TER_TO.options[1].text 	=  "대구동양[802]";
+
+
+							d.TER_TO.options[2].value	= "300";
+							d.TER_TO.options[2].text 	=  "대전    [300]";
+
+
+							d.TER_TO.options[3].value	= "031";
+							d.TER_TO.options[3].text 	=  "동서울  [031]";
+
+
+							d.TER_TO.options[4].value	= "805";
+							d.TER_TO.options[4].text 	=  "서대구  [805]";
+
+
+							d.TER_TO.options[5].value	= "010";
+							d.TER_TO.options[5].text 	=  "서울경부[010]";
+
+		
+							d.TER_TO.options[6].value	= "813";
+							d.TER_TO.options[6].text 	=  "선산(상)휴게소[813]";
+
+
+
+							d.TER_TO.options[7].value	= "120";
+							d.TER_TO.options[7].text 	=  "성남(분당)[120]";
+
+
+							d.TER_TO.options[8].value	= "830";
+							d.TER_TO.options[8].text 	=  "포항    [830]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "505") {
+
+					d.TER_TO.length = 5;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+
+							d.TER_TO.options[1].value	= "110";
+							d.TER_TO.options[1].text 	=  "수원    [110]";
+
+
+							d.TER_TO.options[2].value	= "100";
+							d.TER_TO.options[2].text 	=  "인천    [100]";
+
+
+							d.TER_TO.options[3].value	= "105";
+							d.TER_TO.options[3].text 	=  "인천공항[105]";
+
+		
+							d.TER_TO.options[4].value	= "316";
+							d.TER_TO.options[4].text 	=  "정안(상)휴게소[316]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "550") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "584") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "555") {
+
+					d.TER_TO.length = 2;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+		
+							d.TER_TO.options[1].value	= "316";
+							d.TER_TO.options[1].text 	=  "정안(상)휴게소[316]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "554") {
+
+					d.TER_TO.length = 2;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+		
+							d.TER_TO.options[1].value	= "316";
+							d.TER_TO.options[1].text 	=  "정안(상)휴게소[316]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "700") {
+
+					d.TER_TO.length = 17;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "815";
+							d.TER_TO.options[0].text 	=  "경주    [815]";
+
+
+							d.TER_TO.options[1].value	= "500";
+							d.TER_TO.options[1].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[2].value	= "169";
+							d.TER_TO.options[2].text 	=  "구리    [169]";
+
+
+							d.TER_TO.options[3].value	= "300";
+							d.TER_TO.options[3].text 	=  "대전    [300]";
+
+
+							d.TER_TO.options[4].value	= "802";
+							d.TER_TO.options[4].text 	=  "대구동양[802]";
+
+
+							d.TER_TO.options[5].value	= "031";
+							d.TER_TO.options[5].text 	=  "동서울  [031]";
+
+
+							d.TER_TO.options[6].value	= "010";
+							d.TER_TO.options[6].text 	=  "서울경부[010]";
+
+		
+							d.TER_TO.options[7].value	= "813";
+							d.TER_TO.options[7].text 	=  "선산(상)휴게소[813]";
+
+
+
+							d.TER_TO.options[8].value	= "120";
+							d.TER_TO.options[8].text 	=  "성남(분당)[120]";
+
+
+							d.TER_TO.options[9].value	= "515";
+							d.TER_TO.options[9].text 	=  "순천    [515]";
+
+
+							d.TER_TO.options[10].value	= "510";
+							d.TER_TO.options[10].text 	=  "여수    [510]";
+
+
+							d.TER_TO.options[11].value	= "509";
+							d.TER_TO.options[11].text 	=  "여천    [509]";
+
+
+							d.TER_TO.options[12].value	= "150";
+							d.TER_TO.options[12].text 	=  "용인    [150]";
+
+
+							d.TER_TO.options[13].value	= "170";
+							d.TER_TO.options[13].text 	=  "의정부  [170]";
+
+
+							d.TER_TO.options[14].value	= "100";
+							d.TER_TO.options[14].text 	=  "인천    [100]";
+
+
+							d.TER_TO.options[15].value	= "602";
+							d.TER_TO.options[15].text 	=  "전주공용[602]";
+
+
+							d.TER_TO.options[16].value	= "400";
+							d.TER_TO.options[16].text 	=  "청주    [400]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "703") {
+
+					d.TER_TO.length = 5;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+		
+							d.TER_TO.options[1].value	= "813";
+							d.TER_TO.options[1].text 	=  "선산(상)휴게소[813]";
+
+
+
+							d.TER_TO.options[2].value	= "510";
+							d.TER_TO.options[2].text 	=  "여수    [510]";
+
+
+							d.TER_TO.options[3].value	= "509";
+							d.TER_TO.options[3].text 	=  "여천    [509]";
+
+
+							d.TER_TO.options[4].value	= "100";
+							d.TER_TO.options[4].text 	=  "인천    [100]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "220") {
+
+					d.TER_TO.length = 3;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "032";
+							d.TER_TO.options[0].text 	=  "동서울  [032]";
+
+
+							d.TER_TO.options[1].value	= "010";
+							d.TER_TO.options[1].text 	=  "서울경부[010]";
+
+	
+							d.TER_TO.options[2].value	= "239";
+							d.TER_TO.options[2].text 	=  "횡성(상)휴게소[239]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "591") {
+
+					d.TER_TO.length = 2;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+		
+							d.TER_TO.options[1].value	= "316";
+							d.TER_TO.options[1].text 	=  "정안(상)휴게소[316]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "040") {
+
+					d.TER_TO.length = 5;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[1].value	= "300";
+							d.TER_TO.options[1].text 	=  "대전    [300]";
+
+
+							d.TER_TO.options[2].value	= "602";
+							d.TER_TO.options[2].text 	=  "전주    [602]";
+
+		
+							d.TER_TO.options[3].value	= "315";
+							d.TER_TO.options[3].text 	=  "정안(하)휴게소[315]";
+
+
+							d.TER_TO.options[4].value	= "400";
+							d.TER_TO.options[4].text 	=  "청주    [400]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "825") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "010";
+							d.TER_TO.options[0].text 	=  "서울경부[010]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "805") {
+
+					d.TER_TO.length = 15;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[1].value	= "706";
+							d.TER_TO.options[1].text 	=  "내서    [706]";
+
+
+							d.TER_TO.options[2].value	= "300";
+							d.TER_TO.options[2].text 	=  "대전    [300]";
+
+
+							d.TER_TO.options[3].value	= "031";
+							d.TER_TO.options[3].text 	=  "동서울  [031]";
+
+
+							d.TER_TO.options[4].value	= "705";
+							d.TER_TO.options[4].text 	=  "마산    [705]";
+
+
+							d.TER_TO.options[5].value	= "010";
+							d.TER_TO.options[5].text 	=  "서울경부[010]";
+
+		
+							d.TER_TO.options[6].value	= "813";
+							d.TER_TO.options[6].text 	=  "선산(상)휴게소[813]";
+
+
+
+							d.TER_TO.options[7].value	= "120";
+							d.TER_TO.options[7].text 	=  "성남(분당)[120]";
+
+
+							d.TER_TO.options[8].value	= "515";
+							d.TER_TO.options[8].text 	=  "순천    [515]";
+
+
+							d.TER_TO.options[9].value	= "170";
+							d.TER_TO.options[9].text 	=  "의정부  [170]";
+
+
+							d.TER_TO.options[10].value	= "100";
+							d.TER_TO.options[10].text 	=  "인천    [100]";
+
+
+							d.TER_TO.options[11].value	= "602";
+							d.TER_TO.options[11].text 	=  "전주    [602]";
+
+
+							d.TER_TO.options[12].value	= "722";
+							d.TER_TO.options[12].text 	=  "진주    [722]";
+
+
+							d.TER_TO.options[13].value	= "400";
+							d.TER_TO.options[13].text 	=  "청주    [400]";
+
+
+							d.TER_TO.options[14].value	= "250";
+							d.TER_TO.options[14].text 	=  "춘천    [250]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "109") {
+
+					d.TER_TO.length = 4;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "625";
+							d.TER_TO.options[0].text 	=  "남원    [625]";
+
+
+							d.TER_TO.options[1].value	= "626";
+							d.TER_TO.options[1].text 	=  "덕과    [626]";
+
+
+							d.TER_TO.options[2].value	= "127";
+							d.TER_TO.options[2].text 	=  "오산    [127]";
+
+
+							d.TER_TO.options[3].value	= "100";
+							d.TER_TO.options[3].text 	=  "인천    [100]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "010") {
+
+					d.TER_TO.length = 53;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "200";
+							d.TER_TO.options[0].text 	=  "강릉    [200]";
+
+
+							d.TER_TO.options[1].value	= "815";
+							d.TER_TO.options[1].text 	=  "경주    [815]";
+
+
+							d.TER_TO.options[2].value	= "355";
+							d.TER_TO.options[2].text 	=  "고대홍대[355]";
+
+
+							d.TER_TO.options[3].value	= "320";
+							d.TER_TO.options[3].text 	=  "공주    [320]";
+
+
+							d.TER_TO.options[4].value	= "810";
+							d.TER_TO.options[4].text 	=  "구미    [810]";
+
+
+							d.TER_TO.options[5].value	= "330";
+							d.TER_TO.options[5].text 	=  "금산    [330]";
+
+
+							d.TER_TO.options[6].value	= "820";
+							d.TER_TO.options[6].text 	=  "김천    [820]";
+
+
+							d.TER_TO.options[7].value	= "735";
+							d.TER_TO.options[7].text 	=  "김해    [735]";
+
+
+							d.TER_TO.options[8].value	= "736";
+							d.TER_TO.options[8].text 	=  "김해장유[736]";
+
+
+							d.TER_TO.options[9].value	= "706";
+							d.TER_TO.options[9].text 	=  "내서    [706]";
+
+
+							d.TER_TO.options[10].value	= "300";
+							d.TER_TO.options[10].text 	=  "대전    [300]";
+
+
+							d.TER_TO.options[11].value	= "305";
+							d.TER_TO.options[11].text 	=  "대전청사[305]";
+
+
+							d.TER_TO.options[12].value	= "801";
+							d.TER_TO.options[12].text 	=  "대구한진[801]";
+
+
+							d.TER_TO.options[13].value	= "210";
+							d.TER_TO.options[13].text 	=  "동해    [210]";
+
+
+							d.TER_TO.options[14].value	= "705";
+							d.TER_TO.options[14].text 	=  "마산    [705]";
+
+
+							d.TER_TO.options[15].value	= "700";
+							d.TER_TO.options[15].text 	=  "부산    [700]";
+
+
+							d.TER_TO.options[16].value	= "220";
+							d.TER_TO.options[16].text 	=  "삼척    [220]";
+
+
+							d.TER_TO.options[17].value	= "825";
+							d.TER_TO.options[17].text 	=  "상주    [825]";
+
+
+							d.TER_TO.options[18].value	= "805";
+							d.TER_TO.options[18].text 	=  "서대구  [805]";
+
+		
+							d.TER_TO.options[19].value	= "812";
+							d.TER_TO.options[19].text 	=  "선산(하)휴게소[812]";
+
+
+							d.TER_TO.options[20].value	= "230";
+							d.TER_TO.options[20].text 	=  "속초    [230]";
+
+
+							d.TER_TO.options[21].value	= "341";
+							d.TER_TO.options[21].text 	=  "아산서부[341]";
+
+
+							d.TER_TO.options[22].value	= "130";
+							d.TER_TO.options[22].text 	=  "안성    [130]";
+
+
+							d.TER_TO.options[23].value	= "133";
+							d.TER_TO.options[23].text 	=  "안성공도[133]";
+
+
+							d.TER_TO.options[24].value	= "137";
+							d.TER_TO.options[24].text 	=  "안성대림[137]";
+
+
+							d.TER_TO.options[25].value	= "131";
+							d.TER_TO.options[25].text 	=  "안성중대[131]";
+
+
+							d.TER_TO.options[26].value	= "132";
+							d.TER_TO.options[26].text 	=  "안성풍림[132]";
+
+
+							d.TER_TO.options[27].value	= "134";
+							d.TER_TO.options[27].text 	=  "안성한경[134]";
+
+
+							d.TER_TO.options[28].value	= "270";
+							d.TER_TO.options[28].text 	=  "양양    [270]";
+
+
+							d.TER_TO.options[29].value	= "140";
+							d.TER_TO.options[29].text 	=  "여주    [140]";
+
+
+							d.TER_TO.options[30].value	= "845";
+							d.TER_TO.options[30].text 	=  "영천    [845]";
+
+
+							d.TER_TO.options[31].value	= "357";
+							d.TER_TO.options[31].text 	=  "오송단지[357]";
+
+
+							d.TER_TO.options[32].value	= "356";
+							d.TER_TO.options[32].text 	=  "오송역  [356]";
+
+
+							d.TER_TO.options[33].value	= "340";
+							d.TER_TO.options[33].text 	=  "온양    [340]";
+
+
+							d.TER_TO.options[34].value	= "150";
+							d.TER_TO.options[34].text 	=  "용인    [150]";
+
+
+							d.TER_TO.options[35].value	= "149";
+							d.TER_TO.options[35].text 	=  "용인유방[149]";
+
+
+							d.TER_TO.options[36].value	= "715";
+							d.TER_TO.options[36].text 	=  "울산    [715]";
+
+
+							d.TER_TO.options[37].value	= "240";
+							d.TER_TO.options[37].text 	=  "원주    [240]";
+
+
+							d.TER_TO.options[38].value	= "160";
+							d.TER_TO.options[38].text 	=  "이천    [160]";
+
+
+							d.TER_TO.options[39].value	= "850";
+							d.TER_TO.options[39].text 	=  "점촌    [850]";
+
+
+							d.TER_TO.options[40].value	= "450";
+							d.TER_TO.options[40].text 	=  "제천    [450]";
+
+
+							d.TER_TO.options[41].value	= "350";
+							d.TER_TO.options[41].text 	=  "조치원  [350]";
+
+
+							d.TER_TO.options[42].value	= "722";
+							d.TER_TO.options[42].text 	=  "진주    [722]";
+
+
+							d.TER_TO.options[43].value	= "710";
+							d.TER_TO.options[43].text 	=  "창원    [710]";
+
+
+							d.TER_TO.options[44].value	= "711";
+							d.TER_TO.options[44].text 	=  "창원역  [711]";
+
+
+							d.TER_TO.options[45].value	= "310";
+							d.TER_TO.options[45].text 	=  "천안    [310]";
+
+
+							d.TER_TO.options[46].value	= "400";
+							d.TER_TO.options[46].text 	=  "청주    [400]";
+
+
+							d.TER_TO.options[47].value	= "730";
+							d.TER_TO.options[47].text 	=  "통영    [730]";
+
+
+							d.TER_TO.options[48].value	= "180";
+							d.TER_TO.options[48].text 	=  "평택    [180]";
+
+
+							d.TER_TO.options[49].value	= "175";
+							d.TER_TO.options[49].text 	=  "평택대  [175]";
+
+
+							d.TER_TO.options[50].value	= "830";
+							d.TER_TO.options[50].text 	=  "포항    [830]";
+
+
+							d.TER_TO.options[51].value	= "440";
+							d.TER_TO.options[51].text 	=  "황간    [440]";
+
+		
+							d.TER_TO.options[52].value	= "238";
+							d.TER_TO.options[52].text 	=  "횡성(하)휴게소[238]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "812") {
+
+					d.TER_TO.length = 15;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "815";
+							d.TER_TO.options[0].text 	=  "경주    [815]";
+
+
+							d.TER_TO.options[1].value	= "735";
+							d.TER_TO.options[1].text 	=  "김해    [735]";
+
+
+							d.TER_TO.options[2].value	= "736";
+							d.TER_TO.options[2].text 	=  "김해장유[736]";
+
+
+							d.TER_TO.options[3].value	= "706";
+							d.TER_TO.options[3].text 	=  "내서    [706]";
+
+
+							d.TER_TO.options[4].value	= "801";
+							d.TER_TO.options[4].text 	=  "대구한진[801]";
+
+
+							d.TER_TO.options[5].value	= "803";
+							d.TER_TO.options[5].text 	=  "대구금호[803]";
+
+
+							d.TER_TO.options[6].value	= "705";
+							d.TER_TO.options[6].text 	=  "마산    [705]";
+
+
+							d.TER_TO.options[7].value	= "700";
+							d.TER_TO.options[7].text 	=  "부산    [700]";
+
+
+							d.TER_TO.options[8].value	= "703";
+							d.TER_TO.options[8].text 	=  "부산사상[703]";
+
+
+							d.TER_TO.options[9].value	= "805";
+							d.TER_TO.options[9].text 	=  "서대구  [805]";
+
+
+							d.TER_TO.options[10].value	= "845";
+							d.TER_TO.options[10].text 	=  "영천    [845]";
+
+
+							d.TER_TO.options[11].value	= "715";
+							d.TER_TO.options[11].text 	=  "울산    [715]";
+
+
+							d.TER_TO.options[12].value	= "710";
+							d.TER_TO.options[12].text 	=  "창원    [710]";
+
+
+							d.TER_TO.options[13].value	= "711";
+							d.TER_TO.options[13].text 	=  "창원역  [711]";
+
+
+							d.TER_TO.options[14].value	= "830";
+							d.TER_TO.options[14].text 	=  "포항    [830]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "813") {
+
+					d.TER_TO.length = 8;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "031";
+							d.TER_TO.options[0].text 	=  "동서울  [031]";
+
+
+							d.TER_TO.options[1].value	= "010";
+							d.TER_TO.options[1].text 	=  "서울경부[010]";
+
+
+							d.TER_TO.options[2].value	= "120";
+							d.TER_TO.options[2].text 	=  "성남(분당)[120]";
+
+
+							d.TER_TO.options[3].value	= "150";
+							d.TER_TO.options[3].text 	=  "용인    [150]";
+
+
+							d.TER_TO.options[4].value	= "170";
+							d.TER_TO.options[4].text 	=  "의정부  [170]";
+
+
+							d.TER_TO.options[5].value	= "100";
+							d.TER_TO.options[5].text 	=  "인천    [100]";
+
+
+							d.TER_TO.options[6].value	= "310";
+							d.TER_TO.options[6].text 	=  "천안    [310]";
+
+
+							d.TER_TO.options[7].value	= "400";
+							d.TER_TO.options[7].text 	=  "청주    [400]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "120") {
+
+					d.TER_TO.length = 13;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[1].value	= "706";
+							d.TER_TO.options[1].text 	=  "내서    [706]";
+
+
+							d.TER_TO.options[2].value	= "801";
+							d.TER_TO.options[2].text 	=  "대구한진[801]";
+
+
+							d.TER_TO.options[3].value	= "705";
+							d.TER_TO.options[3].text 	=  "마산    [705]";
+
+
+							d.TER_TO.options[4].value	= "700";
+							d.TER_TO.options[4].text 	=  "부산    [700]";
+
+
+							d.TER_TO.options[5].value	= "805";
+							d.TER_TO.options[5].text 	=  "서대구  [805]";
+
+		
+							d.TER_TO.options[6].value	= "812";
+							d.TER_TO.options[6].text 	=  "선산(하)휴게소[812]";
+
+
+							d.TER_TO.options[7].value	= "602";
+							d.TER_TO.options[7].text 	=  "전주    [602]";
+
+		
+							d.TER_TO.options[8].value	= "315";
+							d.TER_TO.options[8].text 	=  "정안(하)휴게소[315]";
+
+
+							d.TER_TO.options[9].value	= "722";
+							d.TER_TO.options[9].text 	=  "진주    [722]";
+
+
+							d.TER_TO.options[10].value	= "710";
+							d.TER_TO.options[10].text 	=  "창원    [710]";
+
+
+							d.TER_TO.options[11].value	= "711";
+							d.TER_TO.options[11].text 	=  "창원역  [711]";
+
+
+							d.TER_TO.options[12].value	= "730";
+							d.TER_TO.options[12].text 	=  "통영    [730]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "230") {
+
+					d.TER_TO.length = 6;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "125";
+							d.TER_TO.options[0].text 	=  "광명    [125]";
+
+
+							d.TER_TO.options[1].value	= "032";
+							d.TER_TO.options[1].text 	=  "동서울  [032]";
+
+
+							d.TER_TO.options[2].value	= "010";
+							d.TER_TO.options[2].text 	=  "서울경부[010]";
+
+
+							d.TER_TO.options[3].value	= "100";
+							d.TER_TO.options[3].text 	=  "인천    [100]";
+
+
+							d.TER_TO.options[4].value	= "126";
+							d.TER_TO.options[4].text 	=  "철산    [126]";
+
+	
+							d.TER_TO.options[5].value	= "239";
+							d.TER_TO.options[5].text 	=  "횡성(상)휴게소[239]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "110") {
+
+					d.TER_TO.length = 6;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[1].value	= "300";
+							d.TER_TO.options[1].text 	=  "대전    [300]";
+
+
+							d.TER_TO.options[2].value	= "505";
+							d.TER_TO.options[2].text 	=  "목포    [505]";
+
+
+							d.TER_TO.options[3].value	= "516";
+							d.TER_TO.options[3].text 	=  "순천시외[516]";
+
+		
+							d.TER_TO.options[4].value	= "315";
+							d.TER_TO.options[4].text 	=  "정안(하)휴게소[315]";
+
+
+							d.TER_TO.options[5].value	= "722";
+							d.TER_TO.options[5].text 	=  "진주    [722]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "645") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "515") {
+
+					d.TER_TO.length = 6;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "803";
+							d.TER_TO.options[0].text 	=  "대구금호[803]";
+
+
+							d.TER_TO.options[1].value	= "700";
+							d.TER_TO.options[1].text 	=  "부산    [700]";
+
+
+							d.TER_TO.options[2].value	= "805";
+							d.TER_TO.options[2].text 	=  "서대구  [805]";
+
+
+							d.TER_TO.options[3].value	= "020";
+							d.TER_TO.options[3].text 	=  "서울    [020]";
+
+
+							d.TER_TO.options[4].value	= "100";
+							d.TER_TO.options[4].text 	=  "인천    [100]";
+
+		
+							d.TER_TO.options[5].value	= "316";
+							d.TER_TO.options[5].text 	=  "정안(상)휴게소[316]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "516") {
+
+					d.TER_TO.length = 6;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "106";
+							d.TER_TO.options[0].text 	=  "송도    [106]";
+
+
+							d.TER_TO.options[1].value	= "110";
+							d.TER_TO.options[1].text 	=  "수원    [110]";
+
+
+							d.TER_TO.options[2].value	= "114";
+							d.TER_TO.options[2].text 	=  "신갈시외[114]";
+
+
+							d.TER_TO.options[3].value	= "112";
+							d.TER_TO.options[3].text 	=  "영통    [112]";
+
+
+							d.TER_TO.options[4].value	= "105";
+							d.TER_TO.options[4].text 	=  "인천공항[105]";
+
+
+							d.TER_TO.options[5].value	= "730";
+							d.TER_TO.options[5].text 	=  "통영    [730]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "195") {
+
+					d.TER_TO.length = 2;
+
+				d.TER_TO.selectedIndex = 0;
+
+		
+							d.TER_TO.options[0].value	= "315";
+							d.TER_TO.options[0].text 	=  "정안(하)휴게소[315]";
+
+
+							d.TER_TO.options[1].value	= "500";
+							d.TER_TO.options[1].text 	=  "광주    [500]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "114") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "516";
+							d.TER_TO.options[0].text 	=  "순천시외[516]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "341") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "010";
+							d.TER_TO.options[0].text 	=  "서울경부[010]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "130") {
+
+					d.TER_TO.length = 3;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[1].value	= "010";
+							d.TER_TO.options[1].text 	=  "서울경부[010]";
+
+		
+							d.TER_TO.options[2].value	= "315";
+							d.TER_TO.options[2].text 	=  "정안(하)휴게소[315]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "133") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "010";
+							d.TER_TO.options[0].text 	=  "서울경부[010]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "137") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "010";
+							d.TER_TO.options[0].text 	=  "서울경부[010]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "131") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "010";
+							d.TER_TO.options[0].text 	=  "서울경부[010]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "132") {
+
+					d.TER_TO.length = 3;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[1].value	= "010";
+							d.TER_TO.options[1].text 	=  "서울경부[010]";
+
+		
+							d.TER_TO.options[2].value	= "315";
+							d.TER_TO.options[2].text 	=  "정안(하)휴게소[315]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "134") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "010";
+							d.TER_TO.options[0].text 	=  "서울경부[010]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "270") {
+
+					d.TER_TO.length = 2;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "032";
+							d.TER_TO.options[0].text 	=  "동서울  [032]";
+
+
+							d.TER_TO.options[1].value	= "010";
+							d.TER_TO.options[1].text 	=  "서울경부[010]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "510") {
+
+					d.TER_TO.length = 8;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "700";
+							d.TER_TO.options[0].text 	=  "부산    [700]";
+
+
+							d.TER_TO.options[1].value	= "703";
+							d.TER_TO.options[1].text 	=  "부산사상[703]";
+
+
+							d.TER_TO.options[2].value	= "020";
+							d.TER_TO.options[2].text 	=  "서울    [020]";
+
+
+							d.TER_TO.options[3].value	= "106";
+							d.TER_TO.options[3].text 	=  "송도    [106]";
+
+
+							d.TER_TO.options[4].value	= "100";
+							d.TER_TO.options[4].text 	=  "인천    [100]";
+
+
+							d.TER_TO.options[5].value	= "105";
+							d.TER_TO.options[5].text 	=  "인천공항[105]";
+
+		
+							d.TER_TO.options[6].value	= "316";
+							d.TER_TO.options[6].text 	=  "정안(상)휴게소[316]";
+
+
+							d.TER_TO.options[7].value	= "730";
+							d.TER_TO.options[7].text 	=  "통영    [730]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "140") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "010";
+							d.TER_TO.options[0].text 	=  "서울경부[010]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "509") {
+
+					d.TER_TO.length = 5;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "700";
+							d.TER_TO.options[0].text 	=  "부산    [700]";
+
+
+							d.TER_TO.options[1].value	= "703";
+							d.TER_TO.options[1].text 	=  "부산사상[703]";
+
+
+							d.TER_TO.options[2].value	= "020";
+							d.TER_TO.options[2].text 	=  "서울    [020]";
+
+
+							d.TER_TO.options[3].value	= "100";
+							d.TER_TO.options[3].text 	=  "인천    [100]";
+
+		
+							d.TER_TO.options[4].value	= "316";
+							d.TER_TO.options[4].text 	=  "정안(상)휴게소[316]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "380") {
+
+					d.TER_TO.length = 3;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[1].value	= "020";
+							d.TER_TO.options[1].text 	=  "서울    [020]";
+
+		
+							d.TER_TO.options[2].value	= "316";
+							d.TER_TO.options[2].text 	=  "정안(상)휴게소[316]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "560") {
+
+					d.TER_TO.length = 2;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+		
+							d.TER_TO.options[1].value	= "316";
+							d.TER_TO.options[1].text 	=  "정안(상)휴게소[316]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "565") {
+
+					d.TER_TO.length = 2;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+		
+							d.TER_TO.options[1].value	= "316";
+							d.TER_TO.options[1].text 	=  "정안(상)휴게소[316]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "570") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "845") {
+
+					d.TER_TO.length = 2;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "010";
+							d.TER_TO.options[0].text 	=  "서울경부[010]";
+
+		
+							d.TER_TO.options[1].value	= "813";
+							d.TER_TO.options[1].text 	=  "선산(상)휴게소[813]";
+
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "127") {
+
+					d.TER_TO.length = 7;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "125";
+							d.TER_TO.options[0].text 	=  "광명    [125]";
+
+
+							d.TER_TO.options[1].value	= "625";
+							d.TER_TO.options[1].text 	=  "남원    [625]";
+
+
+							d.TER_TO.options[2].value	= "626";
+							d.TER_TO.options[2].text 	=  "덕과    [626]";
+
+
+							d.TER_TO.options[3].value	= "109";
+							d.TER_TO.options[3].text 	=  "서수원  [109]";
+
+
+							d.TER_TO.options[4].value	= "100";
+							d.TER_TO.options[4].text 	=  "인천    [100]";
+
+
+							d.TER_TO.options[5].value	= "602";
+							d.TER_TO.options[5].text 	=  "전주공용[602]";
+
+
+							d.TER_TO.options[6].value	= "126";
+							d.TER_TO.options[6].text 	=  "철산    [126]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "340") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "010";
+							d.TER_TO.options[0].text 	=  "서울경부[010]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "575") {
+
+					d.TER_TO.length = 2;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+		
+							d.TER_TO.options[1].value	= "316";
+							d.TER_TO.options[1].text 	=  "정안(상)휴게소[316]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "150") {
+
+					d.TER_TO.length = 5;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[1].value	= "700";
+							d.TER_TO.options[1].text 	=  "부산    [700]";
+
+
+							d.TER_TO.options[2].value	= "010";
+							d.TER_TO.options[2].text 	=  "서울경부[010]";
+
+		
+							d.TER_TO.options[3].value	= "812";
+							d.TER_TO.options[3].text 	=  "선산(하)휴게소[812]";
+
+		
+							d.TER_TO.options[4].value	= "315";
+							d.TER_TO.options[4].text 	=  "정안(하)휴게소[315]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "149") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "010";
+							d.TER_TO.options[0].text 	=  "서울경부[010]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "715") {
+
+					d.TER_TO.length = 7;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[1].value	= "300";
+							d.TER_TO.options[1].text 	=  "대전    [300]";
+
+
+							d.TER_TO.options[2].value	= "803";
+							d.TER_TO.options[2].text 	=  "대구금호[803]";
+
+
+							d.TER_TO.options[3].value	= "010";
+							d.TER_TO.options[3].text 	=  "서울경부[010]";
+
+		
+							d.TER_TO.options[4].value	= "813";
+							d.TER_TO.options[4].text 	=  "선산(상)휴게소[813]";
+
+
+
+							d.TER_TO.options[5].value	= "602";
+							d.TER_TO.options[5].text 	=  "전주    [602]";
+
+
+							d.TER_TO.options[6].value	= "310";
+							d.TER_TO.options[6].text 	=  "천안    [310]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "716") {
+
+					d.TER_TO.length = 6;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[1].value	= "300";
+							d.TER_TO.options[1].text 	=  "대전    [300]";
+
+
+							d.TER_TO.options[2].value	= "010";
+							d.TER_TO.options[2].text 	=  "서울경부[010]";
+
+		
+							d.TER_TO.options[3].value	= "813";
+							d.TER_TO.options[3].text 	=  "선산(상)휴게소[813]";
+
+
+
+							d.TER_TO.options[4].value	= "602";
+							d.TER_TO.options[4].text 	=  "전주    [602]";
+
+
+							d.TER_TO.options[5].value	= "310";
+							d.TER_TO.options[5].text 	=  "천안    [310]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "240") {
+
+					d.TER_TO.length = 3;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "200";
+							d.TER_TO.options[0].text 	=  "강릉    [200]";
+
+
+							d.TER_TO.options[1].value	= "500";
+							d.TER_TO.options[1].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[2].value	= "010";
+							d.TER_TO.options[2].text 	=  "서울경부[010]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "360") {
+
+					d.TER_TO.length = 2;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[1].value	= "020";
+							d.TER_TO.options[1].text 	=  "서울    [020]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "170") {
+
+					d.TER_TO.length = 6;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[1].value	= "803";
+							d.TER_TO.options[1].text 	=  "대구금호[803]";
+
+
+							d.TER_TO.options[2].value	= "700";
+							d.TER_TO.options[2].text 	=  "부산    [700]";
+
+
+							d.TER_TO.options[3].value	= "805";
+							d.TER_TO.options[3].text 	=  "서대구  [805]";
+
+		
+							d.TER_TO.options[4].value	= "812";
+							d.TER_TO.options[4].text 	=  "선산(하)휴게소[812]";
+
+		
+							d.TER_TO.options[5].value	= "315";
+							d.TER_TO.options[5].text 	=  "정안(하)휴게소[315]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "160") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "010";
+							d.TER_TO.options[0].text 	=  "서울경부[010]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "615") {
+
+					d.TER_TO.length = 5;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+
+							d.TER_TO.options[1].value	= "190";
+							d.TER_TO.options[1].text 	=  "안산    [190]";
+
+
+							d.TER_TO.options[2].value	= "100";
+							d.TER_TO.options[2].text 	=  "인천    [100]";
+
+		
+							d.TER_TO.options[3].value	= "316";
+							d.TER_TO.options[3].text 	=  "정안(상)휴게소[316]";
+
+
+							d.TER_TO.options[4].value	= "310";
+							d.TER_TO.options[4].text 	=  "천안    [310]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "616") {
+
+					d.TER_TO.length = 5;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+
+							d.TER_TO.options[1].value	= "190";
+							d.TER_TO.options[1].text 	=  "안산    [190]";
+
+
+							d.TER_TO.options[2].value	= "100";
+							d.TER_TO.options[2].text 	=  "인천    [100]";
+
+		
+							d.TER_TO.options[3].value	= "316";
+							d.TER_TO.options[3].text 	=  "정안(상)휴게소[316]";
+
+
+							d.TER_TO.options[4].value	= "310";
+							d.TER_TO.options[4].text 	=  "천안    [310]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "100") {
+
+					d.TER_TO.length = 19;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[1].value	= "625";
+							d.TER_TO.options[1].text 	=  "남원    [625]";
+
+
+							d.TER_TO.options[2].value	= "300";
+							d.TER_TO.options[2].text 	=  "대전    [300]";
+
+
+							d.TER_TO.options[3].value	= "626";
+							d.TER_TO.options[3].text 	=  "덕과    [626]";
+
+
+							d.TER_TO.options[4].value	= "801";
+							d.TER_TO.options[4].text 	=  "대구한진[801]";
+
+
+							d.TER_TO.options[5].value	= "505";
+							d.TER_TO.options[5].text 	=  "목포    [505]";
+
+
+							d.TER_TO.options[6].value	= "700";
+							d.TER_TO.options[6].text 	=  "부산    [700]";
+
+
+							d.TER_TO.options[7].value	= "703";
+							d.TER_TO.options[7].text 	=  "부산사상[703]";
+
+
+							d.TER_TO.options[8].value	= "805";
+							d.TER_TO.options[8].text 	=  "서대구  [805]";
+
+		
+							d.TER_TO.options[9].value	= "812";
+							d.TER_TO.options[9].text 	=  "선산(하)휴게소[812]";
+
+
+							d.TER_TO.options[10].value	= "230";
+							d.TER_TO.options[10].text 	=  "속초    [230]";
+
+
+							d.TER_TO.options[11].value	= "515";
+							d.TER_TO.options[11].text 	=  "순천    [515]";
+
+
+							d.TER_TO.options[12].value	= "510";
+							d.TER_TO.options[12].text 	=  "여수    [510]";
+
+
+							d.TER_TO.options[13].value	= "509";
+							d.TER_TO.options[13].text 	=  "여천    [509]";
+
+
+							d.TER_TO.options[14].value	= "615";
+							d.TER_TO.options[14].text 	=  "익산    [615]";
+
+
+							d.TER_TO.options[15].value	= "602";
+							d.TER_TO.options[15].text 	=  "전주공용[602]";
+
+		
+							d.TER_TO.options[16].value	= "315";
+							d.TER_TO.options[16].text 	=  "정안(하)휴게소[315]";
+
+
+							d.TER_TO.options[17].value	= "722";
+							d.TER_TO.options[17].text 	=  "진주    [722]";
+
+		
+							d.TER_TO.options[18].value	= "238";
+							d.TER_TO.options[18].text 	=  "횡성(하)휴게소[238]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "583") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "580") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "602") {
+
+					d.TER_TO.length = 17;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "115";
+							d.TER_TO.options[0].text 	=  "고양    [115]";
+
+
+							d.TER_TO.options[1].value	= "500";
+							d.TER_TO.options[1].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[2].value	= "300";
+							d.TER_TO.options[2].text 	=  "대전    [300]";
+
+
+							d.TER_TO.options[3].value	= "305";
+							d.TER_TO.options[3].text 	=  "대전청사[305]";
+
+
+							d.TER_TO.options[4].value	= "802";
+							d.TER_TO.options[4].text 	=  "대구동양[802]";
+
+
+							d.TER_TO.options[5].value	= "032";
+							d.TER_TO.options[5].text 	=  "동서울  [032]";
+
+
+							d.TER_TO.options[6].value	= "700";
+							d.TER_TO.options[6].text 	=  "부산    [700]";
+
+
+							d.TER_TO.options[7].value	= "040";
+							d.TER_TO.options[7].text 	=  "상봉    [040]";
+
+
+							d.TER_TO.options[8].value	= "805";
+							d.TER_TO.options[8].text 	=  "서대구  [805]";
+
+
+							d.TER_TO.options[9].value	= "020";
+							d.TER_TO.options[9].text 	=  "서울    [020]";
+
+
+							d.TER_TO.options[10].value	= "120";
+							d.TER_TO.options[10].text 	=  "성남(분당)[120]";
+
+
+							d.TER_TO.options[11].value	= "715";
+							d.TER_TO.options[11].text 	=  "울산    [715]";
+
+
+							d.TER_TO.options[12].value	= "100";
+							d.TER_TO.options[12].text 	=  "인천    [100]";
+
+
+							d.TER_TO.options[13].value	= "125";
+							d.TER_TO.options[13].text 	=  "광명    [125]";
+
+
+							d.TER_TO.options[14].value	= "127";
+							d.TER_TO.options[14].text 	=  "오산    [127]";
+
+		
+							d.TER_TO.options[15].value	= "316";
+							d.TER_TO.options[15].text 	=  "정안(상)휴게소[316]";
+
+
+							d.TER_TO.options[16].value	= "126";
+							d.TER_TO.options[16].text 	=  "철산    [126]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "850") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "010";
+							d.TER_TO.options[0].text 	=  "서울경부[010]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "316") {
+
+					d.TER_TO.length = 13;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "115";
+							d.TER_TO.options[0].text 	=  "고양    [115]";
+
+
+							d.TER_TO.options[1].value	= "032";
+							d.TER_TO.options[1].text 	=  "동서울  [032]";
+
+
+							d.TER_TO.options[2].value	= "040";
+							d.TER_TO.options[2].text 	=  "상봉    [040]";
+
+
+							d.TER_TO.options[3].value	= "020";
+							d.TER_TO.options[3].text 	=  "서울호남[020]";
+
+
+							d.TER_TO.options[4].value	= "120";
+							d.TER_TO.options[4].text 	=  "성남(분당)[120]";
+
+
+							d.TER_TO.options[5].value	= "110";
+							d.TER_TO.options[5].text 	=  "수원    [110]";
+
+
+							d.TER_TO.options[6].value	= "195";
+							d.TER_TO.options[6].text 	=  "시흥(시화)[195]";
+
+
+							d.TER_TO.options[7].value	= "190";
+							d.TER_TO.options[7].text 	=  "안산    [190]";
+
+
+							d.TER_TO.options[8].value	= "130";
+							d.TER_TO.options[8].text 	=  "안성    [130]";
+
+
+							d.TER_TO.options[9].value	= "150";
+							d.TER_TO.options[9].text 	=  "용인    [150]";
+
+
+							d.TER_TO.options[10].value	= "170";
+							d.TER_TO.options[10].text 	=  "의정부  [170]";
+
+
+							d.TER_TO.options[11].value	= "100";
+							d.TER_TO.options[11].text 	=  "인천    [100]";
+
+
+							d.TER_TO.options[12].value	= "310";
+							d.TER_TO.options[12].text 	=  "천안    [310]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "315") {
+
+					d.TER_TO.length = 7;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[1].value	= "505";
+							d.TER_TO.options[1].text 	=  "목포    [505]";
+
+
+							d.TER_TO.options[2].value	= "515";
+							d.TER_TO.options[2].text 	=  "순천    [515]";
+
+
+							d.TER_TO.options[3].value	= "510";
+							d.TER_TO.options[3].text 	=  "여수    [510]";
+
+
+							d.TER_TO.options[4].value	= "509";
+							d.TER_TO.options[4].text 	=  "여천    [509]";
+
+
+							d.TER_TO.options[5].value	= "615";
+							d.TER_TO.options[5].text 	=  "익산    [615]";
+
+
+							d.TER_TO.options[6].value	= "602";
+							d.TER_TO.options[6].text 	=  "전주공용[602]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "630") {
+
+					d.TER_TO.length = 3;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "032";
+							d.TER_TO.options[0].text 	=  "동서울  [032]";
+
+
+							d.TER_TO.options[1].value	= "020";
+							d.TER_TO.options[1].text 	=  "서울    [020]";
+
+		
+							d.TER_TO.options[2].value	= "316";
+							d.TER_TO.options[2].text 	=  "정안(상)휴게소[316]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "450") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "010";
+							d.TER_TO.options[0].text 	=  "서울경부[010]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "350") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "010";
+							d.TER_TO.options[0].text 	=  "서울경부[010]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "590") {
+
+					d.TER_TO.length = 2;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+		
+							d.TER_TO.options[1].value	= "316";
+							d.TER_TO.options[1].text 	=  "정안(상)휴게소[316]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "650") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "722") {
+
+					d.TER_TO.length = 8;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[1].value	= "804";
+							d.TER_TO.options[1].text 	=  "대구중앙[804]";
+
+
+							d.TER_TO.options[2].value	= "031";
+							d.TER_TO.options[2].text 	=  "동서울  [031]";
+
+
+							d.TER_TO.options[3].value	= "805";
+							d.TER_TO.options[3].text 	=  "서대구  [805]";
+
+
+							d.TER_TO.options[4].value	= "010";
+							d.TER_TO.options[4].text 	=  "서울경부[010]";
+
+
+							d.TER_TO.options[5].value	= "120";
+							d.TER_TO.options[5].text 	=  "성남(분당)[120]";
+
+
+							d.TER_TO.options[6].value	= "110";
+							d.TER_TO.options[6].text 	=  "수원    [110]";
+
+
+							d.TER_TO.options[7].value	= "100";
+							d.TER_TO.options[7].text 	=  "인천    [100]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "710") {
+
+					d.TER_TO.length = 4;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "031";
+							d.TER_TO.options[0].text 	=  "동서울  [031]";
+
+
+							d.TER_TO.options[1].value	= "010";
+							d.TER_TO.options[1].text 	=  "서울경부[010]";
+
+		
+							d.TER_TO.options[2].value	= "813";
+							d.TER_TO.options[2].text 	=  "선산(상)휴게소[813]";
+
+
+
+							d.TER_TO.options[3].value	= "120";
+							d.TER_TO.options[3].text 	=  "성남(분당)[120]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "711") {
+
+					d.TER_TO.length = 4;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "031";
+							d.TER_TO.options[0].text 	=  "동서울  [031]";
+
+
+							d.TER_TO.options[1].value	= "010";
+							d.TER_TO.options[1].text 	=  "서울경부[010]";
+
+		
+							d.TER_TO.options[2].value	= "813";
+							d.TER_TO.options[2].text 	=  "선산(상)휴게소[813]";
+
+
+
+							d.TER_TO.options[3].value	= "120";
+							d.TER_TO.options[3].text 	=  "성남(분당)[120]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "126") {
+
+					d.TER_TO.length = 4;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "200";
+							d.TER_TO.options[0].text 	=  "강릉    [200]";
+
+
+							d.TER_TO.options[1].value	= "230";
+							d.TER_TO.options[1].text 	=  "속초    [230]";
+
+
+							d.TER_TO.options[2].value	= "127";
+							d.TER_TO.options[2].text 	=  "오산    [127]";
+
+
+							d.TER_TO.options[3].value	= "602";
+							d.TER_TO.options[3].text 	=  "전주공용[602]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "400") {
+
+					d.TER_TO.length = 8;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[1].value	= "803";
+							d.TER_TO.options[1].text 	=  "대구금호[803]";
+
+
+							d.TER_TO.options[2].value	= "031";
+							d.TER_TO.options[2].text 	=  "동서울  [031]";
+
+
+							d.TER_TO.options[3].value	= "700";
+							d.TER_TO.options[3].text 	=  "부산    [700]";
+
+
+							d.TER_TO.options[4].value	= "040";
+							d.TER_TO.options[4].text 	=  "상봉    [040]";
+
+
+							d.TER_TO.options[5].value	= "805";
+							d.TER_TO.options[5].text 	=  "서대구  [805]";
+
+
+							d.TER_TO.options[6].value	= "010";
+							d.TER_TO.options[6].text 	=  "서울경부[010]";
+
+		
+							d.TER_TO.options[7].value	= "812";
+							d.TER_TO.options[7].text 	=  "선산(하)휴게소[812]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "250") {
+
+					d.TER_TO.length = 3;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[1].value	= "804";
+							d.TER_TO.options[1].text 	=  "대구중앙[804]";
+
+
+							d.TER_TO.options[2].value	= "805";
+							d.TER_TO.options[2].text 	=  "서대구  [805]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "730") {
+
+					d.TER_TO.length = 9;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "520";
+							d.TER_TO.options[0].text 	=  "광양    [520]";
+
+
+							d.TER_TO.options[1].value	= "500";
+							d.TER_TO.options[1].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[2].value	= "301";
+							d.TER_TO.options[2].text 	=  "대전시외[301]";
+
+
+							d.TER_TO.options[3].value	= "525";
+							d.TER_TO.options[3].text 	=  "동광양  [525]";
+
+
+							d.TER_TO.options[4].value	= "010";
+							d.TER_TO.options[4].text 	=  "서울경부[010]";
+
+
+							d.TER_TO.options[5].value	= "050";
+							d.TER_TO.options[5].text 	=  "서울남부[050]";
+
+
+							d.TER_TO.options[6].value	= "120";
+							d.TER_TO.options[6].text 	=  "성남(분당)[120]";
+
+
+							d.TER_TO.options[7].value	= "516";
+							d.TER_TO.options[7].text 	=  "순천시외[516]";
+
+
+							d.TER_TO.options[8].value	= "510";
+							d.TER_TO.options[8].text 	=  "여수    [510]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "180") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "010";
+							d.TER_TO.options[0].text 	=  "서울경부[010]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "175") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "010";
+							d.TER_TO.options[0].text 	=  "서울경부[010]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "830") {
+
+					d.TER_TO.length = 5;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[1].value	= "300";
+							d.TER_TO.options[1].text 	=  "대전    [300]";
+
+
+							d.TER_TO.options[2].value	= "705";
+							d.TER_TO.options[2].text 	=  "마산    [705]";
+
+
+							d.TER_TO.options[3].value	= "010";
+							d.TER_TO.options[3].text 	=  "서울경부[010]";
+
+		
+							d.TER_TO.options[4].value	= "813";
+							d.TER_TO.options[4].text 	=  "선산(상)휴게소[813]";
+
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "581") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "595") {
+
+					d.TER_TO.length = 2;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+		
+							d.TER_TO.options[1].value	= "316";
+							d.TER_TO.options[1].text 	=  "정안(상)휴게소[316]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "586") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울호남[020]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "440") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "010";
+							d.TER_TO.options[0].text 	=  "서울경부[010]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "577") {
+
+					d.TER_TO.length = 1;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "020";
+							d.TER_TO.options[0].text 	=  "서울    [020]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "238") {
+
+					d.TER_TO.length = 4;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "200";
+							d.TER_TO.options[0].text 	=  "강릉    [200]";
+
+
+							d.TER_TO.options[1].value	= "210";
+							d.TER_TO.options[1].text 	=  "동해    [210]";
+
+
+							d.TER_TO.options[2].value	= "220";
+							d.TER_TO.options[2].text 	=  "삼척    [220]";
+
+
+							d.TER_TO.options[3].value	= "230";
+							d.TER_TO.options[3].text 	=  "속초    [230]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "239") {
+
+					d.TER_TO.length = 5;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "115";
+							d.TER_TO.options[0].text 	=  "고양    [115]";
+
+
+							d.TER_TO.options[1].value	= "300";
+							d.TER_TO.options[1].text 	=  "대전    [300]";
+
+
+							d.TER_TO.options[2].value	= "032";
+							d.TER_TO.options[2].text 	=  "동서울  [032]";
+
+
+							d.TER_TO.options[3].value	= "010";
+							d.TER_TO.options[3].text 	=  "서울경부[010]";
+
+
+							d.TER_TO.options[4].value	= "100";
+							d.TER_TO.options[4].text 	=  "인천    [100]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "310") {
+
+					d.TER_TO.length = 7;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "010";
+							d.TER_TO.options[0].text 	=  "서울경부[010]";
+
+
+							d.TER_TO.options[1].value	= "300";
+							d.TER_TO.options[1].text 	=  "대전    [300]";
+
+
+							d.TER_TO.options[2].value	= "715";
+							d.TER_TO.options[2].text 	=  "울산    [715]";
+
+		
+							d.TER_TO.options[3].value	= "812";
+							d.TER_TO.options[3].text 	=  "선산(하)휴게소[812]";
+
+
+							d.TER_TO.options[4].value	= "500";
+							d.TER_TO.options[4].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[5].value	= "615";
+							d.TER_TO.options[5].text 	=  "익산    [615]";
+
+
+							d.TER_TO.options[6].value	= "456";
+							d.TER_TO.options[6].text 	=  "정안(휴)[456]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "020") {
+
+					d.TER_TO.length = 27;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "620";
+							d.TER_TO.options[0].text 	=  "김제    [620]";
+
+
+							d.TER_TO.options[1].value	= "380";
+							d.TER_TO.options[1].text 	=  "연무대  [380]";
+
+
+							d.TER_TO.options[2].value	= "370";
+							d.TER_TO.options[2].text 	=  "논산    [370]";
+
+
+							d.TER_TO.options[3].value	= "535";
+							d.TER_TO.options[3].text 	=  "강진    [535]";
+
+
+							d.TER_TO.options[4].value	= "500";
+							d.TER_TO.options[4].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[5].value	= "610";
+							d.TER_TO.options[5].text 	=  "군산    [610]";
+
+
+							d.TER_TO.options[6].value	= "625";
+							d.TER_TO.options[6].text 	=  "남원    [625]";
+
+
+							d.TER_TO.options[7].value	= "540";
+							d.TER_TO.options[7].text 	=  "고흥    [540]";
+
+
+							d.TER_TO.options[8].value	= "545";
+							d.TER_TO.options[8].text 	=  "녹동    [545]";
+
+
+							d.TER_TO.options[9].value	= "582";
+							d.TER_TO.options[9].text 	=  "담양    [582]";
+
+
+							d.TER_TO.options[10].value	= "505";
+							d.TER_TO.options[10].text 	=  "목포    [505]";
+
+
+							d.TER_TO.options[11].value	= "554";
+							d.TER_TO.options[11].text 	=  "보성    [554]";
+
+
+							d.TER_TO.options[12].value	= "555";
+							d.TER_TO.options[12].text 	=  "벌교    [555]";
+
+
+							d.TER_TO.options[13].value	= "515";
+							d.TER_TO.options[13].text 	=  "순천    [515]";
+
+
+							d.TER_TO.options[14].value	= "510";
+							d.TER_TO.options[14].text 	=  "여수    [510]";
+
+
+							d.TER_TO.options[15].value	= "509";
+							d.TER_TO.options[15].text 	=  "여천    [509]";
+
+
+							d.TER_TO.options[16].value	= "560";
+							d.TER_TO.options[16].text 	=  "영광    [560]";
+
+
+							d.TER_TO.options[17].value	= "530";
+							d.TER_TO.options[17].text 	=  "나주    [530]";
+
+
+							d.TER_TO.options[18].value	= "565";
+							d.TER_TO.options[18].text 	=  "영산포  [565]";
+
+
+							d.TER_TO.options[19].value	= "575";
+							d.TER_TO.options[19].text 	=  "완도    [575]";
+
+
+							d.TER_TO.options[20].value	= "360";
+							d.TER_TO.options[20].text 	=  "유성    [360]";
+
+
+							d.TER_TO.options[21].value	= "615";
+							d.TER_TO.options[21].text 	=  "익산    [615]";
+
+
+							d.TER_TO.options[22].value	= "600";
+							d.TER_TO.options[22].text 	=  "전주    [600]";
+
+
+							d.TER_TO.options[23].value	= "630";
+							d.TER_TO.options[23].text 	=  "정읍    [630]";
+
+
+							d.TER_TO.options[24].value	= "590";
+							d.TER_TO.options[24].text 	=  "진도    [590]";
+
+
+							d.TER_TO.options[25].value	= "595";
+							d.TER_TO.options[25].text 	=  "해남    [595]";
+
+
+							d.TER_TO.options[26].value	= "456";
+							d.TER_TO.options[26].text 	=  "정안(휴)[456]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "032") {
+
+					d.TER_TO.length = 9;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "520";
+							d.TER_TO.options[0].text 	=  "광양    [520]";
+
+
+							d.TER_TO.options[1].value	= "500";
+							d.TER_TO.options[1].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[2].value	= "600";
+							d.TER_TO.options[2].text 	=  "전주    [600]";
+
+
+							d.TER_TO.options[3].value	= "630";
+							d.TER_TO.options[3].text 	=  "정읍    [630]";
+
+
+							d.TER_TO.options[4].value	= "200";
+							d.TER_TO.options[4].text 	=  "강릉    [200]";
+
+
+							d.TER_TO.options[5].value	= "456";
+							d.TER_TO.options[5].text 	=  "정안(휴)[456]";
+
+
+							d.TER_TO.options[6].value	= "210";
+							d.TER_TO.options[6].text 	=  "동해    [210]";
+
+
+							d.TER_TO.options[7].value	= "220";
+							d.TER_TO.options[7].text 	=  "삼척    [220]";
+
+		
+							d.TER_TO.options[8].value	= "239";
+							d.TER_TO.options[8].text 	=  "횡성(휴)[239]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "190") {
+
+					d.TER_TO.length = 3;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[1].value	= "615";
+							d.TER_TO.options[1].text 	=  "익산    [615]";
+
+
+							d.TER_TO.options[2].value	= "456";
+							d.TER_TO.options[2].text 	=  "정안(휴)[456]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+		if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "456") {
+
+					d.TER_TO.length = 24;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "500";
+							d.TER_TO.options[0].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[1].value	= "615";
+							d.TER_TO.options[1].text 	=  "익산    [615]";
+
+
+							d.TER_TO.options[2].value	= "505";
+							d.TER_TO.options[2].text 	=  "목포    [505]";
+
+
+							d.TER_TO.options[3].value	= "600";
+							d.TER_TO.options[3].text 	=  "전주공용[600]";
+
+
+							d.TER_TO.options[4].value	= "620";
+							d.TER_TO.options[4].text 	=  "김제    [620]";
+
+
+							d.TER_TO.options[5].value	= "380";
+							d.TER_TO.options[5].text 	=  "연무대  [380]";
+
+
+							d.TER_TO.options[6].value	= "370";
+							d.TER_TO.options[6].text 	=  "논산    [370]";
+
+
+							d.TER_TO.options[7].value	= "535";
+							d.TER_TO.options[7].text 	=  "강진    [535]";
+
+
+							d.TER_TO.options[8].value	= "610";
+							d.TER_TO.options[8].text 	=  "군산    [610]";
+
+
+							d.TER_TO.options[9].value	= "625";
+							d.TER_TO.options[9].text 	=  "남원    [625]";
+
+
+							d.TER_TO.options[10].value	= "540";
+							d.TER_TO.options[10].text 	=  "고흥    [540]";
+
+
+							d.TER_TO.options[11].value	= "545";
+							d.TER_TO.options[11].text 	=  "녹동    [545]";
+
+
+							d.TER_TO.options[12].value	= "582";
+							d.TER_TO.options[12].text 	=  "담양    [582]";
+
+
+							d.TER_TO.options[13].value	= "554";
+							d.TER_TO.options[13].text 	=  "보성    [554]";
+
+
+							d.TER_TO.options[14].value	= "555";
+							d.TER_TO.options[14].text 	=  "벌교    [555]";
+
+
+							d.TER_TO.options[15].value	= "515";
+							d.TER_TO.options[15].text 	=  "순천    [515]";
+
+
+							d.TER_TO.options[16].value	= "510";
+							d.TER_TO.options[16].text 	=  "여수    [510]";
+
+
+							d.TER_TO.options[17].value	= "560";
+							d.TER_TO.options[17].text 	=  "영광    [560]";
+
+
+							d.TER_TO.options[18].value	= "530";
+							d.TER_TO.options[18].text 	=  "나주    [530]";
+
+
+							d.TER_TO.options[19].value	= "565";
+							d.TER_TO.options[19].text 	=  "영산포  [565]";
+
+
+							d.TER_TO.options[20].value	= "575";
+							d.TER_TO.options[20].text 	=  "완도    [575]";
+
+
+							d.TER_TO.options[21].value	= "630";
+							d.TER_TO.options[21].text 	=  "정읍    [630]";
+
+
+							d.TER_TO.options[22].value	= "590";
+							d.TER_TO.options[22].text 	=  "진도    [590]";
+
+
+							d.TER_TO.options[23].value	= "595";
+							d.TER_TO.options[23].text 	=  "해남    [595]";
+
+		}// script : if(d.TER_FR.value... 의 끝
+
+
+
+	} else {
+			d.TER_TO.length = 1;
+			d.TER_TO.options[0].value 	= "";
+			d.TER_TO.options[0].text 	= "선택";
+	}
+}// script : function 의 끝
+
+function fc_Setdate() {
+
+	//document.InputForm.Tim_date_Year.selectedIndex = 0;
+	document.InputForm.Tim_date_Month.selectedIndex = 9;
+	document.InputForm.Tim_date_Day.selectedIndex   = 3;
+	
+	  //공지창 주말만 소요시간 보이게
+
+}
+
+//건설 교통 인재 교육원
+function fc_popUp(url) {
+
+	sealWin=window.open(url,"win",'toolbar=1,location=1,directories=1,status=1,menubar=1,scrollbars=1,resizable=1,width=750,height=550');
+	self.name = "mainWin";
+
+}
+
+function fc_openWindow(url) {
+
+	popUpWin = window.open(url, 'newWin', 'toolbar=0,location=no,directories=0,status=0,menubar=0,scrollbars=0,resizable=no,width=390,height=550,top=020,left=020');
+
+    if(navigator.appName == 'Netscape') {
+    	popUpWin.focus();
+    }
+}
+
+function fc_openWindow2(url1) {
+
+	popUpWin = window.open(url1, 'Win', 'toolbar=0,directories=0,status=0,menubar=0,scrollbars=0,resizable=no,width=300,height=650,top=020,left=430');
+
+    if(navigator.appName == 'Netscape') {
+		popUpWin.focus();
+	}
+}
+
+function fc_openWindow3(url2) {
+
+	popUpWin = window.open(url2, 'oldWin', 'toolbar=0,directories=0,status=0,menubar=0,scrollbars=0,resizable=no,width=300,height=325,top=020,left=630');
+
+	if(navigator.appName == 'Netscape') {
+		popUpWin.focus();
+	}
+}
+
+function fc_HomeTicketRepeat() {
+
+	window.open('/flash/flash01/useinfo.swf','', 'width=798, height=459, left=250, top=50, scrollbars=no, resizable=no status=no');
+}
+
+
+//-->
+
+</script>
+<meta name="generator" content="Namo WebEditor">
+
+</head>
+
+		<body onLoad="fc_Setdate(); MM_preloadImages('/images/image01/t_home_o.gif','/images/image01/t_sitemap_o.gif','/images/image01/t_contactus_o.gif','/images/image01/t_english_o.gif','/images/image01/c_quick01_o.gif','/images/image01/c_quick02_o.gif','/images/image01/c_quick03_o.gif','/images/image01/m_q1_o.gif');" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" >
+
+<div id="Layer1" style="position:absolute; left:252px; top:180px; width:450px; height:200px; z-index:5">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td><script>flashWrite('/flash/flash01/wonlink.swf','550','200')</script></td>
+		</tr>
+	</table> 
+</div><!--div id="Layer2" style="position:absolute; left:723px; top:173px; width:283px; height:200px; z-index:6">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td><script>flashWrite('/flash/flash01/main.swf','300','350')</script></td>
+		</tr>
+	</table>
+</div--><table width="100%" border="0" cellpadding="0" cellspacing="0">
+   <!-- 공지창 주말만 소요시간 보이게 -->
+	<form name=frmkongi method="post" target="kongi" action="http://210.207.244.43/web/kongji.jsp">		
+	</form>
+	<tr>
+		<td background="/images/image01/top_m_bg.gif">
+			<table width="990" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="200" height="100" rowspan="2" align="center" valign="top">
+						<!--로고-->
+						<script>flashWrite('/flash/flash01/logo.swf','200','100')</script></td>
+					<td align="right" valign="top"><table border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td><a href="javascript:goHome()" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','/images/image01/t_home_o.gif',1)"><img src="/images/image01/t_home.gif" name="Image3" width="45" height="33" border="0"></a></td>
+								<td><a href="javascript:go7(1)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','/images/image01/t_sitemap_o.gif',1)"><img src="/images/image01/t_sitemap.gif" name="Image6" width="57" height="33"  border="0"></a></td>
+								<td><a href="javascript:mail(1)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','/images/image01/t_contactus_o.gif',1)"><img src="/images/image01/t_contactus.gif" name="Image7" width="76" height="33" border="0"></a></td>
+								<td><a href="javascript:etc(2)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','/images/image01/t_english_o.gif',1)"><img src="/images/image01/t_english.gif" name="Image8" width="57" height="33"  border="0"></a></td>
+							</tr>
+						</table></td>
+				</tr>
+				<tr>
+					<td height="67" valign="top" background="/images/image01/menu_bg.gif"><script>flashWrite('/flash/flash01/menu.swf','790','67')</script></td>
+				</tr>
+			</table></td>
+	</tr>
+
+	<tr>
+		<td background="/images/image01/m_bg.jpg"><table width="990" height="281" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="16"><img src="/images/image01/left_color.gif" width="16" height="281"></td>
+					<td width="231" valign="bottom">
+						<!--예약폼 시작-->
+						<table width="90%" border="0" cellpadding="0" cellspacing="0">
+						<form name="InputForm" method="post"  action="./03_reservation/reservation01_1.jsp" onSubmit="return fc_Select()">
+
+							<tr>
+								<td><img src="/images/image01/l_r_t.gif" width="231" height="18"></td>
+							</tr>
+							<tr>
+								<td height="96" valign="top" background="/images/image01/l_r_bg.gif" style="Padding:0 5 0 5"> <table border="0" cellpadding="1" cellspacing="0" width="220">
+										<tr>
+											<td class=msfont><img src="/images/image01/l_r_icon.gif" width="8" height="7">출발지</td>
+											<td> <select name="TER_FR" onChange="fc_ChangeTer()" onBlur="setStatus()" class=form>
+													<option value="">선 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 택</option>
+
+													<option value="200" >강릉    [200]</option>
+
+													<option value="535" >강진    [535]</option>
+
+													<option value="815" >경주    [815]</option>
+
+													<option value="355" >고대홍대[355]</option>
+
+													<option value="115" >고양    [115]</option>
+
+													<option value="540" >고흥    [540]</option>
+
+													<option value="320" >공주    [320]</option>
+
+													<option value="125" >광명    [125]</option>
+
+													<option value="520" >광양    [520]</option>
+
+													<option value="500" >광주    [500]</option>
+
+													<option value="169" >구리    [169]</option>
+
+													<option value="810" >구미    [810]</option>
+
+													<option value="610" >군산    [610]</option>
+
+													<option value="330" >금산    [330]</option>
+
+													<option value="620" >김제    [620]</option>
+
+													<option value="820" >김천    [820]</option>
+
+													<option value="735" >김해    [735]</option>
+
+													<option value="736" >김해장유[736]</option>
+
+													<option value="530" >나주    [530]</option>
+
+													<option value="625" >남원    [625]</option>
+
+													<option value="706" >내서    [706]</option>
+
+													<option value="579" >노력항  [579]</option>
+
+													<option value="545" >녹동    [545]</option>
+
+													<option value="370" >논산    [370]</option>
+
+													<option value="587" >능주    [587]</option>
+
+													<option value="582" >담양    [582]</option>
+
+													<option value="300" >대전    [300]</option>
+
+													<option value="305" >대전청사[305]</option>
+
+													<option value="626" >덕과    [626]</option>
+
+													<option value="525" >동광양  [525]</option>
+
+													<option value="802" >대구동양[802]</option>
+
+													<option value="801" >대구한진[801]</option>
+
+													<option value="803" >대구금호[803]</option>
+
+													<option value="804" >대구중앙[804]</option>
+
+													<option value="031" >동서울  [031]</option>
+
+													<option value="210" >동해    [210]</option>
+
+													<option value="705" >마산    [705]</option>
+
+													<option value="505" >목포    [505]</option>
+
+													<option value="550" >무안    [550]</option>
+
+													<option value="584" >문장    [584]</option>
+
+													<option value="555" >벌교    [555]</option>
+
+													<option value="554" >보성    [554]</option>
+
+													<option value="700" >부산    [700]</option>
+
+													<option value="703" >부산사상[703]</option>
+
+													<option value="220" >삼척    [220]</option>
+
+													<option value="591" >삼호    [591]</option>
+
+													<option value="040" >상봉    [040]</option>
+
+													<option value="825" >상주    [825]</option>
+
+													<option value="805" >서대구  [805]</option>
+
+													<option value="109" >서수원  [109]</option>
+
+													<option value="010" >서울경부[010]</option>
+
+													<option value="812" >선산(하)휴게소[812]</option>
+
+													<option value="813" >선산(상)휴게소[813]</option>
+
+													<option value="120" >성남(분당)[120]</option>
+
+													<option value="230" >속초    [230]</option>
+
+													<option value="110" >수원    [110]</option>
+
+													<option value="645" >순창    [645]</option>
+
+													<option value="515" >순천    [515]</option>
+
+													<option value="516" >순천시외[516]</option>
+
+													<option value="195" >시흥(시화)[195]</option>
+
+													<option value="114" >신갈시외[114]</option>
+
+													<option value="341" >아산서부[341]</option>
+
+													<option value="130" >안성    [130]</option>
+
+													<option value="133" >안성공도[133]</option>
+
+													<option value="137" >안성대림[137]</option>
+
+													<option value="131" >안성중대[131]</option>
+
+													<option value="132" >안성풍림[132]</option>
+
+													<option value="134" >안성한경[134]</option>
+
+													<option value="270" >양양    [270]</option>
+
+													<option value="510" >여수    [510]</option>
+
+													<option value="140" >여주    [140]</option>
+
+													<option value="509" >여천    [509]</option>
+
+													<option value="380" >연무대  [380]</option>
+
+													<option value="560" >영광    [560]</option>
+
+													<option value="565" >영산포  [565]</option>
+
+													<option value="570" >영암    [570]</option>
+
+													<option value="845" >영천    [845]</option>
+
+													<option value="127" >오산    [127]</option>
+
+													<option value="340" >온양    [340]</option>
+
+													<option value="575" >완도    [575]</option>
+
+													<option value="150" >용인    [150]</option>
+
+													<option value="149" >용인유방[149]</option>
+
+													<option value="715" >울산    [715]</option>
+
+													<option value="716" >울산신복[716]</option>
+
+													<option value="240" >원주    [240]</option>
+
+													<option value="360" >유성    [360]</option>
+
+													<option value="170" >의정부  [170]</option>
+
+													<option value="160" >이천    [160]</option>
+
+													<option value="615" >익산    [615]</option>
+
+													<option value="616" >익산팔봉[616]</option>
+
+													<option value="100" >인천    [100]</option>
+
+													<option value="583" >장성    [583]</option>
+
+													<option value="580" >장흥    [580]</option>
+
+													<option value="602" >전주    [602]</option>
+
+													<option value="850" >점촌    [850]</option>
+
+													<option value="316" >정안(상)휴게소[316]</option>
+
+													<option value="315" >정안(하)휴게소[315]</option>
+
+													<option value="630" >정읍    [630]</option>
+
+													<option value="450" >제천    [450]</option>
+
+													<option value="350" >조치원  [350]</option>
+
+													<option value="590" >진도    [590]</option>
+
+													<option value="650" >진안    [650]</option>
+
+													<option value="722" >진주    [722]</option>
+
+													<option value="710" >창원    [710]</option>
+
+													<option value="711" >창원역  [711]</option>
+
+													<option value="126" >철산    [126]</option>
+
+													<option value="400" >청주    [400]</option>
+
+													<option value="250" >춘천    [250]</option>
+
+													<option value="730" >통영    [730]</option>
+
+													<option value="180" >평택    [180]</option>
+
+													<option value="175" >평택대  [175]</option>
+
+													<option value="830" >포항    [830]</option>
+
+													<option value="581" >함평    [581]</option>
+
+													<option value="595" >해남    [595]</option>
+
+													<option value="586" >화순    [586]</option>
+
+													<option value="440" >황간    [440]</option>
+
+													<option value="577" >회진    [577]</option>
+
+													<option value="238" >횡성(하)휴게소[238]</option>
+
+													<option value="239" >횡성(상)휴게소[239]</option>
+
+													<option value="310" >천안*ⓔ[310]</option>
+
+													<option value="020" >센트럴*ⓔ[020]</option>
+
+													<option value="032" >동서울*ⓔ[032]</option>
+
+													<option value="190" >안산*ⓔ[190]</option>
+
+
+													<option value="456" >정안(휴)*ⓔ[456]</option>
+
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class=msfont><img src="/images/image01/l_r_icon.gif" width="8" height="7">도착지</td>
+											<td> <select   name="TER_TO"  class=form>
+													<option value="">선 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 택</option>
+
+												</select> </td>
+										</tr>
+										<tr>
+							
+											<td valign="top" class=msfont2><img src="/images/image01/l_r_icon.gif" width="8" height="7">출발일시</td>
+											<td> <select  name="Tim_date_Year" onChange="fc_ChangeDate(this.form)"  class=form>
+
+													<option value="2011">2011</option>
+
+													<option value="2012">2012</option>
+
+													<option value="2013">2013</option>
+
+													<option value="2014">2014</option>
+
+													<option value="2015">2015</option>
+
+													<option value="2016">2016</option>
+
+												</select>
+												년
+												<select name="Tim_date_Month" onChange="fc_ChangeDate(this.form)" class=form>
+
+													<option value="01" >1</option>
+
+													<option value="02" >2</option>
+
+													<option value="03" >3</option>
+
+													<option value="04" >4</option>
+
+													<option value="05" >5</option>
+
+													<option value="06" >6</option>
+
+													<option value="07" >7</option>
+
+													<option value="08" >8</option>
+
+													<option value="09" >9</option>
+
+													<option value="10"  selected>10</option>
+
+													<option value="11" >11</option>
+
+													<option value="12" >12</option>
+
+												</select>
+												<!-- 현재시간+1시간으로셋팅 -->
+												월<br> <select name="Tim_date_Day" onChange="fc_ChgDay(this.form)" class=form>
+
+												<script language="JavaScript">
+												<!--
+												for(k=1; k <= checkMonth(document.InputForm.Tim_date_Year.options[document.InputForm.Tim_date_Year.selectedIndex].value, document.InputForm.Tim_date_Month.options[document.InputForm.Tim_date_Month.selectedIndex].value); k++) {
+
+													document.write("<option value=" + addZero(k) + ">" + k + "</option>");
+												}
+												//-->
+												</script>
+
+												</select>
+												일
+												<select name="TIM_TIM_I" class=form>
+													<option value="">선 택</option>
+													<option value="0000">00:00
+
+												</option><option value="0100" >01:00
+
+												</option><option value="0200" >02:00
+
+												</option><option value="0300" >03:00
+
+												</option><option value="0400" >04:00
+
+												</option><option value="0500" >05:00
+
+												</option><option value="0600" >06:00
+
+												</option><option value="0700" >07:00
+
+												</option><option value="0800" >08:00
+
+												</option><option value="0900" >09:00
+
+												</option><option value="1000" >10:00
+
+												</option><option value="1100" >11:00
+
+												</option><option value="1200" >12:00
+
+												</option><option value="1300" >13:00
+
+												</option><option value="1400" >14:00
+
+												</option><option value="1500" >15:00
+
+												</option><option value="1600" >16:00
+
+												</option><option value="1700" >17:00
+
+												</option><option value="1800" >18:00
+
+												</option><option value="1900" >19:00
+
+												</option><option value="2000" >20:00
+
+												</option><option value="2100" >21:00
+
+												</option><option value="2200" >22:00
+
+												</option><option value="2300" selected>23:00
+
+												</option><option value="2400" >24:00
+
+												</option></select>
+												이후 </td>
+										</tr>
+										<tr>
+											<td class=msfont><img src="/images/image01/l_r_icon.gif" width="8" height="7">등급</td>
+											<td> <select name="BUS_GRA_I" class=form>
+													<option value="0">전체등급
+												</option><option value="2" >일반고속
+												</option><option value="1" >우등고속
+												</option><option value="3" >심야우등
+												</option><option value="4" >심야고속
+												</option></select>
+											</td>
+										</tr>
+										<tr>
+											<td class=msfont><img src="/images/image01/l_r_icon.gif" width="8" height="7">매수</td>
+											<td>어른
+												<select name="pCnt_100" onChange="fc_SeatCheck100()" class=form>
+
+													<option value="0">&nbsp;0
+
+													<option value="1">&nbsp;1
+
+													<option value="2">&nbsp;2
+
+													<option value="3">&nbsp;3
+
+													<option value="4">&nbsp;4
+
+													<option value="5">&nbsp;5
+
+													<option value="6">&nbsp;6
+
+													<option value="7">&nbsp;7
+
+													<option value="8">&nbsp;8
+
+													<option value="9">&nbsp;9
+
+													<option value="10">&nbsp;10
+
+													<option value="11">&nbsp;11
+
+													<option value="12">&nbsp;12
+
+													<option value="13">&nbsp;13
+
+													<option value="14">&nbsp;14
+
+													<option value="15">&nbsp;15
+
+													<option value="16">&nbsp;16
+
+													<option value="17">&nbsp;17
+
+													<option value="18">&nbsp;18
+
+													<option value="19">&nbsp;19
+
+													<option value="20">&nbsp;20
+
+													<option value="21">&nbsp;21
+
+													<option value="22">&nbsp;22
+
+													<option value="23">&nbsp;23
+
+													<option value="24">&nbsp;24
+
+													<option value="25">&nbsp;25
+
+													<option value="26">&nbsp;26
+
+													<option value="27">&nbsp;27
+
+													<option value="28">&nbsp;28
+
+													<option value="29">&nbsp;29
+
+													<option value="30">&nbsp;30
+
+													<option value="31">&nbsp;31
+
+													<option value="32">&nbsp;32
+
+													<option value="33">&nbsp;33
+
+													<option value="34">&nbsp;34
+
+													<option value="35">&nbsp;35
+
+													<option value="36">&nbsp;36
+
+													<option value="37">&nbsp;37
+
+													<option value="38">&nbsp;38
+
+													<option value="39">&nbsp;39
+
+													<option value="40">&nbsp;40
+
+												</option></select>
+												아동
+												<select name="pCnt_050" onChange="fc_SeatCheck50()" class=form>
+
+													<option value="0">&nbsp;0
+
+													<option value="1">&nbsp;1
+
+													<option value="2">&nbsp;2
+
+													<option value="3">&nbsp;3
+
+													<option value="4">&nbsp;4
+
+													<option value="5">&nbsp;5
+
+													<option value="6">&nbsp;6
+
+													<option value="7">&nbsp;7
+
+													<option value="8">&nbsp;8
+
+													<option value="9">&nbsp;9
+
+													<option value="10">&nbsp;10
+
+													<option value="11">&nbsp;11
+
+													<option value="12">&nbsp;12
+
+													<option value="13">&nbsp;13
+
+													<option value="14">&nbsp;14
+
+													<option value="15">&nbsp;15
+
+													<option value="16">&nbsp;16
+
+													<option value="17">&nbsp;17
+
+													<option value="18">&nbsp;18
+
+													<option value="19">&nbsp;19
+
+													<option value="20">&nbsp;20
+
+													<option value="21">&nbsp;21
+
+													<option value="22">&nbsp;22
+
+													<option value="23">&nbsp;23
+
+													<option value="24">&nbsp;24
+
+													<option value="25">&nbsp;25
+
+													<option value="26">&nbsp;26
+
+													<option value="27">&nbsp;27
+
+													<option value="28">&nbsp;28
+
+													<option value="29">&nbsp;29
+
+													<option value="30">&nbsp;30
+
+													<option value="31">&nbsp;31
+
+													<option value="32">&nbsp;32
+
+													<option value="33">&nbsp;33
+
+													<option value="34">&nbsp;34
+
+													<option value="35">&nbsp;35
+
+													<option value="36">&nbsp;36
+
+													<option value="37">&nbsp;37
+
+													<option value="38">&nbsp;38
+
+													<option value="39">&nbsp;39
+
+													<option value="40">&nbsp;40
+
+
+												</option></select>
+											</td>
+										</tr>
+									</table></td>
+							</tr>
+							<tr>
+								<td height="35" align="center" valign="middle" background="/images/image01/l_r_b2.gif" style="Padding:2 10 0 10"><table>
+											<tr align="center">
+											    <td><img name="image" style="cursor:hand"  src="/images/image01/re_btn2.gif"   border="0"  onclick="fc_Select('2')" ></td>
+											    <td><img name="image" style="cursor:hand"  src="/images/image01/re_btn.gif"    border="0"  onclick="fc_Select('1')" ></td>
+										</tr>
+									</table></td>
+							</tr>
+							<tr>
+								<td><img src="/images/image01/l_r_b.gif" width="231" height="31"></td>
+							</tr>
+							</form></table>
+							
+							<!-- 이지인터넷연계추가소스-->
+							<form name="easy" target="_blank" action="./03_reservation/reservation01_kobus.jsp" method="post" style="margin:0px">
+								<input type="hidden" name="searchStTermNbr" value="">
+								<input type="hidden" name="searchArTermNbr" value="">
+								<input type="hidden" name="searchDate" value="">
+								<input type="hidden" name="searchTime" value="">
+							</form>
+
+							<!--예약폼 끝-->
+					</td>
+					<td width="743" valign="top" background="/images/image01/index_img.jpg"><script>flashWrite('/flash/flash01/main.swf','743','281')</script></td>
+				</tr>
+			</table></td>
+	</tr>
+	<tr>
+		<td background="/images/image01/con_main_bg.gif"><table width="990" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="16" rowspan="2" valign="top" bgcolor="7DC2E1"><img src="/images/image01/left_color2.gif" width="16" height="315"></td>
+					<td colspan="3" style><img src="/images/image01/c_top.gif" width="16" height="26"></td>
+				</tr>
+				<tr>
+					<td width="231" valign="top" style="padding:0 16 0 16 "><table width="100%" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td><img src="/images/image01/l_top.gif" width="199" height="59"></td>
+										</tr>
+										<tr>
+											<td><a href="javascript:go1(15)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image39','','/images/image01/l_txt01_o.gif',1)"><img src="/images/image01/l_txt01.gif" name="Image39" width="199" height="19" border="0"></a></td>
+										</tr>
+										<tr>
+											<td><a href="javascript:go1(9)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image40','','/images/image01/l_txt02_o.gif',1)"><img src="/images/image01/l_txt02.gif" name="Image40" width="199" height="17" border="0"></a></td>
+										</tr>
+										<tr>
+											<td><a href="javascript:go1(10)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image41','','/images/image01/l_txt03_o.gif',1)"><img src="/images/image01/l_txt03.gif" name="Image41" width="199" height="18" border="0"></a></td>
+										</tr>
+										<tr>
+											<td><a href="javascript:go5(4)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image42','','/images/image01/l_txt04_o.gif',1)"><img src="/images/image01/l_txt04.gif" name="Image42" width="199" height="18" border="0"></a></td>
+										</tr>
+										<tr>
+											<td><a href="http://www.seoul.npa.go.kr" target="_blank" onMouseOver="MM_swapImage('Image43','','/images/image01/l_txt05_o.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="/images/image01/l_txt05.gif" name="Image43" width="199" height="18" border="0"></a></td>
+										</tr>
+										<tr>
+											<td><a href="http://www.freeway.co.kr" target="_blank" onMouseOver="MM_swapImage('Image44','','/images/image01/l_txt06_o.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="/images/image01/l_txt06.gif" name="Image44" width="199" height="18" border="0"></a></td>
+										</tr>
+										<tr>
+											<td><a href="javascript:go1(11)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image45','','/images/image01/l_txt07_o.gif',1)"><img src="/images/image01/l_txt07.gif" name="Image45" width="199" height="18" border="0"></a></td>
+										</tr>
+										<tr>
+											<td><img src="/images/image01/l_bottom.gif" width="199" height="13"></td>
+										</tr>
+									</table></td>
+							</tr>
+							<tr>
+								<td style="padding:10 0 0 0 "><a href="http://www.hticket.co.kr" target="_blank"><img src="/images/image01/easyticket_logo.jpg" width="199" height="53" border="0"></a></td>
+							</tr>
+							<tr>
+								<!--<td style="padding:10 0 0 0 "><a href="javascript:go6(63)"><img src="/images/image01/l_banner1.gif" width="199" height="63" border="0"></a></td>-->
+								<td style="padding:10 0 0 0 "><center><a href="http://www.tago.go.kr"><img src="/images/image01/tago_logo.gif" width="199" height="54" border="0"></a></center></td>
+							</tr>
+							<tr>
+								<td style="padding:10 0 0 0 "><a href="http://www.freeway.co.kr" target="_blank"><img src="/images/image01/l_banner2.gif" width="199" height="40" border="0"></a></td>
+							</tr>
+							<tr>
+								<td style="padding:10 0 0 0 "><a href="http://www.intis.or.kr" target="_blank"><img src="/images/image01/intis.jpg" width="199" height="56" border="0"></a></td>
+							</tr>
+						</table></td>
+					<td width="744" colspan="2" valign="top"><table width="743" border="0" cellpadding="0" cellspacing="0" dwcopytype="CopyTableCell">
+							<tr>
+								<td width="363" valign="top" style="padding:0 14 0 14 "><!-- 공지사항=--><table width="335" border="0" cellspacing="0" cellpadding="0">
+										<tr>
+											<td width="87" valign="top" bgcolor="3B84AD"><img src="/images/image01/tit_notice.gif" width="87" height="21"></td>
+											<td align="right" bgcolor="3B84AD"><a href="./08_notice/notice01.jsp"><img src="/images/image01/tit_notice_more.gif" width="44" height="21" border="0"></a></td>
+										</tr>
+										<tr>
+											<td style = "padding :8 0 0 0" height="104" colspan="2" valign="top">
+											<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<td valign="top">
+
+														<table width="100%" border="0" cellspacing="0" cellpadding="0">
+															<tr valign="top">
+																<td width="18" height="66" align="center" style="padding:0 5 4 0"><img src="/images/image01/tit_notice_img.gif" width="71" height="56"></td>
+																<td>
+
+																<table width="100%" border="0" cellspacing="0">
+
+																	<tr>
+																		<td height="22"><font color="#008080"><strong><a href="./08_notice/notice01_view.jsp?pBckpgm=index&pID=000064&pCOD=4&pSTR=20110808&pRegDte=20110808">스마트폰 어플리케이션 관련                                                      </a></strong></font>
+
+																	</tr>
+																	<tr>
+																		<td height="42"><스마트폰 어플리케이션 관련><br><br>
+
+- 당사는 현재 웹페이지(www....</td>
+																	</tr>
+
+																</table>
+
+																</td>
+															</tr>
+														</table>
+
+														<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+															<tr>
+																<td width="18" height="21" align="right"><img src="/images/image01/tit_icon.gif" width="10" height="8"></td>
+																<td width="273"><a href="./08_notice/notice01_view.jsp?pBckpgm=index&pID=000062&pCOD=4&pSTR=20100913&pRegDte=20100913">포항시청 앞 무인발권기 승차안내                                                 </a>
+
+																<td width="80">2010-09-13</td>
+
+															</tr>
+
+															<tr>
+																<td height="1" colspan="3" align="center" bgcolor="#efefef"></td>
+															</tr>
+
+															<tr>
+																<td width="18" height="21" align="right"><img src="/images/image01/tit_icon.gif" width="10" height="8"></td>
+																<td width="273"><a href="./08_notice/notice01_view.jsp?pBckpgm=index&pID=000050&pCOD=4&pSTR=20071008&pRegDte=20071008"><체크카드 사용 제한시간 안내>                                                   </a>
+
+																<td width="80">2007-10-08</td>
+
+															</tr>
+
+															<tr>
+																<td height="1" colspan="3" align="center" bgcolor="#efefef"></td>
+															</tr>
+
+														</table>
+
+
+													</td>
+											</table>
+											</td>
+										</tr>
+									</table><!-- 공지사항end--></td>
+								<td width="380" style="padding:0 0 0 14 ">
+									<!-- 오른쪽게시판-->
+									<table width="367" height="143" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td height="143" valign="top">
+
+												<div id="notice" style="position:absolute; left:623px; top:405px; width:356px; height:124px; z-index:1; visibility: visible;">
+													<table width="367" border="0" cellpadding="0" cellspacing="0">
+														<tr>
+															<td colspan="3" valign="top"><table width="367" border="0" cellpadding="0" cellspacing="0" background="/images/image01/tit_bg2.gif">
+																	<tr>
+																		<td width="72" valign="top"><a href="./index.jsp?gubun=1"><img src="/images/image01/tit_notice2_o.gif" width="72" height="25" border="0"></a></td>
+																		<td width="60" valign="top"><a href="./index.jsp?gubun=3"><img src="/images/image01/tit_data.gif" width="60" height="25" border="0"></a></td>
+																		<td width="60" valign="top"><a href="./index.jsp?gubun=4"><img src="/images/image01/tit_peo.gif" width="60" height="25" border="0"></a></td>
+																		<td width="60" valign="top"><a href="./index.jsp?gubun=2"><img src="/images/image01/tit_event.gif" width="60" height="25" border="0"></a></td>
+																		<td width="115" align="right" background="/images/image01/tit_bg2.gif" style = "padding : 0 2 0 0"><a href="javascript:go6(6)" onFocus="this.blur()"><img src="/images/image01/tit_more2.gif" width="37" height="25" border="0"></a></td>
+																	</tr>
+																</table></td>
+														</tr>
+														<tr>
+															<td style = "padding :10 0 0 0"><img src="/images/image01/new_icon.gif" width="12" height="11"><a href="http://www.kobus.co.kr/web/01_info/info_chg_pic.jsp"><font color="#CC641F">고속도로 휴게소(정안, 횡성, 선산) 환승지도</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2010-12-15</td>
+														</tr>
+														<tr>
+															<td height="7"></td>
+														</tr>
+														<tr>
+															<td height="1" align="center" bgcolor="#efefef"></td>
+														</tr>
+														<tr>
+															<td style = "padding :10 0 0 0"><img src="/images/image01/new_icon.gif" width="12" height="11"><a href="http://www.kobus.co.kr/web/01_info/info_chg_bor.jsp"><font color="#CC641F">고속도로 휴게소(정안, 횡성, 선산) 환승시간표</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2010-02-23</td>
+														</tr>
+														<tr>
+															<td height="7"></td>
+														</tr>
+														<tr>
+															<td height="1" align="center" bgcolor="#efefef"></td>
+														</tr>
+														<tr>
+															<td width="367" height="104" valign="top" style = "padding :8 0 0 0">
+
+															   	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+																	<tr>
+																		<td width="18" height="21" align="right"><img src="/images/image01/tit_icon.gif" width="10" height="8"></td>
+																		<td width="273">
+																		
+																		<a href="./06_introduction/introduction06_view.jsp?pBckpgm=kongji&pID=3&pPage=1&pCOD=1&pRegDte=20080715">고속버스홈티켓 시행</a>
+																		
+
+																		</td>
+																		<td width="80">2008-07-15</td>
+																	</tr>
+																	<tr>
+																		<td height="1" colspan="3" align="center" bgcolor="#efefef"></td>
+																	</tr>
+																</table>
+
+															</td>
+														</tr>
+													</table>
+												</div>
+
+												</td>
+										</tr>
+									</table>
+									<!-- 오른쪽게시판end-->
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" valign="top"><img src="/images/image01/space.gif" width="1" height="18"></td>
+							</tr>
+							<tr>
+								<td align="center" style="padding:0 13 0 13 "><table border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td><a href="javascript:go1(8)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image92','','/images/image01/c_quick01_o.gif',1)"><img src="/images/image01/c_quick01.gif" name="Image92" width="108" height="94" border="0"></a></td>
+											<td style="padding:0 4 0 4 "><a href="javascript:go1(13)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image91','','/images/image01/c_quick02_o.gif',1)"><img src="/images/image01/c_quick02.gif" name="Image91" width="108" height="94" border="0"></a></td>
+											<!-- 새로 변경 되는 부분-->
+											<td><a href="http://www.kobus.co.kr/web/01_info/info_chg.jsp" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image93','','/images/image01/c_quick03_chg_o.gif',1)"><img src="/images/image01/c_quick03_chg.gif" name="Image93" width="108" height="94" border="0"></a></td>
+										</tr>
+									</table></td>
+								<td valign="top" style="padding:0 13 0 13 "><script>flashWrite('/flash/flash01/road.swf','367','94')</script></td>
+							</tr>
+							<tr>
+								<td colspan="2"><img src="/images/image01/space.gif" width="1" height="18"></td>
+							</tr>
+							<tr>
+								<td colspan="2" style="padding:0 0 0 13 "><table border="0" cellpadding="0" cellspacing="0" width="667">
+										<tr>
+											<td width="556"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+													<tr>
+														<td width="117"><a href="javascript:go6(0)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image94','','/images/image01/m_q1_o.gif',1)"><img src="/images/image01/m_q1.gif" name="Image94" width="117" height="91" border="0"></a></td>
+														<td width="107"><a href="javascript:go5(4)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image95','','/images/image01/m_q2_o.gif',1)"><img src="/images/image01/m_q2.gif" name="Image95" width="107" height="91" border="0"></a></td>
+														<td width="104"><a href="javascript:go5(1)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image96','','/images/image01/m_q3_o.gif',1)"><img src="/images/image01/m_q3.gif" name="Image96" width="107" height="91" border="0"></a></td>
+														<td width="218"><a href="javascript:go1(12)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image98','','/images/image01/m_q5_o.gif',1)"><img src="/images/image01/m_q5.gif" name="Image98" width="134" height="91" border="0"></a></td>
+													</tr>
+												</table></td>
+											<td width="10"><img src="/images/image01/space.gif" width="10" height="91"></td>
+											<td width="97"><a href="javascript:fc_HomeTicketRepeat()"><img src="/images/img09/btn01.gif" width="97" height="91" border="0"></a></td>
+											<td width="111"><img src="/images/image01/tel.gif" width="154" height="91"></td>
+										</tr>
+									</table></td>
+							</tr>
+							<tr>
+								<td colspan="2"><img src="/images/image01/space.gif" width="1" height="18"></td>
+							</tr>
+							<tr>
+								<td colspan="2" style="padding:0 0 0 13 "><table width="728" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td width="100"><img src="/images/image01/site.gif" width="100" height="50"></td>
+											<td width="620" background="/images/image01/site_bg.gif"><script>flashWrite('/flash/flash01/banner.swf','620','40')</script></td>
+											<td width="9" background="/images/image01/site_bg.gif"><img src="/images/image01/site_r.gif" width="9" height="50"></td>
+										</tr>
+									</table></td>
+							</tr>
+						</table></td>
+				</tr>
+				<tr>
+					<td height="29" valign="top" bgcolor="7DC2E1">&nbsp;</td>
+					<td valign="top" style="padding:0 16 0 16 ">&nbsp;</td>
+					<td colspan="2" valign="top">&nbsp;</td>
+				</tr>
+			</table></td>
+	</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td height="86" background="/images/image01/bottom_bg.gif" style="padding-left:247"><table width="743" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="16%"><img src="/images/image01/bottom_logo.gif" width="153" height="86"></td>
+					<td width="82%"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td style="padding:2 0 2 0"><a href="javascript:go1(14)">고속버스운송약관</a> l <a href="javascript:mail(1)">E-MAIL</a> l <a href="javascript:go7(1)">사이트맵</a></td>
+							</tr>
+							<tr>
+								<td class=s_txt>주소 : 서울특별시 서초구 신반포로 190 (반포동 19-4)</td>
+							</tr>
+							<tr>
+								<td class=s_txt>통신판매업신고 : 2009-서울서초0587호 | 대표자:이정만</td>
+							</tr>
+							<tr>
+								<td class=s_txt><img src="/images/image01/copy.gif" width="421" height="14" border="0" usemap="#Map">
+									<map name="Map">
+										<area shape="rect" coords="284,-2,410,12" href="javascript:mail(1)">
+									</map></td>
+							</tr>
+						</table></td>
+					<td width="2%"><script src="https://seal.verisign.com/getseal?host_name=www.kobus.co.kr&size=M&use_flash=NO&use_transparent=NO&lang=ko"></script></td>
+				</tr>
+			</table></td>
+	</tr>
+</table>
+
+</body>
+</html>
+

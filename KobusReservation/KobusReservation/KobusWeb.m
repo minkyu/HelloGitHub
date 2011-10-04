@@ -161,12 +161,21 @@
     [errorAlert show];
 }
 
+-(void) makeSampleFileForTesting
+{
+	// 테스트용 파일을 만들 필요가 있을 때만 부른다.
+	NSError *error = nil;
+	[responseData writeToFile:@"~/KobusWebSampleInput__" options:NSDataWritingFileProtectionComplete error:&error];	
+}
+
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
 	
 //	NSString *webstring = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
 //	NSLog(@"%@",[self webDataEncoding]);
 	[connection release];
+	
+	[self makeSampleFileForTesting];
 	
 	[self loadOrigins];
 }
