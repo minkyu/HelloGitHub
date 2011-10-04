@@ -26,7 +26,6 @@
 		ED332E301435C29A009A82E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E071435C299009A82E5 /* CoreGraphics.framework */; };
 		ED332E311435C29A009A82E5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E091435C299009A82E5 /* CoreData.framework */; };
 		ED332E391435C29A009A82E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED332E371435C29A009A82E5 /* InfoPlist.strings */; };
-		ED332E3B1435C29A009A82E5 /* KobusWebTests.h in Resources */ = {isa = PBXBuildFile; fileRef = ED332E3A1435C29A009A82E5 /* KobusWebTests.h */; };
 		ED332E3D1435C29A009A82E5 /* KobusWebTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED332E3C1435C29A009A82E5 /* KobusWebTests.m */; };
 		ED3D725C143B3C0100775F58 /* KobusWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D943781435D31700568CE0 /* KobusWeb.m */; };
 		ED3D725E143B3DB100775F58 /* KobusWebSampleInput.data in Resources */ = {isa = PBXBuildFile; fileRef = ED3D725D143B3DB100775F58 /* KobusWebSampleInput.data */; };
@@ -35,7 +34,6 @@
 /* Begin PBXFileReference section */
 		D3D943771435D31700568CE0 /* KobusWeb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KobusWeb.h; sourceTree = "<group>"; };
 		D3D943781435D31700568CE0 /* KobusWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KobusWeb.m; sourceTree = "<group>"; };
-		ED332DFF1435C299009A82E5 /* KobusReservation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = KobusReservation.app; path = "/Users/daliot/programming/AppleDev/iPhoneDev/프로젝트/HelloGitHub/KobusReservation/build/Release-iphoneos/KobusReservation.app"; sourceTree = "<absolute>"; };
 		ED332E031435C299009A82E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ED332E051435C299009A82E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ED332E071435C299009A82E5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,13 +51,14 @@
 		ED332E211435C29A009A82E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailView.xib; sourceTree = "<group>"; };
 		ED332E231435C29A009A82E5 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		ED332E241435C29A009A82E5 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		ED332E2B1435C29A009A82E5 /* KobusReservationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = KobusReservationTests.octest; path = "/Users/daliot/programming/AppleDev/iPhoneDev/프로젝트/HelloGitHub/KobusReservation/build/Release-iphoneos/KobusReservationTests.octest"; sourceTree = "<absolute>"; };
 		ED332E2C1435C29A009A82E5 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		ED332E361435C29A009A82E5 /* KobusReservationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KobusReservationTests-Info.plist"; sourceTree = "<group>"; };
 		ED332E381435C29A009A82E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ED332E3A1435C29A009A82E5 /* KobusWebTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KobusWebTests.h; sourceTree = "<group>"; };
 		ED332E3C1435C29A009A82E5 /* KobusWebTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KobusWebTests.m; sourceTree = "<group>"; };
 		ED3D725D143B3DB100775F58 /* KobusWebSampleInput.data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KobusWebSampleInput.data; sourceTree = "<group>"; };
+		ED3D7267143B4BA800775F58 /* KobusReservation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KobusReservation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED3D7269143B4BA800775F58 /* KobusReservationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KobusReservationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +94,8 @@
 				ED332E0B1435C299009A82E5 /* KobusReservation */,
 				ED332E341435C29A009A82E5 /* KobusReservationTests */,
 				ED332E021435C299009A82E5 /* Frameworks */,
+				ED3D7267143B4BA800775F58 /* KobusReservation.app */,
+				ED3D7269143B4BA800775F58 /* KobusReservationTests.octest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,7 +178,7 @@
 			);
 			name = KobusReservation;
 			productName = KobusReservation;
-			productReference = ED332DFF1435C299009A82E5 /* KobusReservation.app */;
+			productReference = ED3D7267143B4BA800775F58 /* KobusReservation.app */;
 			productType = "com.apple.product-type.application";
 		};
 		ED332E2A1435C29A009A82E5 /* KobusReservationTests */ = {
@@ -195,7 +196,7 @@
 			);
 			name = KobusReservationTests;
 			productName = KobusReservationTests;
-			productReference = ED332E2B1435C29A009A82E5 /* KobusReservationTests.octest */;
+			productReference = ED3D7269143B4BA800775F58 /* KobusReservationTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -240,7 +241,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED332E391435C29A009A82E5 /* InfoPlist.strings in Resources */,
-				ED332E3B1435C29A009A82E5 /* KobusWebTests.h in Resources */,
 				ED3D725E143B3DB100775F58 /* KobusWebSampleInput.data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

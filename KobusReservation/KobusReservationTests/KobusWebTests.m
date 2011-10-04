@@ -11,17 +11,21 @@
 
 @implementation KobusWebTests
 
+-(NSBundle*) getTestBundle
+{
+	for(NSBundle *each in [NSBundle allBundles]){
+		if([[each bundlePath] hasSuffix:@".octest"]) return each;
+	}
+	return nil;
+}
+
 - (void)setUp
 {
     [super setUp];
     kobusWeb = [[KobusWeb alloc] init];
-	//NSString *path = @"KobusReservation/KobusReservation/KobusWebSampleInput.data";
-	NSString *path = [[NSBundle mainBundle] pathForResource:@"KobusWebSampleInput" ofType:@"data"];
+	NSString *path = [[self getTestBundle] pathForResource:@"KobusWebSampleInput" ofType:@"data"];
 	NSLog(@"path=%@",path);
 	kobusWeb.responseData = [NSMutableData dataWithContentsOfFile: path];
-
-	//[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
-	//[[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"KobusReservation.sqlite"];
 }
 
 - (void)tearDown
