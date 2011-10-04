@@ -28,17 +28,9 @@
 		ED332E391435C29A009A82E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED332E371435C29A009A82E5 /* InfoPlist.strings */; };
 		ED332E3B1435C29A009A82E5 /* KobusReservationTests.h in Resources */ = {isa = PBXBuildFile; fileRef = ED332E3A1435C29A009A82E5 /* KobusReservationTests.h */; };
 		ED332E3D1435C29A009A82E5 /* KobusReservationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED332E3C1435C29A009A82E5 /* KobusReservationTests.m */; };
+		ED3D725C143B3C0100775F58 /* KobusWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D943781435D31700568CE0 /* KobusWeb.m */; };
+		ED3D725E143B3DB100775F58 /* KobusWebSampleInput in Resources */ = {isa = PBXBuildFile; fileRef = ED3D725D143B3DB100775F58 /* KobusWebSampleInput */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		ED332E321435C29A009A82E5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ED332DF61435C299009A82E5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = ED332DFE1435C299009A82E5;
-			remoteInfo = KobusReservation;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D3D943771435D31700568CE0 /* KobusWeb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KobusWeb.h; sourceTree = "<group>"; };
@@ -67,6 +59,7 @@
 		ED332E381435C29A009A82E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ED332E3A1435C29A009A82E5 /* KobusReservationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KobusReservationTests.h; sourceTree = "<group>"; };
 		ED332E3C1435C29A009A82E5 /* KobusReservationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KobusReservationTests.m; sourceTree = "<group>"; };
+		ED3D725D143B3DB100775F58 /* KobusWebSampleInput */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KobusWebSampleInput; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +146,7 @@
 				ED332E0E1435C299009A82E5 /* InfoPlist.strings */,
 				ED332E111435C299009A82E5 /* main.m */,
 				ED332E131435C299009A82E5 /* KobusReservation-Prefix.pch */,
+				ED3D725D143B3DB100775F58 /* KobusWebSampleInput */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -208,7 +202,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				ED332E331435C29A009A82E5 /* PBXTargetDependency */,
 			);
 			name = KobusReservationTests;
 			productName = KobusReservationTests;
@@ -258,6 +251,7 @@
 			files = (
 				ED332E391435C29A009A82E5 /* InfoPlist.strings in Resources */,
 				ED332E3B1435C29A009A82E5 /* KobusReservationTests.h in Resources */,
+				ED3D725E143B3DB100775F58 /* KobusWebSampleInput in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,18 +292,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED332E3D1435C29A009A82E5 /* KobusReservationTests.m in Sources */,
+				ED3D725C143B3C0100775F58 /* KobusWeb.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		ED332E331435C29A009A82E5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = ED332DFE1435C299009A82E5 /* KobusReservation */;
-			targetProxy = ED332E321435C29A009A82E5 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		ED332E0E1435C299009A82E5 /* InfoPlist.strings */ = {

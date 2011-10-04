@@ -7,26 +7,28 @@
 //
 
 #import "KobusReservationTests.h"
+#import "KobusWeb.h"
 
-@implementation KobusReservationTests
+@implementation KobusWebTests
 
 - (void)setUp
 {
     [super setUp];
-    
+    kobusWeb = [[KobusWeb alloc] init];
+	kobusWeb.responseData = [NSMutableData dataWithContentsOfFile:@""];
     // Set-up code here.
 }
 
 - (void)tearDown
 {
     // Tear-down code here.
-    
+    [kobusWeb release];
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testLoadOrigins
 {
-    STFail(@"Unit tests are not implemented yet in KobusReservationTests");
+	[kobusWeb loadWeb];
 }
 
 @end
