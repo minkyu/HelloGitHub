@@ -26,8 +26,8 @@
 		ED332E301435C29A009A82E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E071435C299009A82E5 /* CoreGraphics.framework */; };
 		ED332E311435C29A009A82E5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E091435C299009A82E5 /* CoreData.framework */; };
 		ED332E391435C29A009A82E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED332E371435C29A009A82E5 /* InfoPlist.strings */; };
-		ED332E3B1435C29A009A82E5 /* KobusReservationTests.h in Resources */ = {isa = PBXBuildFile; fileRef = ED332E3A1435C29A009A82E5 /* KobusReservationTests.h */; };
-		ED332E3D1435C29A009A82E5 /* KobusReservationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED332E3C1435C29A009A82E5 /* KobusReservationTests.m */; };
+		ED332E3B1435C29A009A82E5 /* KobusWebTests.h in Resources */ = {isa = PBXBuildFile; fileRef = ED332E3A1435C29A009A82E5 /* KobusWebTests.h */; };
+		ED332E3D1435C29A009A82E5 /* KobusWebTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED332E3C1435C29A009A82E5 /* KobusWebTests.m */; };
 		ED3D725C143B3C0100775F58 /* KobusWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D943781435D31700568CE0 /* KobusWeb.m */; };
 		ED3D725E143B3DB100775F58 /* KobusWebSampleInput in Resources */ = {isa = PBXBuildFile; fileRef = ED3D725D143B3DB100775F58 /* KobusWebSampleInput */; };
 /* End PBXBuildFile section */
@@ -57,8 +57,8 @@
 		ED332E2C1435C29A009A82E5 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		ED332E361435C29A009A82E5 /* KobusReservationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KobusReservationTests-Info.plist"; sourceTree = "<group>"; };
 		ED332E381435C29A009A82E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		ED332E3A1435C29A009A82E5 /* KobusReservationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KobusReservationTests.h; sourceTree = "<group>"; };
-		ED332E3C1435C29A009A82E5 /* KobusReservationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KobusReservationTests.m; sourceTree = "<group>"; };
+		ED332E3A1435C29A009A82E5 /* KobusWebTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KobusWebTests.h; sourceTree = "<group>"; };
+		ED332E3C1435C29A009A82E5 /* KobusWebTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KobusWebTests.m; sourceTree = "<group>"; };
 		ED3D725D143B3DB100775F58 /* KobusWebSampleInput */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KobusWebSampleInput; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,8 +154,8 @@
 		ED332E341435C29A009A82E5 /* KobusReservationTests */ = {
 			isa = PBXGroup;
 			children = (
-				ED332E3A1435C29A009A82E5 /* KobusReservationTests.h */,
-				ED332E3C1435C29A009A82E5 /* KobusReservationTests.m */,
+				ED332E3A1435C29A009A82E5 /* KobusWebTests.h */,
+				ED332E3C1435C29A009A82E5 /* KobusWebTests.m */,
 				ED332E351435C29A009A82E5 /* Supporting Files */,
 			);
 			path = KobusReservationTests;
@@ -250,7 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED332E391435C29A009A82E5 /* InfoPlist.strings in Resources */,
-				ED332E3B1435C29A009A82E5 /* KobusReservationTests.h in Resources */,
+				ED332E3B1435C29A009A82E5 /* KobusWebTests.h in Resources */,
 				ED3D725E143B3DB100775F58 /* KobusWebSampleInput in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED332E3D1435C29A009A82E5 /* KobusReservationTests.m in Sources */,
+				ED332E3D1435C29A009A82E5 /* KobusWebTests.m in Sources */,
 				ED3D725C143B3C0100775F58 /* KobusWeb.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
