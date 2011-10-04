@@ -41,9 +41,23 @@
 	STAssertNotNil(kobusWeb.responseData, nil);
 }
 
-- (void)testLoadOrigins
+- (void)testMatchesOfOriginsInString
 {
-	[kobusWeb loadOrigins];
+	NSArray *matches = [kobusWeb matchesOfOriginsInString: [kobusWeb webDataEncoding]];
+	STAssertEquals((int)124, (int)[matches count], nil);;
+	NSTextCheckingResult *match = [matches objectAtIndex:3];
+	STAssertEqualObjects(@"355", [[kobusWeb webDataEncoding] substringWithRange: [match rangeAtIndex:1]], nil);
+	STAssertEqualObjects(@"고대홍대[355]", [[kobusWeb webDataEncoding] substringWithRange: [match rangeAtIndex:2]], nil);
 }
+
+- (void)testMatchesOfDestinationsInString
+{
+	NSArray *matches = [kobusWeb matchesOfDestinationsInString: [kobusWeb webDataEncoding]];
+	STAssertEquals((int)1, (int)[matches count], nil);;
+	NSTextCheckingResult *match = [matches objectAtIndex:0];
+	STAssertEqualObjects(@"355", [[kobusWeb webDataEncoding] substringWithRange: [match rangeAtIndex:2]], nil);
+	STAssertEqualObjects(@"200", [[kobusWeb webDataEncoding] substringWithRange: [match rangeAtIndex:1]], nil);
+}
+
 
 @end

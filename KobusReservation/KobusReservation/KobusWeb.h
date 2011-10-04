@@ -20,6 +20,8 @@
 @property (nonatomic,retain) NSMutableDictionary *Destinations;
 
 - (void)loadWeb;
+- (NSArray *) matchesOfOriginsInString:(NSString*)aString;
+- (NSArray *) matchesOfDestinationsInString:(NSString*)aString;
 - (void)loadOrigins;
 - (void)loadDestinations;
 - (NSString*)webDataEncoding;
