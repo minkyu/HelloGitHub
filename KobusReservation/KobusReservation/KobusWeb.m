@@ -114,18 +114,21 @@
     
     NSLog(@"parse dests - %d", [aStr length]);
     NSError *error = NULL;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"d.TER_FR.selectedIndex].value == \"([\\d]{3})\"[)] [{](.*)[}]" 
-                                                                           options:NSRegularExpressionCaseInsensitive + NSRegularExpressionDotMatchesLineSeparators
+
+	NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"d.TER_FR.selectedIndex].value == \"([\\d]{3})\"[)] [{]([^}]*)[}]" 
+//    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"[\{]([^}]*)[\}]" 
+//	NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"d.TER_FR.selectedIndex].value == \"([\\d]{3})\"[)] [{](.*)[}]"
+                                                                           options:NSRegularExpressionCaseInsensitive
                                                                              error:&error];
+	NSAssert(regex, @"%@", error);
     NSArray *matches = [regex matchesInString:aStr options:0 range:NSMakeRange(0, [aStr length])];
     for (NSTextCheckingResult *match in matches) {
-        NSString *fromCode = [aStr substringWithRange:[match rangeAtIndex:2]];
-        NSString *toStr = [aStr substringWithRange:[match rangeAtIndex:1]];
+		NSString *toStr = [aStr substringWithRange:[match rangeAtIndex:1]];// ([\\d]{3})
+        NSString *fromCode = [aStr substringWithRange:[match rangeAtIndex:2]];// ([^}]*)
         
-        NSLog(@"from %@ ", fromCode);
-        NSLog(@"%@", toStr);
-        
-        
+		NSLog(@"%@", toStr);
+		NSLog(@"from %@ ", fromCode);
+		
     }
     NSLog(@"parse end");
 }
