@@ -61,15 +61,20 @@
 }
 
 // 출발지를 가져온다
-- (void)parseOrigins:(NSString*)aStr {
-	
-	NSLog(@"parser start - %d", [aStr length]);
+
+- (NSArray *) matchesOfOriginsInString:(NSString*)aString
+{
 	NSError *error = NULL;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"<option value=\"([\\d]{3})\" >(.*)</option>"
                                                                            options:NSRegularExpressionCaseInsensitive
                                                                              error:&error];
-    NSArray *matches = [regex matchesInString:aStr options:0 range:NSMakeRange(0, [aStr length])];
-    for (NSTextCheckingResult *match in matches) {
+	return [regex matchesInString:aString options:0 range:NSMakeRange(0, [aString length])];	
+}
+
+- (void)parseOrigins:(NSString*)aStr {
+	
+	NSLog(@"parser start - %d", [aStr length]);
+    for (NSTextCheckingResult *match in [self matchesOfOriginsInString:aStr]) {
         // 지역코드
         NSString *locCode = [aStr substringWithRange:[match rangeAtIndex:1]];
         // 지역명
@@ -87,16 +92,22 @@
 
 // 목적지 파싱
 // 멀티라인이 안먹네..
+
+- (NSArray *) matchesOfDestinationsInString:(NSString*)aString
+{
+    NSError *error = NULL;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"d.TER_FR.selectedIndex].value == \"([\\d]{3})\"[)] [{]([^}]*)[}]" 
+                                                                           options:NSRegularExpressionCaseInsensitive + NSRegularExpressionDotMatchesLineSeparators
+                                                                             error:&error];
+	NSAssert(regex, @"%@", error);
+	return [regex matchesInString:aString options:0 range:NSMakeRange(0, [aString length])];	
+}
+
 - (void)parseDestinations:(NSString*)aStr
 {
 
-    NSError *error = NULL;
-	NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"d.TER_FR.selectedIndex].value == \"([\\d]{3})\"[)] [{]([^}]*)[}]" 
-                                                                           options:NSRegularExpressionCaseInsensitive
-                                                                             error:&error];
-	NSAssert(regex, @"%@", error);
-    NSArray *matches = [regex matchesInString:aStr options:0 range:NSMakeRange(0, [aStr length])];
-    for (NSTextCheckingResult *match in matches) {
+    NSError *error = NULL;	
+	for (NSTextCheckingResult *match in [self matchesOfDestinationsInString:aStr]) {
 		NSString *orgineStr = [aStr substringWithRange:[match rangeAtIndex:1]];// ([\\d]{3})
         NSString *fromCode = [aStr substringWithRange:[match rangeAtIndex:2]];// ([^}]*)
 		
@@ -122,7 +133,9 @@
 		}
 		[Destinations setValue:destination forKey:orgineStr];
 		[destination release];
-    }
+	}
+
+		
 	NSLog(@"%@",Destinations);
     NSLog(@"parse end");
 }
@@ -158,12 +171,21 @@
     [errorAlert show];
 }
 
+-(void) makeSampleFileForTesting
+{
+	// 테스트용 파일을 만들 필요가 있을 때만 부른다.
+	NSError *error = nil;
+	[responseData writeToFile:@"~/KobusWebSampleInput__" options:NSDataWritingFileProtectionComplete error:&error];	
+}
+
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
 	
 //	NSString *webstring = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
 //	NSLog(@"%@",[self webDataEncoding]);
 	[connection release];
+	
+//	[self makeSampleFileForTesting];
 	
 	[self loadOrigins];
 	[self loadDestinations];
