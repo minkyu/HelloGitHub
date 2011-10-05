@@ -99,7 +99,7 @@
 						<object class="IBUITableViewController" id="641806676">
 							<object class="IBUINavigationItem" key="IBUINavigationItem" id="463972797">
 								<reference key="IBUINavigationBar"/>
-								<string key="IBUITitle">Root View Controller</string>
+								<string key="IBUITitle">출발지</string>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 							</object>
 							<reference key="IBUIParentViewController" ref="653026161"/>
