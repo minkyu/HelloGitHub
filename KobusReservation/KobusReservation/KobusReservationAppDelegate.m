@@ -10,7 +10,7 @@
 
 #import "OriginsViewController.h"
 
-#import "DetailViewController.h"
+#import "DestinationsViewController.h"
 
 #import "KobusWeb.h"
 

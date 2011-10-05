@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class DetailViewController;
+@class DestinationsViewController;
 
 
 @interface OriginsViewController : UITableViewController 
 
-@property (nonatomic, retain) IBOutlet DetailViewController *detailViewController;
+@property (nonatomic, retain) IBOutlet DestinationsViewController *detailViewController;
 
 @property (nonatomic, retain) NSDictionary *Origins;
 

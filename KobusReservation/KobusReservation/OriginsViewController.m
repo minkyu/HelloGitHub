@@ -8,7 +8,7 @@
 
 #import "OriginsViewController.h"
 
-#import "DetailViewController.h"
+#import "DestinationsViewController.h"
 
 @interface OriginsViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -28,27 +28,6 @@
 }
 
 		
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-	
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	[[self tableView] reloadData];
     return YES;
@@ -64,6 +43,7 @@
 	[Origins release];
 	Origins = [aOrigins retain];
 	[[self tableView] reloadData];
+//	NSLog(@"%@",Origins);
 }
 		
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -138,6 +118,7 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
+	NSLog(@"%d",[indexPath row]);
     cell.textLabel.text = [[Origins allValues] objectAtIndex:[indexPath row]];
 }
 

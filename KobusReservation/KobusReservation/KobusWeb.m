@@ -73,7 +73,7 @@
 
 - (void)parseOrigins:(NSString*)aStr {
 	
-	NSLog(@"parser start - %d", [aStr length]);
+//	NSLog(@"parser start - %d", [aStr length]);
     for (NSTextCheckingResult *match in [self matchesOfOriginsInString:aStr]) {
         // 지역코드
         NSString *locCode = [aStr substringWithRange:[match rangeAtIndex:1]];
@@ -81,12 +81,12 @@
         NSString *locName = [aStr substringWithRange:[match rangeAtIndex:2]];
         
         [Origins setValue:locName forKey:locCode];
-        NSLog(@"%@ = %@", locCode, locName);
+//        NSLog(@"%@ = %@", locCode, locName);
         
 		
     }
     
-	NSLog(@"parser end");
+//	NSLog(@"parser end");
 }
 
 
@@ -145,7 +145,7 @@
 - (void)parseDestinations:(NSString*)aStr
 {
 
-    NSLog(@"%d",[[self matchesOfDestinationsInString:aStr] count]);
+//    NSLog(@"%d",[[self matchesOfDestinationsInString:aStr] count]);
 	for (NSTextCheckingResult *match in [self matchesOfDestinationsInString:aStr]) {
 		NSString *orgineStr = [aStr substringWithRange:[match rangeAtIndex:1]];// ([\\d]{3})
         NSString *fromCode = [aStr substringWithRange:[match rangeAtIndex:2]];// ([^}]*)
@@ -153,7 +153,7 @@
 		[Destinations setValue:[self destinationForOrgine:fromCode] forKey:orgineStr];
 	}
 
-	NSLog(@"%@",Destinations);
+//	NSLog(@"%@",Destinations);
 }
 
 

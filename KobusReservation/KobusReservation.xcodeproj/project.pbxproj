@@ -17,7 +17,7 @@
 		ED332E161435C299009A82E5 /* KobusReservationAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED332E151435C299009A82E5 /* KobusReservationAppDelegate.m */; };
 		ED332E191435C299009A82E5 /* KobusReservation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED332E171435C299009A82E5 /* KobusReservation.xcdatamodeld */; };
 		ED332E1C1435C29A009A82E5 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED332E1A1435C29A009A82E5 /* MainWindow.xib */; };
-		ED332E1F1435C29A009A82E5 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED332E1E1435C29A009A82E5 /* DetailViewController.m */; };
+		ED332E1F1435C29A009A82E5 /* DestinationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED332E1E1435C29A009A82E5 /* DestinationsViewController.m */; };
 		ED332E221435C29A009A82E5 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED332E201435C29A009A82E5 /* DetailView.xib */; };
 		ED332E251435C29A009A82E5 /* OriginsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED332E241435C29A009A82E5 /* OriginsViewController.m */; };
 		ED332E2D1435C29A009A82E5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E2C1435C29A009A82E5 /* SenTestingKit.framework */; };
@@ -46,8 +46,8 @@
 		ED332E151435C299009A82E5 /* KobusReservationAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KobusReservationAppDelegate.m; sourceTree = "<group>"; };
 		ED332E181435C299009A82E5 /* KobusReservation.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KobusReservation.xcdatamodel; sourceTree = "<group>"; };
 		ED332E1B1435C29A009A82E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		ED332E1D1435C29A009A82E5 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		ED332E1E1435C29A009A82E5 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		ED332E1D1435C29A009A82E5 /* DestinationsViewController.h */ = {isa = PBXFileReference; path = DestinationsViewController.h; sourceTree = "<group>"; };
+		ED332E1E1435C29A009A82E5 /* DestinationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DestinationsViewController.m; sourceTree = "<group>"; };
 		ED332E211435C29A009A82E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailView.xib; sourceTree = "<group>"; };
 		ED332E231435C29A009A82E5 /* OriginsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OriginsViewController.h; sourceTree = "<group>"; };
 		ED332E241435C29A009A82E5 /* OriginsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OriginsViewController.m; sourceTree = "<group>"; };
@@ -117,8 +117,8 @@
 				ED332E141435C299009A82E5 /* KobusReservationAppDelegate.h */,
 				ED332E151435C299009A82E5 /* KobusReservationAppDelegate.m */,
 				ED332E1A1435C29A009A82E5 /* MainWindow.xib */,
-				ED332E1D1435C29A009A82E5 /* DetailViewController.h */,
-				ED332E1E1435C29A009A82E5 /* DetailViewController.m */,
+				ED332E1D1435C29A009A82E5 /* DestinationsViewController.h */,
+				ED332E1E1435C29A009A82E5 /* DestinationsViewController.m */,
 				ED332E201435C29A009A82E5 /* DetailView.xib */,
 				ED332E231435C29A009A82E5 /* OriginsViewController.h */,
 				ED332E241435C29A009A82E5 /* OriginsViewController.m */,
@@ -271,7 +271,7 @@
 				ED332E121435C299009A82E5 /* main.m in Sources */,
 				ED332E161435C299009A82E5 /* KobusReservationAppDelegate.m in Sources */,
 				ED332E191435C299009A82E5 /* KobusReservation.xcdatamodeld in Sources */,
-				ED332E1F1435C29A009A82E5 /* DetailViewController.m in Sources */,
+				ED332E1F1435C29A009A82E5 /* DestinationsViewController.m in Sources */,
 				ED332E251435C29A009A82E5 /* OriginsViewController.m in Sources */,
 				D3D943791435D31700568CE0 /* KobusWeb.m in Sources */,
 			);

@@ -10,7 +10,7 @@
 
 @class OriginsViewController;
 
-@class DetailViewController;
+@class DestinationsViewController;
 
 @interface KobusReservationAppDelegate : NSObject <UIApplicationDelegate>
 
@@ -27,6 +27,6 @@
 
 @property (nonatomic, retain) IBOutlet OriginsViewController *rootViewController;
 
-@property (nonatomic, retain) IBOutlet DetailViewController *detailViewController;
+@property (nonatomic, retain) IBOutlet DestinationsViewController *detailViewController;
 
 @end
