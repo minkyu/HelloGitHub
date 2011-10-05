@@ -22,7 +22,7 @@
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 @synthesize splitViewController = _splitViewController;
 @synthesize rootViewController = _rootViewController;
-@synthesize detailViewController = _detailViewController;
+@synthesize destinationsViewController = _destinationsViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -31,7 +31,7 @@
 	KobusWeb *web = [[KobusWeb alloc] init];
 	web.pushDatas = ^(NSDictionary* origins,NSDictionary* destinations){
 		self.rootViewController.Origins = origins;
-		self.detailViewController.Destinations = destinations;
+		self.destinationsViewController.Destinations = destinations;
 	};
 	[web loadWeb];
 	
@@ -84,7 +84,7 @@
 	[__persistentStoreCoordinator release];
 	[_splitViewController release];
 	[_rootViewController release];
-	[_detailViewController release];
+	[_destinationsViewController release];
     [super dealloc];
 }
 

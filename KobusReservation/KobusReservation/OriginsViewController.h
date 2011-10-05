@@ -13,10 +13,9 @@
 
 @interface OriginsViewController : UITableViewController 
 
-@property (nonatomic, retain) IBOutlet DestinationsViewController *detailViewController;
+@property (nonatomic, retain) IBOutlet DestinationsViewController *destinationsViewController;
 
 @property (nonatomic, retain) NSDictionary *Origins;
 
-- (void)insertNewObject:(id)sender;
 
 @end

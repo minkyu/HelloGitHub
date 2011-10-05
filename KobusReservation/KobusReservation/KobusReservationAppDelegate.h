@@ -27,6 +27,6 @@
 
 @property (nonatomic, retain) IBOutlet OriginsViewController *rootViewController;
 
-@property (nonatomic, retain) IBOutlet DestinationsViewController *detailViewController;
+@property (nonatomic, retain) IBOutlet DestinationsViewController *destinationsViewController;
 
 @end

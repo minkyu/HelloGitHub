@@ -18,7 +18,7 @@
 
 @synthesize Origins;
 		
-@synthesize detailViewController;
+@synthesize destinationsViewController;
 
 - (void)viewDidLoad
 {
@@ -91,28 +91,17 @@
 
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Set the detail item in the detail view controller.
-
-    detailViewController.detailItem = [[Origins allKeys] objectAtIndex:[indexPath row]];
+    destinationsViewController.selectedOrigin = [[Origins allKeys] objectAtIndex:[indexPath row]];
 }
 
 - (void)didReceiveMemoryWarning
 {
-    // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-
-    // Relinquish ownership any cached data, images, etc that aren't in use.
-}
-
-- (void)viewDidUnload
-{
-    // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
-    // For example: self.myOutlet = nil;
 }
 
 - (void)dealloc
 {
-	[detailViewController release];
+	[destinationsViewController release];
 	[super dealloc];
 }
 
@@ -122,14 +111,5 @@
     cell.textLabel.text = [[Origins allValues] objectAtIndex:[indexPath row]];
 }
 
-- (void)insertNewObject:(id)sender
-{
-//    NSIndexPath *currentSelection = [self.tableView indexPathForSelectedRow];
-//    if (currentSelection != nil) {
-//        [self.tableView deselectRowAtIndexPath:currentSelection animated:NO];
-//    }    
-//
-//    [self.tableView selectRowAtIndexPath:insertionPath animated:YES scrollPosition:UITableViewScrollPositionTop];
-}
 
 @end

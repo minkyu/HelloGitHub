@@ -1,5 +1,5 @@
 //
-//  DetailViewController.m
+//  DestinationsViewController.m
 //  KobusReservation
 //
 //  Created by 오 화종 on 11. 09. 30.
@@ -13,40 +13,34 @@
 @implementation DestinationsViewController
 
 @synthesize toolbar = _toolbar;
-@synthesize detailItem = _detailItem;
-@synthesize detailDescriptionLabel = _detailDescriptionLabel;
+@synthesize selectedOrigin = _selectedOrigin;
 @synthesize rootViewController = _rootViewController;
 @synthesize Destinations;
 @synthesize destinationsView;
 
-#pragma mark - Managing the detail item
 
-/*
- When setting the detail item, update the view and dismiss the popover controller if it's showing.
- */
-- (void)setDetailItem:(NSString *)seletedObject
+- (void)setSelectedOrigin:(NSString *)seletedObject
 {
-	if (_detailItem != seletedObject) {
-		[_detailItem release];
-		_detailItem = [seletedObject retain];
+	if (_selectedOrigin != seletedObject) {
+		[_selectedOrigin release];
+		_selectedOrigin = [seletedObject retain];
 		
 		[destinationsView reloadData];
 	}
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
-{
-    // Update the user interface for the detail item.
-
-	// Normally should use accessor method, but using KVC here avoids adding a custom class to the template.
-	cell.textLabel.text = [[[Destinations objectForKey:_detailItem] allValues] objectAtIndex:[indexPath row]];
-}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
 #pragma mark - Destinations table view
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+{
+	cell.textLabel.text = [[[Destinations objectForKey:_selectedOrigin] allValues] objectAtIndex:[indexPath row]];
+}
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -55,7 +49,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return [[Destinations objectForKey:_detailItem] count];
+	return [[Destinations objectForKey:_selectedOrigin] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -122,16 +116,9 @@
 - (void)dealloc
 {
 	[_toolbar release];
-	[_detailItem release];
-	[_detailDescriptionLabel release];
+	[_selectedOrigin release];
+
     [super dealloc];
-}
-
-#pragma mark - Object insertion
-
-- (IBAction)insertNewObject:(id)sender
-{
-	[self.rootViewController insertNewObject:sender];	
 }
 
 @end
