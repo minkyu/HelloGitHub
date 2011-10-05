@@ -28,7 +28,7 @@
 /*
  When setting the detail item, update the view and dismiss the popover controller if it's showing.
  */
-- (void)setDetailItem:(NSDictionary *)managedObject
+- (void)setDetailItem:(NSString *)managedObject
 {
 	if (_detailItem != managedObject) {
 		[_detailItem release];

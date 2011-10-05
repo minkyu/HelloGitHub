@@ -16,7 +16,7 @@
 
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
 
-@property (nonatomic, retain) NSDictionary *detailItem;
+@property (nonatomic, retain) NSString *detailItem;
 
 @property (nonatomic, retain) IBOutlet UILabel *detailDescriptionLabel;
 

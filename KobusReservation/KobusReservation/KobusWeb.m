@@ -12,7 +12,7 @@
 
 @implementation KobusWeb
 
-@synthesize responseData,Origins,Destinations;
+@synthesize responseData,Origins,Destinations,pushDatas;
 
 - (id)init
 {
@@ -191,6 +191,7 @@
 	
 	[self loadOrigins];
 	[self loadDestinations];
+	pushDatas(Origins,Destinations);
 }
 
 #pragma mark - test code
