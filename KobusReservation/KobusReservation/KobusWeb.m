@@ -49,7 +49,7 @@
 	self.Origins = [[NSMutableDictionary alloc]init];
 	//responseData
 	[self parseOrigins:[self webDataEncoding]];
-    [self parseDestinations:[self webDataEncoding]];
+    
 	
 }
 
@@ -57,6 +57,7 @@
 {
 	self.Destinations = [[NSMutableDictionary alloc]init];
 	//responseData
+	[self parseDestinations:[self webDataEncoding]];
 }
 
 // 출발지를 가져온다
@@ -80,25 +81,6 @@
                                         
     }
     
-/*             
-    // 이전 코드
-	NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(?<=<option value=\"[\\d]{3}\" >).*(?=</option>)"
-																		   options:0
-																			 error:&error];
-	NSArray *matches = [regex matchesInString:aStr options:0 range:NSMakeRange(0, [aStr length])];
-	
-	for (NSTextCheckingResult *match in matches) 
-	{
-		NSString *str = [aStr substringWithRange:[match range]];
-		NSString *value = [[str componentsSeparatedByCharactersInSet:
-								  [[NSCharacterSet characterSetWithCharactersInString:@"0123456789"] invertedSet]] componentsJoinedByString:@""];
-		[Origins setValue:value forKey:str];
-		NSLog(@"%@ = %@",value,str);
-
-	}
-	NSLog(@"%@",Origins);
- */
-    
 	NSLog(@"parser end");
 }
 
@@ -108,28 +90,40 @@
 - (void)parseDestinations:(NSString*)aStr
 {
 
-    //if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "200") { ~~  }
-    //if(d.TER_FR.options[d.TER_FR.selectedIndex].value == "190") {
-    //document.InputForm.Tim_date_Month.options[document.InputForm.Tim_date_Month.selectedIndex].value); k++) {
-    
-    NSLog(@"parse dests - %d", [aStr length]);
     NSError *error = NULL;
-
 	NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"d.TER_FR.selectedIndex].value == \"([\\d]{3})\"[)] [{]([^}]*)[}]" 
-//    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"[\{]([^}]*)[\}]" 
-//	NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"d.TER_FR.selectedIndex].value == \"([\\d]{3})\"[)] [{](.*)[}]"
                                                                            options:NSRegularExpressionCaseInsensitive
                                                                              error:&error];
 	NSAssert(regex, @"%@", error);
     NSArray *matches = [regex matchesInString:aStr options:0 range:NSMakeRange(0, [aStr length])];
     for (NSTextCheckingResult *match in matches) {
-		NSString *toStr = [aStr substringWithRange:[match rangeAtIndex:1]];// ([\\d]{3})
+		NSString *orgineStr = [aStr substringWithRange:[match rangeAtIndex:1]];// ([\\d]{3})
         NSString *fromCode = [aStr substringWithRange:[match rangeAtIndex:2]];// ([^}]*)
-        
-		NSLog(@"%@", toStr);
-		NSLog(@"from %@ ", fromCode);
 		
+		NSRegularExpression *subvalueregex = [NSRegularExpression regularExpressionWithPattern:@"].value	= \"([\\d]{3})\"" 
+																				  options:NSRegularExpressionCaseInsensitive
+																					error:&error];
+		NSRegularExpression *subtextregex = [NSRegularExpression regularExpressionWithPattern:@"].text 	=  \"(.*)\"" 
+																				  options:NSRegularExpressionCaseInsensitive
+																					error:&error];
+		NSArray *submatchesvalue = [subvalueregex matchesInString:fromCode options:0 range:NSMakeRange(0, [fromCode length])];
+		NSArray *submatchestext = [subtextregex matchesInString:fromCode options:0 range:NSMakeRange(0, [fromCode length])];
+
+		NSAssert([submatchesvalue count] == [submatchestext count], @"갯수가 틀림");
+		NSMutableDictionary *destination = [[NSMutableDictionary alloc] init];
+		for (int i = 0; i<[submatchesvalue count]; i++) {
+			NSTextCheckingResult *subvalueresult = [submatchesvalue objectAtIndex:i];
+			NSTextCheckingResult *subtextresult = [submatchestext objectAtIndex:i];
+			
+			NSString *subvalue = [fromCode substringWithRange:[subvalueresult rangeAtIndex:1]];
+			NSString *subtext = [fromCode substringWithRange:[subtextresult rangeAtIndex:1]];
+			[destination setValue:subtext forKey:subvalue];
+			
+		}
+		[Destinations setValue:destination forKey:orgineStr];
+		[destination release];
     }
+	NSLog(@"%@",Destinations);
     NSLog(@"parse end");
 }
 
@@ -172,6 +166,7 @@
 	[connection release];
 	
 	[self loadOrigins];
+	[self loadDestinations];
 }
 
 @end
