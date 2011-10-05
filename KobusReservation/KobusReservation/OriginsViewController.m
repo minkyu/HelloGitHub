@@ -107,7 +107,7 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-	NSLog(@"%d",[indexPath row]);
+//	NSLog(@"%d",[indexPath row]);
     cell.textLabel.text = [[Origins allValues] objectAtIndex:[indexPath row]];
 }
 
