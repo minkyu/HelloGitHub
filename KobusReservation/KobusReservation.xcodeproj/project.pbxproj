@@ -46,7 +46,7 @@
 		ED332E151435C299009A82E5 /* KobusReservationAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KobusReservationAppDelegate.m; sourceTree = "<group>"; };
 		ED332E181435C299009A82E5 /* KobusReservation.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KobusReservation.xcdatamodel; sourceTree = "<group>"; };
 		ED332E1B1435C29A009A82E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		ED332E1D1435C29A009A82E5 /* DestinationsViewController.h */ = {isa = PBXFileReference; path = DestinationsViewController.h; sourceTree = "<group>"; };
+		ED332E1D1435C29A009A82E5 /* DestinationsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DestinationsViewController.h; sourceTree = "<group>"; };
 		ED332E1E1435C29A009A82E5 /* DestinationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DestinationsViewController.m; sourceTree = "<group>"; };
 		ED332E211435C29A009A82E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailView.xib; sourceTree = "<group>"; };
 		ED332E231435C29A009A82E5 /* OriginsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OriginsViewController.h; sourceTree = "<group>"; };

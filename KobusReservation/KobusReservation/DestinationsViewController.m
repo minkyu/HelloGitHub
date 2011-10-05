@@ -10,10 +10,6 @@
 
 #import "OriginsViewController.h"
 
-@interface DestinationsViewController ()
-- (void)configureView;
-@end
-
 @implementation DestinationsViewController
 
 @synthesize toolbar = _toolbar;
@@ -21,6 +17,7 @@
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
 @synthesize rootViewController = _rootViewController;
 @synthesize Destinations;
+@synthesize destinationsView;
 
 #pragma mark - Managing the detail item
 
@@ -33,37 +30,16 @@
 		[_detailItem release];
 		_detailItem = [seletedObject retain];
 		
-        // Update the view.
-        [self configureView];
+		[destinationsView reloadData];
 	}
 }
 
-- (void)configureView
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     // Update the user interface for the detail item.
 
 	// Normally should use accessor method, but using KVC here avoids adding a custom class to the template.
-	self.detailDescriptionLabel.text = [[[Destinations objectForKey:_detailItem] allValues] objectAtIndex:0];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
+	cell.textLabel.text = [[[Destinations objectForKey:_detailItem] allValues] objectAtIndex:[indexPath row]];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -72,6 +48,28 @@
 
 #pragma mark - Destinations table view
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+	return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+	return [[Destinations objectForKey:_detailItem] count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+    }
+	
+	[self configureCell:cell atIndexPath:indexPath];
+    return cell;
+}
 
 #pragma mark - Split view support
 

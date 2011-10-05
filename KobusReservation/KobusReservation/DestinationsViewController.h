@@ -24,6 +24,8 @@
 
 @property (nonatomic, retain) NSDictionary *Destinations;
 
+@property (nonatomic, retain) IBOutlet UITableView *destinationsView;
+
 - (IBAction)insertNewObject:(id)sender;
 
 @end
