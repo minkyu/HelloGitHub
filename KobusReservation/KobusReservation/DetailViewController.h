@@ -10,9 +10,9 @@
 
 #import <CoreData/CoreData.h>
 
-@class RootViewController;
+@class OriginsViewController;
 
-@interface DetailViewController : UIViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate>
+@interface DetailViewController : UIViewController <UISplitViewControllerDelegate>
 
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
 
@@ -20,7 +20,9 @@
 
 @property (nonatomic, retain) IBOutlet UILabel *detailDescriptionLabel;
 
-@property (nonatomic, assign) IBOutlet RootViewController *rootViewController;
+@property (nonatomic, assign) IBOutlet OriginsViewController *rootViewController;
+
+@property (nonatomic, retain) NSDictionary *Destinations;
 
 - (IBAction)insertNewObject:(id)sender;
 

@@ -8,10 +8,9 @@
 
 #import "DetailViewController.h"
 
-#import "RootViewController.h"
+#import "OriginsViewController.h"
 
 @interface DetailViewController ()
-@property (nonatomic, retain) UIPopoverController *popoverController;
 - (void)configureView;
 @end
 
@@ -20,8 +19,8 @@
 @synthesize toolbar = _toolbar;
 @synthesize detailItem = _detailItem;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
-@synthesize popoverController = _myPopoverController;
 @synthesize rootViewController = _rootViewController;
+@synthesize Destinations;
 
 #pragma mark - Managing the detail item
 
@@ -37,10 +36,6 @@
         // Update the view.
         [self configureView];
 	}
-    
-    if (self.popoverController != nil) {
-        [self.popoverController dismissPopoverAnimated:YES];
-    }		
 }
 
 - (void)configureView
@@ -77,25 +72,25 @@
 
 #pragma mark - Split view support
 
-- (void)splitViewController:(UISplitViewController *)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController: (UIPopoverController *)pc
-{
-    barButtonItem.title = @"Events";
-    NSMutableArray *items = [[self.toolbar items] mutableCopy];
-    [items insertObject:barButtonItem atIndex:0];
-    [self.toolbar setItems:items animated:YES];
-    [items release];
-    self.popoverController = pc;
-}
-
-// Called when the view is shown again in the split view, invalidating the button and popover controller.
-- (void)splitViewController:(UISplitViewController *)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
-{
-    NSMutableArray *items = [[self.toolbar items] mutableCopy];
-    [items removeObjectAtIndex:0];
-    [self.toolbar setItems:items animated:YES];
-    [items release];
-    self.popoverController = nil;
-}
+//- (void)splitViewController:(UISplitViewController *)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController: (UIPopoverController *)pc
+//{
+//    barButtonItem.title = @"Events";
+//    NSMutableArray *items = [[self.toolbar items] mutableCopy];
+//    [items insertObject:barButtonItem atIndex:0];
+//    [self.toolbar setItems:items animated:YES];
+//    [items release];
+//    self.popoverController = pc;
+//}
+//
+//// Called when the view is shown again in the split view, invalidating the button and popover controller.
+//- (void)splitViewController:(UISplitViewController *)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
+//{
+//    NSMutableArray *items = [[self.toolbar items] mutableCopy];
+//    [items removeObjectAtIndex:0];
+//    [self.toolbar setItems:items animated:YES];
+//    [items release];
+//    self.popoverController = nil;
+//}
 
 /*
  // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -111,7 +106,6 @@
 
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
-	self.popoverController = nil;
 }
 
 #pragma mark - Memory management
@@ -126,7 +120,6 @@
 
 - (void)dealloc
 {
-	[_myPopoverController release];
 	[_toolbar release];
 	[_detailItem release];
 	[_detailDescriptionLabel release];

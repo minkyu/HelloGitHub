@@ -8,7 +8,7 @@
 
 #import "KobusReservationAppDelegate.h"
 
-#import "RootViewController.h"
+#import "OriginsViewController.h"
 
 #import "DetailViewController.h"
 
@@ -31,6 +31,7 @@
 	KobusWeb *web = [[KobusWeb alloc] init];
 	web.pushDatas = ^(NSDictionary* origins,NSDictionary* destinations){
 		self.rootViewController.Origins = origins;
+		self.detailViewController.Destinations = destinations;
 	};
 	[web loadWeb];
 	
