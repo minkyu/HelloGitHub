@@ -114,7 +114,8 @@
 - (NSArray *) matchesOfDestinationsInString:(NSString*)aString
 {
     NSError *error = NULL;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"d.TER_FR.selectedIndex].value == \"([\\d]{3})\"[)] [{](.*)[}]" 
+    NSRegularExpression *regex = [NSRegularExpression 
+                                  regularExpressionWithPattern:@"d.TER_FR.selectedIndex].value == \"([\\d]{3})\"[)] [{][\\s]+d.TER_TO.length = [\\d]+;[\\s]+d.TER_TO.selectedIndex = [\\d]+;[\\s]+((d.TER_TO.options\[[\\d]+].value[\\s]+=[\\s]+\"[\\d]{3}\";[\\s]+d.TER_TO.options\[[\\d]+].text[\\s]+=[\\s]+\".+\";)+)[\\s]+[}]" 
                                                                            options:NSRegularExpressionCaseInsensitive + NSRegularExpressionDotMatchesLineSeparators
                                                                              error:&error];
 	return [regex matchesInString:aString options:0 range:NSMakeRange(0, [aString length])];	
