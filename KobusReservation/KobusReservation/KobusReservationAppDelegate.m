@@ -30,6 +30,7 @@
 	// Add the split view controller's view to the window and display.
 	KobusWeb *web = [[KobusWeb alloc] init];
 	[web loadWeb];
+	self.rootViewController.Origins = [web Origins];
 	self.window.rootViewController = self.splitViewController;
 	[self.window makeKeyAndVisible];
     return YES;
@@ -86,7 +87,7 @@
 - (void)awakeFromNib
 {
     // Pass the managed object context to the root view controller.
-    self.rootViewController.managedObjectContext = self.managedObjectContext; 
+    
 }
 - (void)saveContext
 {

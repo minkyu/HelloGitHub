@@ -10,14 +10,12 @@
 
 @class DetailViewController;
 
-#import <CoreData/CoreData.h>
 
-@interface RootViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface RootViewController : UITableViewController 
 
 @property (nonatomic, retain) IBOutlet DetailViewController *detailViewController;
 
-@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) NSDictionary *Origins;
 
 - (void)insertNewObject:(id)sender;
 

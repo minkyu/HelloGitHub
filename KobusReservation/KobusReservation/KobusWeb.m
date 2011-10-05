@@ -44,24 +44,24 @@
 	[[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
 
+- (NSString*)webDataEncoding
+{
+	NSString *webstring = [[[NSString alloc] initWithData:responseData encoding:EucKrEncoding] autorelease];
+	NSAssert([webstring length], @"에러 발생");
+	return webstring;
+}
+
+
+#pragma mark - Origins method
+
 - (void)loadOrigins
 {
 	self.Origins = [[NSMutableDictionary alloc]init];
 	//responseData
 	[self parseOrigins:[self webDataEncoding]];
-    
-	
-}
-
-- (void)loadDestinations
-{
-	self.Destinations = [[NSMutableDictionary alloc]init];
-	//responseData
-	[self parseDestinations:[self webDataEncoding]];
 }
 
 // 출발지를 가져온다
-
 - (NSArray *) matchesOfOriginsInString:(NSString*)aString
 {
 	NSError *error = NULL;
@@ -83,11 +83,23 @@
         [Origins setValue:locName forKey:locCode];
         NSLog(@"%@ = %@", locCode, locName);
         
-                                        
+		
     }
     
 	NSLog(@"parser end");
 }
+
+
+#pragma mark - Destinations method
+
+
+- (void)loadDestinations
+{
+	self.Destinations = [[NSMutableDictionary alloc]init];
+	//responseData
+	[self parseDestinations:[self webDataEncoding]];
+}
+
 
 
 // 목적지 파싱
@@ -144,14 +156,8 @@
 	NSLog(@"%@",Destinations);
 }
 
-- (NSString*)webDataEncoding
-{
-	NSString *webstring = [[[NSString alloc] initWithData:responseData encoding:EucKrEncoding] autorelease];
-	NSAssert([webstring length], @"에러 발생");
-	return webstring;
-}
 
-#pragma - NSURLConnection deletage
+#pragma mark - NSURLConnection deletage
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
@@ -175,12 +181,6 @@
     [errorAlert show];
 }
 
--(void) makeSampleFileForTesting
-{
-	// 테스트용 파일을 만들 필요가 있을 때만 부른다.
-	NSError *error = nil;
-	[responseData writeToFile:@"~/KobusWebSampleInput__" options:NSDataWritingFileProtectionComplete error:&error];	
-}
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
@@ -192,5 +192,15 @@
 	[self loadOrigins];
 	[self loadDestinations];
 }
+
+#pragma mark - test code
+
+-(void) makeSampleFileForTesting
+{
+	// 테스트용 파일을 만들 필요가 있을 때만 부른다.
+	NSError *error = nil;
+	[responseData writeToFile:@"~/KobusWebSampleInput__" options:NSDataWritingFileProtectionComplete error:&error];	
+}
+
 
 @end
