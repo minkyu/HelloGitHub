@@ -29,7 +29,7 @@
 	// Override point for customization after application launch.
 	// Add the split view controller's view to the window and display.
 	KobusWeb *web = [[KobusWeb alloc] init];
-	web.pushDatas = ^(NSDictionary* origins,NSDictionary* destinations){
+	web.pushDatas = ^(SortedDictionary* origins,SortedDictionary* destinations){
 		self.rootViewController.Origins = origins;
 		self.destinationsViewController.Destinations = destinations;
 	};

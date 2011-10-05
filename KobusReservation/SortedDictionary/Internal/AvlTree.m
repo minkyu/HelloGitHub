@@ -10,6 +10,15 @@
 
 #define DIR(side)	(((side) == odLeft) ? -1 : 1)
 
+@implementation NSObject (NSComparisonMethods)
+- (BOOL)isLessThan:(id)object
+{
+	if ([self compare:object] == NSOrderedAscending)
+		return YES;
+	return NO;
+}
+@end
+
 
 @implementation AvlTree
 

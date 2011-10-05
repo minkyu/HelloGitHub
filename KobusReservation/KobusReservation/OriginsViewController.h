@@ -15,7 +15,7 @@
 
 @property (nonatomic, retain) IBOutlet DestinationsViewController *destinationsViewController;
 
-@property (nonatomic, retain) NSDictionary *Origins;
+@property (nonatomic, retain) SortedDictionary *Origins;
 
 
 @end

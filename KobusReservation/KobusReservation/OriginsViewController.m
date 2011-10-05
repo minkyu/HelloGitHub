@@ -38,12 +38,11 @@
 	return 1;
 }
 
-- (void)setOrigins:(NSDictionary *)aOrigins
+- (void)setOrigins:(SortedDictionary *)aOrigins
 {
 	[Origins release];
 	Origins = [aOrigins retain];
 	[[self tableView] reloadData];
-//	NSLog(@"%@",Origins);
 }
 		
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

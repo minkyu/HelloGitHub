@@ -56,7 +56,7 @@
 
 - (void)loadOrigins
 {
-	self.Origins = [[NSMutableDictionary alloc]init];
+	self.Origins = [[MutableSortedDictionary alloc]init];
 	//responseData
 	[self parseOrigins:[self webDataEncoding]];
 }
@@ -95,7 +95,7 @@
 
 - (void)loadDestinations
 {
-	self.Destinations = [[NSMutableDictionary alloc]init];
+	self.Destinations = [[MutableSortedDictionary alloc]init];
 	//responseData
 	[self parseDestinations:[self webDataEncoding]];
 }
@@ -116,7 +116,7 @@
 	return [regex matchesInString:aString options:0 range:NSMakeRange(0, [aString length])];	
 }
 
-- (NSDictionary*)destinationForOrgine:(NSString*)fromCode
+- (SortedDictionary*)destinationForOrgine:(NSString*)fromCode
 {
 	NSError *error = NULL;	
 	NSRegularExpression *subvalueregex = [NSRegularExpression regularExpressionWithPattern:@"].value	= \"([\\d]{3})\"" 
@@ -129,7 +129,7 @@
 	NSArray *submatchestext = [subtextregex matchesInString:fromCode options:0 range:NSMakeRange(0, [fromCode length])];
 	
 	NSAssert([submatchesvalue count] == [submatchestext count], @"갯수가 틀림");
-	NSMutableDictionary *destination = [[NSMutableDictionary alloc] init];
+	MutableSortedDictionary *destination = [[MutableSortedDictionary alloc] init];
 	for (int i = 0; i<[submatchesvalue count]; i++) {
 		NSTextCheckingResult *subvalueresult = [submatchesvalue objectAtIndex:i];
 		NSTextCheckingResult *subtextresult = [submatchestext objectAtIndex:i];

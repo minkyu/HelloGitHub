@@ -19,6 +19,6 @@
 @property (nonatomic, retain) IBOutlet UITableView *destinationsView;
 
 @property (nonatomic, retain) NSString *selectedOrigin;
-@property (nonatomic, retain) NSDictionary *Destinations;
+@property (nonatomic, retain) SortedDictionary *Destinations;
 
 @end

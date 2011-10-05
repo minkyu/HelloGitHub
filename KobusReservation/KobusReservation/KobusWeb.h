@@ -8,19 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^datas)(NSDictionary*,NSDictionary*);
+typedef void (^datas)(SortedDictionary*,SortedDictionary*);
 
 
 @interface KobusWeb : NSObject 
-{
-	NSMutableData *responseData;
-	NSMutableDictionary *Origins;
-	NSMutableDictionary *Destinations;
-}
+
 @property (nonatomic,copy) datas pushDatas;
 @property (nonatomic,retain) NSMutableData *responseData;
-@property (nonatomic,retain) NSMutableDictionary *Origins;
-@property (nonatomic,retain) NSMutableDictionary *Destinations;
+@property (nonatomic,retain) MutableSortedDictionary *Origins;
+@property (nonatomic,retain) MutableSortedDictionary *Destinations;
 
 - (void)loadWeb;
 - (NSArray *) matchesOfOriginsInString:(NSString*)aString;
