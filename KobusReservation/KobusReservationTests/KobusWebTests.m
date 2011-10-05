@@ -53,9 +53,8 @@
 - (void)testMatchesOfDestinationsInString
 {
 	NSArray *matches = [kobusWeb matchesOfDestinationsInString: [kobusWeb webDataEncoding]];
-	STAssertEquals((int)1, (int)[matches count], nil);;
+	STAssertEquals((int)124, (int)[matches count], nil);;
 	NSTextCheckingResult *match = [matches objectAtIndex:0];
-	STAssertEqualObjects(@"355", [[kobusWeb webDataEncoding] substringWithRange: [match rangeAtIndex:2]], nil);
 	STAssertEqualObjects(@"200", [[kobusWeb webDataEncoding] substringWithRange: [match rangeAtIndex:1]], nil);
 }
 

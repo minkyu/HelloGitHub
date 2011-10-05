@@ -104,41 +104,44 @@
 	return [regex matchesInString:aString options:0 range:NSMakeRange(0, [aString length])];	
 }
 
+- (NSDictionary*)destinationForOrgine:(NSString*)fromCode
+{
+	NSError *error = NULL;	
+	NSRegularExpression *subvalueregex = [NSRegularExpression regularExpressionWithPattern:@"].value	= \"([\\d]{3})\"" 
+																				   options:NSRegularExpressionCaseInsensitive
+																					 error:&error];
+	NSRegularExpression *subtextregex = [NSRegularExpression regularExpressionWithPattern:@"].text 	=  \"(.*)\"" 
+																				  options:NSRegularExpressionCaseInsensitive
+																					error:&error];
+	NSArray *submatchesvalue = [subvalueregex matchesInString:fromCode options:0 range:NSMakeRange(0, [fromCode length])];
+	NSArray *submatchestext = [subtextregex matchesInString:fromCode options:0 range:NSMakeRange(0, [fromCode length])];
+	
+	NSAssert([submatchesvalue count] == [submatchestext count], @"갯수가 틀림");
+	NSMutableDictionary *destination = [[NSMutableDictionary alloc] init];
+	for (int i = 0; i<[submatchesvalue count]; i++) {
+		NSTextCheckingResult *subvalueresult = [submatchesvalue objectAtIndex:i];
+		NSTextCheckingResult *subtextresult = [submatchestext objectAtIndex:i];
+		
+		NSString *subvalue = [fromCode substringWithRange:[subvalueresult rangeAtIndex:1]];
+		NSString *subtext = [fromCode substringWithRange:[subtextresult rangeAtIndex:1]];
+		[destination setValue:subtext forKey:subvalue];
+		
+	}
+	return [destination autorelease];
+}
+
 - (void)parseDestinations:(NSString*)aStr
 {
 
-    NSError *error = NULL;	
+    NSLog(@"%d",[[self matchesOfDestinationsInString:aStr] count]);
 	for (NSTextCheckingResult *match in [self matchesOfDestinationsInString:aStr]) {
 		NSString *orgineStr = [aStr substringWithRange:[match rangeAtIndex:1]];// ([\\d]{3})
         NSString *fromCode = [aStr substringWithRange:[match rangeAtIndex:2]];// ([^}]*)
 		
-		NSRegularExpression *subvalueregex = [NSRegularExpression regularExpressionWithPattern:@"].value	= \"([\\d]{3})\"" 
-																				  options:NSRegularExpressionCaseInsensitive
-																					error:&error];
-		NSRegularExpression *subtextregex = [NSRegularExpression regularExpressionWithPattern:@"].text 	=  \"(.*)\"" 
-																				  options:NSRegularExpressionCaseInsensitive
-																					error:&error];
-		NSArray *submatchesvalue = [subvalueregex matchesInString:fromCode options:0 range:NSMakeRange(0, [fromCode length])];
-		NSArray *submatchestext = [subtextregex matchesInString:fromCode options:0 range:NSMakeRange(0, [fromCode length])];
-
-		NSAssert([submatchesvalue count] == [submatchestext count], @"갯수가 틀림");
-		NSMutableDictionary *destination = [[NSMutableDictionary alloc] init];
-		for (int i = 0; i<[submatchesvalue count]; i++) {
-			NSTextCheckingResult *subvalueresult = [submatchesvalue objectAtIndex:i];
-			NSTextCheckingResult *subtextresult = [submatchestext objectAtIndex:i];
-			
-			NSString *subvalue = [fromCode substringWithRange:[subvalueresult rangeAtIndex:1]];
-			NSString *subtext = [fromCode substringWithRange:[subtextresult rangeAtIndex:1]];
-			[destination setValue:subtext forKey:subvalue];
-			
-		}
-		[Destinations setValue:destination forKey:orgineStr];
-		[destination release];
+		[Destinations setValue:[self destinationForOrgine:fromCode] forKey:orgineStr];
 	}
 
-		
 	NSLog(@"%@",Destinations);
-    NSLog(@"parse end");
 }
 
 - (NSString*)webDataEncoding
@@ -185,8 +188,6 @@
 //	NSString *webstring = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
 //	NSLog(@"%@",[self webDataEncoding]);
 	[connection release];
-	
-//	[self makeSampleFileForTesting];
 	
 	[self loadOrigins];
 	[self loadDestinations];
