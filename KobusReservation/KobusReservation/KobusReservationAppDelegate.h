@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class RootViewController;
+@class OriginsViewController;
 
-@class DetailViewController;
+@class DestinationsViewController;
 
 @interface KobusReservationAppDelegate : NSObject <UIApplicationDelegate>
 
@@ -25,8 +25,8 @@
 
 @property (nonatomic, retain) IBOutlet UISplitViewController *splitViewController;
 
-@property (nonatomic, retain) IBOutlet RootViewController *rootViewController;
+@property (nonatomic, retain) IBOutlet OriginsViewController *rootViewController;
 
-@property (nonatomic, retain) IBOutlet DetailViewController *detailViewController;
+@property (nonatomic, retain) IBOutlet DestinationsViewController *destinationsViewController;
 
 @end

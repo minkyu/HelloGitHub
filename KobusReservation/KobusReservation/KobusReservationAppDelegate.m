@@ -8,9 +8,9 @@
 
 #import "KobusReservationAppDelegate.h"
 
-#import "RootViewController.h"
+#import "OriginsViewController.h"
 
-#import "DetailViewController.h"
+#import "DestinationsViewController.h"
 
 #import "KobusWeb.h"
 
@@ -22,14 +22,19 @@
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 @synthesize splitViewController = _splitViewController;
 @synthesize rootViewController = _rootViewController;
-@synthesize detailViewController = _detailViewController;
+@synthesize destinationsViewController = _destinationsViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	// Override point for customization after application launch.
 	// Add the split view controller's view to the window and display.
 	KobusWeb *web = [[KobusWeb alloc] init];
+	web.pushDatas = ^(SortedDictionary* origins,SortedDictionary* destinations){
+		self.rootViewController.Origins = origins;
+		self.destinationsViewController.Destinations = destinations;
+	};
 	[web loadWeb];
+	
 	self.window.rootViewController = self.splitViewController;
 	[self.window makeKeyAndVisible];
     return YES;
@@ -79,14 +84,14 @@
 	[__persistentStoreCoordinator release];
 	[_splitViewController release];
 	[_rootViewController release];
-	[_detailViewController release];
+	[_destinationsViewController release];
     [super dealloc];
 }
 
 - (void)awakeFromNib
 {
     // Pass the managed object context to the root view controller.
-    self.rootViewController.managedObjectContext = self.managedObjectContext; 
+    
 }
 - (void)saveContext
 {

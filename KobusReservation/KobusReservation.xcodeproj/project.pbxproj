@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D388C46F143C6ECF00DEF523 /* AvlTree+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C44E143C6ECF00DEF523 /* AvlTree+Private.m */; };
+		D388C470143C6ECF00DEF523 /* AvlTree.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C450143C6ECF00DEF523 /* AvlTree.m */; };
+		D388C471143C6ECF00DEF523 /* common.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C452143C6ECF00DEF523 /* common.m */; };
+		D388C472143C6ECF00DEF523 /* EntryEnumerator+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C455143C6ECF00DEF523 /* EntryEnumerator+Private.m */; };
+		D388C473143C6ECF00DEF523 /* EntryEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C457143C6ECF00DEF523 /* EntryEnumerator.m */; };
+		D388C474143C6ECF00DEF523 /* KeyEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C459143C6ECF00DEF523 /* KeyEnumerator.m */; };
+		D388C475143C6ECF00DEF523 /* ObjectEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C45B143C6ECF00DEF523 /* ObjectEnumerator.m */; };
+		D388C476143C6ECF00DEF523 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C45D143C6ECF00DEF523 /* Node.m */; };
+		D388C477143C6ECF00DEF523 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C45F143C6ECF00DEF523 /* NSString+Base64.m */; };
+		D388C478143C6ECF00DEF523 /* NSString+Indent.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C461143C6ECF00DEF523 /* NSString+Indent.m */; };
+		D388C479143C6ECF00DEF523 /* PropertyListReader.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C464143C6ECF00DEF523 /* PropertyListReader.m */; };
+		D388C47A143C6ECF00DEF523 /* PropertyListWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C466143C6ECF00DEF523 /* PropertyListWriter.m */; };
+		D388C47B143C6ECF00DEF523 /* SortedDictionary+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C468143C6ECF00DEF523 /* SortedDictionary+Private.m */; };
+		D388C47C143C6ECF00DEF523 /* MutableSortedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C46B143C6ECF00DEF523 /* MutableSortedDictionary.m */; };
+		D388C47D143C6ECF00DEF523 /* SortedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C46D143C6ECF00DEF523 /* SortedDictionary.m */; };
 		D3D943791435D31700568CE0 /* KobusWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D943781435D31700568CE0 /* KobusWeb.m */; };
 		ED332E041435C299009A82E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E031435C299009A82E5 /* UIKit.framework */; };
 		ED332E061435C299009A82E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E051435C299009A82E5 /* Foundation.framework */; };
@@ -17,9 +32,9 @@
 		ED332E161435C299009A82E5 /* KobusReservationAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED332E151435C299009A82E5 /* KobusReservationAppDelegate.m */; };
 		ED332E191435C299009A82E5 /* KobusReservation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED332E171435C299009A82E5 /* KobusReservation.xcdatamodeld */; };
 		ED332E1C1435C29A009A82E5 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED332E1A1435C29A009A82E5 /* MainWindow.xib */; };
-		ED332E1F1435C29A009A82E5 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED332E1E1435C29A009A82E5 /* DetailViewController.m */; };
+		ED332E1F1435C29A009A82E5 /* DestinationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED332E1E1435C29A009A82E5 /* DestinationsViewController.m */; };
 		ED332E221435C29A009A82E5 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED332E201435C29A009A82E5 /* DetailView.xib */; };
-		ED332E251435C29A009A82E5 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED332E241435C29A009A82E5 /* RootViewController.m */; };
+		ED332E251435C29A009A82E5 /* OriginsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED332E241435C29A009A82E5 /* OriginsViewController.m */; };
 		ED332E2D1435C29A009A82E5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E2C1435C29A009A82E5 /* SenTestingKit.framework */; };
 		ED332E2E1435C29A009A82E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E031435C299009A82E5 /* UIKit.framework */; };
 		ED332E2F1435C29A009A82E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E051435C299009A82E5 /* Foundation.framework */; };
@@ -32,6 +47,37 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D388C44D143C6ECF00DEF523 /* AvlTree+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AvlTree+Private.h"; sourceTree = "<group>"; };
+		D388C44E143C6ECF00DEF523 /* AvlTree+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AvlTree+Private.m"; sourceTree = "<group>"; };
+		D388C44F143C6ECF00DEF523 /* AvlTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvlTree.h; sourceTree = "<group>"; };
+		D388C450143C6ECF00DEF523 /* AvlTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvlTree.m; sourceTree = "<group>"; };
+		D388C451143C6ECF00DEF523 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		D388C452143C6ECF00DEF523 /* common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common.m; sourceTree = "<group>"; };
+		D388C454143C6ECF00DEF523 /* EntryEnumerator+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EntryEnumerator+Private.h"; sourceTree = "<group>"; };
+		D388C455143C6ECF00DEF523 /* EntryEnumerator+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EntryEnumerator+Private.m"; sourceTree = "<group>"; };
+		D388C456143C6ECF00DEF523 /* EntryEnumerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryEnumerator.h; sourceTree = "<group>"; };
+		D388C457143C6ECF00DEF523 /* EntryEnumerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryEnumerator.m; sourceTree = "<group>"; };
+		D388C458143C6ECF00DEF523 /* KeyEnumerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyEnumerator.h; sourceTree = "<group>"; };
+		D388C459143C6ECF00DEF523 /* KeyEnumerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyEnumerator.m; sourceTree = "<group>"; };
+		D388C45A143C6ECF00DEF523 /* ObjectEnumerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectEnumerator.h; sourceTree = "<group>"; };
+		D388C45B143C6ECF00DEF523 /* ObjectEnumerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectEnumerator.m; sourceTree = "<group>"; };
+		D388C45C143C6ECF00DEF523 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		D388C45D143C6ECF00DEF523 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
+		D388C45E143C6ECF00DEF523 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		D388C45F143C6ECF00DEF523 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		D388C460143C6ECF00DEF523 /* NSString+Indent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Indent.h"; sourceTree = "<group>"; };
+		D388C461143C6ECF00DEF523 /* NSString+Indent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Indent.m"; sourceTree = "<group>"; };
+		D388C463143C6ECF00DEF523 /* PropertyListReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyListReader.h; sourceTree = "<group>"; };
+		D388C464143C6ECF00DEF523 /* PropertyListReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyListReader.m; sourceTree = "<group>"; };
+		D388C465143C6ECF00DEF523 /* PropertyListWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyListWriter.h; sourceTree = "<group>"; };
+		D388C466143C6ECF00DEF523 /* PropertyListWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyListWriter.m; sourceTree = "<group>"; };
+		D388C467143C6ECF00DEF523 /* SortedDictionary+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SortedDictionary+Private.h"; sourceTree = "<group>"; };
+		D388C468143C6ECF00DEF523 /* SortedDictionary+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SortedDictionary+Private.m"; sourceTree = "<group>"; };
+		D388C46A143C6ECF00DEF523 /* MutableSortedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutableSortedDictionary.h; sourceTree = "<group>"; };
+		D388C46B143C6ECF00DEF523 /* MutableSortedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutableSortedDictionary.m; sourceTree = "<group>"; };
+		D388C46C143C6ECF00DEF523 /* SortedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortedDictionary.h; sourceTree = "<group>"; };
+		D388C46D143C6ECF00DEF523 /* SortedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortedDictionary.m; sourceTree = "<group>"; };
+		D388C46E143C6ECF00DEF523 /* SortedDictionaryEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortedDictionaryEntry.h; sourceTree = "<group>"; };
 		D3D943771435D31700568CE0 /* KobusWeb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KobusWeb.h; sourceTree = "<group>"; };
 		D3D943781435D31700568CE0 /* KobusWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KobusWeb.m; sourceTree = "<group>"; };
 		ED332E031435C299009A82E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -46,11 +92,11 @@
 		ED332E151435C299009A82E5 /* KobusReservationAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KobusReservationAppDelegate.m; sourceTree = "<group>"; };
 		ED332E181435C299009A82E5 /* KobusReservation.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KobusReservation.xcdatamodel; sourceTree = "<group>"; };
 		ED332E1B1435C29A009A82E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		ED332E1D1435C29A009A82E5 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		ED332E1E1435C29A009A82E5 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		ED332E1D1435C29A009A82E5 /* DestinationsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DestinationsViewController.h; sourceTree = "<group>"; };
+		ED332E1E1435C29A009A82E5 /* DestinationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DestinationsViewController.m; sourceTree = "<group>"; };
 		ED332E211435C29A009A82E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailView.xib; sourceTree = "<group>"; };
-		ED332E231435C29A009A82E5 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		ED332E241435C29A009A82E5 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		ED332E231435C29A009A82E5 /* OriginsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OriginsViewController.h; sourceTree = "<group>"; };
+		ED332E241435C29A009A82E5 /* OriginsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OriginsViewController.m; sourceTree = "<group>"; };
 		ED332E2C1435C29A009A82E5 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		ED332E361435C29A009A82E5 /* KobusReservationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KobusReservationTests-Info.plist"; sourceTree = "<group>"; };
 		ED332E381435C29A009A82E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -88,9 +134,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D388C44B143C6ECF00DEF523 /* SortedDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				D388C44C143C6ECF00DEF523 /* Internal */,
+				D388C469143C6ECF00DEF523 /* Public */,
+			);
+			path = SortedDictionary;
+			sourceTree = "<group>";
+		};
+		D388C44C143C6ECF00DEF523 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				D388C44D143C6ECF00DEF523 /* AvlTree+Private.h */,
+				D388C44E143C6ECF00DEF523 /* AvlTree+Private.m */,
+				D388C44F143C6ECF00DEF523 /* AvlTree.h */,
+				D388C450143C6ECF00DEF523 /* AvlTree.m */,
+				D388C451143C6ECF00DEF523 /* common.h */,
+				D388C452143C6ECF00DEF523 /* common.m */,
+				D388C453143C6ECF00DEF523 /* Enumerators */,
+				D388C45C143C6ECF00DEF523 /* Node.h */,
+				D388C45D143C6ECF00DEF523 /* Node.m */,
+				D388C45E143C6ECF00DEF523 /* NSString+Base64.h */,
+				D388C45F143C6ECF00DEF523 /* NSString+Base64.m */,
+				D388C460143C6ECF00DEF523 /* NSString+Indent.h */,
+				D388C461143C6ECF00DEF523 /* NSString+Indent.m */,
+				D388C462143C6ECF00DEF523 /* Serialization */,
+				D388C467143C6ECF00DEF523 /* SortedDictionary+Private.h */,
+				D388C468143C6ECF00DEF523 /* SortedDictionary+Private.m */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		D388C453143C6ECF00DEF523 /* Enumerators */ = {
+			isa = PBXGroup;
+			children = (
+				D388C454143C6ECF00DEF523 /* EntryEnumerator+Private.h */,
+				D388C455143C6ECF00DEF523 /* EntryEnumerator+Private.m */,
+				D388C456143C6ECF00DEF523 /* EntryEnumerator.h */,
+				D388C457143C6ECF00DEF523 /* EntryEnumerator.m */,
+				D388C458143C6ECF00DEF523 /* KeyEnumerator.h */,
+				D388C459143C6ECF00DEF523 /* KeyEnumerator.m */,
+				D388C45A143C6ECF00DEF523 /* ObjectEnumerator.h */,
+				D388C45B143C6ECF00DEF523 /* ObjectEnumerator.m */,
+			);
+			path = Enumerators;
+			sourceTree = "<group>";
+		};
+		D388C462143C6ECF00DEF523 /* Serialization */ = {
+			isa = PBXGroup;
+			children = (
+				D388C463143C6ECF00DEF523 /* PropertyListReader.h */,
+				D388C464143C6ECF00DEF523 /* PropertyListReader.m */,
+				D388C465143C6ECF00DEF523 /* PropertyListWriter.h */,
+				D388C466143C6ECF00DEF523 /* PropertyListWriter.m */,
+			);
+			path = Serialization;
+			sourceTree = "<group>";
+		};
+		D388C469143C6ECF00DEF523 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				D388C46A143C6ECF00DEF523 /* MutableSortedDictionary.h */,
+				D388C46B143C6ECF00DEF523 /* MutableSortedDictionary.m */,
+				D388C46C143C6ECF00DEF523 /* SortedDictionary.h */,
+				D388C46D143C6ECF00DEF523 /* SortedDictionary.m */,
+				D388C46E143C6ECF00DEF523 /* SortedDictionaryEntry.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
 		ED332DF41435C299009A82E5 = {
 			isa = PBXGroup;
 			children = (
+				D388C44B143C6ECF00DEF523 /* SortedDictionary */,
 				ED332E0B1435C299009A82E5 /* KobusReservation */,
 				ED332E341435C29A009A82E5 /* KobusReservationTests */,
 				ED332E021435C299009A82E5 /* Frameworks */,
@@ -117,11 +234,11 @@
 				ED332E141435C299009A82E5 /* KobusReservationAppDelegate.h */,
 				ED332E151435C299009A82E5 /* KobusReservationAppDelegate.m */,
 				ED332E1A1435C29A009A82E5 /* MainWindow.xib */,
-				ED332E1D1435C29A009A82E5 /* DetailViewController.h */,
-				ED332E1E1435C29A009A82E5 /* DetailViewController.m */,
+				ED332E1D1435C29A009A82E5 /* DestinationsViewController.h */,
+				ED332E1E1435C29A009A82E5 /* DestinationsViewController.m */,
 				ED332E201435C29A009A82E5 /* DetailView.xib */,
-				ED332E231435C29A009A82E5 /* RootViewController.h */,
-				ED332E241435C29A009A82E5 /* RootViewController.m */,
+				ED332E231435C29A009A82E5 /* OriginsViewController.h */,
+				ED332E241435C29A009A82E5 /* OriginsViewController.m */,
 				ED332E171435C299009A82E5 /* KobusReservation.xcdatamodeld */,
 				ED332E0C1435C299009A82E5 /* Supporting Files */,
 				D3D943771435D31700568CE0 /* KobusWeb.h */,
@@ -271,9 +388,24 @@
 				ED332E121435C299009A82E5 /* main.m in Sources */,
 				ED332E161435C299009A82E5 /* KobusReservationAppDelegate.m in Sources */,
 				ED332E191435C299009A82E5 /* KobusReservation.xcdatamodeld in Sources */,
-				ED332E1F1435C29A009A82E5 /* DetailViewController.m in Sources */,
-				ED332E251435C29A009A82E5 /* RootViewController.m in Sources */,
+				ED332E1F1435C29A009A82E5 /* DestinationsViewController.m in Sources */,
+				ED332E251435C29A009A82E5 /* OriginsViewController.m in Sources */,
 				D3D943791435D31700568CE0 /* KobusWeb.m in Sources */,
+				D388C46F143C6ECF00DEF523 /* AvlTree+Private.m in Sources */,
+				D388C470143C6ECF00DEF523 /* AvlTree.m in Sources */,
+				D388C471143C6ECF00DEF523 /* common.m in Sources */,
+				D388C472143C6ECF00DEF523 /* EntryEnumerator+Private.m in Sources */,
+				D388C473143C6ECF00DEF523 /* EntryEnumerator.m in Sources */,
+				D388C474143C6ECF00DEF523 /* KeyEnumerator.m in Sources */,
+				D388C475143C6ECF00DEF523 /* ObjectEnumerator.m in Sources */,
+				D388C476143C6ECF00DEF523 /* Node.m in Sources */,
+				D388C477143C6ECF00DEF523 /* NSString+Base64.m in Sources */,
+				D388C478143C6ECF00DEF523 /* NSString+Indent.m in Sources */,
+				D388C479143C6ECF00DEF523 /* PropertyListReader.m in Sources */,
+				D388C47A143C6ECF00DEF523 /* PropertyListWriter.m in Sources */,
+				D388C47B143C6ECF00DEF523 /* SortedDictionary+Private.m in Sources */,
+				D388C47C143C6ECF00DEF523 /* MutableSortedDictionary.m in Sources */,
+				D388C47D143C6ECF00DEF523 /* SortedDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
