@@ -23,6 +23,21 @@
 		D388C47C143C6ECF00DEF523 /* MutableSortedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C46B143C6ECF00DEF523 /* MutableSortedDictionary.m */; };
 		D388C47D143C6ECF00DEF523 /* SortedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C46D143C6ECF00DEF523 /* SortedDictionary.m */; };
 		D3D943791435D31700568CE0 /* KobusWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D943781435D31700568CE0 /* KobusWeb.m */; };
+		D3FB0001143D402D00A5B013 /* EntryEnumerator+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C455143C6ECF00DEF523 /* EntryEnumerator+Private.m */; };
+		D3FB0003143D402D00A5B013 /* EntryEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C457143C6ECF00DEF523 /* EntryEnumerator.m */; };
+		D3FB0005143D402D00A5B013 /* KeyEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C459143C6ECF00DEF523 /* KeyEnumerator.m */; };
+		D3FB0007143D402D00A5B013 /* ObjectEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C45B143C6ECF00DEF523 /* ObjectEnumerator.m */; };
+		D3FB0009143D402D00A5B013 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C45D143C6ECF00DEF523 /* Node.m */; };
+		D3FB000B143D402D00A5B013 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C45F143C6ECF00DEF523 /* NSString+Base64.m */; };
+		D3FB000D143D402D00A5B013 /* NSString+Indent.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C461143C6ECF00DEF523 /* NSString+Indent.m */; };
+		D3FB000F143D402D00A5B013 /* PropertyListReader.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C464143C6ECF00DEF523 /* PropertyListReader.m */; };
+		D3FB0011143D402D00A5B013 /* PropertyListWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C466143C6ECF00DEF523 /* PropertyListWriter.m */; };
+		D3FB0013143D402D00A5B013 /* SortedDictionary+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C468143C6ECF00DEF523 /* SortedDictionary+Private.m */; };
+		D3FB0015143D402D00A5B013 /* MutableSortedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C46B143C6ECF00DEF523 /* MutableSortedDictionary.m */; };
+		D3FB0017143D402D00A5B013 /* SortedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C46D143C6ECF00DEF523 /* SortedDictionary.m */; };
+		D3FBFFFB143D402D00A5B013 /* AvlTree+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C44E143C6ECF00DEF523 /* AvlTree+Private.m */; };
+		D3FBFFFD143D402D00A5B013 /* AvlTree.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C450143C6ECF00DEF523 /* AvlTree.m */; };
+		D3FBFFFF143D402D00A5B013 /* common.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C452143C6ECF00DEF523 /* common.m */; };
 		ED332E041435C299009A82E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E031435C299009A82E5 /* UIKit.framework */; };
 		ED332E061435C299009A82E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E051435C299009A82E5 /* Foundation.framework */; };
 		ED332E081435C299009A82E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E071435C299009A82E5 /* CoreGraphics.framework */; };
@@ -413,6 +428,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3FBFFFB143D402D00A5B013 /* AvlTree+Private.m in Sources */,
+				D3FBFFFD143D402D00A5B013 /* AvlTree.m in Sources */,
+				D3FBFFFF143D402D00A5B013 /* common.m in Sources */,
+				D3FB0001143D402D00A5B013 /* EntryEnumerator+Private.m in Sources */,
+				D3FB0003143D402D00A5B013 /* EntryEnumerator.m in Sources */,
+				D3FB0005143D402D00A5B013 /* KeyEnumerator.m in Sources */,
+				D3FB0007143D402D00A5B013 /* ObjectEnumerator.m in Sources */,
+				D3FB0009143D402D00A5B013 /* Node.m in Sources */,
+				D3FB000B143D402D00A5B013 /* NSString+Base64.m in Sources */,
+				D3FB000D143D402D00A5B013 /* NSString+Indent.m in Sources */,
+				D3FB000F143D402D00A5B013 /* PropertyListReader.m in Sources */,
+				D3FB0011143D402D00A5B013 /* PropertyListWriter.m in Sources */,
+				D3FB0013143D402D00A5B013 /* SortedDictionary+Private.m in Sources */,
+				D3FB0015143D402D00A5B013 /* MutableSortedDictionary.m in Sources */,
+				D3FB0017143D402D00A5B013 /* SortedDictionary.m in Sources */,
 				ED332E3D1435C29A009A82E5 /* KobusWebTests.m in Sources */,
 				ED3D725C143B3C0100775F58 /* KobusWeb.m in Sources */,
 			);
