@@ -1,0 +1,27 @@
+
+
+					d.TER_TO.length = 5;
+
+				d.TER_TO.selectedIndex = 0;
+
+
+							d.TER_TO.options[0].value	= "200";
+							d.TER_TO.options[0].text 	=  "강릉    [200]";
+
+
+							d.TER_TO.options[1].value	= "500";
+							d.TER_TO.options[1].text 	=  "광주    [500]";
+
+
+							d.TER_TO.options[2].value	= "602";
+							d.TER_TO.options[2].text 	=  "전주    [602]";
+
+		
+							d.TER_TO.options[3].value	= "315";
+							d.TER_TO.options[3].text 	=  "정안(하)휴게소[315]";
+
+		
+							d.TER_TO.options[4].value	= "238";
+							d.TER_TO.options[4].text 	=  "횡성(하)휴게소[238]";
+
+		

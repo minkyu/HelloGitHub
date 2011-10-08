@@ -17,7 +17,7 @@ typedef void (^datas)(SortedDictionary*,SortedDictionary*);
 @property (nonatomic,retain) NSMutableData *responseData;
 @property (nonatomic,retain) MutableSortedDictionary *Origins;
 @property (nonatomic,retain) MutableSortedDictionary *Destinations;
-
+- (SortedDictionary*)destinationForOrgine:(NSString*)fromCode;
 - (void)loadWeb;
 - (NSArray *) matchesOfOriginsInString:(NSString*)aString;
 - (NSArray *) matchesOfDestinationsInString:(NSString*)aString;

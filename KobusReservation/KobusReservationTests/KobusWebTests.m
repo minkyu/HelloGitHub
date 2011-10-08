@@ -58,5 +58,24 @@
 	STAssertEqualObjects(@"200", [[kobusWeb webDataEncoding] substringWithRange: [match rangeAtIndex:1]], nil);
 }
 
+-(void)testDestinationForOrgine
+{
+	NSString *aStr = [kobusWeb webDataEncoding];
+	NSTextCheckingResult *match = [[kobusWeb matchesOfDestinationsInString:aStr] objectAtIndex: 4];
+	NSString *orgineStr = [aStr substringWithRange:[match rangeAtIndex:1]];// ([\\d]{3})
+	NSString *fromCode = [aStr substringWithRange:[match rangeAtIndex:2]];// ([^}]*)
+	STAssertEqualObjects(@"115", orgineStr, nil);
+	NSError *error = nil;
+	STAssertEqualObjects([NSString stringWithContentsOfFile:[[self getTestBundle] pathForResource:@"Sample115" ofType:@"data"] encoding:NSUTF8StringEncoding error:&error], fromCode, nil);
+	SortedDictionary *sd = [kobusWeb destinationForOrgine:fromCode];
+	NSArray *destinations = [sd allValues];
+	STAssertEquals((int)5, (int)[destinations count], nil);
+	STAssertEqualObjects(@"강릉    [200]",[destinations objectAtIndex:0],nil);
+	STAssertEqualObjects(@"횡성(하)휴게소[238]",[destinations objectAtIndex:1],nil);
+	STAssertEqualObjects(@"정안(하)휴게소[315]",[destinations objectAtIndex:2],nil);
+	STAssertEqualObjects(@"광주    [500]",[destinations objectAtIndex:3],nil);
+	STAssertEqualObjects(@"전주    [602]",[destinations objectAtIndex:4],nil);
+}
+
 
 @end
