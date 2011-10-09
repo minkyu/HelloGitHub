@@ -8,34 +8,31 @@
 
 #import "KobusReservationAppDelegate.h"
 
-#import "OriginsViewController.h"
 
-#import "DestinationsViewController.h"
+#import "TwoPickerViewsController.h"
 
 #import "KobusWeb.h"
 
 @implementation KobusReservationAppDelegate
+@synthesize twoPickerViewController = _twoPickerViewController;
 
 @synthesize window = _window;
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
-@synthesize splitViewController = _splitViewController;
-@synthesize rootViewController = _rootViewController;
-@synthesize destinationsViewController = _destinationsViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	// Override point for customization after application launch.
 	// Add the split view controller's view to the window and display.
 	KobusWeb *web = [[KobusWeb alloc] init];
+	self.twoPickerViewController.model = web;
+	[self.window addSubview: self.twoPickerViewController.view];
 	web.pushDatas = ^(SortedDictionary* origins,SortedDictionary* destinations){
-		self.rootViewController.Origins = origins;
-		self.destinationsViewController.Destinations = destinations;
 	};
 	[web loadWeb];
 	
-	self.window.rootViewController = self.splitViewController;
+	//self.window.rootViewController = self.splitViewController;
 	[self.window makeKeyAndVisible];
     return YES;
 }
@@ -82,9 +79,7 @@
 	[__managedObjectContext release];
 	[__managedObjectModel release];
 	[__persistentStoreCoordinator release];
-	[_splitViewController release];
-	[_rootViewController release];
-	[_destinationsViewController release];
+	[_twoPickerViewController release];
     [super dealloc];
 }
 

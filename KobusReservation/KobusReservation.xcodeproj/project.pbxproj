@@ -47,9 +47,6 @@
 		ED332E161435C299009A82E5 /* KobusReservationAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED332E151435C299009A82E5 /* KobusReservationAppDelegate.m */; };
 		ED332E191435C299009A82E5 /* KobusReservation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED332E171435C299009A82E5 /* KobusReservation.xcdatamodeld */; };
 		ED332E1C1435C29A009A82E5 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED332E1A1435C29A009A82E5 /* MainWindow.xib */; };
-		ED332E1F1435C29A009A82E5 /* DestinationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED332E1E1435C29A009A82E5 /* DestinationsViewController.m */; };
-		ED332E221435C29A009A82E5 /* DestinationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED332E201435C29A009A82E5 /* DestinationsViewController.xib */; };
-		ED332E251435C29A009A82E5 /* OriginsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED332E241435C29A009A82E5 /* OriginsViewController.m */; };
 		ED332E2D1435C29A009A82E5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E2C1435C29A009A82E5 /* SenTestingKit.framework */; };
 		ED332E2E1435C29A009A82E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E031435C299009A82E5 /* UIKit.framework */; };
 		ED332E2F1435C29A009A82E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E051435C299009A82E5 /* Foundation.framework */; };
@@ -60,6 +57,9 @@
 		ED3D725C143B3C0100775F58 /* KobusWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D943781435D31700568CE0 /* KobusWeb.m */; };
 		ED3D725E143B3DB100775F58 /* KobusWebSampleInput.data in Resources */ = {isa = PBXBuildFile; fileRef = ED3D725D143B3DB100775F58 /* KobusWebSampleInput.data */; };
 		EDC2A76E1440B31D00ADD159 /* Sample115.data in Resources */ = {isa = PBXBuildFile; fileRef = EDC2A76D1440B31D00ADD159 /* Sample115.data */; };
+		EDC8C4DC14413B1C000C7169 /* TwoPickerViewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC8C4DA14413B1B000C7169 /* TwoPickerViewsController.m */; };
+		EDC8C4DD14413B1C000C7169 /* TwoPickerViewsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDC8C4DB14413B1C000C7169 /* TwoPickerViewsController.xib */; };
+		EDC8C4DF14414F87000C7169 /* KobusWebSampleInput.data in Resources */ = {isa = PBXBuildFile; fileRef = ED3D725D143B3DB100775F58 /* KobusWebSampleInput.data */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,11 +108,6 @@
 		ED332E151435C299009A82E5 /* KobusReservationAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KobusReservationAppDelegate.m; sourceTree = "<group>"; };
 		ED332E181435C299009A82E5 /* KobusReservation.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KobusReservation.xcdatamodel; sourceTree = "<group>"; };
 		ED332E1B1435C29A009A82E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		ED332E1D1435C29A009A82E5 /* DestinationsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DestinationsViewController.h; sourceTree = "<group>"; };
-		ED332E1E1435C29A009A82E5 /* DestinationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DestinationsViewController.m; sourceTree = "<group>"; };
-		ED332E211435C29A009A82E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DestinationsViewController.xib; sourceTree = "<group>"; };
-		ED332E231435C29A009A82E5 /* OriginsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OriginsViewController.h; sourceTree = "<group>"; };
-		ED332E241435C29A009A82E5 /* OriginsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OriginsViewController.m; sourceTree = "<group>"; };
 		ED332E2C1435C29A009A82E5 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		ED332E361435C29A009A82E5 /* KobusReservationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KobusReservationTests-Info.plist"; sourceTree = "<group>"; };
 		ED332E381435C29A009A82E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -122,6 +117,9 @@
 		ED3D7267143B4BA800775F58 /* KobusReservation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KobusReservation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED3D7269143B4BA800775F58 /* KobusReservationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KobusReservationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDC2A76D1440B31D00ADD159 /* Sample115.data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Sample115.data; sourceTree = "<group>"; };
+		EDC8C4D914413B1B000C7169 /* TwoPickerViewsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoPickerViewsController.h; sourceTree = "<group>"; };
+		EDC8C4DA14413B1B000C7169 /* TwoPickerViewsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoPickerViewsController.m; sourceTree = "<group>"; };
+		EDC8C4DB14413B1C000C7169 /* TwoPickerViewsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwoPickerViewsController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,14 +246,12 @@
 		ED332E0B1435C299009A82E5 /* KobusReservation */ = {
 			isa = PBXGroup;
 			children = (
+				ED332E1A1435C29A009A82E5 /* MainWindow.xib */,
 				ED332E141435C299009A82E5 /* KobusReservationAppDelegate.h */,
 				ED332E151435C299009A82E5 /* KobusReservationAppDelegate.m */,
-				ED332E1A1435C29A009A82E5 /* MainWindow.xib */,
-				ED332E1D1435C29A009A82E5 /* DestinationsViewController.h */,
-				ED332E1E1435C29A009A82E5 /* DestinationsViewController.m */,
-				ED332E201435C29A009A82E5 /* DestinationsViewController.xib */,
-				ED332E231435C29A009A82E5 /* OriginsViewController.h */,
-				ED332E241435C29A009A82E5 /* OriginsViewController.m */,
+				EDC8C4D914413B1B000C7169 /* TwoPickerViewsController.h */,
+				EDC8C4DA14413B1B000C7169 /* TwoPickerViewsController.m */,
+				EDC8C4DB14413B1C000C7169 /* TwoPickerViewsController.xib */,
 				ED332E171435C299009A82E5 /* KobusReservation.xcdatamodeld */,
 				ED332E0C1435C299009A82E5 /* Supporting Files */,
 				D3D943771435D31700568CE0 /* KobusWeb.h */,
@@ -367,7 +363,8 @@
 			files = (
 				ED332E101435C299009A82E5 /* InfoPlist.strings in Resources */,
 				ED332E1C1435C29A009A82E5 /* MainWindow.xib in Resources */,
-				ED332E221435C29A009A82E5 /* DestinationsViewController.xib in Resources */,
+				EDC8C4DD14413B1C000C7169 /* TwoPickerViewsController.xib in Resources */,
+				EDC8C4DF14414F87000C7169 /* KobusWebSampleInput.data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,8 +404,6 @@
 				ED332E121435C299009A82E5 /* main.m in Sources */,
 				ED332E161435C299009A82E5 /* KobusReservationAppDelegate.m in Sources */,
 				ED332E191435C299009A82E5 /* KobusReservation.xcdatamodeld in Sources */,
-				ED332E1F1435C29A009A82E5 /* DestinationsViewController.m in Sources */,
-				ED332E251435C29A009A82E5 /* OriginsViewController.m in Sources */,
 				D3D943791435D31700568CE0 /* KobusWeb.m in Sources */,
 				D388C46F143C6ECF00DEF523 /* AvlTree+Private.m in Sources */,
 				D388C470143C6ECF00DEF523 /* AvlTree.m in Sources */,
@@ -425,6 +420,7 @@
 				D388C47B143C6ECF00DEF523 /* SortedDictionary+Private.m in Sources */,
 				D388C47C143C6ECF00DEF523 /* MutableSortedDictionary.m in Sources */,
 				D388C47D143C6ECF00DEF523 /* SortedDictionary.m in Sources */,
+				EDC8C4DC14413B1C000C7169 /* TwoPickerViewsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,14 +465,6 @@
 				ED332E1B1435C29A009A82E5 /* en */,
 			);
 			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
-		ED332E201435C29A009A82E5 /* DestinationsViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ED332E211435C29A009A82E5 /* en */,
-			);
-			name = DestinationsViewController.xib;
 			sourceTree = "<group>";
 		};
 		ED332E371435C29A009A82E5 /* InfoPlist.strings */ = {

@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class OriginsViewController;
+@class TwoPickerViewsController;
 
-@class DestinationsViewController;
+@interface KobusReservationAppDelegate : NSObject <UIApplicationDelegate> {
+	TwoPickerViewsController *_twoPickerViewController;
+}
 
-@interface KobusReservationAppDelegate : NSObject <UIApplicationDelegate>
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
@@ -22,11 +23,7 @@
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
+@property (nonatomic, retain) IBOutlet TwoPickerViewsController *twoPickerViewController;
 
-@property (nonatomic, retain) IBOutlet UISplitViewController *splitViewController;
-
-@property (nonatomic, retain) IBOutlet OriginsViewController *rootViewController;
-
-@property (nonatomic, retain) IBOutlet DestinationsViewController *destinationsViewController;
 
 @end
