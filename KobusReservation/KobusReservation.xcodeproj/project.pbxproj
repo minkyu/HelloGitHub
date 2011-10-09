@@ -48,7 +48,7 @@
 		ED332E191435C299009A82E5 /* KobusReservation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED332E171435C299009A82E5 /* KobusReservation.xcdatamodeld */; };
 		ED332E1C1435C29A009A82E5 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED332E1A1435C29A009A82E5 /* MainWindow.xib */; };
 		ED332E1F1435C29A009A82E5 /* DestinationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED332E1E1435C29A009A82E5 /* DestinationsViewController.m */; };
-		ED332E221435C29A009A82E5 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED332E201435C29A009A82E5 /* DetailView.xib */; };
+		ED332E221435C29A009A82E5 /* DestinationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED332E201435C29A009A82E5 /* DestinationsViewController.xib */; };
 		ED332E251435C29A009A82E5 /* OriginsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED332E241435C29A009A82E5 /* OriginsViewController.m */; };
 		ED332E2D1435C29A009A82E5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E2C1435C29A009A82E5 /* SenTestingKit.framework */; };
 		ED332E2E1435C29A009A82E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E031435C299009A82E5 /* UIKit.framework */; };
@@ -110,7 +110,7 @@
 		ED332E1B1435C29A009A82E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		ED332E1D1435C29A009A82E5 /* DestinationsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DestinationsViewController.h; sourceTree = "<group>"; };
 		ED332E1E1435C29A009A82E5 /* DestinationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DestinationsViewController.m; sourceTree = "<group>"; };
-		ED332E211435C29A009A82E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailView.xib; sourceTree = "<group>"; };
+		ED332E211435C29A009A82E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DestinationsViewController.xib; sourceTree = "<group>"; };
 		ED332E231435C29A009A82E5 /* OriginsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OriginsViewController.h; sourceTree = "<group>"; };
 		ED332E241435C29A009A82E5 /* OriginsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OriginsViewController.m; sourceTree = "<group>"; };
 		ED332E2C1435C29A009A82E5 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -253,7 +253,7 @@
 				ED332E1A1435C29A009A82E5 /* MainWindow.xib */,
 				ED332E1D1435C29A009A82E5 /* DestinationsViewController.h */,
 				ED332E1E1435C29A009A82E5 /* DestinationsViewController.m */,
-				ED332E201435C29A009A82E5 /* DetailView.xib */,
+				ED332E201435C29A009A82E5 /* DestinationsViewController.xib */,
 				ED332E231435C29A009A82E5 /* OriginsViewController.h */,
 				ED332E241435C29A009A82E5 /* OriginsViewController.m */,
 				ED332E171435C299009A82E5 /* KobusReservation.xcdatamodeld */,
@@ -367,7 +367,7 @@
 			files = (
 				ED332E101435C299009A82E5 /* InfoPlist.strings in Resources */,
 				ED332E1C1435C29A009A82E5 /* MainWindow.xib in Resources */,
-				ED332E221435C29A009A82E5 /* DetailView.xib in Resources */,
+				ED332E221435C29A009A82E5 /* DestinationsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,12 +471,12 @@
 			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
-		ED332E201435C29A009A82E5 /* DetailView.xib */ = {
+		ED332E201435C29A009A82E5 /* DestinationsViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				ED332E211435C29A009A82E5 /* en */,
 			);
-			name = DetailView.xib;
+			name = DestinationsViewController.xib;
 			sourceTree = "<group>";
 		};
 		ED332E371435C29A009A82E5 /* InfoPlist.strings */ = {
