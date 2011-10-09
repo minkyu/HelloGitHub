@@ -25,6 +25,7 @@
     if (self) {
         // Custom initialization
 		originSelected = false;
+		selectedOrigin = nil;
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(modelHasCompletedHtmlParsing:) name:@"html분석이 끝났다." object:nil];
     }
     return self;
@@ -36,6 +37,7 @@
 	if(self){
         // Custom initialization
 		originSelected = false;
+		selectedOrigin = nil;
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(modelHasCompletedHtmlParsing:) name:@"html분석이 끝났다." object:nil];		
 	}
 	return self;
@@ -73,28 +75,38 @@
     return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
+-(BOOL) originSelected
+{
+	return selectedOrigin != nil;
+}
+
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
-	return originSelected?2:1;
+	return [self originSelected]?2:1;
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
 	if(component==0) return [[model.Origins allKeys] count];
-	return [[[model.Destinations objectForKey: [[model.Origins allKeys] objectAtIndex:0]] allValues] count];
+	if(component==1) return [[[model.Destinations objectForKey: selectedOrigin] allValues] count];
+	return 0;
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-	if(component==0) originSelected = YES;
+	if(component==0) {
+		selectedOrigin = [[model.Origins allKeys] objectAtIndex: row];
+	}
+	if(component==1){
+		selectedDestination = [[[model.Destinations objectForKey: selectedOrigin] allValues] objectAtIndex: row];
+	}
 	[queryPicker reloadAllComponents];
-	//[queryPicker reloadComponent:1];
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-	if(component==0) return [[model.Origins allKeys] objectAtIndex:row];
-	if(component==1) return [[[model.Destinations objectForKey: [[model.Origins allKeys] objectAtIndex:row]] allValues] objectAtIndex:row];
+	if(component==0) return [[model.Origins allValues] objectAtIndex:row];
+	if(component==1) return [[[model.Destinations objectForKey: selectedOrigin] allValues] objectAtIndex:row];
 	return @"error";
 }
 

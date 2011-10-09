@@ -11,6 +11,8 @@
 @interface TwoPickerViewsController : UIViewController<UIPickerViewDelegate,UIPickerViewDataSource>
 {
 	BOOL originSelected;
+	id selectedOrigin;
+	id selectedDestination;
 	IBOutlet UIPickerView *queryPicker;
 }
 
