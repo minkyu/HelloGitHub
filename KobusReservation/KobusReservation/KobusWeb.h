@@ -12,7 +12,7 @@ typedef void (^datas)(SortedDictionary*,SortedDictionary*);
 
 
 @interface KobusWeb : NSObject 
-
+-(void) processData;
 @property (nonatomic,copy) datas pushDatas;
 @property (nonatomic,retain) NSMutableData *responseData;
 @property (nonatomic,retain) MutableSortedDictionary *Origins;
