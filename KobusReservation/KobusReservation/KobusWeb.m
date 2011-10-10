@@ -73,7 +73,6 @@
 
 - (void)parseOrigins:(NSString*)aStr {
 	
-//	NSLog(@"parser start - %d", [aStr length]);
     for (NSTextCheckingResult *match in [self matchesOfOriginsInString:aStr]) {
         // 지역코드
         NSString *locCode = [aStr substringWithRange:[match rangeAtIndex:1]];
@@ -81,12 +80,10 @@
         NSString *locName = [aStr substringWithRange:[match rangeAtIndex:2]];
         
         [Origins setValue:locName forKey:locCode];
-//        NSLog(@"%@ = %@", locCode, locName);
         
 		
     }
     
-//	NSLog(@"parser end");
 }
 
 
