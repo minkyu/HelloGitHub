@@ -81,12 +81,10 @@
         NSString *locName = [aStr substringWithRange:[match rangeAtIndex:2]];
         
         [Origins setValue:locName forKey:locCode];
-//        NSLog(@"%@ = %@", locCode, locName);
         
 		
     }
     
-//	NSLog(@"parser end");
 }
 
 
