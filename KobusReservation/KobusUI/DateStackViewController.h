@@ -7,7 +7,8 @@
 //
 
 #import "DataTableViewController.h"
-
+@class KalViewController;
 @interface DateStackViewController : DataViewController
 
+@property (nonatomic, retain) KalViewController *kal;
 @end

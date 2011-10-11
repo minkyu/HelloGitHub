@@ -65,7 +65,7 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	DateStackViewController *dataViewController = [[DateStackViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
+	DateStackViewController *dataViewController = [[DateStackViewController alloc] initWithFrame:CGRectMake(0, 0, 322, self.view.frame.size.height)];
 	[[KobusReservationAppDelegate instance].rootViewController.stackScrollViewController addViewInSlider:dataViewController invokeByController:self isStackStartView:FALSE];
 	[dataViewController release];
 }

@@ -55,7 +55,7 @@
 		
 		[self.view setFrame:frame]; 
 		
-		_menus = [NSArray arrayWithObjects:@"예약하기", @"즐겨찾기",nil];
+		_menus = [NSArray arrayWithObjects:@"조회하기", @"즐겨찾기",nil];
 		
 		_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
 		[_tableView setDelegate:self];

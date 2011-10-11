@@ -7,14 +7,24 @@
 //
 
 #import "DateStackViewController.h"
+//#import "../KobusUI/Kal/Kal.h"
+#import "Kal.h"
 
 @implementation DateStackViewController
+
+@synthesize kal;
 
 - (id)initWithFrame:(CGRect)frame
 {
 	self = [super initWithFrame:frame];
 	if (self != nil) {
 		[self.titleLabel setText:@"  날짜/시간"];
+		
+		kal = [[KalViewController alloc] init];
+		CGRect frame = kal.view.frame;
+		frame.origin.y = titleHeight+boundaryHeight;
+		kal.view.frame = frame;
+		[self.view addSubview:kal.view];
 	}
 	return self;
 }
