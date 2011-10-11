@@ -40,7 +40,7 @@
 #import "KobusReservationAppDelegate.h"
 #import "RootViewController.h"
 #import "StackScrollViewController.h"
-#import "OringinsViewController.h"
+#import "OriginsStackViewController.h"
 
 
 @implementation MenuViewController
@@ -139,7 +139,7 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	OringinsViewController *dataViewController = [[OringinsViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
+	OriginsStackViewController *dataViewController = [[OriginsStackViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
 	[[KobusReservationAppDelegate instance].rootViewController.stackScrollViewController addViewInSlider:dataViewController invokeByController:self isStackStartView:TRUE];
 	[dataViewController release];
 }

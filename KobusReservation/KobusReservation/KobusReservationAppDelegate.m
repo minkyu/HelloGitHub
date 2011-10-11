@@ -17,7 +17,7 @@
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 @synthesize rootViewController = _rootViewController;
-
+@synthesize web;
 
 + (KobusReservationAppDelegate *) instance {
 	return (KobusReservationAppDelegate *) [[UIApplication sharedApplication] delegate];
@@ -25,18 +25,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-//	KobusWeb *web = [[KobusWeb alloc] init];
-//	web.pushDatas = ^(SortedDictionary* origins,SortedDictionary* destinations){
+	web = [[KobusWeb alloc] init];
+	web.pushDatas = ^(SortedDictionary* origins,SortedDictionary* destinations){
 //		self.rootViewController.Origins = origins;
 //		self.destinationsViewController.Destinations = destinations;
-//	};
-//	[web loadWeb];
+	};
+	[web loadWeb];
 	
 	_rootViewController = [[RootViewController alloc] init];
 	[self.window setBackgroundColor:[UIColor clearColor]];
     [self.window addSubview:_rootViewController.view];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (SortedDictionary*)originData
+{
+	return web.Origins;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

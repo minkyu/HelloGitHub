@@ -24,7 +24,7 @@
 		D388C47D143C6ECF00DEF523 /* SortedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C46D143C6ECF00DEF523 /* SortedDictionary.m */; };
 		D3C1AE1B14443BDF00C23FC0 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C1AE0E14443BDF00C23FC0 /* DataViewController.m */; };
 		D3C1AE1C14443BDF00C23FC0 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C1AE1014443BDF00C23FC0 /* MenuViewController.m */; };
-		D3C1AE1D14443BDF00C23FC0 /* OringinsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C1AE1214443BDF00C23FC0 /* OringinsViewController.m */; };
+		D3C1AE1D14443BDF00C23FC0 /* OriginsStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C1AE1214443BDF00C23FC0 /* OriginsStackViewController.m */; };
 		D3C1AE1E14443BDF00C23FC0 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C1AE1414443BDF00C23FC0 /* RootViewController.m */; };
 		D3C1AE2014443BDF00C23FC0 /* StackScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C1AE1814443BDF00C23FC0 /* StackScrollViewController.m */; };
 		D3C1AE2114443BDF00C23FC0 /* UIViewWithShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C1AE1A14443BDF00C23FC0 /* UIViewWithShadow.m */; };
@@ -56,7 +56,6 @@
 		ED332E1C1435C29A009A82E5 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED332E1A1435C29A009A82E5 /* MainWindow.xib */; };
 		ED332E1F1435C29A009A82E5 /* DestinationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED332E1E1435C29A009A82E5 /* DestinationsViewController.m */; };
 		ED332E221435C29A009A82E5 /* DestinationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED332E201435C29A009A82E5 /* DestinationsViewController.xib */; };
-		ED332E251435C29A009A82E5 /* OriginsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED332E241435C29A009A82E5 /* OriginsViewController.m */; };
 		ED332E2D1435C29A009A82E5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E2C1435C29A009A82E5 /* SenTestingKit.framework */; };
 		ED332E2E1435C29A009A82E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E031435C299009A82E5 /* UIKit.framework */; };
 		ED332E2F1435C29A009A82E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED332E051435C299009A82E5 /* Foundation.framework */; };
@@ -105,8 +104,8 @@
 		D3C1AE0E14443BDF00C23FC0 /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
 		D3C1AE0F14443BDF00C23FC0 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		D3C1AE1014443BDF00C23FC0 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
-		D3C1AE1114443BDF00C23FC0 /* OringinsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OringinsViewController.h; sourceTree = "<group>"; };
-		D3C1AE1214443BDF00C23FC0 /* OringinsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OringinsViewController.m; sourceTree = "<group>"; };
+		D3C1AE1114443BDF00C23FC0 /* OriginsStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OriginsStackViewController.h; sourceTree = "<group>"; };
+		D3C1AE1214443BDF00C23FC0 /* OriginsStackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OriginsStackViewController.m; sourceTree = "<group>"; };
 		D3C1AE1314443BDF00C23FC0 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		D3C1AE1414443BDF00C23FC0 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		D3C1AE1714443BDF00C23FC0 /* StackScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackScrollViewController.h; sourceTree = "<group>"; };
@@ -131,8 +130,6 @@
 		ED332E1D1435C29A009A82E5 /* DestinationsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DestinationsViewController.h; sourceTree = "<group>"; };
 		ED332E1E1435C29A009A82E5 /* DestinationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DestinationsViewController.m; sourceTree = "<group>"; };
 		ED332E211435C29A009A82E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DestinationsViewController.xib; sourceTree = "<group>"; };
-		ED332E231435C29A009A82E5 /* OriginsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OriginsViewController.h; sourceTree = "<group>"; };
-		ED332E241435C29A009A82E5 /* OriginsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OriginsViewController.m; sourceTree = "<group>"; };
 		ED332E2C1435C29A009A82E5 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		ED332E361435C29A009A82E5 /* KobusReservationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KobusReservationTests-Info.plist"; sourceTree = "<group>"; };
 		ED332E381435C29A009A82E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -245,12 +242,20 @@
 		D3C1AE0C14443BDF00C23FC0 /* KobusUI */ = {
 			isa = PBXGroup;
 			children = (
+				D3C1AE1114443BDF00C23FC0 /* OriginsStackViewController.h */,
+				D3C1AE1214443BDF00C23FC0 /* OriginsStackViewController.m */,
+				D3C1AE27144443FC00C23FC0 /* StackScroll */,
+			);
+			path = KobusUI;
+			sourceTree = "<group>";
+		};
+		D3C1AE27144443FC00C23FC0 /* StackScroll */ = {
+			isa = PBXGroup;
+			children = (
 				D3C1AE0D14443BDF00C23FC0 /* DataViewController.h */,
 				D3C1AE0E14443BDF00C23FC0 /* DataViewController.m */,
 				D3C1AE0F14443BDF00C23FC0 /* MenuViewController.h */,
 				D3C1AE1014443BDF00C23FC0 /* MenuViewController.m */,
-				D3C1AE1114443BDF00C23FC0 /* OringinsViewController.h */,
-				D3C1AE1214443BDF00C23FC0 /* OringinsViewController.m */,
 				D3C1AE1314443BDF00C23FC0 /* RootViewController.h */,
 				D3C1AE1414443BDF00C23FC0 /* RootViewController.m */,
 				D3C1AE1714443BDF00C23FC0 /* StackScrollViewController.h */,
@@ -258,7 +263,7 @@
 				D3C1AE1914443BDF00C23FC0 /* UIViewWithShadow.h */,
 				D3C1AE1A14443BDF00C23FC0 /* UIViewWithShadow.m */,
 			);
-			path = KobusUI;
+			name = StackScroll;
 			sourceTree = "<group>";
 		};
 		ED332DF41435C299009A82E5 = {
@@ -296,8 +301,6 @@
 				ED332E1D1435C29A009A82E5 /* DestinationsViewController.h */,
 				ED332E1E1435C29A009A82E5 /* DestinationsViewController.m */,
 				ED332E201435C29A009A82E5 /* DestinationsViewController.xib */,
-				ED332E231435C29A009A82E5 /* OriginsViewController.h */,
-				ED332E241435C29A009A82E5 /* OriginsViewController.m */,
 				ED332E171435C299009A82E5 /* KobusReservation.xcdatamodeld */,
 				ED332E0C1435C299009A82E5 /* Supporting Files */,
 				D3D943771435D31700568CE0 /* KobusWeb.h */,
@@ -450,7 +453,6 @@
 				ED332E161435C299009A82E5 /* KobusReservationAppDelegate.m in Sources */,
 				ED332E191435C299009A82E5 /* KobusReservation.xcdatamodeld in Sources */,
 				ED332E1F1435C29A009A82E5 /* DestinationsViewController.m in Sources */,
-				ED332E251435C29A009A82E5 /* OriginsViewController.m in Sources */,
 				D3D943791435D31700568CE0 /* KobusWeb.m in Sources */,
 				D388C46F143C6ECF00DEF523 /* AvlTree+Private.m in Sources */,
 				D388C470143C6ECF00DEF523 /* AvlTree.m in Sources */,
@@ -469,7 +471,7 @@
 				D388C47D143C6ECF00DEF523 /* SortedDictionary.m in Sources */,
 				D3C1AE1B14443BDF00C23FC0 /* DataViewController.m in Sources */,
 				D3C1AE1C14443BDF00C23FC0 /* MenuViewController.m in Sources */,
-				D3C1AE1D14443BDF00C23FC0 /* OringinsViewController.m in Sources */,
+				D3C1AE1D14443BDF00C23FC0 /* OriginsStackViewController.m in Sources */,
 				D3C1AE1E14443BDF00C23FC0 /* RootViewController.m in Sources */,
 				D3C1AE2014443BDF00C23FC0 /* StackScrollViewController.m in Sources */,
 				D3C1AE2114443BDF00C23FC0 /* UIViewWithShadow.m in Sources */,

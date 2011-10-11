@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @class RootViewController;
+@class KobusWeb;
 
 @interface KobusReservationAppDelegate : NSObject <UIApplicationDelegate>
 
 
-
+@property (nonatomic, retain) KobusWeb *web;
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) RootViewController *rootViewController;
 
@@ -24,5 +25,6 @@
 + (KobusReservationAppDelegate *) instance;
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
+- (SortedDictionary*)originData;
 
 @end
