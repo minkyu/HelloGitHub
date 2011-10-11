@@ -15,12 +15,30 @@
 @implementation OriginsStackViewController
 
 
+- (void)viewDidLoad {
+	[super viewDidLoad];
+	//로딩뺑뺑시작
+	NSLog(@"로딩뺑뺑시작");
+	[[NSNotificationCenter defaultCenter] addObserverForName:@"html분석이 끝났다." 
+													  object:nil 
+													   queue:nil 
+												  usingBlock:^(NSNotification *noti) 
+	 {
+		 //로딩뺑뺑끝
+		 NSLog(@"로딩뺑뺑끝");
+		 [self.tableView reloadData];
+	 }];
+}
+
+
+
+
 #pragma mark -
 #pragma mark Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
-    return 1;
+	// Return the number of sections.
+	return 1;
 }
 
 
@@ -38,7 +56,7 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
-
+	
 	cell.textLabel.text = [[[[KobusReservationAppDelegate instance] originData] allValues] objectAtIndex:[indexPath row]];
 	cell.textLabel.textColor = [UIColor blackColor];
 	
