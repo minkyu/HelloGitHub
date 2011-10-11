@@ -8,25 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@class OriginsViewController;
-
-@class DestinationsViewController;
+@class RootViewController;
 
 @interface KobusReservationAppDelegate : NSObject <UIApplicationDelegate>
 
+
+
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) RootViewController *rootViewController;
 
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
++ (KobusReservationAppDelegate *) instance;
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
-
-@property (nonatomic, retain) IBOutlet UISplitViewController *splitViewController;
-
-@property (nonatomic, retain) IBOutlet OriginsViewController *rootViewController;
-
-@property (nonatomic, retain) IBOutlet DestinationsViewController *destinationsViewController;
 
 @end

@@ -7,11 +7,7 @@
 //
 
 #import "KobusReservationAppDelegate.h"
-
-#import "OriginsViewController.h"
-
-#import "DestinationsViewController.h"
-
+#import "RootViewController.h"
 #import "KobusWeb.h"
 
 @implementation KobusReservationAppDelegate
@@ -20,23 +16,26 @@
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
-@synthesize splitViewController = _splitViewController;
 @synthesize rootViewController = _rootViewController;
-@synthesize destinationsViewController = _destinationsViewController;
+
+
++ (KobusReservationAppDelegate *) instance {
+	return (KobusReservationAppDelegate *) [[UIApplication sharedApplication] delegate];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	// Override point for customization after application launch.
-	// Add the split view controller's view to the window and display.
-	KobusWeb *web = [[KobusWeb alloc] init];
-	web.pushDatas = ^(SortedDictionary* origins,SortedDictionary* destinations){
-		self.rootViewController.Origins = origins;
-		self.destinationsViewController.Destinations = destinations;
-	};
-	[web loadWeb];
+//	KobusWeb *web = [[KobusWeb alloc] init];
+//	web.pushDatas = ^(SortedDictionary* origins,SortedDictionary* destinations){
+//		self.rootViewController.Origins = origins;
+//		self.destinationsViewController.Destinations = destinations;
+//	};
+//	[web loadWeb];
 	
-	self.window.rootViewController = self.splitViewController;
-	[self.window makeKeyAndVisible];
+	_rootViewController = [[RootViewController alloc] init];
+	[self.window setBackgroundColor:[UIColor clearColor]];
+    [self.window addSubview:_rootViewController.view];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
@@ -82,9 +81,7 @@
 	[__managedObjectContext release];
 	[__managedObjectModel release];
 	[__persistentStoreCoordinator release];
-	[_splitViewController release];
 	[_rootViewController release];
-	[_destinationsViewController release];
     [super dealloc];
 }
 

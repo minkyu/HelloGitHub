@@ -9,9 +9,12 @@
 #endif
 
 #ifdef __OBJC__
-	#import <UIKit/UIKit.h>
+
 	#import <Foundation/Foundation.h>
+	#import <UIKit/UIKit.h>
+	#import <QuartzCore/QuartzCore.h>
 	#import <CoreData/CoreData.h>
-#import "MutableSortedDictionary.h"
-#import "SortedDictionary.h"
+
+	#import "MutableSortedDictionary.h"
+	#import "SortedDictionary.h"
 #endif
