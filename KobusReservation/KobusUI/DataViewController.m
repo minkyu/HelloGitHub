@@ -41,8 +41,12 @@
 #import "RootViewController.h"
 #import "StackScrollViewController.h"
 
+const float titleHeight = 60;
+const float boundaryHeight = 5;
+
 @implementation DataViewController
 @synthesize tableView = _tableView;
+@synthesize titleLabel = _titleLabel;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -50,13 +54,20 @@
 - (id)initWithFrame:(CGRect)frame {
     if (self = [super init]) {
 		[self.view setFrame:frame]; 
-
-		_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
+		_titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,self.view.frame.size.width , titleHeight)];
+		[_titleLabel setFont:[UIFont systemFontOfSize:30]];
+		UIView *boundaryView = [[UIView alloc] initWithFrame:CGRectMake(0, titleHeight, self.view.frame.size.width, boundaryHeight)];
+		[boundaryView setBackgroundColor:[UIColor redColor]];
+//		[_titleLabel setTextColor:[UIColor blackColor]];
+//		[_titleLabel setBackgroundColor:[UIColor redColor]];
+		_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, titleHeight+boundaryHeight, self.view.frame.size.width, self.view.frame.size.height-titleHeight-boundaryHeight) style:UITableViewStylePlain];
 		[_tableView setDelegate:self];
 		[_tableView setDataSource:self];
 		_tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 1)];
 		[_tableView setAutoresizingMask:UIViewAutoresizingFlexibleHeight];
 		[self.view addSubview:_tableView];
+		[self.view addSubview:_titleLabel];
+		[self.view addSubview:boundaryView];
 	}
     return self;
 }

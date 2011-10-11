@@ -15,28 +15,30 @@
 @implementation OriginsStackViewController
 
 
-- (void)viewDidLoad {
-	[super viewDidLoad];
-	
-	
-	
-	if ([[[KobusReservationAppDelegate instance] originData] count] == 0) {
-		//로딩뺑뺑시작
-		NSLog(@"로딩뺑뺑시작");
-		[[NSNotificationCenter defaultCenter] addObserverForName:@"html분석이 끝났다." 
-														  object:nil 
-														   queue:nil 
-													  usingBlock:^(NSNotification *noti) 
-		 {
-			 //로딩뺑뺑끝
-			 NSLog(@"로딩뺑뺑끝");
-			 [self.tableView reloadData];
-			 [[NSNotificationCenter defaultCenter] removeObserver:self];
-		 }];
+- (id)initWithFrame:(CGRect)frame
+{
+	self = [super initWithFrame:frame];
+	if (self != nil) {
+		[self.titleLabel setText:@"  출발지"];
+		
+		if ([[[KobusReservationAppDelegate instance] originData] count] == 0) {
+			//로딩뺑뺑시작
+			NSLog(@"로딩뺑뺑시작");
+			[[NSNotificationCenter defaultCenter] addObserverForName:@"html분석이 끝났다." 
+															  object:nil 
+															   queue:nil 
+														  usingBlock:^(NSNotification *noti) 
+			 {
+				 //로딩뺑뺑끝
+				 NSLog(@"로딩뺑뺑끝");
+				 [self.tableView reloadData];
+				 [[NSNotificationCenter defaultCenter] removeObserver:self];
+			 }];
+		}	
 	}
-	
-	
+	return self;
 }
+
 
 
 
@@ -46,12 +48,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-	return 60;
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-	return @"출발지를 선택해 주세요";
+	return 2;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

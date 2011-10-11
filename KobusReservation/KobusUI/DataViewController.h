@@ -40,11 +40,12 @@
 
 @interface DataViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
 	UITableView*  _tableView;
+	UILabel* _titleLabel;
 }
 
 - (id)initWithFrame:(CGRect)frame;
 
 
 @property(nonatomic, retain)UITableView* tableView;
-
+@property(nonatomic, retain)UILabel* titleLabel;
 @end

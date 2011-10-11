@@ -14,6 +14,16 @@
 @implementation DestinationsStackViewController
 @synthesize selectedOrigin;
 
+- (id)initWithFrame:(CGRect)frame
+{
+	self = [super initWithFrame:frame];
+	if (self != nil) {
+		[self.titleLabel setText:@"  도착지"];
+	}
+	return self;
+}
+
+
 #pragma mark -
 #pragma mark Table view data source
 
@@ -52,21 +62,12 @@
 #pragma mark -
 #pragma mark Table view delegate
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-	return 60;
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-	return @"도착지를 선택해 주세요";
-}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	DestinationsStackViewController *dataViewController = [[DestinationsStackViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
-	dataViewController.selectedOrigin = [[[[KobusReservationAppDelegate instance] originData] allKeys] objectAtIndex:[indexPath row]];
-	[[KobusReservationAppDelegate instance].rootViewController.stackScrollViewController addViewInSlider:dataViewController invokeByController:self isStackStartView:FALSE];
-	[dataViewController release];
+//	DestinationsStackViewController *dataViewController = [[DestinationsStackViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
+//	dataViewController.selectedOrigin = [[[[KobusReservationAppDelegate instance] originData] allKeys] objectAtIndex:[indexPath row]];
+//	[[KobusReservationAppDelegate instance].rootViewController.stackScrollViewController addViewInSlider:dataViewController invokeByController:self isStackStartView:FALSE];
+//	[dataViewController release];
 }
 
 
