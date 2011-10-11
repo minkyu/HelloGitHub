@@ -652,6 +652,13 @@ const NSInteger SLIDE_VIEWS_START_X_POS = 0;
 	[super viewWillAppear:animated];
 }
 
+-(void) hideBorderViews
+{
+	[[borderViews viewWithTag:3] setHidden:TRUE];
+	[[borderViews viewWithTag:2] setHidden:TRUE];
+	[[borderViews viewWithTag:1] setHidden:TRUE];
+}
+
 - (void)addViewInSlider:(UIViewController*)controller invokeByController:(UIViewController*)invokeByController isStackStartView:(BOOL)isStackStartView{
 	
 	BOOL isContentSizeForMainViewSet = FALSE;
@@ -663,10 +670,7 @@ const NSInteger SLIDE_VIEWS_START_X_POS = 0;
 		for (UIView* subview in [slideViews subviews]) {
 			[subview removeFromSuperview];
 		}
-		
-		[[borderViews viewWithTag:3] setHidden:TRUE];
-		[[borderViews viewWithTag:2] setHidden:TRUE];
-		[[borderViews viewWithTag:1] setHidden:TRUE];
+		[self hideBorderViews];
 		[viewControllersStack removeAllObjects];
 		isContentSizeForMainViewSet = TRUE;
 	}
@@ -690,10 +694,9 @@ const NSInteger SLIDE_VIEWS_START_X_POS = 0;
 	}else if([viewControllersStack count] == 0) {
 		for (UIView* subview in [slideViews subviews]) {
 			[subview removeFromSuperview];
-		}		[viewControllersStack removeAllObjects];
-		[[borderViews viewWithTag:3] setHidden:TRUE];
-		[[borderViews viewWithTag:2] setHidden:TRUE];
-		[[borderViews viewWithTag:1] setHidden:TRUE];
+		}
+		[viewControllersStack removeAllObjects];
+		[self hideBorderViews];
 	}
 	
 	if ([slideViews.subviews count] != 0) {
