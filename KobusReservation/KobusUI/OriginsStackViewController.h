@@ -8,6 +8,6 @@
 
 #import "DataViewController.h"
 
-@interface OringinsViewController : DataViewController
+@interface OriginsStackViewController : DataViewController
 
 @end

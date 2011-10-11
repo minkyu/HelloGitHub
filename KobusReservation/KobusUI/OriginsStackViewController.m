@@ -6,12 +6,12 @@
 //  Copyright 2011년 __MyCompanyName__. All rights reserved.
 //
 
-#import "OringinsViewController.h"
+#import "OriginsStackViewController.h"
 #import "KobusReservationAppDelegate.h"
 #import "RootViewController.h"
 #import "StackScrollViewController.h"
 
-@implementation OringinsViewController
+@implementation OriginsStackViewController
 
 
 #pragma mark -
@@ -25,7 +25,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 2;
+    return [[[KobusReservationAppDelegate instance] originData] count];
 }
 
 
@@ -37,9 +37,8 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
-    
-    // Configure the cell...
-	cell.textLabel.text = [NSString stringWithFormat:@"Data %d", indexPath.row];
+
+	cell.textLabel.text = [[[[KobusReservationAppDelegate instance] originData] allValues] objectAtIndex:[indexPath row]];
 	cell.textLabel.textColor = [UIColor blackColor];
 	
     return cell;
@@ -50,8 +49,7 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	//    DataViewController *dataViewController = [[DataViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
-	OringinsViewController *dataViewController = [[OringinsViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
+	OriginsStackViewController *dataViewController = [[OriginsStackViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
 	[[KobusReservationAppDelegate instance].rootViewController.stackScrollViewController addViewInSlider:dataViewController invokeByController:self isStackStartView:FALSE];
 	[dataViewController release];
 }
