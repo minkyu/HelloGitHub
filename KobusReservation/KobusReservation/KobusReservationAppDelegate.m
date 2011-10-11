@@ -44,6 +44,11 @@
 	return web.Origins;
 }
 
+- (SortedDictionary*)destinationData
+{
+	return web.Destinations;
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
 	/*

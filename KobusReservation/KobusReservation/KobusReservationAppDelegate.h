@@ -26,5 +26,6 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 - (SortedDictionary*)originData;
+- (SortedDictionary*)destinationData;
 
 @end

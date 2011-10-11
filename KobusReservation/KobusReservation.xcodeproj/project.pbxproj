@@ -29,6 +29,7 @@
 		D3C1AE2014443BDF00C23FC0 /* StackScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C1AE1814443BDF00C23FC0 /* StackScrollViewController.m */; };
 		D3C1AE2114443BDF00C23FC0 /* UIViewWithShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C1AE1A14443BDF00C23FC0 /* UIViewWithShadow.m */; };
 		D3C1AE261444415D00C23FC0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C1AE251444415D00C23FC0 /* QuartzCore.framework */; };
+		D3C1AE2F14444DD200C23FC0 /* DestinationsStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C1AE2E14444DD200C23FC0 /* DestinationsStackViewController.m */; };
 		D3D943791435D31700568CE0 /* KobusWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D943781435D31700568CE0 /* KobusWeb.m */; };
 		D3FB0001143D402D00A5B013 /* EntryEnumerator+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C455143C6ECF00DEF523 /* EntryEnumerator+Private.m */; };
 		D3FB0003143D402D00A5B013 /* EntryEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C457143C6ECF00DEF523 /* EntryEnumerator.m */; };
@@ -113,6 +114,8 @@
 		D3C1AE1914443BDF00C23FC0 /* UIViewWithShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewWithShadow.h; sourceTree = "<group>"; };
 		D3C1AE1A14443BDF00C23FC0 /* UIViewWithShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewWithShadow.m; sourceTree = "<group>"; };
 		D3C1AE251444415D00C23FC0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D3C1AE2D14444DD200C23FC0 /* DestinationsStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinationsStackViewController.h; sourceTree = "<group>"; };
+		D3C1AE2E14444DD200C23FC0 /* DestinationsStackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinationsStackViewController.m; sourceTree = "<group>"; };
 		D3D943771435D31700568CE0 /* KobusWeb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KobusWeb.h; sourceTree = "<group>"; };
 		D3D943781435D31700568CE0 /* KobusWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KobusWeb.m; sourceTree = "<group>"; };
 		ED332E031435C299009A82E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -242,9 +245,11 @@
 		D3C1AE0C14443BDF00C23FC0 /* KobusUI */ = {
 			isa = PBXGroup;
 			children = (
+				D3C1AE27144443FC00C23FC0 /* StackScroll */,
 				D3C1AE1114443BDF00C23FC0 /* OriginsStackViewController.h */,
 				D3C1AE1214443BDF00C23FC0 /* OriginsStackViewController.m */,
-				D3C1AE27144443FC00C23FC0 /* StackScroll */,
+				D3C1AE2D14444DD200C23FC0 /* DestinationsStackViewController.h */,
+				D3C1AE2E14444DD200C23FC0 /* DestinationsStackViewController.m */,
 			);
 			path = KobusUI;
 			sourceTree = "<group>";
@@ -475,6 +480,7 @@
 				D3C1AE1E14443BDF00C23FC0 /* RootViewController.m in Sources */,
 				D3C1AE2014443BDF00C23FC0 /* StackScrollViewController.m in Sources */,
 				D3C1AE2114443BDF00C23FC0 /* UIViewWithShadow.m in Sources */,
+				D3C1AE2F14444DD200C23FC0 /* DestinationsStackViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
