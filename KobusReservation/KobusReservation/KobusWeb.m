@@ -166,9 +166,14 @@
     [responseData appendData:data];
 }
 
+-(void) loadFile
+{
+	self.responseData = [NSMutableData dataWithContentsOfFile: [[NSBundle mainBundle] pathForResource:@"KobusWebSampleInput" ofType:@"data"]];
+}
+
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
-	NSString * errorString = [NSString stringWithFormat:@"Error code %i", [error code]];
+	NSString * errorString = [NSString stringWithFormat:@"Error code %i\nTest data will be loaded.", [error code]];
 	
     UIAlertView * errorAlert = [[UIAlertView alloc] initWithTitle:@"Error loading content" 
 														  message:errorString delegate:self 
@@ -176,8 +181,18 @@
 												otherButtonTitles:nil];
 	
     [errorAlert show];
+	
+	[self loadFile];
+	[self processData];
 }
 
+-(void) processData
+{
+	[self loadOrigins];
+	[self loadDestinations];
+	pushDatas(Origins,Destinations);
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"html분석이 끝났다." object:nil];
+}
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
@@ -186,9 +201,7 @@
 //	NSLog(@"%@",[self webDataEncoding]);
 	[connection release];
 	
-	[self loadOrigins];
-	[self loadDestinations];
-	pushDatas(Origins,Destinations);
+	[self processData];
 }
 
 #pragma mark - test code
