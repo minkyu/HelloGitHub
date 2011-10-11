@@ -10,4 +10,6 @@
 
 @interface OriginsStackViewController : DataViewController
 
+@property (nonatomic) MutableSortedDictionary *data;
+
 @end

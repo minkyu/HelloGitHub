@@ -191,14 +191,13 @@
 	[self loadOrigins];
 	[self loadDestinations];
 	pushDatas(Origins,Destinations);
+	NSLog(@"분석끝");
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"html분석이 끝났다." object:nil];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
 	
-//	NSString *webstring = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
-//	NSLog(@"%@",[self webDataEncoding]);
 	[connection release];
 	
 	[self processData];
