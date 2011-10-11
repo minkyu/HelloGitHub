@@ -22,7 +22,9 @@
 		D388C47B143C6ECF00DEF523 /* SortedDictionary+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C468143C6ECF00DEF523 /* SortedDictionary+Private.m */; };
 		D388C47C143C6ECF00DEF523 /* MutableSortedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C46B143C6ECF00DEF523 /* MutableSortedDictionary.m */; };
 		D388C47D143C6ECF00DEF523 /* SortedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C46D143C6ECF00DEF523 /* SortedDictionary.m */; };
-		D3C1AE1B14443BDF00C23FC0 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C1AE0E14443BDF00C23FC0 /* DataViewController.m */; };
+		D3A7D0CC14448199003285B9 /* DateStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A7D0CB14448199003285B9 /* DateStackViewController.m */; };
+		D3A7D0D014448220003285B9 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A7D0CF14448220003285B9 /* DataViewController.m */; };
+		D3C1AE1B14443BDF00C23FC0 /* DataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C1AE0E14443BDF00C23FC0 /* DataTableViewController.m */; };
 		D3C1AE1C14443BDF00C23FC0 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C1AE1014443BDF00C23FC0 /* MenuViewController.m */; };
 		D3C1AE1D14443BDF00C23FC0 /* OriginsStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C1AE1214443BDF00C23FC0 /* OriginsStackViewController.m */; };
 		D3C1AE1E14443BDF00C23FC0 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C1AE1414443BDF00C23FC0 /* RootViewController.m */; };
@@ -99,8 +101,12 @@
 		D388C46C143C6ECF00DEF523 /* SortedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortedDictionary.h; sourceTree = "<group>"; };
 		D388C46D143C6ECF00DEF523 /* SortedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortedDictionary.m; sourceTree = "<group>"; };
 		D388C46E143C6ECF00DEF523 /* SortedDictionaryEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortedDictionaryEntry.h; sourceTree = "<group>"; };
-		D3C1AE0D14443BDF00C23FC0 /* DataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
-		D3C1AE0E14443BDF00C23FC0 /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
+		D3A7D0CA14448199003285B9 /* DateStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateStackViewController.h; sourceTree = "<group>"; };
+		D3A7D0CB14448199003285B9 /* DateStackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateStackViewController.m; sourceTree = "<group>"; };
+		D3A7D0CE14448220003285B9 /* DataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
+		D3A7D0CF14448220003285B9 /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
+		D3C1AE0D14443BDF00C23FC0 /* DataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTableViewController.h; sourceTree = "<group>"; };
+		D3C1AE0E14443BDF00C23FC0 /* DataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTableViewController.m; sourceTree = "<group>"; };
 		D3C1AE0F14443BDF00C23FC0 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		D3C1AE1014443BDF00C23FC0 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		D3C1AE1114443BDF00C23FC0 /* OriginsStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OriginsStackViewController.h; sourceTree = "<group>"; };
@@ -245,6 +251,8 @@
 				D3C1AE1214443BDF00C23FC0 /* OriginsStackViewController.m */,
 				D3C1AE2D14444DD200C23FC0 /* DestinationsStackViewController.h */,
 				D3C1AE2E14444DD200C23FC0 /* DestinationsStackViewController.m */,
+				D3A7D0CA14448199003285B9 /* DateStackViewController.h */,
+				D3A7D0CB14448199003285B9 /* DateStackViewController.m */,
 			);
 			path = KobusUI;
 			sourceTree = "<group>";
@@ -252,8 +260,10 @@
 		D3C1AE27144443FC00C23FC0 /* StackScroll */ = {
 			isa = PBXGroup;
 			children = (
-				D3C1AE0D14443BDF00C23FC0 /* DataViewController.h */,
-				D3C1AE0E14443BDF00C23FC0 /* DataViewController.m */,
+				D3A7D0CE14448220003285B9 /* DataViewController.h */,
+				D3A7D0CF14448220003285B9 /* DataViewController.m */,
+				D3C1AE0D14443BDF00C23FC0 /* DataTableViewController.h */,
+				D3C1AE0E14443BDF00C23FC0 /* DataTableViewController.m */,
 				D3C1AE0F14443BDF00C23FC0 /* MenuViewController.h */,
 				D3C1AE1014443BDF00C23FC0 /* MenuViewController.m */,
 				D3C1AE1314443BDF00C23FC0 /* RootViewController.h */,
@@ -464,13 +474,15 @@
 				D388C47B143C6ECF00DEF523 /* SortedDictionary+Private.m in Sources */,
 				D388C47C143C6ECF00DEF523 /* MutableSortedDictionary.m in Sources */,
 				D388C47D143C6ECF00DEF523 /* SortedDictionary.m in Sources */,
-				D3C1AE1B14443BDF00C23FC0 /* DataViewController.m in Sources */,
+				D3C1AE1B14443BDF00C23FC0 /* DataTableViewController.m in Sources */,
 				D3C1AE1C14443BDF00C23FC0 /* MenuViewController.m in Sources */,
 				D3C1AE1D14443BDF00C23FC0 /* OriginsStackViewController.m in Sources */,
 				D3C1AE1E14443BDF00C23FC0 /* RootViewController.m in Sources */,
 				D3C1AE2014443BDF00C23FC0 /* StackScrollViewController.m in Sources */,
 				D3C1AE2114443BDF00C23FC0 /* UIViewWithShadow.m in Sources */,
 				D3C1AE2F14444DD200C23FC0 /* DestinationsStackViewController.m in Sources */,
+				D3A7D0CC14448199003285B9 /* DateStackViewController.m in Sources */,
+				D3A7D0D014448220003285B9 /* DataViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

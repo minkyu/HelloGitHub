@@ -1,5 +1,5 @@
 //
-//  DestinationsStackViewController.h
+//  DateStackViewController.h
 //  KobusReservation
 //
 //  Created by kim hongjun on 11. 10. 11..
@@ -8,8 +8,6 @@
 
 #import "DataTableViewController.h"
 
-@interface DestinationsStackViewController : DataTableViewController
+@interface DateStackViewController : DataViewController
 
-
-@property (nonatomic, retain) NSString *selectedOrigin;
 @end

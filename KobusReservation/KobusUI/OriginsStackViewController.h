@@ -6,9 +6,9 @@
 //  Copyright 2011년 __MyCompanyName__. All rights reserved.
 //
 
-#import "DataViewController.h"
+#import "DataTableViewController.h"
 
-@interface OriginsStackViewController : DataViewController
+@interface OriginsStackViewController : DataTableViewController
 
 
 @end
