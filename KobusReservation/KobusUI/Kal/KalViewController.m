@@ -52,6 +52,12 @@ NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotific
 	return self;
 }
 
+- (id)initwithFrame:(CGRect)aframe
+{
+	frame = aframe;
+	return [self init];
+}
+
 - (id)init
 {
 	return [self initWithSelectedDate:[NSDate date]];
@@ -184,7 +190,7 @@ NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotific
 	if (!self.title)
 		self.title = @"Calendar";
 	
-	KalView *kalView = [[[KalView alloc] initWithFrame:CGRectMake(0, 0, 322, [[UIScreen mainScreen] applicationFrame].size.height) delegate:self logic:logic] autorelease];
+	KalView *kalView = [[[KalView alloc] initWithFrame:frame delegate:self logic:logic] autorelease];
 	self.view = kalView;
 	tableView = kalView.tableView;
 	tableView.dataSource = dataSource;

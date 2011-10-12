@@ -7,8 +7,19 @@
 //
 
 #import "DataTableViewController.h"
+#import "Kal.h"
+
 @class KalViewController;
-@interface DateStackViewController : DataViewController
+
+@interface DateDataSource : SimpleKalDataSource 
+@property (nonatomic,retain) NSArray *dates;
+@end
+
+@interface DateStackViewController : DataViewController <UITableViewDelegate>
 
 @property (nonatomic, retain) KalViewController *kal;
+@property (nonatomic, retain) DateDataSource *dataSource;
+
 @end
+
+
