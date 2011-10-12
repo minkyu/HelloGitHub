@@ -661,8 +661,6 @@ const NSInteger SLIDE_VIEWS_START_X_POS = 0;
 
 - (void)addViewInSlider:(UIViewController*)controller invokeByController:(UIViewController*)invokeByController isStackStartView:(BOOL)isStackStartView{
 	
-	BOOL isContentSizeForMainViewSet = FALSE;
-	
 	if (isStackStartView) {
 		slideStartPosition = SLIDE_VIEWS_START_X_POS;
 		viewXPosition = slideStartPosition;
@@ -672,7 +670,6 @@ const NSInteger SLIDE_VIEWS_START_X_POS = 0;
 		}
 		[self hideBorderViews];
 		[viewControllersStack removeAllObjects];
-		isContentSizeForMainViewSet = TRUE;
 	}
 	
 	
