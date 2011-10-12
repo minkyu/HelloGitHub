@@ -8,6 +8,8 @@
 
 #import "DataViewController.h"
 
+
+
 @implementation DataViewController
 
 
@@ -15,6 +17,16 @@
 
 #pragma mark -
 #pragma mark View lifecycle
+
+- (void)postNoticationReservation:(NSString*)name value:(NSString*)value key:(NSString*)key 
+{
+	NSDictionary *uerinfo = [NSDictionary dictionaryWithObjectsAndKeys:
+							 key,@"key",
+							 value,@"value"
+							 ,nil];	 
+	NSLog(@"%@",uerinfo);
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"KobusReservation" object:nil userInfo:uerinfo];
+}
 
 - (void)addButton:(NSString*)title origin:(CGPoint)origin size:(CGSize)size tag:(int)aTag
 {

@@ -74,6 +74,9 @@ const int padding = 10;
 	TicketCountStackViewController *dataViewController = [[TicketCountStackViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
 	[[KobusReservationAppDelegate stackScrollViewController] addViewInSlider:dataViewController invokeByController:self isStackStartView:FALSE];
 	[dataViewController release];
+	
+
+	[self postNoticationReservation:@"KobusReservation" value:button.titleLabel.text key:@"busClass"];
 }
 
 @end

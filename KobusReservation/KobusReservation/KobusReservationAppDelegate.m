@@ -9,6 +9,7 @@
 #import "KobusReservationAppDelegate.h"
 #import "RootViewController.h"
 #import "KobusWeb.h"
+#import "KobusReservationObject.h"
 
 @implementation KobusReservationAppDelegate
 
@@ -17,7 +18,7 @@
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 @synthesize rootViewController = _rootViewController;
-@synthesize web;
+@synthesize web,reservationObject;
 
 + (KobusReservationAppDelegate *) instance {
 	return (KobusReservationAppDelegate *) [[UIApplication sharedApplication] delegate];
@@ -36,12 +37,26 @@
 //		self.destinationsViewController.Destinations = destinations;
 	};
 	[web loadWeb];
+	reservationObject = [[KobusReservationObject alloc] init];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(KobusReservationObjectNoti:) name:@"KobusReservation" object:nil];
 	
 	_rootViewController = [[RootViewController alloc] init];
 	[self.window setBackgroundColor:[UIColor clearColor]];
     [self.window addSubview:_rootViewController.view];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)KobusReservationObjectNoti:(NSNotification*)noti
+{
+	NSDictionary *notiDic = [noti userInfo];
+	
+	NSString *key = [notiDic objectForKey:@"key"];
+	NSString *value = [notiDic objectForKey:@"value"];
+	
+	[reservationObject setValue:value forKey:key];
+	NSLog(@"%@",reservationObject);
 }
 
 - (SortedDictionary*)originData
@@ -53,6 +68,8 @@
 {
 	return web.Destinations;
 }
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

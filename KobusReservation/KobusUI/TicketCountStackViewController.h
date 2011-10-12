@@ -8,6 +8,9 @@
 
 #import "DataViewController.h"
 
-@interface TicketCountStackViewController : DataViewController <UIPickerViewDelegate,UIPickerViewDataSource>
+@interface TicketCountStackViewController : DataViewController 
+
+@property (nonatomic,retain) NSString *childrenStr;
+@property (nonatomic,retain) NSString *adultStr;
 
 @end

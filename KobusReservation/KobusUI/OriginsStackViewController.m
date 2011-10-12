@@ -80,6 +80,9 @@
 	dataViewController.selectedOrigin = [[[[KobusReservationAppDelegate instance] originData] allKeys] objectAtIndex:[indexPath row]];
 	[[KobusReservationAppDelegate stackScrollViewController] addViewInSlider:dataViewController invokeByController:self isStackStartView:FALSE];
 	[dataViewController release];
+	
+	id origin = [[[[KobusReservationAppDelegate instance] originData] allValues] objectAtIndex:[indexPath row]];;
+	[self postNoticationReservation:@"KobusReservation" value:origin key:@"origin"];
 }
 
 

@@ -11,8 +11,12 @@
 
 static const int labelHeight = 40;
 static const int padding = 10;
+static const int adultTag = 100;
+static const int childrenTag = 200;
 
 @implementation TicketCountStackViewController
+
+@synthesize childrenStr,adultStr;
 
 - (float)addSVSegmentedControl:(NSArray*)array originY:(float)originY frameWidth:(float)frameWidth tag:(int)tag;  
 {
@@ -67,7 +71,7 @@ static const int padding = 10;
 		float adultSegmentHeight = [self addSVSegmentedControl:array 
 													   originY:titleHeight+boundaryHeight+labelHeight 
 													frameWidth:frame.size.width 
-														   tag:100];
+														   tag:adultTag];
 		
 		UILabel *children = [[UILabel alloc] initWithFrame:CGRectMake(0,titleHeight+boundaryHeight+labelHeight+adultSegmentHeight , frame.size.width, 40)];
 		[children setText:@"아동"];
@@ -77,7 +81,7 @@ static const int padding = 10;
 		float childrenSegmentHeight = [self addSVSegmentedControl:array 
 														  originY:titleHeight+boundaryHeight+labelHeight*2+adultSegmentHeight 
 													   frameWidth:frame.size.width
-															  tag:200];
+															  tag:childrenTag];
 		
 		CGPoint bouttonpoint = CGPointMake(padding, 
 										   titleHeight+boundaryHeight+labelHeight*2+adultSegmentHeight+childrenSegmentHeight+padding );
@@ -93,11 +97,19 @@ static const int padding = 10;
 - (void)segmentedControlChangedValue:(SVSegmentedControl*)segmentedControl 
 {
 	NSLog(@"segmentedControl %i did select index %i (via UIControl method)", segmentedControl.tag, segmentedControl.selectedIndex);
+	
+	if (segmentedControl.tag == adultTag)
+		self.adultStr = [NSString stringWithFormat:@"어른:%d",segmentedControl.selectedIndex];
+	else
+		self.childrenStr = [NSString stringWithFormat:@"아동:%d",segmentedControl.selectedIndex]; 
+	
 }
 
 - (void)selectedButton:(UIButton*)button
 {
 	
+	NSString *TicketCount = [NSString stringWithFormat:@"%@  %@",adultStr,childrenStr]; 
+	[self postNoticationReservation:@"KobusReservation" value:TicketCount key:@"ticketCount"];
 }
 
 @end

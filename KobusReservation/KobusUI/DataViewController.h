@@ -17,5 +17,5 @@
 
 - (id)initWithFrame:(CGRect)frame;
 - (void)addButton:(NSString*)title origin:(CGPoint)origin size:(CGSize)size tag:(int)aTag;
-
+- (void)postNoticationReservation:(NSString*)name value:(NSString*)value key:(NSString*)key;
 @end

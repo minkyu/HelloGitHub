@@ -63,10 +63,13 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//	DateStackViewController *dataViewController = [[DateStackViewController alloc] initWithFrame:CGRectMake(0, 0, 322, self.view.frame.size.height)];
+
 	DateStackViewController *dataViewController = [[DateStackViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
 	[[KobusReservationAppDelegate stackScrollViewController] addViewInSlider:dataViewController invokeByController:self isStackStartView:FALSE];
 	[dataViewController release];
+	
+	id destination = [[[[[KobusReservationAppDelegate instance] destinationData] objectForKey:selectedOrigin] allValues] objectAtIndex:[indexPath row]];;
+	[self postNoticationReservation:@"KobusReservation" value:destination key:@"destination"];
 }
 
 

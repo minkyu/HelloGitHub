@@ -27,6 +27,7 @@
 		D39D880B144568E100BD9A45 /* SVSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D39D8807144568E100BD9A45 /* SVSegmentedControl.m */; };
 		D39D880C144568E100BD9A45 /* SVSegmentedThumb.m in Sources */ = {isa = PBXBuildFile; fileRef = D39D8809144568E100BD9A45 /* SVSegmentedThumb.m */; };
 		D39D880E1445730A00BD9A45 /* backgroundImage_repeat.png in Resources */ = {isa = PBXBuildFile; fileRef = D39D880D1445730A00BD9A45 /* backgroundImage_repeat.png */; };
+		D39D8815144574C600BD9A45 /* KobusReservationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D39D8814144574C600BD9A45 /* KobusReservationObject.m */; };
 		D3A5D07D14452569007CF7BD /* TicketCountStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A5D07C14452569007CF7BD /* TicketCountStackViewController.m */; };
 		D3A7D0CC14448199003285B9 /* DateStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A7D0CB14448199003285B9 /* DateStackViewController.m */; };
 		D3A7D0D014448220003285B9 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A7D0CF14448220003285B9 /* DataViewController.m */; };
@@ -127,6 +128,8 @@
 		D39D8808144568E100BD9A45 /* SVSegmentedThumb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSegmentedThumb.h; sourceTree = "<group>"; };
 		D39D8809144568E100BD9A45 /* SVSegmentedThumb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVSegmentedThumb.m; sourceTree = "<group>"; };
 		D39D880D1445730A00BD9A45 /* backgroundImage_repeat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backgroundImage_repeat.png; path = KobusUI/backgroundImage_repeat.png; sourceTree = SOURCE_ROOT; };
+		D39D8813144574C600BD9A45 /* KobusReservationObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KobusReservationObject.h; sourceTree = "<group>"; };
+		D39D8814144574C600BD9A45 /* KobusReservationObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KobusReservationObject.m; sourceTree = "<group>"; };
 		D3A5D07B14452569007CF7BD /* TicketCountStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketCountStackViewController.h; sourceTree = "<group>"; };
 		D3A5D07C14452569007CF7BD /* TicketCountStackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketCountStackViewController.m; sourceTree = "<group>"; };
 		D3A7D0CA14448199003285B9 /* DateStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateStackViewController.h; sourceTree = "<group>"; };
@@ -413,6 +416,8 @@
 				ED332E0C1435C299009A82E5 /* Supporting Files */,
 				D3D943771435D31700568CE0 /* KobusWeb.h */,
 				D3D943781435D31700568CE0 /* KobusWeb.m */,
+				D39D8813144574C600BD9A45 /* KobusReservationObject.h */,
+				D39D8814144574C600BD9A45 /* KobusReservationObject.m */,
 			);
 			path = KobusReservation;
 			sourceTree = "<group>";
@@ -601,6 +606,7 @@
 				D3A5D07D14452569007CF7BD /* TicketCountStackViewController.m in Sources */,
 				D39D880B144568E100BD9A45 /* SVSegmentedControl.m in Sources */,
 				D39D880C144568E100BD9A45 /* SVSegmentedThumb.m in Sources */,
+				D39D8815144574C600BD9A45 /* KobusReservationObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
