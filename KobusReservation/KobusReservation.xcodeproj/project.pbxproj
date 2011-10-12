@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D36F662D14451B5B009F5755 /* ClassStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D36F662C14451B5B009F5755 /* ClassStackViewController.m */; };
 		D388C46F143C6ECF00DEF523 /* AvlTree+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C44E143C6ECF00DEF523 /* AvlTree+Private.m */; };
 		D388C470143C6ECF00DEF523 /* AvlTree.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C450143C6ECF00DEF523 /* AvlTree.m */; };
 		D388C471143C6ECF00DEF523 /* common.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C452143C6ECF00DEF523 /* common.m */; };
@@ -81,6 +82,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D36F662B14451B5B009F5755 /* ClassStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassStackViewController.h; sourceTree = "<group>"; };
+		D36F662C14451B5B009F5755 /* ClassStackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassStackViewController.m; sourceTree = "<group>"; };
 		D388C44D143C6ECF00DEF523 /* AvlTree+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AvlTree+Private.h"; sourceTree = "<group>"; };
 		D388C44E143C6ECF00DEF523 /* AvlTree+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AvlTree+Private.m"; sourceTree = "<group>"; };
 		D388C44F143C6ECF00DEF523 /* AvlTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvlTree.h; sourceTree = "<group>"; };
@@ -318,6 +321,8 @@
 				D3C1AE2E14444DD200C23FC0 /* DestinationsStackViewController.m */,
 				D3A7D0CA14448199003285B9 /* DateStackViewController.h */,
 				D3A7D0CB14448199003285B9 /* DateStackViewController.m */,
+				D36F662B14451B5B009F5755 /* ClassStackViewController.h */,
+				D36F662C14451B5B009F5755 /* ClassStackViewController.m */,
 			);
 			path = KobusUI;
 			sourceTree = "<group>";
@@ -559,6 +564,7 @@
 				D3A7D17F14449720003285B9 /* KalViewController.m in Sources */,
 				D3A7D18014449720003285B9 /* NSDateAdditions.m in Sources */,
 				D3A7D18114449720003285B9 /* UIViewAdditions.m in Sources */,
+				D36F662D14451B5B009F5755 /* ClassStackViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

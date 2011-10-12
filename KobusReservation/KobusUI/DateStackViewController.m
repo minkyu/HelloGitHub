@@ -7,6 +7,10 @@
 //
 
 #import "DateStackViewController.h"
+#import "KobusReservationAppDelegate.h"
+#import "RootViewController.h"
+#import "StackScrollViewController.h"
+#import "ClassStackViewController.h"
 
 @implementation DateDataSource
 
@@ -60,7 +64,7 @@ const int kalViewWidth = 322;
 	if (self != nil) {
 		[self.titleLabel setText:@"  날짜/시간"];
 		
-		kal = [[KalViewController alloc] initwithFrame:CGRectMake(frame.size.width/2-kalViewWidth/2, 
+		kal = [[KalViewController alloc] initwithFrame:CGRectMake(10, 
 																  titleHeight+boundaryHeight, 
 																  kalViewWidth, 
 																  frame.size.height- (titleHeight+boundaryHeight))];
@@ -85,6 +89,9 @@ const int kalViewWidth = 322;
 	NSString *theTime = [dataSource.dates objectAtIndex:indexPath.row];
 	NSLog(@"%@ %@",theDate,theTime);
 	
+	ClassStackViewController *dataViewController = [[ClassStackViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
+	[[KobusReservationAppDelegate instance].rootViewController.stackScrollViewController addViewInSlider:dataViewController invokeByController:self isStackStartView:FALSE];
+	[dataViewController release];
 	
 	/*
 	 
