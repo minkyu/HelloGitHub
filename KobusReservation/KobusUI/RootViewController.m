@@ -77,6 +77,7 @@
 	}
 	
 	if(viewToReturn != nil) {
+		NSLog(@"%@",viewToReturn);
 		return [viewToReturn hitTest:pointToReturn withEvent:event];		
 	}
 	
@@ -126,7 +127,7 @@
 	
 	[rootView addSubview:leftMenuView];
 	[rootView addSubview:rightSlideView];
-//	[self.view setBackgroundColor:[UIColor colorWithPatternImage: [UIImage imageNamed:@"backgroundImage_repeat.png"]]];
+	[self.view setBackgroundColor:[UIColor colorWithPatternImage: [UIImage imageNamed:@"backgroundImage_repeat.png"]]];
 	[self.view addSubview:rootView];
 }
 

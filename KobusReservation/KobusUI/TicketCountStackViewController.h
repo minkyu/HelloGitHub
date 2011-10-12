@@ -8,6 +8,6 @@
 
 #import "DataViewController.h"
 
-@interface TicketCountStackViewController : DataViewController
+@interface TicketCountStackViewController : DataViewController <UIPickerViewDelegate,UIPickerViewDataSource>
 
 @end
