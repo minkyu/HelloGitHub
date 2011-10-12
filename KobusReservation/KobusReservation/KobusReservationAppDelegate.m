@@ -23,6 +23,11 @@
 	return (KobusReservationAppDelegate *) [[UIApplication sharedApplication] delegate];
 }
 
++ (StackScrollViewController *) stackScrollViewController
+{
+	return [[[KobusReservationAppDelegate instance] rootViewController] stackScrollViewController];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	web = [[KobusWeb alloc] init];

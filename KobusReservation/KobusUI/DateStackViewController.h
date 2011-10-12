@@ -13,6 +13,8 @@
 
 @interface DateDataSource : SimpleKalDataSource 
 @property (nonatomic,retain) NSArray *dates;
+
+- (NSIndexPath*)currentTimeIndexPath;
 @end
 
 @interface DateStackViewController : DataViewController <UITableViewDelegate>

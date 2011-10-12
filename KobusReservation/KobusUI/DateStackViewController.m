@@ -8,8 +8,6 @@
 
 #import "DateStackViewController.h"
 #import "KobusReservationAppDelegate.h"
-#import "RootViewController.h"
-#import "StackScrollViewController.h"
 #import "ClassStackViewController.h"
 
 @implementation DateDataSource
@@ -49,6 +47,13 @@
 	return [dates count];
 }
 
+- (NSIndexPath*)currentTimeIndexPath
+{
+	NSDateFormatter *timeFormat = [[NSDateFormatter alloc] init];
+	[timeFormat setDateFormat:@"HH:00"];
+	return [NSIndexPath indexPathForRow:[dates indexOfObject:[timeFormat stringFromDate:[NSDate date]]] inSection:0];
+}
+
 @end
 
 
@@ -73,6 +78,8 @@ const int kalViewWidth = 322;
 		kal.delegate = self;
 		self.dataSource = [[DateDataSource alloc] init];
 		kal.dataSource = dataSource;
+
+		[kal.tableView selectRowAtIndexPath:dataSource.currentTimeIndexPath animated:NO scrollPosition:UITableViewScrollPositionTop];
 		
 		
 	}
@@ -90,7 +97,7 @@ const int kalViewWidth = 322;
 	NSLog(@"%@ %@",theDate,theTime);
 	
 	ClassStackViewController *dataViewController = [[ClassStackViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
-	[[KobusReservationAppDelegate instance].rootViewController.stackScrollViewController addViewInSlider:dataViewController invokeByController:self isStackStartView:FALSE];
+	[[KobusReservationAppDelegate stackScrollViewController] addViewInSlider:dataViewController invokeByController:self isStackStartView:FALSE];
 	[dataViewController release];
 	
 	/*

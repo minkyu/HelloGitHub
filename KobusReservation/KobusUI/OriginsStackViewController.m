@@ -9,8 +9,6 @@
 #import "OriginsStackViewController.h"
 #import "DestinationsStackViewController.h"
 #import "KobusReservationAppDelegate.h"
-#import "RootViewController.h"
-#import "StackScrollViewController.h"
 
 @implementation OriginsStackViewController
 
@@ -80,7 +78,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	DestinationsStackViewController *dataViewController = [[DestinationsStackViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
 	dataViewController.selectedOrigin = [[[[KobusReservationAppDelegate instance] originData] allKeys] objectAtIndex:[indexPath row]];
-	[[KobusReservationAppDelegate instance].rootViewController.stackScrollViewController addViewInSlider:dataViewController invokeByController:self isStackStartView:FALSE];
+	[[KobusReservationAppDelegate stackScrollViewController] addViewInSlider:dataViewController invokeByController:self isStackStartView:FALSE];
 	[dataViewController release];
 }
 

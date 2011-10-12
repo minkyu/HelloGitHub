@@ -38,8 +38,6 @@
 
 #import "MenuViewController.h"
 #import "KobusReservationAppDelegate.h"
-#import "RootViewController.h"
-#import "StackScrollViewController.h"
 #import "OriginsStackViewController.h"
 
 
@@ -140,8 +138,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	OriginsStackViewController *dataViewController = [[OriginsStackViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
-	[[KobusReservationAppDelegate instance].rootViewController.stackScrollViewController addViewInSlider:dataViewController invokeByController:self isStackStartView:TRUE];
-	[dataViewController release];
+	[[KobusReservationAppDelegate stackScrollViewController] addViewInSlider:dataViewController invokeByController:self isStackStartView:TRUE];
+
 }
 
 

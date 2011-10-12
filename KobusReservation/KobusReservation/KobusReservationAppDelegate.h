@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StackScrollViewController.h"
 
 @class RootViewController;
 @class KobusWeb;
+
 
 @interface KobusReservationAppDelegate : NSObject <UIApplicationDelegate>
 
@@ -23,6 +25,7 @@
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 + (KobusReservationAppDelegate *) instance;
++ (StackScrollViewController *) stackScrollViewController;
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 - (SortedDictionary*)originData;

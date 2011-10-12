@@ -7,6 +7,8 @@
 //
 
 #import "ClassStackViewController.h"
+#import "KobusReservationAppDelegate.h"
+#import "TicketCountStackViewController.h"
 
 const int padding = 10;
 
@@ -37,22 +39,27 @@ const int padding = 10;
 		[self addButton:@"일반고속" 
 				 origin:CGPointMake(padding,titleHeight+boundaryHeight+padding) 
 				   size:buttonsize
-					tag:1];
+					tag:10];
 		
 		[self addButton:@"우등고속"
 				 origin:CGPointMake(padding+padding+buttonsize.width,titleHeight+boundaryHeight+padding) 
 				   size:buttonsize
-					tag:2];
+					tag:20];
 		
 		[self addButton:@"심야우등" 
 				 origin:CGPointMake(padding,titleHeight+boundaryHeight+padding+buttonsize.height+padding) 
 				   size:buttonsize
-					tag:3];
+					tag:30];
 		
 		[self addButton:@"심야고속" 
 				 origin:CGPointMake(padding+padding+buttonsize.width,titleHeight+boundaryHeight+padding+buttonsize.height+padding) 
 				   size:buttonsize
-					tag:4];
+					tag:40];
+		
+		[self addButton:@"전체등급" 
+				 origin:CGPointMake((padding+padding+buttonsize.width)/2,titleHeight+boundaryHeight+padding+buttonsize.height+padding+buttonsize.height+padding) 
+				   size:buttonsize
+					tag:50];
 		
 		
 	}
@@ -61,7 +68,12 @@ const int padding = 10;
 
 - (void)selectedButton:(UIButton*)button
 {
+	//stackScrollViewController에 tag버그 있음 1,2,3내부적으로 사용해서 문제가 됨
 	NSLog(@"tag:%d",button.tag);
+	
+	TicketCountStackViewController *dataViewController = [[TicketCountStackViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
+	[[KobusReservationAppDelegate stackScrollViewController] addViewInSlider:dataViewController invokeByController:self isStackStartView:FALSE];
+	[dataViewController release];
 }
 
 @end

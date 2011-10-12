@@ -23,6 +23,7 @@
 		D388C47B143C6ECF00DEF523 /* SortedDictionary+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C468143C6ECF00DEF523 /* SortedDictionary+Private.m */; };
 		D388C47C143C6ECF00DEF523 /* MutableSortedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C46B143C6ECF00DEF523 /* MutableSortedDictionary.m */; };
 		D388C47D143C6ECF00DEF523 /* SortedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C46D143C6ECF00DEF523 /* SortedDictionary.m */; };
+		D3A5D07D14452569007CF7BD /* TicketCountStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A5D07C14452569007CF7BD /* TicketCountStackViewController.m */; };
 		D3A7D0CC14448199003285B9 /* DateStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A7D0CB14448199003285B9 /* DateStackViewController.m */; };
 		D3A7D0D014448220003285B9 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A7D0CF14448220003285B9 /* DataViewController.m */; };
 		D3A7D17714449720003285B9 /* Kal.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D3A7D16014449720003285B9 /* Kal.bundle */; };
@@ -115,6 +116,8 @@
 		D388C46C143C6ECF00DEF523 /* SortedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortedDictionary.h; sourceTree = "<group>"; };
 		D388C46D143C6ECF00DEF523 /* SortedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortedDictionary.m; sourceTree = "<group>"; };
 		D388C46E143C6ECF00DEF523 /* SortedDictionaryEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortedDictionaryEntry.h; sourceTree = "<group>"; };
+		D3A5D07B14452569007CF7BD /* TicketCountStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketCountStackViewController.h; sourceTree = "<group>"; };
+		D3A5D07C14452569007CF7BD /* TicketCountStackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketCountStackViewController.m; sourceTree = "<group>"; };
 		D3A7D0CA14448199003285B9 /* DateStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateStackViewController.h; sourceTree = "<group>"; };
 		D3A7D0CB14448199003285B9 /* DateStackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateStackViewController.m; sourceTree = "<group>"; };
 		D3A7D0CE14448220003285B9 /* DataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
@@ -323,6 +326,8 @@
 				D3A7D0CB14448199003285B9 /* DateStackViewController.m */,
 				D36F662B14451B5B009F5755 /* ClassStackViewController.h */,
 				D36F662C14451B5B009F5755 /* ClassStackViewController.m */,
+				D3A5D07B14452569007CF7BD /* TicketCountStackViewController.h */,
+				D3A5D07C14452569007CF7BD /* TicketCountStackViewController.m */,
 			);
 			path = KobusUI;
 			sourceTree = "<group>";
@@ -565,6 +570,7 @@
 				D3A7D18014449720003285B9 /* NSDateAdditions.m in Sources */,
 				D3A7D18114449720003285B9 /* UIViewAdditions.m in Sources */,
 				D36F662D14451B5B009F5755 /* ClassStackViewController.m in Sources */,
+				D3A5D07D14452569007CF7BD /* TicketCountStackViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
