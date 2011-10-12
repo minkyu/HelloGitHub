@@ -16,6 +16,19 @@
 #pragma mark -
 #pragma mark View lifecycle
 
+- (void)addButton:(NSString*)title origin:(CGPoint)origin size:(CGSize)size tag:(int)aTag
+{
+	UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+	button.tag = aTag;
+	[button addTarget:self action:@selector(selectedButton:) forControlEvents:UIControlEventTouchUpInside];
+	[button setTitle:title forState:UIControlStateNormal];
+	button.frame = CGRectMake(origin.x, 
+							  origin.y, 
+							  size.width, 
+							  size.height);
+	[self.view addSubview:button];
+}
+
 - (id)initWithFrame:(CGRect)frame {
     if (self = [super init]) {
 		[self.view setFrame:frame]; 

@@ -16,5 +16,6 @@
 @property(nonatomic, retain)UILabel* titleLabel;
 
 - (id)initWithFrame:(CGRect)frame;
+- (void)addButton:(NSString*)title origin:(CGPoint)origin size:(CGSize)size tag:(int)aTag;
 
 @end
