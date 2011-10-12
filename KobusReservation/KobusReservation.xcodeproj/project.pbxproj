@@ -24,6 +24,9 @@
 		D388C47C143C6ECF00DEF523 /* MutableSortedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C46B143C6ECF00DEF523 /* MutableSortedDictionary.m */; };
 		D388C47D143C6ECF00DEF523 /* SortedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C46D143C6ECF00DEF523 /* SortedDictionary.m */; };
 		D39D87F4144546C700BD9A45 /* backgroundImage_repeat.png in Resources */ = {isa = PBXBuildFile; fileRef = D39D87F3144546C700BD9A45 /* backgroundImage_repeat.png */; };
+		D39D880A144568E100BD9A45 /* SVSegmentedControl.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D39D8805144568E100BD9A45 /* SVSegmentedControl.bundle */; };
+		D39D880B144568E100BD9A45 /* SVSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D39D8807144568E100BD9A45 /* SVSegmentedControl.m */; };
+		D39D880C144568E100BD9A45 /* SVSegmentedThumb.m in Sources */ = {isa = PBXBuildFile; fileRef = D39D8809144568E100BD9A45 /* SVSegmentedThumb.m */; };
 		D3A5D07D14452569007CF7BD /* TicketCountStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A5D07C14452569007CF7BD /* TicketCountStackViewController.m */; };
 		D3A7D0CC14448199003285B9 /* DateStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A7D0CB14448199003285B9 /* DateStackViewController.m */; };
 		D3A7D0D014448220003285B9 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A7D0CF14448220003285B9 /* DataViewController.m */; };
@@ -118,6 +121,12 @@
 		D388C46D143C6ECF00DEF523 /* SortedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortedDictionary.m; sourceTree = "<group>"; };
 		D388C46E143C6ECF00DEF523 /* SortedDictionaryEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortedDictionaryEntry.h; sourceTree = "<group>"; };
 		D39D87F3144546C700BD9A45 /* backgroundImage_repeat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backgroundImage_repeat.png; path = KobusReservationTests/backgroundImage_repeat.png; sourceTree = SOURCE_ROOT; };
+		D39D87FA1445530800BD9A45 /* StackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackViewController.h; sourceTree = "<group>"; };
+		D39D8805144568E100BD9A45 /* SVSegmentedControl.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVSegmentedControl.bundle; sourceTree = "<group>"; };
+		D39D8806144568E100BD9A45 /* SVSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSegmentedControl.h; sourceTree = "<group>"; };
+		D39D8807144568E100BD9A45 /* SVSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVSegmentedControl.m; sourceTree = "<group>"; };
+		D39D8808144568E100BD9A45 /* SVSegmentedThumb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSegmentedThumb.h; sourceTree = "<group>"; };
+		D39D8809144568E100BD9A45 /* SVSegmentedThumb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVSegmentedThumb.m; sourceTree = "<group>"; };
 		D3A5D07B14452569007CF7BD /* TicketCountStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketCountStackViewController.h; sourceTree = "<group>"; };
 		D3A5D07C14452569007CF7BD /* TicketCountStackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketCountStackViewController.m; sourceTree = "<group>"; };
 		D3A7D0CA14448199003285B9 /* DateStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateStackViewController.h; sourceTree = "<group>"; };
@@ -285,6 +294,18 @@
 			path = Public;
 			sourceTree = "<group>";
 		};
+		D39D8804144568E100BD9A45 /* SVSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				D39D8805144568E100BD9A45 /* SVSegmentedControl.bundle */,
+				D39D8806144568E100BD9A45 /* SVSegmentedControl.h */,
+				D39D8807144568E100BD9A45 /* SVSegmentedControl.m */,
+				D39D8808144568E100BD9A45 /* SVSegmentedThumb.h */,
+				D39D8809144568E100BD9A45 /* SVSegmentedThumb.m */,
+			);
+			path = SVSegmentedControl;
+			sourceTree = "<group>";
+		};
 		D3A7D12714448CBE003285B9 /* Kal */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,8 +339,10 @@
 		D3C1AE0C14443BDF00C23FC0 /* KobusUI */ = {
 			isa = PBXGroup;
 			children = (
+				D39D8804144568E100BD9A45 /* SVSegmentedControl */,
 				D3A7D12714448CBE003285B9 /* Kal */,
 				D3C1AE27144443FC00C23FC0 /* StackScroll */,
+				D39D87FA1445530800BD9A45 /* StackViewController.h */,
 				D3C1AE1114443BDF00C23FC0 /* OriginsStackViewController.h */,
 				D3C1AE1214443BDF00C23FC0 /* OriginsStackViewController.m */,
 				D3C1AE2D14444DD200C23FC0 /* DestinationsStackViewController.h */,
@@ -499,6 +522,7 @@
 				ED332E1C1435C29A009A82E5 /* MainWindow.xib in Resources */,
 				D3A7D17714449720003285B9 /* Kal.bundle in Resources */,
 				D39D87F4144546C700BD9A45 /* backgroundImage_repeat.png in Resources */,
+				D39D880A144568E100BD9A45 /* SVSegmentedControl.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +599,8 @@
 				D3A7D18114449720003285B9 /* UIViewAdditions.m in Sources */,
 				D36F662D14451B5B009F5755 /* ClassStackViewController.m in Sources */,
 				D3A5D07D14452569007CF7BD /* TicketCountStackViewController.m in Sources */,
+				D39D880B144568E100BD9A45 /* SVSegmentedControl.m in Sources */,
+				D39D880C144568E100BD9A45 /* SVSegmentedThumb.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

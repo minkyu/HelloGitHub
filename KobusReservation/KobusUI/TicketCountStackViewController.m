@@ -7,9 +7,44 @@
 //
 
 #import "TicketCountStackViewController.h"
+#import "SVSegmentedControl.h"
 
+static const int labelHeight = 40;
+static const int padding = 10;
 
 @implementation TicketCountStackViewController
+
+- (float)addSVSegmentedControl:(NSArray*)array originY:(float)originY frameWidth:(float)frameWidth tag:(int)tag;  
+{
+	SVSegmentedControl *RC = [[SVSegmentedControl alloc] initWithSectionTitles:array];
+	[RC addTarget:self action:@selector(segmentedControlChangedValue:) forControlEvents:UIControlEventValueChanged];
+	RC.tag = tag;
+	
+	RC.crossFadeLabelsOnDrag = YES;
+	RC.font = [UIFont fontWithName:@"Marker Felt" size:20];
+	RC.titleEdgeInsets = UIEdgeInsetsMake(0, 14, 0, 14);
+	RC.height = 40;
+	RC.selectedIndex = 0;
+	
+	RC.thumb.tintColor = [UIColor colorWithRed:0.999 green:0.889 blue:0.312 alpha:1.000];
+	RC.thumb.textColor = [UIColor blackColor];
+	RC.thumb.shadowColor = [UIColor colorWithWhite:1 alpha:0.5];
+	RC.thumb.shadowOffset = CGSizeMake(0, 1);
+	
+	UIScrollView *scrollView = [[UIScrollView alloc] init];	
+	[scrollView setBackgroundColor:[UIColor colorWithHue:0.f saturation:0.f brightness:0.3f alpha:1.f]];
+	[scrollView setBounces:NO];
+	[self.view addSubview:scrollView];	
+	[scrollView addSubview:RC];
+	
+	[scrollView setFrame:CGRectMake(0, originY,frameWidth , RC.frame.size.height)];
+	[scrollView setContentSize:CGSizeMake(RC.frame.size.width, RC.frame.size.height)];
+	RC.center = CGPointMake(scrollView.contentSize.width/2, scrollView.frame.size.height/2);
+	
+	[scrollView release];
+	[RC release];
+	return scrollView.frame.size.height;
+}
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -17,57 +52,52 @@
 	if (self != nil) {
 		[self.titleLabel setText:@"  매수"];
 		
-		CGRect pickerViewFrame = frame;
-		pickerViewFrame.origin.y = titleHeight+boundaryHeight;
-		pickerViewFrame.size.height = 216;
-		UIScrollView *pickerBackGraundView = [[UIScrollView alloc] initWithFrame:pickerViewFrame];
-		pickerBackGraundView.userInteractionEnabled = YES;
-		[self.view addSubview:pickerBackGraundView];
+		UILabel *adult = [[UILabel alloc] initWithFrame:CGRectMake(0,titleHeight+boundaryHeight , frame.size.width, labelHeight)];
+		[adult setText:@"어른"];
+		[self.view addSubview:adult];
+		[adult release];
 		
-		pickerViewFrame.origin.y = 0;
-		UIPickerView *ticketPickerView = [[UIPickerView alloc] initWithFrame:pickerViewFrame];
-		ticketPickerView.showsSelectionIndicator= YES;
-		ticketPickerView.userInteractionEnabled	= YES;
-		ticketPickerView.delegate = self;
-		ticketPickerView.dataSource = self;
-		[pickerBackGraundView addSubview:ticketPickerView];
 		
-		CGPoint bouttonpoint = CGPointMake(0, 216+titleHeight+boundaryHeight+10);
-		CGSize buttionsize = CGSizeMake(frame.size.width, frame.size.height-(216+titleHeight+boundaryHeight+10));
+		
+		NSMutableArray *array = [NSMutableArray array];
+		for (int i = 0; i <= 40; i++) 
+		{
+			[array addObject:[NSString stringWithFormat:@"%d",i]];
+		}
+		float adultSegmentHeight = [self addSVSegmentedControl:array 
+													   originY:titleHeight+boundaryHeight+labelHeight 
+													frameWidth:frame.size.width 
+														   tag:100];
+		
+		UILabel *children = [[UILabel alloc] initWithFrame:CGRectMake(0,titleHeight+boundaryHeight+labelHeight+adultSegmentHeight , frame.size.width, 40)];
+		[children setText:@"아동"];
+		[self.view addSubview:children];
+		[children release];
+		
+		float childrenSegmentHeight = [self addSVSegmentedControl:array 
+														  originY:titleHeight+boundaryHeight+labelHeight*2+adultSegmentHeight 
+													   frameWidth:frame.size.width
+															  tag:200];
+		
+		CGPoint bouttonpoint = CGPointMake(padding, 
+										   titleHeight+boundaryHeight+labelHeight*2+adultSegmentHeight+childrenSegmentHeight+padding );
+		CGSize buttionsize = CGSizeMake(frame.size.width-padding*2, 
+										frame.size.height-(titleHeight+boundaryHeight+labelHeight*2+adultSegmentHeight+childrenSegmentHeight+padding*2));
 		[self addButton:@"에약하기" origin:bouttonpoint size:buttionsize tag:10];
 		
+	
 	}
 	return self;
 }
 
+- (void)segmentedControlChangedValue:(SVSegmentedControl*)segmentedControl 
+{
+	NSLog(@"segmentedControl %i did select index %i (via UIControl method)", segmentedControl.tag, segmentedControl.selectedIndex);
+}
+
 - (void)selectedButton:(UIButton*)button
 {
-	NSLog(@"%d",button.tag);
-}
-
-#pragma mark - UIPickerViewDataSource
-
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
-	return 2;
-}
-
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
-	return 10;
-}
-
-#pragma makr - UIPickerViewDelegate
-
-
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-	return [NSString stringWithFormat:@"%d",row+1];
-}
-
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
-{
-	NSLog(@"%d %d",row,component);
+	
 }
 
 @end

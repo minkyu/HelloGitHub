@@ -77,7 +77,6 @@
 	}
 	
 	if(viewToReturn != nil) {
-		NSLog(@"%@",viewToReturn);
 		return [viewToReturn hitTest:pointToReturn withEvent:event];		
 	}
 	

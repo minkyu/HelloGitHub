@@ -6,9 +6,9 @@
 //  Copyright 2011년 앱달. All rights reserved.
 //
 
-#import "DestinationsStackViewController.h"
+#import "StackViewController.h"
 #import "KobusReservationAppDelegate.h"
-#import "DateStackViewController.h"
+
 
 @implementation DestinationsStackViewController
 @synthesize selectedOrigin;

@@ -6,9 +6,9 @@
 //  Copyright 2011년 __MyCompanyName__. All rights reserved.
 //
 
-#import "OriginsStackViewController.h"
-#import "DestinationsStackViewController.h"
+#import "StackViewController.h"
 #import "KobusReservationAppDelegate.h"
+
 
 @implementation OriginsStackViewController
 

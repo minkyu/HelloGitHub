@@ -6,9 +6,9 @@
 //  Copyright 2011년 앱달. All rights reserved.
 //
 
-#import "ClassStackViewController.h"
+#import "StackViewController.h"
 #import "KobusReservationAppDelegate.h"
-#import "TicketCountStackViewController.h"
+
 
 const int padding = 10;
 

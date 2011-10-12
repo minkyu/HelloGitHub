@@ -18,7 +18,7 @@
 
 - (void)addButton:(NSString*)title origin:(CGPoint)origin size:(CGSize)size tag:(int)aTag
 {
-	UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+	UIButton *button = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
 	button.tag = aTag;
 	[button addTarget:self action:@selector(selectedButton:) forControlEvents:UIControlEventTouchUpInside];
 	[button setTitle:title forState:UIControlStateNormal];
@@ -27,6 +27,7 @@
 							  size.width, 
 							  size.height);
 	[self.view addSubview:button];
+	[button release];
 }
 
 - (id)initWithFrame:(CGRect)frame {
