@@ -16,4 +16,8 @@
 @property (nonatomic,copy) NSString *busClass; // 버스등급
 @property (nonatomic,copy) NSString *ticketCount; // 매수
 
+- (BOOL)shuldReservateOnEasyInternet;
+- (BOOL)requestedNoTicket;
+- (BOOL)requestedExcessTicket;
+
 @end
