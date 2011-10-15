@@ -25,7 +25,7 @@
 - (NSString*)description
 {
 	NSMutableString	*descriptionStr = [NSMutableString string];
-	[descriptionStr appendFormat:@"Origin = %@\n",origin];
+	[descriptionStr appendFormat:@"Origin = %@\n",origin]; // 출발지
 	[descriptionStr appendFormat:@"Destination = %@\n",destination];
 	[descriptionStr appendFormat:@"Date = %@\n",date];
 	[descriptionStr appendFormat:@"BusClass = %@\n",busClass];

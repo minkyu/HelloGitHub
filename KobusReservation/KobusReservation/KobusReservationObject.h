@@ -10,10 +10,10 @@
 
 @interface KobusReservationObject : NSObject
 
-@property (nonatomic,copy) NSString *origin;
-@property (nonatomic,copy) NSString *destination;
-@property (nonatomic,copy) NSString *date;
-@property (nonatomic,copy) NSString *busClass;
-@property (nonatomic,copy) NSString *ticketCount;
+@property (nonatomic,copy) NSString *origin; // 출발지
+@property (nonatomic,copy) NSString *destination; // 도작치
+@property (nonatomic,copy) NSString *date; //출발일
+@property (nonatomic,copy) NSString *busClass; // 버스등급
+@property (nonatomic,copy) NSString *ticketCount; // 매수
 
 @end

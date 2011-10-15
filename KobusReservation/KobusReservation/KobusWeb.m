@@ -106,9 +106,10 @@
 - (NSArray *) matchesOfDestinationsInString:(NSString*)aString
 {
     NSError *error = NULL;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"d.TER_FR.selectedIndex].value == \"([\\d]{3})\"[)] [{]([^}]*)[}]" 
-                                                                           options:NSRegularExpressionCaseInsensitive + NSRegularExpressionDotMatchesLineSeparators
-                                                                             error:&error];
+    NSRegularExpression *regex = [NSRegularExpression 
+								  regularExpressionWithPattern:@"d.TER_FR.selectedIndex].value == \"([\\d]{3})\"[)] [{]([^}]*)[}]" 
+								  options:NSRegularExpressionCaseInsensitive + NSRegularExpressionDotMatchesLineSeparators
+								  error:&error];
 	NSAssert(regex, @"%@", error);
 	return [regex matchesInString:aString options:0 range:NSMakeRange(0, [aString length])];	
 }
