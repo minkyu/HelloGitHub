@@ -49,6 +49,8 @@
 	return descriptionStr;
 }
 
+
+// 이제 없애도 될듯
 - (NSDictionary*)toPostData
 {
 	//예약할 좌석 조회 화면 조회 시 아래의 데이터가 POST 방식으로 넘어감

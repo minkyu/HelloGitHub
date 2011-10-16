@@ -126,4 +126,18 @@ static const int childrenTag = 200;
 
 }
 
+- (void)doReservation
+{
+	NSURL *url = [NSURL URLWithString:@"http://m.kobus.co.kr/web/m/reservation/sch_bus.jsp"];
+	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+	
+	
+//	[request setPostValue:@"Ben" forKey:@"first_name"];
+//	[request setPostValue:@"Copsey" forKey:@"last_name"];
+//	[request setFile:@"/Users/ben/Desktop/ben.jpg" forKey:@"photo"];
+//	
+	
+	
+}
+
 @end

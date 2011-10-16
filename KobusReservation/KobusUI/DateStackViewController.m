@@ -116,7 +116,7 @@ const int kalViewWidth = 322;
 	[self postNoticationReservation:@"KobusReservation" value:dateYear key:@"Tim_data_Year"];
 	[self postNoticationReservation:@"KobusReservation" value:dateMonth key:@"Tim_data_Month"];
 	[self postNoticationReservation:@"KobusReservation" value:dateDay key:@"Tim_data_Day"];
-	[self postNoticationReservation:@"KobusReservation" value:theTime key:@"TIM_TIM_I"];
+	[self postNoticationReservation:@"KobusReservation" value:[theTime stringByReplacingOccurrencesOfString:@":" withString:@""] key:@"TIM_TIM_I"];
 	
 	/*
 	 
