@@ -284,12 +284,16 @@ const float ANIMATION_DURATION = 0.2;
 	
 }
 
-- (void)startAnimation {
-	[UIView beginAnimations:nil context:NULL];
+-(void) setUpNonTransitionAnimation
+{
 	[UIView setAnimationDuration:ANIMATION_DURATION];			
 	[UIView setAnimationBeginsFromCurrentState:YES];
-	[UIView setAnimationTransition:UIViewAnimationTransitionNone forView:nil cache:YES];
-	
+	[UIView setAnimationTransition:UIViewAnimationTransitionNone forView:nil cache:YES];	
+}
+
+- (void)startAnimation {
+	[UIView beginAnimations:nil context:NULL];
+	[self setUpNonTransitionAnimation];
 }
 
 - (void)dropAnimation {
@@ -371,9 +375,7 @@ const float ANIMATION_DURATION = 0.2;
 		}	
 		else if (viewAtLeft.frame.origin.x == SLIDE_VIEWS_MINUS_X_POSITION && viewAtRight.frame.origin.x + viewAtRight.frame.size.width < self.view.frame.size.width) {
 			[UIView beginAnimations:@"RIGHT-WITH-RIGHT" context:NULL];
-			[UIView setAnimationDuration:ANIMATION_DURATION];
-			[UIView setAnimationBeginsFromCurrentState:YES];
-			[UIView setAnimationTransition:UIViewAnimationTransitionNone forView:nil cache:YES];
+			[self setUpNonTransitionAnimation];
 			[viewAtRight setFrame:CGRectMake(self.view.frame.size.width - viewAtRight.frame.size.width, viewAtRight.frame.origin.y, viewAtRight.frame.size.width,viewAtRight.frame.size.height)];
 			[self setBounceBackAnimationDelegate];
 			[UIView commitAnimations];
@@ -409,9 +411,7 @@ const float ANIMATION_DURATION = 0.2;
 	}
 	else{
 		[UIView beginAnimations:nil context:NULL];
-		[UIView setAnimationDuration:ANIMATION_DURATION];
-		[UIView setAnimationBeginsFromCurrentState:YES];
-		[UIView setAnimationTransition:UIViewAnimationTransitionNone forView:nil cache:YES];
+		[self setUpNonTransitionAnimation];
 		[viewAtLeft setFrame:CGRectMake(SLIDE_VIEWS_START_X_POS, viewAtLeft.frame.origin.y, viewAtLeft.frame.size.width, viewAtLeft.frame.size.height)];
 		[UIView commitAnimations];
 	}
@@ -440,18 +440,14 @@ const float ANIMATION_DURATION = 0.2;
 		else if (viewAtRight.frame.origin.x < self.view.frame.size.width) {
 			if((viewAtRight.frame.origin.x < (viewAtLeft.frame.origin.x + viewAtLeft.frame.size.width)) && viewAtRight.frame.origin.x < (self.view.frame.size.width - (viewAtRight.frame.size.width/2))){
 				[UIView beginAnimations:@"RIGHT-WITH-RIGHT" context:NULL];
-				[UIView setAnimationDuration:ANIMATION_DURATION];
-				[UIView setAnimationBeginsFromCurrentState:YES];
-				[UIView setAnimationTransition:UIViewAnimationTransitionNone forView:nil cache:YES];
+				[self setUpNonTransitionAnimation];
 				[viewAtRight setFrame:CGRectMake(SLIDE_VIEWS_MINUS_X_POSITION + viewAtLeft.frame.size.width, viewAtRight.frame.origin.y, viewAtRight.frame.size.width,viewAtRight.frame.size.height)];						
 				[self setBounceBackAnimationDelegate];
 			}				
 			else{
 				
 				[UIView beginAnimations:@"RIGHT-WITH-LEFT" context:NULL];
-				[UIView setAnimationDuration:ANIMATION_DURATION];
-				[UIView setAnimationBeginsFromCurrentState:YES];
-				[UIView setAnimationTransition:UIViewAnimationTransitionNone forView:nil cache:YES];
+				[self setUpNonTransitionAnimation];
 				if([[slideViews subviews] indexOfObject:viewAtLeft] > 0){ 
 					CGRect newFrameForViewAtLeft;
 					newFrameForViewAtLeft.origin.y = viewAtLeft.frame.origin.y;
