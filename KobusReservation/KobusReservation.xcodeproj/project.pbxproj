@@ -16,6 +16,10 @@
 		911AD162144951FB009F8B5B /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 911AD158144951FB009F8B5B /* ASIInputStream.m */; };
 		911AD163144951FB009F8B5B /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 911AD15A144951FB009F8B5B /* ASINetworkQueue.m */; };
 		911AD16714495226009F8B5B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 911AD16614495226009F8B5B /* Reachability.m */; };
+		913DC509144A97D200DA2331 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913DC508144A97D200DA2331 /* CFNetwork.framework */; };
+		913DC50C144A97F000DA2331 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913DC50B144A97F000DA2331 /* SystemConfiguration.framework */; };
+		913DC50E144A97FB00DA2331 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913DC50D144A97FB00DA2331 /* MobileCoreServices.framework */; };
+		913DC510144A981800DA2331 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 913DC50F144A981800DA2331 /* libz.dylib */; };
 		D36F662D14451B5B009F5755 /* ClassStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D36F662C14451B5B009F5755 /* ClassStackViewController.m */; };
 		D388C46F143C6ECF00DEF523 /* AvlTree+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C44E143C6ECF00DEF523 /* AvlTree+Private.m */; };
 		D388C470143C6ECF00DEF523 /* AvlTree.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C450143C6ECF00DEF523 /* AvlTree.m */; };
@@ -119,6 +123,10 @@
 		911AD15B144951FB009F8B5B /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
 		911AD16514495226009F8B5B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		911AD16614495226009F8B5B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		913DC508144A97D200DA2331 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		913DC50B144A97F000DA2331 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		913DC50D144A97FB00DA2331 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		913DC50F144A981800DA2331 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		D36F662B14451B5B009F5755 /* ClassStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassStackViewController.h; sourceTree = "<group>"; };
 		D36F662C14451B5B009F5755 /* ClassStackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassStackViewController.m; sourceTree = "<group>"; };
 		D388C44D143C6ECF00DEF523 /* AvlTree+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AvlTree+Private.h"; sourceTree = "<group>"; };
@@ -235,6 +243,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913DC510144A981800DA2331 /* libz.dylib in Frameworks */,
+				913DC50E144A97FB00DA2331 /* MobileCoreServices.framework in Frameworks */,
+				913DC50C144A97F000DA2331 /* SystemConfiguration.framework in Frameworks */,
+				913DC509144A97D200DA2331 /* CFNetwork.framework in Frameworks */,
 				D3C1AE261444415D00C23FC0 /* QuartzCore.framework in Frameworks */,
 				ED332E041435C299009A82E5 /* UIKit.framework in Frameworks */,
 				ED332E061435C299009A82E5 /* Foundation.framework in Frameworks */,
@@ -451,6 +463,10 @@
 		ED332DF41435C299009A82E5 = {
 			isa = PBXGroup;
 			children = (
+				913DC50F144A981800DA2331 /* libz.dylib */,
+				913DC50D144A97FB00DA2331 /* MobileCoreServices.framework */,
+				913DC50B144A97F000DA2331 /* SystemConfiguration.framework */,
+				913DC508144A97D200DA2331 /* CFNetwork.framework */,
 				D3C1AE0C14443BDF00C23FC0 /* KobusUI */,
 				D388C44B143C6ECF00DEF523 /* SortedDictionary */,
 				ED332E0B1435C299009A82E5 /* KobusReservation */,
