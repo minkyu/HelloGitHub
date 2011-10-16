@@ -433,7 +433,6 @@ const float ANIMATION_DURATION = 0.2;
 				[viewAtLeft setFrame:CGRectMake(SLIDE_VIEWS_MINUS_X_POSITION, viewAtLeft.frame.origin.y, viewAtLeft.frame.size.width, viewAtLeft.frame.size.height)];
 				[viewAtRight setFrame:CGRectMake(SLIDE_VIEWS_MINUS_X_POSITION + viewAtLeft.frame.size.width, viewAtRight.frame.origin.y, viewAtRight.frame.size.width,viewAtRight.frame.size.height)];
 			}
-			[UIView commitAnimations];
 		}
 		else if (viewAtRight.frame.origin.x < self.view.frame.size.width) {
 			if((viewAtRight.frame.origin.x < (viewAtLeft.frame.origin.x + viewAtLeft.frame.size.width)) && viewAtRight.frame.origin.x < (self.view.frame.size.width - (viewAtRight.frame.size.width/2))){
@@ -467,8 +466,8 @@ const float ANIMATION_DURATION = 0.2;
 				[UIView setAnimationDelegate:self];
 				[UIView setAnimationDidStopSelector:@selector(bounceBack:finished:context:)];
 			}
-			[UIView commitAnimations];
 		}
+		[UIView commitAnimations];
 	}
 	
 }
