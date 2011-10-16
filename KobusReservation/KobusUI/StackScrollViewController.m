@@ -451,12 +451,17 @@ const float ANIMATION_DURATION = 0.2;
 				[UIView setAnimationBeginsFromCurrentState:YES];
 				[UIView setAnimationTransition:UIViewAnimationTransitionNone forView:nil cache:YES];
 				if([[slideViews subviews] indexOfObject:viewAtLeft] > 0){ 
+					CGRect newFrameForViewAtLeft;
+					newFrameForViewAtLeft.origin.y = viewAtLeft.frame.origin.y;
+					newFrameForViewAtLeft.size.width = viewAtLeft.frame.size.width;
+					newFrameForViewAtLeft.size.height = viewAtLeft.frame.size.height;
 					if (positionOfViewAtRightAtTouchBegan.x  + viewAtRight.frame.size.width <= self.view.frame.size.width) {							
-						[viewAtLeft setFrame:CGRectMake(self.view.frame.size.width - viewAtLeft.frame.size.width, viewAtLeft.frame.origin.y, viewAtLeft.frame.size.width, viewAtLeft.frame.size.height)];
+						newFrameForViewAtLeft.origin.x = self.view.frame.size.width - viewAtLeft.frame.size.width;
 					}
 					else{							
-						[viewAtLeft setFrame:CGRectMake(SLIDE_VIEWS_MINUS_X_POSITION + viewAtLeft2.frame.size.width, viewAtLeft.frame.origin.y, viewAtLeft.frame.size.width, viewAtLeft.frame.size.height)];
+						newFrameForViewAtLeft.origin.x = SLIDE_VIEWS_MINUS_X_POSITION + viewAtLeft2.frame.size.width;
 					}
+					[viewAtLeft setFrame: newFrameForViewAtLeft];
 					[viewAtRight setFrame:CGRectMake(self.view.frame.size.width, viewAtRight.frame.origin.y, viewAtRight.frame.size.width,viewAtRight.frame.size.height)];		
 				}
 				else{
