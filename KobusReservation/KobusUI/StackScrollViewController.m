@@ -364,24 +364,24 @@ const float ANIMATION_DURATION = 0.2;
 		else if (viewAtLeft.frame.origin.x == SLIDE_VIEWS_MINUS_X_POSITION && viewAtRight.frame.origin.x + viewAtRight.frame.size.width > self.view.frame.size.width) {
 			[UIView beginAnimations:nil context:NULL];
 			[UIView setAnimationDuration:ANIMATION_DURATION];
-			[UIView setAnimationTransition:UIViewAnimationCurveEaseInOut forView:nil cache:YES];
 			[UIView setAnimationBeginsFromCurrentState:YES];
+			[UIView setAnimationTransition:UIViewAnimationCurveEaseInOut forView:nil cache:YES];
 			[viewAtRight setFrame:CGRectMake(self.view.frame.size.width - viewAtRight.frame.size.width, viewAtRight.frame.origin.y, viewAtRight.frame.size.width,viewAtRight.frame.size.height)];						
 			[UIView commitAnimations];						
 		}	
 		else if (viewAtLeft.frame.origin.x == SLIDE_VIEWS_MINUS_X_POSITION && viewAtRight.frame.origin.x + viewAtRight.frame.size.width < self.view.frame.size.width) {
 			[UIView beginAnimations:@"RIGHT-WITH-RIGHT" context:NULL];
 			[UIView setAnimationDuration:ANIMATION_DURATION];
-			[UIView setAnimationTransition:UIViewAnimationTransitionNone forView:nil cache:YES];
 			[UIView setAnimationBeginsFromCurrentState:YES];
+			[UIView setAnimationTransition:UIViewAnimationTransitionNone forView:nil cache:YES];
 			[viewAtRight setFrame:CGRectMake(self.view.frame.size.width - viewAtRight.frame.size.width, viewAtRight.frame.origin.y, viewAtRight.frame.size.width,viewAtRight.frame.size.height)];
 			[self setBounceBackAnimationDelegate];
 			[UIView commitAnimations];
 		}
 		else if (viewAtLeft.frame.origin.x > SLIDE_VIEWS_MINUS_X_POSITION) {
 			[UIView setAnimationDuration:ANIMATION_DURATION];
-			[UIView setAnimationTransition:UIViewAnimationCurveEaseInOut forView:nil cache:YES];
 			[UIView setAnimationBeginsFromCurrentState:YES];
+			[UIView setAnimationTransition:UIViewAnimationCurveEaseInOut forView:nil cache:YES];
 			if ((viewAtLeft.frame.origin.x + viewAtLeft.frame.size.width > self.view.frame.size.width) && viewAtLeft.frame.origin.x < (self.view.frame.size.width - (viewAtLeft.frame.size.width)/2)) {
 				[UIView beginAnimations:@"LEFT-WITH-LEFT" context:nil];
 				[viewAtLeft setFrame:CGRectMake(self.view.frame.size.width - viewAtLeft.frame.size.width, viewAtLeft.frame.origin.y, viewAtLeft.frame.size.width, viewAtLeft.frame.size.height)];
