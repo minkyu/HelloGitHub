@@ -586,16 +586,7 @@ const float ANIMATION_DURATION = 0.2;
 		}
 		else if ([animationID isEqualToString:@"RIGHT-WITH-LEFT"]) 
 		{
-			CABasicAnimation *bounceAnimationLeft = [CABasicAnimation animationWithKeyPath:@"position.x"];
-			bounceAnimationLeft.duration = ANIMATION_DURATION;
-			bounceAnimationLeft.fromValue = [NSValue valueWithCGPoint:viewAtLeft.center];
-			bounceAnimationLeft.toValue = [NSValue valueWithCGPoint:CGPointMake(viewAtLeft.center.x +10, viewAtLeft.center.y)];
-			bounceAnimationLeft.repeatCount = 0;
-			bounceAnimationLeft.autoreverses = YES;
-			bounceAnimationLeft.fillMode = kCAFillModeBackwards;
-			bounceAnimationLeft.removedOnCompletion = YES;
-			bounceAnimationLeft.additive = NO;
-			[viewAtLeft.layer addAnimation:bounceAnimationLeft forKey:@"bounceAnimationLeft"];
+			[self addAnimationNamed:@"bounceAnimationLeft" toView:viewAtLeft withData:10];
 			
 			if (viewAtLeft2 != nil) {
 				[viewAtLeft2 setHidden:FALSE];
@@ -603,16 +594,7 @@ const float ANIMATION_DURATION = 0.2;
 				if (viewAtLeft2Position > 0) {
 					[((UIView*)[[slideViews subviews] objectAtIndex:viewAtLeft2Position -1]) setHidden:FALSE];
 				}
-				CABasicAnimation* bounceAnimationLeft2 = [CABasicAnimation animationWithKeyPath:@"position.x"];
-				bounceAnimationLeft2.duration = ANIMATION_DURATION;
-				bounceAnimationLeft2.fromValue = [NSValue valueWithCGPoint:viewAtLeft2.center];
-				bounceAnimationLeft2.toValue = [NSValue valueWithCGPoint:CGPointMake(viewAtLeft2.center.x +10, viewAtLeft2.center.y)];
-				bounceAnimationLeft2.repeatCount = 0;
-				bounceAnimationLeft2.autoreverses = YES;
-				bounceAnimationLeft2.fillMode = kCAFillModeBackwards;
-				bounceAnimationLeft2.removedOnCompletion = YES;
-				bounceAnimationLeft2.additive = NO;
-				[viewAtLeft2.layer addAnimation:bounceAnimationLeft2 forKey:@"bounceAnimationviewAtLeft2"];
+				[self addAnimationNamed:@"bounceAnimationviewAtLeft2" toView:viewAtLeft2 withData: 10];
 				[self performSelector:@selector(callArrangeVerticalBar) withObject:nil afterDelay:0.4];
 				isBouncing = TRUE;
 			}
