@@ -196,7 +196,7 @@ const float ANIMATION_DURATION = 0.2;
 	[self arrangeVerticalBar];
 	
 }
-- (void)drangDirectionRight:(CGPoint)translatedPoint  {
+- (void)dragDirectionRight:(CGPoint)translatedPoint  {
 	if ([dragDirection isEqualToString:@"LEFT"]) {
 		positionOfViewAtRightAtTouchBegan = viewAtRight.frame.origin;
 		positionOfViewAtLeftAtTouchBegan = viewAtLeft.frame.origin;
@@ -518,7 +518,7 @@ const float ANIMATION_DURATION = 0.2;
 			
 		}else if (location.x > lastTouchPoint) {	
 			
-			[self drangDirectionRight: translatedPoint];
+			[self dragDirectionRight: translatedPoint];
 			
 		}
 	}
