@@ -103,6 +103,21 @@ const int kalViewWidth = 322;
 	id date = [NSString stringWithFormat:@"%@ %@",theDate,theTime];
 	[self postNoticationReservation:@"KobusReservation" value:date key:@"date"];
 	
+	
+	// 사이트 param 
+	NSDateFormatter *df = [[[NSDateFormatter alloc] init] autorelease];
+	[df setDateFormat:@"yyyy"];
+	NSString *dateYear = [df stringFromDate:kal.selectedDate];
+	[df setDateFormat:@"MM"];
+	NSString *dateMonth = [df stringFromDate:kal.selectedDate];
+	[df setDateFormat:@"dd"];
+	NSString *dateDay = [df stringFromDate:kal.selectedDate];
+	
+	[self postNoticationReservation:@"KobusReservation" value:dateYear key:@"Tim_data_Year"];
+	[self postNoticationReservation:@"KobusReservation" value:dateMonth key:@"Tim_data_Month"];
+	[self postNoticationReservation:@"KobusReservation" value:dateDay key:@"Tim_data_Day"];
+	[self postNoticationReservation:@"KobusReservation" value:theTime key:@"TIM_TIM_I"];
+	
 	/*
 	 
 	 NSString *dateStr = @"20081122";

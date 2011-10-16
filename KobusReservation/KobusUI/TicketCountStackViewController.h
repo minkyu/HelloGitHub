@@ -13,4 +13,7 @@
 @property (nonatomic,retain) NSString *childrenStr;
 @property (nonatomic,retain) NSString *adultStr;
 
+@property (nonatomic, retain) NSString *adultTicketCnt;
+@property (nonatomic, retain) NSString *childTicketCnt;
+
 @end

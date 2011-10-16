@@ -463,14 +463,9 @@
 		ED332DF41435C299009A82E5 = {
 			isa = PBXGroup;
 			children = (
-				913DC50F144A981800DA2331 /* libz.dylib */,
-				913DC50D144A97FB00DA2331 /* MobileCoreServices.framework */,
-				913DC50B144A97F000DA2331 /* SystemConfiguration.framework */,
-				913DC508144A97D200DA2331 /* CFNetwork.framework */,
 				D3C1AE0C14443BDF00C23FC0 /* KobusUI */,
 				D388C44B143C6ECF00DEF523 /* SortedDictionary */,
 				ED332E0B1435C299009A82E5 /* KobusReservation */,
-				ED332E341435C29A009A82E5 /* KobusReservationTests */,
 				ED332E021435C299009A82E5 /* Frameworks */,
 				ED3D7267143B4BA800775F58 /* KobusReservation.app */,
 				ED3D7269143B4BA800775F58 /* KobusReservationTests.octest */,
@@ -480,6 +475,10 @@
 		ED332E021435C299009A82E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				913DC50F144A981800DA2331 /* libz.dylib */,
+				913DC50D144A97FB00DA2331 /* MobileCoreServices.framework */,
+				913DC50B144A97F000DA2331 /* SystemConfiguration.framework */,
+				913DC508144A97D200DA2331 /* CFNetwork.framework */,
 				D3C1AE251444415D00C23FC0 /* QuartzCore.framework */,
 				ED332E031435C299009A82E5 /* UIKit.framework */,
 				ED332E051435C299009A82E5 /* Foundation.framework */,
@@ -503,6 +502,7 @@
 				D3D943781435D31700568CE0 /* KobusWeb.m */,
 				D39D8813144574C600BD9A45 /* KobusReservationObject.h */,
 				D39D8814144574C600BD9A45 /* KobusReservationObject.m */,
+				ED332E341435C29A009A82E5 /* KobusReservationTests */,
 			);
 			path = KobusReservation;
 			sourceTree = "<group>";
@@ -528,7 +528,7 @@
 				ED332E351435C29A009A82E5 /* Supporting Files */,
 			);
 			path = KobusReservationTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		ED332E351435C29A009A82E5 /* Supporting Files */ = {
 			isa = PBXGroup;

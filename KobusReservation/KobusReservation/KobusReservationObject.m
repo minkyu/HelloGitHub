@@ -11,12 +11,16 @@
 @implementation KobusReservationObject
 
 @synthesize origin,destination,date,busClass,ticketCount;
+//사이트에 사용되는 param
+@synthesize TER_FR, TER_TO, Tim_data_Year, Tim_data_Month, Tim_data_Day, TIM_TIM_I, BUS_GRA_I, pCnt_050, pCnt_100;
 
 - (id)init
 {
     self = [super init];
     if (self) {
         // Initialization code here.
+		pCnt_100 = @"0";
+		pCnt_050 = @"0";
     }
     
     return self;
@@ -25,11 +29,23 @@
 - (NSString*)description
 {
 	NSMutableString	*descriptionStr = [NSMutableString string];
-	[descriptionStr appendFormat:@"Origin = %@\n",origin]; // 출발지
-	[descriptionStr appendFormat:@"Destination = %@\n",destination];
-	[descriptionStr appendFormat:@"Date = %@\n",date];
-	[descriptionStr appendFormat:@"BusClass = %@\n",busClass];
-	[descriptionStr appendFormat:@"TicketCount = %@\n",ticketCount];
+//	[descriptionStr appendFormat:@"Origin = %@\n",origin]; // 출발지
+//	[descriptionStr appendFormat:@"Destination = %@\n",destination];
+//	[descriptionStr appendFormat:@"Date = %@\n",date];
+//	[descriptionStr appendFormat:@"BusClass = %@\n",busClass];
+//	[descriptionStr appendFormat:@"TicketCount = %@\n",ticketCount];
+//	
+	
+	[descriptionStr appendFormat:@"\nTER_FR = %@\n", TER_FR];
+	[descriptionStr appendFormat:@"TER_TO = %@\n", TER_TO];
+	[descriptionStr appendFormat:@"Tim_data_Year = %@\n", Tim_data_Year];
+	[descriptionStr appendFormat:@"Tim_data_Month = %@\n", Tim_data_Month];
+	[descriptionStr appendFormat:@"Tim_data_Day = %@\n", Tim_data_Day];
+	[descriptionStr appendFormat:@"TIM_TIM_I = %@\n", TIM_TIM_I];
+	[descriptionStr appendFormat:@"BUS_GRA_I = %@\n", BUS_GRA_I];
+	[descriptionStr appendFormat:@"pCnt_100 = %@\n", pCnt_100];
+	[descriptionStr appendFormat:@"pCnt_050 = %@\n", pCnt_050];
+	
 	return descriptionStr;
 }
 
@@ -76,8 +92,8 @@
 // 본 프로그램에선 일단 제외하는 걸로.
 - (BOOL)shuldReservateOnEasyInternet
 {
-	if([destination isEqualToString:@"310"] || [destination isEqualToString:@"020"] 
-	   || [destination isEqualToString:@"032"] || [destination isEqualToString:@"190"] || [destination isEqualToString:@"456"])
+	if([TER_TO isEqualToString:@"310"] || [TER_TO isEqualToString:@"020"] 
+	   || [TER_TO isEqualToString:@"032"] || [TER_TO isEqualToString:@"190"] || [TER_TO isEqualToString:@"456"])
 		return YES;
 	return NO;
 }
@@ -85,8 +101,8 @@
 // 티켓 수 확인	
 - (BOOL)requestedNoTicket
 {
-	// TODO 어른티켓 아이티켓 구분하고 그에 맞게 수정하긔
-	if ([ticketCount intValue] < 1) return YES;
+	// TODO null처리 
+	if (([pCnt_100 intValue] + [pCnt_100 intValue]) < 1) return YES;
 	return NO;
 }
 
@@ -97,11 +113,11 @@
 {
 
 	int maxTicket = 27;
-	if ([busClass isEqualToString:@"0"] || [busClass isEqualToString:@"1"] || [busClass isEqualToString:@"4"]) {
+	if ([BUS_GRA_I isEqualToString:@"0"] || [BUS_GRA_I isEqualToString:@"1"] || [BUS_GRA_I isEqualToString:@"4"]) {
 		maxTicket = 45;
 	}
 	
-	if ([ticketCount intValue] > maxTicket) {
+	if (([pCnt_100 intValue] + [pCnt_100 intValue]) > maxTicket) {
 		return YES;
 	}
 	

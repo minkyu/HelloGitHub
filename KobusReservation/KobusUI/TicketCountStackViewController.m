@@ -17,6 +17,7 @@ static const int childrenTag = 200;
 @implementation TicketCountStackViewController
 
 @synthesize childrenStr,adultStr;
+@synthesize adultTicketCnt, childTicketCnt;
 
 - (float)addSVSegmentedControl:(NSArray*)array originY:(float)originY frameWidth:(float)frameWidth tag:(int)tag;  
 {
@@ -87,7 +88,7 @@ static const int childrenTag = 200;
 										   titleHeight+boundaryHeight+labelHeight*2+adultSegmentHeight+childrenSegmentHeight+padding );
 		CGSize buttionsize = CGSizeMake(frame.size.width-padding*2, 
 										frame.size.height-(titleHeight+boundaryHeight+labelHeight*2+adultSegmentHeight+childrenSegmentHeight+padding*2));
-		[self addButton:@"에약하기" origin:bouttonpoint size:buttionsize tag:10];
+		[self addButton:@"예약하기" origin:bouttonpoint size:buttionsize tag:10];
 		
 	
 	}
@@ -98,10 +99,14 @@ static const int childrenTag = 200;
 {
 	NSLog(@"segmentedControl %i did select index %i (via UIControl method)", segmentedControl.tag, segmentedControl.selectedIndex);
 	
-	if (segmentedControl.tag == adultTag)
+	if (segmentedControl.tag == adultTag) {
 		self.adultStr = [NSString stringWithFormat:@"어른:%d",segmentedControl.selectedIndex];
-	else
+		self.adultTicketCnt = [[NSNumber numberWithInteger:segmentedControl.selectedIndex] stringValue];
+		
+	} else {
 		self.childrenStr = [NSString stringWithFormat:@"아동:%d",segmentedControl.selectedIndex]; 
+		self.childTicketCnt = [[NSNumber numberWithInteger:segmentedControl.selectedIndex] stringValue];
+	}
 	
 }
 
@@ -110,6 +115,15 @@ static const int childrenTag = 200;
 	
 	NSString *TicketCount = [NSString stringWithFormat:@"%@  %@",adultStr,childrenStr]; 
 	[self postNoticationReservation:@"KobusReservation" value:TicketCount key:@"ticketCount"];
+	
+	// 사이트 param
+	[self postNoticationReservation:@"KorbusReservation" value:adultTicketCnt key:@"pCnt_100"];
+	[self postNoticationReservation:@"KorbusReservation" value:childTicketCnt key:@"pCnt_050"];
+	
+	// TODO 값 Validation 로직 
+	// TODO 예약 값을 사이트로 전송한 후 페이지를 받아옴
+	// TODO 자리 선택하는 View 생성
+
 }
 
 @end
