@@ -856,15 +856,9 @@ const float ANIMATION_DURATION = 0.2;
 	for (UIViewController* subController in viewControllersStack) {
 		[subController didRotateFromInterfaceOrientation:fromInterfaceOrientation];                
 	}
-	if (viewAtLeft !=nil) {
-		[viewAtLeft setHidden:FALSE];
-	}
-	if (viewAtRight !=nil) {
-		[viewAtRight setHidden:FALSE];
-	}	
-	if (viewAtLeft2 !=nil) {
-		[viewAtLeft2 setHidden:FALSE];
-	}	
+	[viewAtLeft setHidden:FALSE];
+	[viewAtRight setHidden:FALSE];
+	[viewAtLeft2 setHidden:FALSE];
 }
 
 - (void)dealloc {
