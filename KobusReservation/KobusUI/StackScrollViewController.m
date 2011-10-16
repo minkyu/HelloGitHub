@@ -543,30 +543,25 @@ const float ANIMATION_DURATION = 0.2;
 	
 }
 
+-(void) addAnimationNamed:(NSString*)aString toView:(UIView*)aView withData:(float)aFloat 
+{
+	CABasicAnimation *bounceAnimation = [CABasicAnimation animationWithKeyPath:@"position.x"];
+	bounceAnimation.duration = ANIMATION_DURATION;
+	bounceAnimation.fromValue = [NSValue valueWithCGPoint:aView.center];
+	bounceAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(aView.center.x + aFloat, aView.center.y)];
+	bounceAnimation.repeatCount = 0;
+	bounceAnimation.autoreverses = YES;
+	bounceAnimation.fillMode = kCAFillModeBackwards;
+	bounceAnimation.removedOnCompletion = YES;
+	bounceAnimation.additive = NO;
+	[aView.layer addAnimation:bounceAnimation forKey:aString];
+}
+
 - (void)bounceBackAnimation:(UIView*)view1 delta1:(float)data1 view2:(UIView*)view2 delta2:(float)data2
 {
-	CABasicAnimation *bounceAnimation1 = [CABasicAnimation animationWithKeyPath:@"position.x"];
-	bounceAnimation1.duration = ANIMATION_DURATION;
-	bounceAnimation1.fromValue = [NSValue valueWithCGPoint:view1.center];
-	bounceAnimation1.toValue = [NSValue valueWithCGPoint:CGPointMake(view1.center.x + data1, view1.center.y)];
-	bounceAnimation1.repeatCount = 0;
-	bounceAnimation1.autoreverses = YES;
-	bounceAnimation1.fillMode = kCAFillModeBackwards;
-	bounceAnimation1.removedOnCompletion = YES;
-	bounceAnimation1.additive = NO;
-	[view1.layer addAnimation:bounceAnimation1 forKey:@"bounceAnimation"];
-	
+	[self addAnimationNamed: @"bounceAnimation" toView:view1 withData:data1];	
 	[view2 setHidden:FALSE];
-	CABasicAnimation *bounceAnimation2 = [CABasicAnimation animationWithKeyPath:@"position.x"];
-	bounceAnimation2.duration = ANIMATION_DURATION;
-	bounceAnimation2.fromValue = [NSValue valueWithCGPoint:view2.center];
-	bounceAnimation2.toValue = [NSValue valueWithCGPoint:CGPointMake((view2.center.x + data2), view2.center.y)];
-	bounceAnimation2.repeatCount = 0;
-	bounceAnimation2.autoreverses = YES;
-	bounceAnimation2.fillMode = kCAFillModeBackwards;
-	bounceAnimation2.removedOnCompletion = YES;
-	bounceAnimation2.additive = NO;
-	[view2.layer addAnimation:bounceAnimation2 forKey:@"bounceAnimationRight"];
+	[self addAnimationNamed: @"bounceAnimationRight" toView:view2 withData:data2];	
 }
 
 - (void)bounceBack:(NSString*)animationID finished:(NSNumber*)finished context:(void*)context {	
