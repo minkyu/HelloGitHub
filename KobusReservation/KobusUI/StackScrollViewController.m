@@ -330,6 +330,11 @@ const float ANIMATION_DURATION = 0.2;
 	
 }
 
+-(void) setBounceBackAnimationDelegate
+{
+	[UIView setAnimationDelegate:self];
+	[UIView setAnimationDidStopSelector:@selector(bounceBack:finished:context:)];
+}
 
 - (void)handlingLeft {
 	if (viewAtRight != nil) {
@@ -370,8 +375,7 @@ const float ANIMATION_DURATION = 0.2;
 			[UIView setAnimationTransition:UIViewAnimationTransitionNone forView:nil cache:YES];
 			[UIView setAnimationBeginsFromCurrentState:YES];
 			[viewAtRight setFrame:CGRectMake(self.view.frame.size.width - viewAtRight.frame.size.width, viewAtRight.frame.origin.y, viewAtRight.frame.size.width,viewAtRight.frame.size.height)];
-			[UIView setAnimationDelegate:self];
-			[UIView setAnimationDidStopSelector:@selector(bounceBack:finished:context:)];
+			[self setBounceBackAnimationDelegate];
 			[UIView commitAnimations];
 		}
 		else if (viewAtLeft.frame.origin.x > SLIDE_VIEWS_MINUS_X_POSITION) {
@@ -398,8 +402,7 @@ const float ANIMATION_DURATION = 0.2;
 				//Show bounce effect
 				[viewAtRight2 setFrame:CGRectMake(viewAtRight.frame.origin.x + viewAtRight.frame.size.width, viewAtRight2.frame.origin.y, viewAtRight2.frame.size.width, viewAtRight2.frame.size.height)];
 			}
-			[UIView setAnimationDelegate:self];
-			[UIView setAnimationDidStopSelector:@selector(bounceBack:finished:context:)];
+			[self setBounceBackAnimationDelegate];
 			[UIView commitAnimations];
 		}
 		
@@ -441,8 +444,7 @@ const float ANIMATION_DURATION = 0.2;
 				[UIView setAnimationBeginsFromCurrentState:YES];
 				[UIView setAnimationTransition:UIViewAnimationTransitionNone forView:nil cache:YES];
 				[viewAtRight setFrame:CGRectMake(SLIDE_VIEWS_MINUS_X_POSITION + viewAtLeft.frame.size.width, viewAtRight.frame.origin.y, viewAtRight.frame.size.width,viewAtRight.frame.size.height)];						
-				[UIView setAnimationDelegate:self];
-				[UIView setAnimationDidStopSelector:@selector(bounceBack:finished:context:)];
+				[self setBounceBackAnimationDelegate];
 			}				
 			else{
 				
@@ -468,8 +470,7 @@ const float ANIMATION_DURATION = 0.2;
 					[viewAtLeft setFrame:CGRectMake(SLIDE_VIEWS_MINUS_X_POSITION, viewAtLeft.frame.origin.y, viewAtLeft.frame.size.width, viewAtLeft.frame.size.height)];
 					[viewAtRight setFrame:CGRectMake(SLIDE_VIEWS_MINUS_X_POSITION + viewAtLeft.frame.size.width, viewAtRight.frame.origin.y, viewAtRight.frame.size.width,viewAtRight.frame.size.height)];
 				}
-				[UIView setAnimationDelegate:self];
-				[UIView setAnimationDidStopSelector:@selector(bounceBack:finished:context:)];
+				[self setBounceBackAnimationDelegate];
 			}
 		}
 	}
@@ -747,8 +748,7 @@ const float ANIMATION_DURATION = 0.2;
 				[viewAtLeft setFrame:CGRectMake(SLIDE_VIEWS_MINUS_X_POSITION, viewAtLeft.frame.origin.y, viewAtLeft.frame.size.width, viewAtLeft.frame.size.height)];
 				[viewAtRight setFrame:CGRectMake(self.view.frame.size.width - viewAtRight.frame.size.width, viewAtRight.frame.origin.y, viewAtRight.frame.size.width, viewAtRight.frame.size.height)];
 				[tempRight2View setFrame:CGRectMake(self.view.frame.size.width, tempRight2View.frame.origin.y, tempRight2View.frame.size.width, tempRight2View.frame.size.height)];
-				[UIView setAnimationDelegate:self];
-				[UIView setAnimationDidStopSelector:@selector(bounceBack:finished:context:)];
+				[self setBounceBackAnimationDelegate];
 				[UIView commitAnimations];
 			}else {
 				viewAtRight = [[slideViews subviews] objectAtIndex:[[slideViews subviews] count]-1];
@@ -762,8 +762,7 @@ const float ANIMATION_DURATION = 0.2;
 				[UIView setAnimationBeginsFromCurrentState:NO];	
 				[viewAtLeft setFrame:CGRectMake(SLIDE_VIEWS_MINUS_X_POSITION, viewAtLeft.frame.origin.y, viewAtLeft.frame.size.width, viewAtLeft.frame.size.height)];
 				[viewAtRight setFrame:CGRectMake(self.view.frame.size.width - viewAtRight.frame.size.width, viewAtRight.frame.origin.y, viewAtRight.frame.size.width, viewAtRight.frame.size.height)];
-				[UIView setAnimationDelegate:self];
-				[UIView setAnimationDidStopSelector:@selector(bounceBack:finished:context:)];
+				[self setBounceBackAnimationDelegate];
 				[UIView commitAnimations];				
 				slideStartPosition = SLIDE_VIEWS_MINUS_X_POSITION;	
 				if([[slideViews subviews] count] > 3){
