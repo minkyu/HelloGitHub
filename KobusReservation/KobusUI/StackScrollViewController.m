@@ -467,9 +467,8 @@ const float ANIMATION_DURATION = 0.2;
 				[UIView setAnimationDidStopSelector:@selector(bounceBack:finished:context:)];
 			}
 		}
-		[UIView commitAnimations];
 	}
-	
+	[UIView commitAnimations];
 }
 - (void)handlePanFrom:(UIPanGestureRecognizer *)recognizer {
 	
