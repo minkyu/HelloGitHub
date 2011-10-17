@@ -29,12 +29,6 @@
 - (NSString*)description
 {
 	NSMutableString	*descriptionStr = [NSMutableString string];
-//	[descriptionStr appendFormat:@"Origin = %@\n",origin]; // 출발지
-//	[descriptionStr appendFormat:@"Destination = %@\n",destination];
-//	[descriptionStr appendFormat:@"Date = %@\n",date];
-//	[descriptionStr appendFormat:@"BusClass = %@\n",busClass];
-//	[descriptionStr appendFormat:@"TicketCount = %@\n",ticketCount];
-//	
 	
 	[descriptionStr appendFormat:@"\nTER_FR = %@\n", TER_FR];
 	[descriptionStr appendFormat:@"TER_TO = %@\n", TER_TO];
@@ -48,45 +42,6 @@
 	
 	return descriptionStr;
 }
-
-
-// 이제 없애도 될듯
-- (NSDictionary*)toPostData
-{
-	//예약할 좌석 조회 화면 조회 시 아래의 데이터가 POST 방식으로 넘어감
-	//TER_FR=115&TER_TO=200&Tim_date_Year=2011&Tim_date_Month=10&Tim_date_Day=15&TIM_TIM_I=1400&BUS_GRA_I=4&pCnt_100=1&pCnt_050=2
-	// TODO 아래의 구조에 맞게 저장된 데이터 변환하긔
-	NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
-	[data setValue:TER_FR forKey:@"TER_FR"]; // 출발지 코드
-	[data setValue:TER_TO forKey:@"TER_TO"]; // 도착지 코드
-	[data setValue:Tim_date_Year forKey:@"Tim_date_Year"]; // 예약 년도
-	[data setValue:Tim_date_Month forKey:@"Tim_date_Month"]; // 예약 월
-	[data setValue:Tim_date_Day forKey:@"Tim_date_Day"]; // 예약 일
-	[data setValue:TIM_TIM_I forKey:@"TIM_TIM_I"]; // 예약 시간
-	[data setValue:BUS_GRA_I forKey:@"BUS_GRA_I"]; // 버스 등급
-	[data setValue:pCnt_100 forKey:@"pCnt_100"]; // 어른 티켓 수
-	[data setValue:pCnt_050 forKey:@"pCnt_050"]; // 아이 티켓 수
-	
-	return data;
-}
-
-
-- (NSArray*)toPostArray
-{
-	NSMutableArray *postString = [[NSMutableArray alloc] init];
-	
-	[postString addObject:[NSDictionary dictionaryWithObject:TER_FR forKey:@"TER_FR"]];
-	[postString addObject:[NSDictionary dictionaryWithObject:TER_TO forKey:@"TER_TO"]];
-	[postString addObject:[NSDictionary dictionaryWithObject:Tim_date_Year forKey:@"Tim_date_Year"]];
-	[postString addObject:[NSDictionary dictionaryWithObject:Tim_date_Month forKey:@"Tim_date_Month"]];
-	[postString addObject:[NSDictionary dictionaryWithObject:Tim_date_Day forKey:@"Tim_date_Day"]];
-	[postString addObject:[NSDictionary dictionaryWithObject:TIM_TIM_I forKey:@"TIM_TIM_I"]];
-	[postString addObject:[NSDictionary dictionaryWithObject:BUS_GRA_I forKey:@"BUS_GRA_I"]];
-	[postString addObject:[NSDictionary dictionaryWithObject:pCnt_100 forKey:@"pCnt_100"]];
-	[postString addObject:[NSDictionary dictionaryWithObject:pCnt_050 forKey:@"pCnt_050"]];
-	return [postString autorelease];
-}
-
 
 - (NSString*)toPostString
 {

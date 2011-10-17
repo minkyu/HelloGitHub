@@ -114,11 +114,11 @@ static const int childrenTag = 200;
 {
 	
 	NSString *TicketCount = [NSString stringWithFormat:@"%@  %@",adultStr,childrenStr]; 
-	[self postNoticationReservation:@"KobusReservation" value:TicketCount key:@"ticketCount"];
+//	[self postNoticationReservation:@"KobusReservation" value:TicketCount key:@"ticketCount"];
 	
 	// 사이트 param
-	[self postNoticationReservation:@"KorbusReservation" value:adultTicketCnt key:@"pCnt_100"];
-	[self postNoticationReservation:@"KorbusReservation" value:childTicketCnt key:@"pCnt_050"];
+	[self postNoticationReservation:@"KobusReservation" value:adultTicketCnt key:@"pCnt_100"];
+	[self postNoticationReservation:@"KobusReservation" value:childTicketCnt key:@"pCnt_050"];
 	
 	// TODO 값 Validation 로직 
 	// TODO 예약 값을 사이트로 전송한 후 페이지를 받아옴

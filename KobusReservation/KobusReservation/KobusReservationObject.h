@@ -33,8 +33,8 @@
 - (BOOL)requestedNoTicket;
 - (BOOL)requestedExcessTicket;
 
-- (NSDictionary*)toPostData;
-- (NSArray*)toPostArray;
+//- (NSDictionary*)toPostData;
+//- (NSArray*)toPostArray;
 - (NSString*)toPostString;
 
 @end

@@ -178,54 +178,11 @@
 
 #pragma mark - ReservationQuery
 
-- (void)sendReservationInfoQueryArray:(NSArray*)params
-{
-	NSURL *url = [NSURL URLWithString:@"http://m.kobus.co.kr/web/m/reservation/sch_bus.jsp"];
-	//	NSURL *url = [NSURL URLWithString:@"http://kobus.co.kr/web/reservation/sch_bus.jsp"];
-	__block ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-	[request setStringEncoding:EucKrEncoding];
-	for (NSDictionary* dic in params) 
-	{
-		[request addPostValue:[[dic allValues] objectAtIndex:0] forKey:[[dic allKeys] objectAtIndex:0]];
-	}
-	
-	
-	[request setCompletionBlock:^{
-		NSLog(@"%@",[request responseString]);
-	} ];
-	[request setFailedBlock:^{
-		NSLog(@"으아니!");
-	}];
-	[request startAsynchronous];
-	
-}
-
-- (void)sendReservationInfoQuery:(NSDictionary*)params
-{
-	NSURL *url = [NSURL URLWithString:@"http://m.kobus.co.kr/web/m/reservation/sch_bus.jsp"];
-	__block ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-	[request setStringEncoding:EucKrEncoding];
-	for (NSString* key in params) {
-		[request addPostValue:[params objectForKey:key] forKey:key];
-	}
-	[request setCompletionBlock:^{
-		NSLog(@"%@",[request responseString]);
-	} ];
-	[request setFailedBlock:^{
-		NSLog(@"으아니!");
-	}];
-	[request startAsynchronous];
-	
-}
-
 - (void)sendReservationInfoQueryString:(NSString*)params
 {
 	NSString *usrStr = [NSString stringWithFormat:@"http://m.kobus.co.kr/web/m/reservation/sch_bus.jsp?%@",params];
 	NSURL *url = [NSURL URLWithString:usrStr];
 	__block ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-	
-	
-	
 	[request setCompletionBlock:^{
 		NSLog(@"%@",[request responseString]);
 	} ];

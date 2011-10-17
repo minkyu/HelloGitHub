@@ -60,8 +60,8 @@
 - (void)ReservationInfoQuery:(NSNotification*)noti
 {
 	if ([[noti object] isEqualToString:@"doReservation"]) {
-//		[web sendReservationInfoQuery:[reservationObject toPostData]];
-//		[web sendReservationInfoQueryArray:[reservationObject toPostArray]];
+
+		NSLog(@"%@",reservationObject);
 		[web sendReservationInfoQueryString:[reservationObject toPostString]];
 	}
 }

@@ -25,7 +25,5 @@
 - (void)parseOrigins:(NSString*)aStr;
 - (void)parseDestinations:(NSString*)aStr;
 - (void)failWithError:(NSError *)error;
-- (void)sendReservationInfoQuery:(NSDictionary*)params;
-- (void)sendReservationInfoQueryArray:(NSArray*)params;
 - (void)sendReservationInfoQueryString:(NSString*)params;
 @end
