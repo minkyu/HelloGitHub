@@ -77,15 +77,12 @@
 
 -(void) processRouteData
 {
-	KobusRouteWeb *routeWeb = [[KobusRouteWeb  alloc] init];
+	KobusRouteWeb *routeWeb = [[[KobusRouteWeb  alloc] init] autorelease];
 	self.Origins = [routeWeb parseOrigins:responseString];
 	self.Destinations = [routeWeb parseDestinations:responseString];
 	NSLog(@"분석끝");
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"html분석이 끝났다." object:nil];
 }
-
-
-
 
 #pragma mark - ReservationQuery
 
@@ -95,12 +92,19 @@
 	NSURL *url = [NSURL URLWithString:usrStr];
 	__block ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
 	[request setCompletionBlock:^{
-		NSLog(@"%@",[request responseString]);
+		self.responseString = [request responseString];
+		[self processReservationInfo];
 	} ];
 	[request setFailedBlock:^{
 		[self failWithError:[request error]];
 	}];
 	[request startAsynchronous];
+}
+
+- (void)processReservationInfo
+{
+	
+
 }
 
 @end

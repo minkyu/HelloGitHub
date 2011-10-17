@@ -12,10 +12,14 @@
 
 
 @interface KobusWeb : NSObject 
--(void) processRouteData;
+
 @property (nonatomic,retain) NSString *responseString;
 @property (nonatomic,retain) MutableSortedDictionary *Origins;
 @property (nonatomic,retain) MutableSortedDictionary *Destinations;
+
 - (void)loadKoBusWeb;
+- (void)processRouteData;
+
 - (void)sendReservationInfoQueryString:(NSString*)params;
+- (void)processReservationInfo;
 @end
