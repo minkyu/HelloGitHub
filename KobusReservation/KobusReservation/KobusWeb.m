@@ -12,7 +12,7 @@
 
 @implementation KobusWeb
 
-@synthesize responseData,Origins,Destinations,pushDatas;
+@synthesize responseString,Origins,Destinations,pushDatas;
 
 - (id)init
 {
@@ -27,30 +27,60 @@
 
 - (void)dealloc
 {
-	[responseData release];
+	[responseString release];
 	[Origins release];
 	[Destinations release];
 	[super dealloc];
 }
 
+-(void) loadFile
+{
+	NSString* file = [[NSBundle mainBundle] pathForResource:@"KobusWebSampleInput" ofType:@"data"];
+	self.responseString = [[[NSString alloc] initWithData:[NSMutableData dataWithContentsOfFile:file]
+												 encoding:EucKrEncoding] autorelease];
+}
+
+- (void)failWithError:(NSError *)error
+{
+    NSString * errorString = [NSString stringWithFormat:@"Error code %i\nTest data will be loaded.", [error code]];
+	
+    UIAlertView * errorAlert = [[UIAlertView alloc] initWithTitle:@"Error loading content" 
+														  message:errorString delegate:self 
+												cancelButtonTitle:@"OK" 
+												otherButtonTitles:nil];
+	
+    [errorAlert show];
+	
+	[self loadFile];
+	[self processData];
+}
+
+-(void) processData
+{
+	[self loadOrigins];
+	[self loadDestinations];
+	pushDatas(Origins,Destinations);
+	NSLog(@"분석끝");
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"html분석이 끝났다." object:nil];
+}
 
 
 - (void)loadWeb
 {
-	self.responseData = [[NSMutableData alloc] init];
+	NSURL *url = [NSURL URLWithString:@"http://kobus.co.kr/web/index.jsp"];
+	__block ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+	[request setCompletionBlock:^{
+		NSLog(@"%@",[request responseString]);
+		self.responseString = [request responseString];
+		[self processData];
+		
+	}];
+	[request setFailedBlock:^{
+		[self failWithError:[request error]];
+	}];
+	[request startAsynchronous];
 	
-	NSURLRequest *request =	[NSURLRequest requestWithURL:
-                             [NSURL URLWithString:@"http://kobus.co.kr/web/index.jsp"]];
-	[[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
-
-- (NSString*)webDataEncoding
-{
-	NSString *webstring = [[[NSString alloc] initWithData:responseData encoding:EucKrEncoding] autorelease];
-	NSAssert([webstring length], @"에러 발생");
-	return webstring;
-}
-
 
 #pragma mark - Origins method
 
@@ -58,7 +88,7 @@
 {
 	self.Origins = [[MutableSortedDictionary alloc]init];
 	//responseData
-	[self parseOrigins:[self webDataEncoding]];
+	[self parseOrigins:responseString];
 }
 
 // 출발지를 가져온다
@@ -94,13 +124,8 @@
 {
 	self.Destinations = [[MutableSortedDictionary alloc]init];
 	//responseData
-	[self parseDestinations:[self webDataEncoding]];
+	[self parseDestinations:responseString];
 }
-
-
-
-// 목적지 파싱
-// 멀티라인이 안먹네..
 
 
 - (NSArray *) matchesOfDestinationsInString:(NSString*)aString
@@ -143,7 +168,6 @@
 - (void)parseDestinations:(NSString*)aStr
 {
 
-//    NSLog(@"%d",[[self matchesOfDestinationsInString:aStr] count]);
 	for (NSTextCheckingResult *match in [self matchesOfDestinationsInString:aStr]) {
 		NSString *orgineStr = [aStr substringWithRange:[match rangeAtIndex:1]];// ([\\d]{3})
         NSString *fromCode = [aStr substringWithRange:[match rangeAtIndex:2]];// ([^}]*)
@@ -151,67 +175,6 @@
 		[Destinations setValue:[self destinationForOrgine:fromCode] forKey:orgineStr];
 	}
 
-//	NSLog(@"%@",Destinations);
 }
-
-
-#pragma mark - NSURLConnection deletage
-
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
-{
-    [responseData setLength:0];
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
-{
-    [responseData appendData:data];
-}
-
--(void) loadFile
-{
-	self.responseData = [NSMutableData dataWithContentsOfFile: [[NSBundle mainBundle] pathForResource:@"KobusWebSampleInput" ofType:@"data"]];
-}
-
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
-{
-	NSString * errorString = [NSString stringWithFormat:@"Error code %i\nTest data will be loaded.", [error code]];
-	
-    UIAlertView * errorAlert = [[UIAlertView alloc] initWithTitle:@"Error loading content" 
-														  message:errorString delegate:self 
-												cancelButtonTitle:@"OK" 
-												otherButtonTitles:nil];
-	
-    [errorAlert show];
-	
-	[self loadFile];
-	[self processData];
-}
-
--(void) processData
-{
-	[self loadOrigins];
-	[self loadDestinations];
-	pushDatas(Origins,Destinations);
-	NSLog(@"분석끝");
-	[[NSNotificationCenter defaultCenter] postNotificationName:@"html분석이 끝났다." object:nil];
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection
-{
-	
-	[connection release];
-	
-	[self processData];
-}
-
-#pragma mark - test code
-
--(void) makeSampleFileForTesting
-{
-	// 테스트용 파일을 만들 필요가 있을 때만 부른다.
-	NSError *error = nil;
-	[responseData writeToFile:@"~/KobusWebSampleInput__" options:NSDataWritingFileProtectionComplete error:&error];	
-}
-
 
 @end

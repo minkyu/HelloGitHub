@@ -14,7 +14,7 @@ typedef void (^datas)(SortedDictionary*,SortedDictionary*);
 @interface KobusWeb : NSObject 
 -(void) processData;
 @property (nonatomic,copy) datas pushDatas;
-@property (nonatomic,retain) NSMutableData *responseData;
+@property (nonatomic,retain) NSString *responseString;
 @property (nonatomic,retain) MutableSortedDictionary *Origins;
 @property (nonatomic,retain) MutableSortedDictionary *Destinations;
 - (SortedDictionary*)destinationForOrgine:(NSString*)fromCode;
@@ -23,7 +23,7 @@ typedef void (^datas)(SortedDictionary*,SortedDictionary*);
 - (NSArray *) matchesOfDestinationsInString:(NSString*)aString;
 - (void)loadOrigins;
 - (void)loadDestinations;
-- (NSString*)webDataEncoding;
 - (void)parseOrigins:(NSString*)aStr;
 - (void)parseDestinations:(NSString*)aStr;
+- (void)failWithError:(NSError *)error;
 @end
