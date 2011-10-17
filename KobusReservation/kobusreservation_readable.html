@@ -1,0 +1,463 @@
+<script language="JavaScript" src="http://m.kobus.co.kr/web/m/js/main.js"></script>
+<script language="JavaScript" src="http://m.kobus.co.kr/web/m/js/javascript.js"></script>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width user-scalable=no" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link rel="stylesheet" type="text/css" href="http://m.kobus.co.kr/web/m/common/css/base.css" />
+<script type="text/javascript" src="http://m.kobus.co.kr/web/m/common/js/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="http://m.kobus.co.kr/web/m/common/js/DD_belatedPNG_0.0.8a.js"></script>
+<script type="text/javascript" src="http://m.kobus.co.kr/web/m/common/js/default.js"></script>
+
+
+
+
+
+
+<script language="JavaScript">  
+<!--
+
+	function goback(){
+		history.back(-1);
+	}
+//심야시간노약좌석표시, 다음날 배차조회
+function fc_CheckSeat(chgi, stmp, num, tim_tim, ter_chk, bus_cor) {
+	
+	var s_ter_fr = document.PageForm.TER_FR.value; 	
+	
+	if(ter_chk == 'N'){
+		
+		if (s_ter_fr == '315'){
+			alert("해당 터미널에서 출발하는 노선은 카드 예약이 불가합니다.!");
+
+		}else{
+			alert("인터넷 예약이 불가능한 노선입니다!");
+		}
+		return false;
+	}else if(ter_chk == 'A'){
+		alert("선택하신 배차는 예약을 하실 수 없는 배차입니다. 이시간대 배차는 터미널에서만 예매 가능합니다. 예약을 하실려면 다른 시간대를 선택하세요.");
+		return false;
+	} else if(parseInt(num)==0){
+		alert("현재 노선에서 예약 가능한 좌석이 없습니다.");
+		return false;
+	} else if(parseInt(num) < 1) {
+		alert("현재 노선에서 예약 가능한 좌석을 초과하였습니다. 매수 변경후 재조회 하십시요");
+		return false;
+	} else {
+  		//심야시간노약좌석표시, 다음날 배차조회
+			if(bus_cor == '3' || bus_cor == '4' ){
+    		str = confirm("예약하실 날짜가" + "  " +  stmp.substring(4,6) + "월" + "  " +   stmp.substring(6,8) + "일이 맞습니까?\n\n(심야 시간대 출발차량의 1번부터 9번 좌석까지는\n\n여성고객 및 노약자를 위한 좌석으로 운행되고 있습니다!)") ;
+    	}else {
+    		str = confirm("예약하실 날짜가" + "  " +  stmp.substring(4,6) + "월" + "  " +   stmp.substring(6,8) + "일이 맞습니까?") ;
+    	}
+
+      if(str == true){
+         return true ;
+      }
+      else {
+        return false;
+      }
+	}
+
+}
+
+function fc_move(idex){
+	
+	if(idex == "1"){
+		window.history.back();
+		return false;
+	}else {
+		var d = document.InputForm;
+		d.action	= "http://m.kobus.co.kr";
+		d.method	= "post";
+		d.submit();	
+	}
+	return true;
+}
+
+function fc_Setdate() {
+
+	
+
+}
+//--> 
+</script>
+
+<title></title>
+</head>
+<!--<body onLoad="fc_Setdate();" >-->
+<body>
+<h1 class="none">승차권 예약 / 배차정보 조회</h1>
+<!-- Sub Layout -->
+<div id="wrapper">
+	<!-- Header include -->
+	<div id="header"><a href="http://m.kobus.co.kr"><img class="logo" src="http://m.kobus.co.kr/web/m/images/common/logo.png" alt="KOBUS" /></a></div>
+	<!-- Container -->
+	<div id="container">
+		<!-- Title : Page Name -->
+		<h2 id="headline"><img src="http://m.kobus.co.kr/web/m/images/title/h2_pageName.png" alt="타이틀(페이지 명)" /></h2>
+		<!-- Content Layout -->
+		<div id="content">
+
+			
+			<!-- Content Title -->
+			<h3 class="title">배차정보 조회</h3>
+			<!-- Content Block -->
+			<div class="content">
+
+				<!--<form name=ChgTerFrm method="post" target="newWin" action="m_reservation_chg.jsp">
+					<input type="hidden" name="TER_FR" value="700">
+					<input type="hidden" name="TER_TO" value="">														
+					<input type="hidden" name="pTic_cod" value="true">
+					<input type="hidden" name="TIM_TIM_I" value="1700">
+					<input type="hidden" name="START_TIM" value="2100">
+					<input type="hidden" name="pCnt_100" value="1">
+					<input type="hidden" name="pCnt_050" value="0">
+					<input type="hidden" name="Tim_date_Year" value="2011">
+					<input type="hidden" name="Tim_date_Month" value="10">
+					<input type="hidden" name="Tim_date_Day" value="17">
+					<input type="hidden" name="pFirst" value="yes">
+				</form>-->	
+
+				<!-- tblY_01 -->
+				<img width="100%" height="3" src="http://m.kobus.co.kr/web/m/images/common/bg_tableBorder_01.png" alt="" />
+				<table class="tblX_01" summary="summary 정확히 적어줄 것">
+				<caption>Caption 정확히 적어줄 것</caption>
+				<colgroup>
+					<col width="20%" />
+					<col width="20%" />
+					<col width="20%" />
+					<col width="20%" />
+					<col width="20%" />
+				</colgroup>
+				<tr>
+
+					<th>출발시각</th>
+
+					<th>등급</th>
+					<th>회사</th>
+					<th>잔여좌석</th>
+					<th></th>
+				</tr>
+				
+
+	<!--새로 추가 되는 부분(함수에 변수 추가),심야시간노약좌석표시-->
+		<form name="SeatForm0" method="post"  action="../reservation/con_notice.jsp" onSubmit="return fc_CheckSeat('0','14','1735','H','1')">
+					<tr>
+				<!-- 다음날 배차 조회 -->
+
+					<td>17:35</td>
+
+					<td>우등고속</td>					
+					<td>
+					
+								금호  고속(경유)
+
+					</td>					
+					
+						<td >14</td>
+
+				
+
+				<input type = "hidden" name = "pTic_cod"  value="false">
+				<input type = "hidden" name = "pTim_tim_o" value="1735">
+				<input type = "hidden" name = "pTer_fr_o"   value="120">
+				<input type = "hidden" name = "pTer_to_o" value="700">
+				<input type = "hidden" name = "pBus_gra_o"   value="1">
+				<input type = "hidden" name = "pCor_cod_o"	value="08">
+				<input type = "hidden" name = "pCnt_100"  value="1">
+				<input type = "hidden" name = "pCnt_050" value="0">
+				<input type = "hidden" name = "pWeb_cnt" value="28">
+				<input type = "hidden" name = "pTer_sfr" value="120">
+				<input type = "hidden" name = "pTer_sto" value="700">
+				<!-- 다음날 배차조회 -->
+				<input type = "hidden" name = "pTim_dte" value="20111017">
+				<input type = "hidden" name = "pSet_sta" value="0010110011110111110010010000">
+				<input type = "hidden" name = "pTck_pay" value="H">
+				<input type = "hidden" name = "pArr_res" value="true">
+				<input type = "hidden" name = "pTer_chk" value="true">
+				<!-- 새로 추가 되는 부분 -->
+				<input type = "hidden" name = "pGet_Lin" value="0">
+				<!-- 주말주중요금구분 -->
+				<input type = "hidden" name = "pExc_amt" value="32400">
+				<input type = "hidden" name = "pExm_amt" value="35600">	
+
+
+						<!-- 다음날 배차조회 -->
+						<td><a href="javascript:SeatForm0.submit();" onclick="javascript : return fc_CheckSeat('0','20111017','14','1735','H','1');" class="button button41">선택</a></td>
+						<!--<td><a href="javascript:SeatForm0.submit();" class="button button41">선택</a></td>-->
+						<!--<td><input type="button" value="선택" onclick="SeatForm0.submit();"></a></td>-->
+
+ 
+				</form>
+			</tr>
+				
+
+	<!--새로 추가 되는 부분(함수에 변수 추가),심야시간노약좌석표시-->
+		<form name="SeatForm1" method="post"  action="../reservation/con_notice.jsp" onSubmit="return fc_CheckSeat('1','27','1835','H','1')">
+					<tr>
+				<!-- 다음날 배차 조회 -->
+
+					<td>18:35</td>
+
+					<td>우등고속</td>					
+					<td>
+					
+								금호  고속(경유)
+
+					</td>					
+					
+						<td >27</td>
+
+				
+
+				<input type = "hidden" name = "pTic_cod"  value="false">
+				<input type = "hidden" name = "pTim_tim_o" value="1835">
+				<input type = "hidden" name = "pTer_fr_o"   value="120">
+				<input type = "hidden" name = "pTer_to_o" value="700">
+				<input type = "hidden" name = "pBus_gra_o"   value="1">
+				<input type = "hidden" name = "pCor_cod_o"	value="08">
+				<input type = "hidden" name = "pCnt_100"  value="1">
+				<input type = "hidden" name = "pCnt_050" value="0">
+				<input type = "hidden" name = "pWeb_cnt" value="28">
+				<input type = "hidden" name = "pTer_sfr" value="120">
+				<input type = "hidden" name = "pTer_sto" value="700">
+				<!-- 다음날 배차조회 -->
+				<input type = "hidden" name = "pTim_dte" value="20111017">
+				<input type = "hidden" name = "pSet_sta" value="0000000010000000000000000000">
+				<input type = "hidden" name = "pTck_pay" value="H">
+				<input type = "hidden" name = "pArr_res" value="true">
+				<input type = "hidden" name = "pTer_chk" value="true">
+				<!-- 새로 추가 되는 부분 -->
+				<input type = "hidden" name = "pGet_Lin" value="0">
+				<!-- 주말주중요금구분 -->
+				<input type = "hidden" name = "pExc_amt" value="32400">
+				<input type = "hidden" name = "pExm_amt" value="35600">	
+
+
+						<!-- 다음날 배차조회 -->
+						<td><a href="javascript:SeatForm1.submit();" onclick="javascript : return fc_CheckSeat('1','20111017','27','1835','H','1');" class="button button41">선택</a></td>
+						<!--<td><a href="javascript:SeatForm1.submit();" class="button button41">선택</a></td>-->
+						<!--<td><input type="button" value="선택" onclick="SeatForm1.submit();"></a></td>-->
+
+ 
+				</form>
+			</tr>
+				
+
+	<!--새로 추가 되는 부분(함수에 변수 추가),심야시간노약좌석표시-->
+		<form name="SeatForm2" method="post"  action="../reservation/con_notice.jsp" onSubmit="return fc_CheckSeat('2','26','1935','H','1')">
+					<tr>
+				<!-- 다음날 배차 조회 -->
+
+					<td>19:35</td>
+
+					<td>우등고속</td>					
+					<td>
+					
+								속리산고속(경유)
+
+					</td>					
+					
+						<td >26</td>
+
+				
+
+				<input type = "hidden" name = "pTic_cod"  value="false">
+				<input type = "hidden" name = "pTim_tim_o" value="1935">
+				<input type = "hidden" name = "pTer_fr_o"   value="120">
+				<input type = "hidden" name = "pTer_to_o" value="700">
+				<input type = "hidden" name = "pBus_gra_o"   value="1">
+				<input type = "hidden" name = "pCor_cod_o"	value="05">
+				<input type = "hidden" name = "pCnt_100"  value="1">
+				<input type = "hidden" name = "pCnt_050" value="0">
+				<input type = "hidden" name = "pWeb_cnt" value="28">
+				<input type = "hidden" name = "pTer_sfr" value="120">
+				<input type = "hidden" name = "pTer_sto" value="700">
+				<!-- 다음날 배차조회 -->
+				<input type = "hidden" name = "pTim_dte" value="20111017">
+				<input type = "hidden" name = "pSet_sta" value="0000010010000000000000000000">
+				<input type = "hidden" name = "pTck_pay" value="H">
+				<input type = "hidden" name = "pArr_res" value="true">
+				<input type = "hidden" name = "pTer_chk" value="true">
+				<!-- 새로 추가 되는 부분 -->
+				<input type = "hidden" name = "pGet_Lin" value="0">
+				<!-- 주말주중요금구분 -->
+				<input type = "hidden" name = "pExc_amt" value="32400">
+				<input type = "hidden" name = "pExm_amt" value="35600">	
+
+
+						<!-- 다음날 배차조회 -->
+						<td><a href="javascript:SeatForm2.submit();" onclick="javascript : return fc_CheckSeat('2','20111017','26','1935','H','1');" class="button button41">선택</a></td>
+						<!--<td><a href="javascript:SeatForm2.submit();" class="button button41">선택</a></td>-->
+						<!--<td><input type="button" value="선택" onclick="SeatForm2.submit();"></a></td>-->
+
+ 
+				</form>
+			</tr>
+				
+
+	<!--새로 추가 되는 부분(함수에 변수 추가),심야시간노약좌석표시-->
+		<form name="SeatForm3" method="post"  action="../reservation/con_notice.jsp" onSubmit="return fc_CheckSeat('3','27','2200','H','3')">
+					<tr>
+				<!-- 다음날 배차 조회 -->
+
+					<td>22:00</td>
+
+					<td>심야우등</td>					
+					<td>
+					
+								금호  고속
+
+					</td>					
+					
+						<td >27</td>
+
+				
+
+				<input type = "hidden" name = "pTic_cod"  value="false">
+				<input type = "hidden" name = "pTim_tim_o" value="2200">
+				<input type = "hidden" name = "pTer_fr_o"   value="120">
+				<input type = "hidden" name = "pTer_to_o" value="700">
+				<input type = "hidden" name = "pBus_gra_o"   value="3">
+				<input type = "hidden" name = "pCor_cod_o"	value="08">
+				<input type = "hidden" name = "pCnt_100"  value="1">
+				<input type = "hidden" name = "pCnt_050" value="0">
+				<input type = "hidden" name = "pWeb_cnt" value="28">
+				<input type = "hidden" name = "pTer_sfr" value="120">
+				<input type = "hidden" name = "pTer_sto" value="700">
+				<!-- 다음날 배차조회 -->
+				<input type = "hidden" name = "pTim_dte" value="20111017">
+				<input type = "hidden" name = "pSet_sta" value="0000000010000000000000000000">
+				<input type = "hidden" name = "pTck_pay" value="H">
+				<input type = "hidden" name = "pArr_res" value="true">
+				<input type = "hidden" name = "pTer_chk" value="false">
+				<!-- 새로 추가 되는 부분 -->
+				<input type = "hidden" name = "pGet_Lin" value="0">
+				<!-- 주말주중요금구분 -->
+				<input type = "hidden" name = "pExc_amt" value="32400">
+				<input type = "hidden" name = "pExm_amt" value="35600">	
+
+
+						<!-- 다음날 배차조회 -->
+						<td><a href="javascript:SeatForm3.submit();" onclick="javascript : return fc_CheckSeat('3','20111017','27','2200','H','3');" class="button button41">선택</a></td>
+						<!--<td><a href="javascript:SeatForm3.submit();" class="button button41">선택</a></td>-->
+						<!--<td><input type="button" value="선택" onclick="SeatForm3.submit();"></a></td>-->
+
+ 
+				</form>
+			</tr>
+
+
+
+<!-- 새로 추가 되는 부분 -->
+														<form name = "frmChg" >																		
+															<input type="hidden" name="Chg_Ter_To" value="000">
+															<input type="hidden" name="Chg_Tim_Tim" value="0000">
+														</form>
+
+
+													<tr bgcolor="#E6EEFE">
+														<td align="center" colspan="5" class=line_bottom>선택하신 배차정보의 마지막입니다.</td>
+													</tr>
+
+				
+				</table>
+			</div>
+			
+			<p class="btnArea_02">			
+			
+			
+			</p>
+
+			<form name = "PageForm" method= "post" action = "sch_bus.jsp">
+				<input type="hidden" name= "pTic_cod" value= "false">
+				<input type="hidden" name= "TER_FR" value= "120">
+				<input type="hidden" name= "TER_TO" value="700">				
+				<input type="hidden" name= "BUS_GRA_I" value="0">
+<!-- 다음날 배차조회 -->
+
+				<input type="hidden" name= "Tim_dte" value="20111017">
+				<input type="hidden" name= "TIM_TIM_I" value="2200">
+
+				<input type="hidden" name="pCnt_100" value="1">
+				<input type="hidden" name="pCnt_050" value="0">
+				<input type="hidden" name= "pTIM_TIM_TEMP" value="">
+				<input type="hidden" name="pageCheck" value="1">
+				<!-- 새로 추가 되는 부분 -->
+				<input type="hidden" name="Chg_Gu" value="N"> 												
+				<input type="hidden" name="Chg_Ter_To" value="000">
+				<input type="hidden" name="Chg_Tim_Tim" value="0000">
+			</form>
+		
+
+
+			<!-- Content Title -->
+			<h3 class="none">서브 타이틀</h3>
+			<!-- Content Block -->
+			<div class="content">
+				<!-- tblY_01 -->
+				<img width="100%" height="3" src="http://m.kobus.co.kr/web/m/images/common/bg_tableBorder_01.png" alt="" />
+				<table class="tblX_01" summary="summary 정확히 적어줄 것">
+				<caption>Caption 정확히 적어줄 것</caption>
+				<colgroup>
+					<col width="22%" />
+					<col width="26%" />
+					<col width="26%" />
+					<col width="26%" />
+				</colgroup>
+				<tr>
+					<th class="caption" colspan="4">운행정보</th>
+				</tr>
+				<tr>
+					<th>구분</th>
+					<th>일반고속</th>
+					<th>우등고속</th>
+					<th>심야우등</th>
+				</tr>
+				<tr>
+					<td>일반요금</td>
+					<td>21800원</td>
+					<td>32400원</td>
+					<td>35600원</td>
+				</tr>
+				<tr>
+					<td>아동요금</td>
+					<td colspan="3">일반요금의 50%</td>
+				</tr>
+				<tr>
+					<td>소요시간</td>
+					<td colspan="3">4시 10분</td>
+				</tr>
+				<tr>
+					<td>거리</td>
+					<td colspan="3">379.8Km</td>
+				</tr>
+				</table>
+			</div>
+
+		</div>
+	</div>
+	
+<!-- Foot Btn -->
+		<div class="btnTop">
+		 <ul>
+		
+		 <li> <a href='#' onclick='history.back(-1); return false;'><img src="http://m.kobus.co.kr/web/m/images/common/btn_prev.png" alt="이전화면"></a><br /></li>		 
+		 <li><a href="http://www.kobus.co.kr"><img src="http://m.kobus.co.kr/web/m/images/common/btn_pc.png" alt="PC버전"></a></li>
+		 <li><a href="http://m.kobus.co.kr"><img src="http://m.kobus.co.kr/web/m/images/common/btn_home.png" alt="HOME"></a></li>
+		 <li><a href="#"><img src="http://m.kobus.co.kr/web/m/images/common/btn_top.png" alt="맨위로"></a></li>
+		 </ul>
+		</div>
+		<!-- Copyright -->
+		<address><img src="http://m.kobus.co.kr/web/m/images/common/bul_footer.png" alt="" /> <span class="txt01">전국고속버스운송사업조합</span> <br /><span class="txt02">Copyright ⓒ 2011 m.kobus.co.kr All rights reserved.</span></address>
+	<div id="footer">
+		
+	</div>
+</div>
+</body>
+</html>
