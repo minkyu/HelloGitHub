@@ -8,17 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^datas)(SortedDictionary*,SortedDictionary*);
+//typedef void (^datas)(SortedDictionary*,SortedDictionary*);
 
 
 @interface KobusWeb : NSObject 
 -(void) processData;
-@property (nonatomic,copy) datas pushDatas;
 @property (nonatomic,retain) NSString *responseString;
 @property (nonatomic,retain) MutableSortedDictionary *Origins;
 @property (nonatomic,retain) MutableSortedDictionary *Destinations;
 - (SortedDictionary*)destinationForOrgine:(NSString*)fromCode;
-- (void)loadWeb;
+- (void)loadKoBusWeb;
 - (NSArray *) matchesOfOriginsInString:(NSString*)aString;
 - (NSArray *) matchesOfDestinationsInString:(NSString*)aString;
 - (void)loadOrigins;
@@ -26,4 +25,7 @@ typedef void (^datas)(SortedDictionary*,SortedDictionary*);
 - (void)parseOrigins:(NSString*)aStr;
 - (void)parseDestinations:(NSString*)aStr;
 - (void)failWithError:(NSError *)error;
+- (void)sendReservationInfoQuery:(NSDictionary*)params;
+- (void)sendReservationInfoQueryArray:(NSArray*)params;
+- (void)sendReservationInfoQueryString:(NSString*)params;
 @end

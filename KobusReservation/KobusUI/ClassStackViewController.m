@@ -78,7 +78,7 @@ const int padding = 10;
 
 	[self postNoticationReservation:@"KobusReservation" value:button.titleLabel.text key:@"busClass"];
 	
-	NSString *busGrade = [[NSNumber numberWithInt:(button.tag / 10)] stringValue];
+	NSString *busGrade = [[NSNumber numberWithInt:((button.tag / 10)%5)] stringValue];
 
 	// 사이트 param
 	[self postNoticationReservation:@"KobusReservation" value:busGrade key:@"BUS_GRA_I"];

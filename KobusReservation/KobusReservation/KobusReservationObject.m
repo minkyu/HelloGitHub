@@ -12,7 +12,7 @@
 
 @synthesize origin,destination,date,busClass,ticketCount;
 //사이트에 사용되는 param
-@synthesize TER_FR, TER_TO, Tim_data_Year, Tim_data_Month, Tim_data_Day, TIM_TIM_I, BUS_GRA_I, pCnt_050, pCnt_100;
+@synthesize TER_FR, TER_TO, Tim_date_Year, Tim_date_Month, Tim_date_Day, TIM_TIM_I, BUS_GRA_I, pCnt_050, pCnt_100;
 
 - (id)init
 {
@@ -38,9 +38,9 @@
 	
 	[descriptionStr appendFormat:@"\nTER_FR = %@\n", TER_FR];
 	[descriptionStr appendFormat:@"TER_TO = %@\n", TER_TO];
-	[descriptionStr appendFormat:@"Tim_data_Year = %@\n", Tim_data_Year];
-	[descriptionStr appendFormat:@"Tim_data_Month = %@\n", Tim_data_Month];
-	[descriptionStr appendFormat:@"Tim_data_Day = %@\n", Tim_data_Day];
+	[descriptionStr appendFormat:@"Tim_date_Year = %@\n", Tim_date_Year];
+	[descriptionStr appendFormat:@"Tim_date_Month = %@\n", Tim_date_Month];
+	[descriptionStr appendFormat:@"Tim_date_Day = %@\n", Tim_date_Day];
 	[descriptionStr appendFormat:@"TIM_TIM_I = %@\n", TIM_TIM_I];
 	[descriptionStr appendFormat:@"BUS_GRA_I = %@\n", BUS_GRA_I];
 	[descriptionStr appendFormat:@"pCnt_100 = %@\n", pCnt_100];
@@ -56,18 +56,52 @@
 	//예약할 좌석 조회 화면 조회 시 아래의 데이터가 POST 방식으로 넘어감
 	//TER_FR=115&TER_TO=200&Tim_date_Year=2011&Tim_date_Month=10&Tim_date_Day=15&TIM_TIM_I=1400&BUS_GRA_I=4&pCnt_100=1&pCnt_050=2
 	// TODO 아래의 구조에 맞게 저장된 데이터 변환하긔
-	NSDictionary *data = [[NSDictionary alloc] init];
-	[data setValue:@"" forKey:@"TER_FR"]; // 출발지 코드
-	[data setValue:@"" forKey:@"TER_TO"]; // 도착지 코드
-	[data setValue:@"" forKey:@"Tim_data_Year"]; // 예약 년도
-	[data setValue:@"" forKey:@"Tim_data_Month"]; // 예약 월
-	[data setValue:@"" forKey:@"Tim_data_Day"]; // 예약 일
-	[data setValue:@"" forKey:@"TIM_TIM_I"]; // 예약 시간
-	[data setValue:@"" forKey:@"BUS_GRA_I"]; // 버스 등급
-	[data setValue:@"" forKey:@"pCnt_100"]; // 어른 티켓 수
-	[data setValue:@"" forKey:@"pCnt_050"]; // 아이 티켓 수
+	NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
+	[data setValue:TER_FR forKey:@"TER_FR"]; // 출발지 코드
+	[data setValue:TER_TO forKey:@"TER_TO"]; // 도착지 코드
+	[data setValue:Tim_date_Year forKey:@"Tim_date_Year"]; // 예약 년도
+	[data setValue:Tim_date_Month forKey:@"Tim_date_Month"]; // 예약 월
+	[data setValue:Tim_date_Day forKey:@"Tim_date_Day"]; // 예약 일
+	[data setValue:TIM_TIM_I forKey:@"TIM_TIM_I"]; // 예약 시간
+	[data setValue:BUS_GRA_I forKey:@"BUS_GRA_I"]; // 버스 등급
+	[data setValue:pCnt_100 forKey:@"pCnt_100"]; // 어른 티켓 수
+	[data setValue:pCnt_050 forKey:@"pCnt_050"]; // 아이 티켓 수
 	
 	return data;
+}
+
+
+- (NSArray*)toPostArray
+{
+	NSMutableArray *postString = [[NSMutableArray alloc] init];
+	
+	[postString addObject:[NSDictionary dictionaryWithObject:TER_FR forKey:@"TER_FR"]];
+	[postString addObject:[NSDictionary dictionaryWithObject:TER_TO forKey:@"TER_TO"]];
+	[postString addObject:[NSDictionary dictionaryWithObject:Tim_date_Year forKey:@"Tim_date_Year"]];
+	[postString addObject:[NSDictionary dictionaryWithObject:Tim_date_Month forKey:@"Tim_date_Month"]];
+	[postString addObject:[NSDictionary dictionaryWithObject:Tim_date_Day forKey:@"Tim_date_Day"]];
+	[postString addObject:[NSDictionary dictionaryWithObject:TIM_TIM_I forKey:@"TIM_TIM_I"]];
+	[postString addObject:[NSDictionary dictionaryWithObject:BUS_GRA_I forKey:@"BUS_GRA_I"]];
+	[postString addObject:[NSDictionary dictionaryWithObject:pCnt_100 forKey:@"pCnt_100"]];
+	[postString addObject:[NSDictionary dictionaryWithObject:pCnt_050 forKey:@"pCnt_050"]];
+	return [postString autorelease];
+}
+
+
+- (NSString*)toPostString
+{
+	NSMutableString *postString = [[NSMutableString alloc] init];
+	
+	[postString appendFormat:@"TER_FR=%@&",TER_FR];
+	[postString appendFormat:@"TER_TO=%@&",TER_TO];
+	[postString appendFormat:@"Tim_date_Year=%@&",Tim_date_Year];
+	[postString appendFormat:@"Tim_date_Month=%@&",Tim_date_Month];
+	[postString appendFormat:@"Tim_date_Day=%@&",Tim_date_Day];
+	[postString appendFormat:@"TIM_TIM_I=%@&",TIM_TIM_I];
+	[postString appendFormat:@"BUS_GRA_I=%@&",BUS_GRA_I];
+	[postString appendFormat:@"pCnt_100=%@&",pCnt_100];
+	[postString appendFormat:@"pCnt_050=%@",pCnt_050];
+	return [postString autorelease];
 }
 
 #pragma mark -

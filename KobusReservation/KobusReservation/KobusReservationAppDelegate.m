@@ -32,14 +32,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	web = [[KobusWeb alloc] init];
-	web.pushDatas = ^(SortedDictionary* origins,SortedDictionary* destinations){
-//		self.rootViewController.Origins = origins;
-//		self.destinationsViewController.Destinations = destinations;
-	};
-	[web loadWeb];
+	[web loadKoBusWeb];
 	reservationObject = [[KobusReservationObject alloc] init];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(KobusReservationObjectNoti:) name:@"KobusReservation" object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ReservationInfoQuery:) name:@"ReservationInfoQuery" object:nil];
 	
 	_rootViewController = [[RootViewController alloc] init];
 	[self.window setBackgroundColor:[UIColor clearColor]];
@@ -56,7 +53,17 @@
 	NSString *value = [notiDic objectForKey:@"value"];
 	
 	[reservationObject setValue:value forKey:key];
-	NSLog(@"%@",reservationObject);
+	
+	
+}
+
+- (void)ReservationInfoQuery:(NSNotification*)noti
+{
+	if ([[noti object] isEqualToString:@"doReservation"]) {
+//		[web sendReservationInfoQuery:[reservationObject toPostData]];
+//		[web sendReservationInfoQueryArray:[reservationObject toPostArray]];
+		[web sendReservationInfoQueryString:[reservationObject toPostString]];
+	}
 }
 
 - (SortedDictionary*)originData

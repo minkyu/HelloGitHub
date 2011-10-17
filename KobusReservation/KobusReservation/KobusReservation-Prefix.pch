@@ -18,4 +18,5 @@
 	#import "MutableSortedDictionary.h"
 	#import "SortedDictionary.h"
 	#import "ASIHTTPRequest.h"
+	#import "ASIFormDataRequest.h"
 #endif

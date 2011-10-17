@@ -123,6 +123,8 @@ static const int childrenTag = 200;
 	// TODO 값 Validation 로직 
 	// TODO 예약 값을 사이트로 전송한 후 페이지를 받아옴
 	// TODO 자리 선택하는 View 생성
+	[self postNoticationReservation:@"ReservationInfoQuery" object:@"doReservation"];
+	
 
 }
 

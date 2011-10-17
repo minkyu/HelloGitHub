@@ -20,9 +20,9 @@
 // 사이트에 사용되는 param
 @property (nonatomic, copy) NSString *TER_FR;
 @property (nonatomic, copy) NSString *TER_TO;
-@property (nonatomic, copy) NSString *Tim_data_Year;
-@property (nonatomic, copy) NSString *Tim_data_Month;
-@property (nonatomic, copy) NSString *Tim_data_Day;
+@property (nonatomic, copy) NSString *Tim_date_Year;
+@property (nonatomic, copy) NSString *Tim_date_Month;
+@property (nonatomic, copy) NSString *Tim_date_Day;
 @property (nonatomic, copy) NSString *TIM_TIM_I;
 @property (nonatomic, copy) NSString *BUS_GRA_I;
 @property (nonatomic, copy) NSString *pCnt_100;
@@ -33,6 +33,8 @@
 - (BOOL)requestedNoTicket;
 - (BOOL)requestedExcessTicket;
 
-
+- (NSDictionary*)toPostData;
+- (NSArray*)toPostArray;
+- (NSString*)toPostString;
 
 @end
