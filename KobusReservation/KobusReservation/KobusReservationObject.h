@@ -28,7 +28,7 @@
 @property (nonatomic, copy) NSString *pCnt_100;
 @property (nonatomic, copy) NSString *pCnt_050;
 
-
+- (NSString *)checkValidation;
 - (BOOL)shuldReservateOnEasyInternet;
 - (BOOL)requestedNoTicket;
 - (BOOL)requestedExcessTicket;

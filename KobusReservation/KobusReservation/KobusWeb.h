@@ -12,18 +12,10 @@
 
 
 @interface KobusWeb : NSObject 
--(void) processData;
+-(void) processRouteData;
 @property (nonatomic,retain) NSString *responseString;
 @property (nonatomic,retain) MutableSortedDictionary *Origins;
 @property (nonatomic,retain) MutableSortedDictionary *Destinations;
-- (SortedDictionary*)destinationForOrgine:(NSString*)fromCode;
 - (void)loadKoBusWeb;
-- (NSArray *) matchesOfOriginsInString:(NSString*)aString;
-- (NSArray *) matchesOfDestinationsInString:(NSString*)aString;
-- (void)loadOrigins;
-- (void)loadDestinations;
-- (void)parseOrigins:(NSString*)aStr;
-- (void)parseDestinations:(NSString*)aStr;
-- (void)failWithError:(NSError *)error;
 - (void)sendReservationInfoQueryString:(NSString*)params;
 @end

@@ -62,7 +62,17 @@
 	if ([[noti object] isEqualToString:@"doReservation"]) {
 
 		NSLog(@"%@",reservationObject);
-		[web sendReservationInfoQueryString:[reservationObject toPostString]];
+		
+		NSString *check = [reservationObject checkValidation];
+		if ([check isEqualToString:@"OK"]) {
+			[web sendReservationInfoQueryString:[reservationObject toPostString]];
+		}
+		else
+		{
+			NSLog(@"으아니! %@",check);
+		}
+		
+		
 	}
 }
 

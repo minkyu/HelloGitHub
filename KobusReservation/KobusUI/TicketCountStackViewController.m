@@ -113,7 +113,7 @@ static const int childrenTag = 200;
 - (void)selectedButton:(UIButton*)button
 {
 	
-	NSString *TicketCount = [NSString stringWithFormat:@"%@  %@",adultStr,childrenStr]; 
+//	NSString *TicketCount = [NSString stringWithFormat:@"%@  %@",adultStr,childrenStr]; 
 //	[self postNoticationReservation:@"KobusReservation" value:TicketCount key:@"ticketCount"];
 	
 	// 사이트 param
@@ -126,20 +126,6 @@ static const int childrenTag = 200;
 	[self postNoticationReservation:@"ReservationInfoQuery" object:@"doReservation"];
 	
 
-}
-
-- (void)doReservation
-{
-	NSURL *url = [NSURL URLWithString:@"http://m.kobus.co.kr/web/m/reservation/sch_bus.jsp"];
-	ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-	
-	
-//	[request setPostValue:@"Ben" forKey:@"first_name"];
-//	[request setPostValue:@"Copsey" forKey:@"last_name"];
-//	[request setFile:@"/Users/ben/Desktop/ben.jpg" forKey:@"photo"];
-//	
-	
-	
 }
 
 @end
