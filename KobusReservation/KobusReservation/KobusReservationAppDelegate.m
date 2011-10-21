@@ -57,6 +57,8 @@
 	
 }
 
+
+// 예약 가능한 버스 시간, 좌석 수 등을 조회
 - (void)ReservationInfoQuery:(NSNotification*)noti
 {
 	if ([[noti object] isEqualToString:@"doReservation"]) {
@@ -65,7 +67,8 @@
 		
 		NSString *check = [reservationObject checkValidation];
 		if ([check isEqualToString:@"OK"]) {
-			[web sendReservationInfoQueryString:[reservationObject toPostString]];
+			[web sendReservationInfoQueryString:[reservationObject toGETParamString]];
+			//[web sendReservationInfoUsingPostMethod:reservationObject];
 		}
 		else
 		{
@@ -76,11 +79,15 @@
 	}
 }
 
+
+// 출발지 목록
 - (SortedDictionary*)originData
 {
 	return web.Origins;
 }
 
+
+// 도착지 목록
 - (SortedDictionary*)destinationData
 {
 	return web.Destinations;

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "KobusReservationObject.h"
 //typedef void (^datas)(SortedDictionary*,SortedDictionary*);
 
 
@@ -21,5 +21,6 @@
 - (void)processRouteData;
 
 - (void)sendReservationInfoQueryString:(NSString*)params;
+- (void)sendReservationInfoUsingPostMethod:(KobusReservationObject*)resvObj;
 - (void)processReservationInfo;
 @end

@@ -35,6 +35,6 @@
 
 //- (NSDictionary*)toPostData;
 //- (NSArray*)toPostArray;
-- (NSString*)toPostString;
+- (NSString*)toGETParamString;
 
 @end

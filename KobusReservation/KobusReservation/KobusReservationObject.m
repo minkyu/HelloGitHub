@@ -43,7 +43,7 @@
 	return descriptionStr;
 }
 
-- (NSString*)toPostString
+- (NSString*)toGETParamString
 {
 	NSMutableString *postString = [[NSMutableString alloc] init];
 	
