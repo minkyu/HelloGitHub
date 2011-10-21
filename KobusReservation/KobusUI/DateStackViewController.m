@@ -35,7 +35,7 @@
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
 	if (!cell) {
 		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier] autorelease];
-		cell.selectionStyle = UITableViewCellSelectionStyleNone;
+		cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 	}
 	
 	cell.textLabel.text = [dates objectAtIndex:indexPath.row];
@@ -86,8 +86,10 @@ const int kalViewWidth = 322;
 	return self;
 }
 
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
 
 	
 	NSDateFormatter *dateFromat = [[[NSDateFormatter alloc] init] autorelease];

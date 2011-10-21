@@ -68,6 +68,7 @@ const int padding = 10;
 
 - (void)selectedButton:(UIButton*)button
 {
+	
 	//stackScrollViewController에 tag버그 있음 1,2,3내부적으로 사용해서 문제가 됨
 	NSLog(@"tag:%d",button.tag);
 	
