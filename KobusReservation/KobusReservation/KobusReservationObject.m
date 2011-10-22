@@ -93,7 +93,7 @@
 - (BOOL)requestedNoTicket
 {
 	// TODO null처리 
-	if (([pCnt_100 intValue] + [pCnt_100 intValue]) < 1) return YES;
+	if (([pCnt_100 intValue] + [pCnt_050 intValue]) < 1) return YES;
 	return NO;
 }
 
