@@ -49,9 +49,13 @@
 
 - (NSIndexPath*)currentTimeIndexPath
 {
-	NSDateFormatter *timeFormat = [[NSDateFormatter alloc] init];
+	NSDateFormatter *timeFormat = [[[NSDateFormatter alloc] init] autorelease];
 	[timeFormat setDateFormat:@"HH:00"];
-	return [NSIndexPath indexPathForRow:[dates indexOfObject:[timeFormat stringFromDate:[NSDate date]]] inSection:0];
+	int row = [dates indexOfObject:[timeFormat stringFromDate:[NSDate date]]]+1;
+	if (row > [dates count]) {
+		row = 0;
+	}
+	return [NSIndexPath indexPathForRow:row inSection:0];
 }
 
 @end
@@ -75,21 +79,30 @@ const int kalViewWidth = 322;
 																  frame.size.height- (titleHeight+boundaryHeight))];
 		[self.view addSubview:kal.view];
 		
+		
 		kal.delegate = self;
 		self.dataSource = [[DateDataSource alloc] init];
 		kal.dataSource = dataSource;
-
-		[kal.tableView selectRowAtIndexPath:dataSource.currentTimeIndexPath animated:NO scrollPosition:UITableViewScrollPositionTop];
-		
-		
+		[dataSource release];
+				
 	}
 	return self;
 }
 
+- (void)dealloc
+{
+	[kal release];
+	[super dealloc];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+	[kal.tableView selectRowAtIndexPath:dataSource.currentTimeIndexPath animated:NO scrollPosition:UITableViewScrollPositionTop];
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+	[tableView cellForRowAtIndexPath:indexPath].selected = YES;
 
 	
 	NSDateFormatter *dateFromat = [[[NSDateFormatter alloc] init] autorelease];

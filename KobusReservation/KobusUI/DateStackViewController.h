@@ -20,7 +20,7 @@
 @interface DateStackViewController : DataViewController <UITableViewDelegate>
 
 @property (nonatomic, retain) KalViewController *kal;
-@property (nonatomic, retain) DateDataSource *dataSource;
+@property (nonatomic, assign) DateDataSource *dataSource;
 
 @end
 

@@ -65,6 +65,7 @@
 		[self.view addSubview:_titleLabel];
 		[self.view addSubview:boundaryView];
 		[self.view setBackgroundColor:[UIColor whiteColor]];
+		[boundaryView release];
 		
 	}
     return self;

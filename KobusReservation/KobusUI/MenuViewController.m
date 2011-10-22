@@ -59,7 +59,7 @@
 		[_tableView setDelegate:self];
 		[_tableView setDataSource:self];
 		[_tableView setBackgroundColor:[UIColor clearColor]];
-		_tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 1)];
+		_tableView.tableFooterView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 1)] autorelease];
 		[_tableView setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
 		[self.view addSubview:_tableView];
 	
@@ -71,6 +71,7 @@
 		[verticalLineView setBackgroundColor:[UIColor whiteColor]];
 		[self.view addSubview:verticalLineView];
 		[self.view bringSubviewToFront:verticalLineView];	
+		[verticalLineView release];
 		
 	}
     return self;
@@ -103,6 +104,7 @@
 		infoName.layer.borderColor = [UIColor blackColor].CGColor; //테두리 색상
 		infoName.layer.borderWidth = 1.0; //테두리 두께
 		[_kobusReservationInfo addSubview:infoName];
+		[infoName release];
 	}
 	
 	NSArray *hashlabelarray = [NSArray arrayWithObjects:@"origin",@"destination",@"Tim_date_Year",@"Tim_date_Month",@"Tim_date_Day",@"TIM_TIM_I",@"busClass",@"pCnt_100",@"pCnt_050", nil];
@@ -118,6 +120,7 @@
 		hashlabel.layer.borderColor = [UIColor blackColor].CGColor; //테두리 색상
 		hashlabel.layer.borderWidth = 1.0; //테두리 두께
 		[_kobusReservationInfo addSubview:hashlabel];
+		[hashlabel release];
 	}
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reservationInfo:) name:@"KobusReservation" object:nil];
@@ -198,7 +201,7 @@
 	[[KobusReservationAppDelegate stackScrollViewController] addViewInSlider:dataViewController invokeByController:self isStackStartView:TRUE];
 //	TicketCountStackViewController *dataViewController = [[TicketCountStackViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
 //	[[KobusReservationAppDelegate stackScrollViewController] addViewInSlider:dataViewController invokeByController:self isStackStartView:TRUE];
-
+	[dataViewController release];
 }
 
 
@@ -215,7 +218,7 @@
 
 - (void)dealloc {
 	[_menus release];
-	self.tableView = nil;
+	[_tableView release];
     [super dealloc];
 }
 

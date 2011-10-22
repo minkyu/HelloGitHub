@@ -57,6 +57,7 @@
 												otherButtonTitles:nil];
 	
     [errorAlert show];
+	[errorAlert autorelease];
 	
 	[self loadFile];
 	[self processRouteData];
