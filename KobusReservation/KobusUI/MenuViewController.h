@@ -42,9 +42,11 @@
 @interface MenuViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
 	UITableView*  _tableView;
 	NSArray *_menus;
+	UIView* _kobusReservationInfo;
 }
 - (id)initWithFrame:(CGRect)frame;
 
 @property(nonatomic, retain)UITableView* tableView;
+-(void)addKobusReservationInfoView;
 
 @end

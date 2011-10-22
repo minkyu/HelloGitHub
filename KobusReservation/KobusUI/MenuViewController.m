@@ -53,14 +53,18 @@
 		
 		[self.view setFrame:frame]; 
 		
-		_menus = [NSArray arrayWithObjects:@"조회하기", @"즐겨찾기",nil];
+		_menus = [[NSArray arrayWithObjects:@"조회하기", @"즐겨찾기",nil] retain];
 		
-		_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
+		_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height/2) style:UITableViewStylePlain];
 		[_tableView setDelegate:self];
 		[_tableView setDataSource:self];
 		[_tableView setBackgroundColor:[UIColor clearColor]];
 		_tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 1)];
+		[_tableView setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
 		[self.view addSubview:_tableView];
+	
+		[self addKobusReservationInfoView];
+		
 		
 		UIView* verticalLineView = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.size.width, -5, 1, self.view.frame.size.height)];
 		[verticalLineView setAutoresizingMask:UIViewAutoresizingFlexibleHeight];
@@ -76,6 +80,59 @@
     [super viewDidLoad];
 }
 
+-(void)addKobusReservationInfoView
+{
+	_kobusReservationInfo = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height/2, self.view.frame.size.width, self.view.frame.size.height/2)];
+
+	[_kobusReservationInfo setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
+	[self.view addSubview:_kobusReservationInfo];
+
+	NSArray *labelarray = [NSArray arrayWithObjects:@"출발",@"도착",@"년도",@"월",@"일",@"시간",@"등급",@"어른",@"아동", nil];
+	CGSize infoViewSize =  _kobusReservationInfo.frame.size;
+	
+	for (int i =0; i<[labelarray count]; i++) 
+	{
+		NSString *name = [labelarray objectAtIndex:i];
+		CGRect labelframe = CGRectMake(0, (int)(infoViewSize.height/[labelarray count])*i, 
+									   infoViewSize.width/6.f, (int)(infoViewSize.height/[labelarray count]));
+		UILabel *infoName = [[UILabel alloc] initWithFrame:labelframe];
+		[infoName setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
+		[infoName setText:name];
+		[infoName setTextAlignment:UITextAlignmentCenter];
+		[infoName setBackgroundColor:[UIColor clearColor]];
+		infoName.layer.borderColor = [UIColor blackColor].CGColor; //테두리 색상
+		infoName.layer.borderWidth = 1.0; //테두리 두께
+		[_kobusReservationInfo addSubview:infoName];
+	}
+	
+	NSArray *hashlabelarray = [NSArray arrayWithObjects:@"origin",@"destination",@"Tim_date_Year",@"Tim_date_Month",@"Tim_date_Day",@"TIM_TIM_I",@"busClass",@"pCnt_100",@"pCnt_050", nil];
+	for (int i =0; i<[hashlabelarray count]; i++) 
+	{
+		NSString *name = [hashlabelarray objectAtIndex:i];
+		CGRect labelframe = CGRectMake(infoViewSize.width/6.f, (int)(infoViewSize.height/[labelarray count])*i, 
+									   (infoViewSize.width/6.f)*5, (int)(infoViewSize.height/[labelarray count]));
+		UILabel *hashlabel = [[UILabel alloc] initWithFrame:labelframe];
+		[hashlabel setTag:[name hash]];
+		[hashlabel setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
+		[hashlabel setBackgroundColor:[UIColor clearColor]];
+		hashlabel.layer.borderColor = [UIColor blackColor].CGColor; //테두리 색상
+		hashlabel.layer.borderWidth = 1.0; //테두리 두께
+		[_kobusReservationInfo addSubview:hashlabel];
+	}
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reservationInfo:) name:@"KobusReservation" object:nil];
+	
+}
+
+- (void)reservationInfo:(NSNotification*)noti
+{
+	NSDictionary* notiDic =[noti userInfo];
+	NSString *key = [notiDic objectForKey:@"key"];
+	NSString *value = [notiDic objectForKey:@"value"];
+	
+	UILabel *label = (UILabel*)[_kobusReservationInfo viewWithTag:[key hash]];
+	[label setText:value];
+}
 
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -157,6 +214,7 @@
 
 
 - (void)dealloc {
+	[_menus release];
 	self.tableView = nil;
     [super dealloc];
 }

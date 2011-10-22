@@ -172,6 +172,14 @@
 		NSLog(@"%@",[[tds objectAtIndex:ClassTagIndex] content]);
 		NSLog(@"%@",[[tds objectAtIndex:CompanyTagIndex] content]);
 		NSLog(@"%@",[[tds objectAtIndex:TicketCountTagIndex] content]);
+		for (int i = TicketCountTagIndex+1; i<[tds count]; i++) {
+			if ([[[tds objectAtIndex:i] tagName] isEqualToString:@"input"]) {
+				NSLog(@"%@",[[tds objectAtIndex:i] objectForKey:@"name"]);
+				NSLog(@"%@",[[tds objectAtIndex:i] objectForKey:@"value"]);
+			}
+			else
+				break;
+		}
 	}
 	[hpple release];
 }
