@@ -8,8 +8,14 @@
 
 #import "KobusWeb.h"
 #import "KobusRouteWeb.h"
-//#define EucKrEncoding 0x80000940
+
 #define EucKrEncoding -2147481280
+
+#define TimeTagIndex 1
+#define ClassTagIndex 2
+#define CompanyTagIndex 3
+#define TicketCountTagIndex 4
+
 
 @implementation KobusWeb
 
@@ -134,7 +140,7 @@
 	__block ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
 	[request setCompletionBlock:^{
 		self.responseString = [request responseString];
-		[self processReservationInfo];
+		[self processReservationInfo:[request responseData]];
 	} ];
 	[request setFailedBlock:^{
 		[self failWithError:[request error]];
@@ -144,8 +150,30 @@
 
 - (void)processReservationInfo
 {
-	NSLog(@"%@", responseString);
+	NSLog(@"%@", responseString);	
+}
 
+- (void)processReservationInfo:(NSData*)responseData
+{
+	TFHpple *hpple = [[TFHpple alloc] initWithHTMLData:responseData];
+	int seatformcount = 0;
+	while (42) {
+		//<form name="SeatForm
+		TFHppleElement *seatForm = [hpple peekAtSearchWithXPathQuery:[NSString stringWithFormat:@"//form[@name='SeatForm%d']",seatformcount++]];
+		if (!seatForm) {
+			break;
+		}
+		//<tr ... table row
+		TFHppleElement *tr = [seatForm firstChild];
+		//<td ... table data
+		NSArray *tds = [tr children];
+		
+		NSLog(@"%@",[[tds objectAtIndex:TimeTagIndex] content]);
+		NSLog(@"%@",[[tds objectAtIndex:ClassTagIndex] content]);
+		NSLog(@"%@",[[tds objectAtIndex:CompanyTagIndex] content]);
+		NSLog(@"%@",[[tds objectAtIndex:TicketCountTagIndex] content]);
+	}
+	[hpple release];
 }
 
 @end

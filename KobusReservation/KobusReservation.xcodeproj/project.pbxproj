@@ -20,6 +20,9 @@
 		913DC50C144A97F000DA2331 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913DC50B144A97F000DA2331 /* SystemConfiguration.framework */; };
 		913DC50E144A97FB00DA2331 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913DC50D144A97FB00DA2331 /* MobileCoreServices.framework */; };
 		913DC510144A981800DA2331 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 913DC50F144A981800DA2331 /* libz.dylib */; };
+		D35DF74514527F8300C79101 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = D35DF74014527F8200C79101 /* TFHpple.m */; };
+		D35DF74614527F8300C79101 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = D35DF74214527F8300C79101 /* TFHppleElement.m */; };
+		D35DF74714527F8300C79101 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = D35DF74414527F8300C79101 /* XPathQuery.m */; };
 		D36F662D14451B5B009F5755 /* ClassStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D36F662C14451B5B009F5755 /* ClassStackViewController.m */; };
 		D388C46F143C6ECF00DEF523 /* AvlTree+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C44E143C6ECF00DEF523 /* AvlTree+Private.m */; };
 		D388C470143C6ECF00DEF523 /* AvlTree.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C450143C6ECF00DEF523 /* AvlTree.m */; };
@@ -128,6 +131,12 @@
 		913DC50B144A97F000DA2331 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		913DC50D144A97FB00DA2331 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		913DC50F144A981800DA2331 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		D35DF73F14527F8200C79101 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		D35DF74014527F8200C79101 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		D35DF74114527F8200C79101 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		D35DF74214527F8300C79101 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		D35DF74314527F8300C79101 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		D35DF74414527F8300C79101 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		D36F662B14451B5B009F5755 /* ClassStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassStackViewController.h; sourceTree = "<group>"; };
 		D36F662C14451B5B009F5755 /* ClassStackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassStackViewController.m; sourceTree = "<group>"; };
 		D388C44D143C6ECF00DEF523 /* AvlTree+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AvlTree+Private.h"; sourceTree = "<group>"; };
@@ -299,6 +308,7 @@
 				911AD15B144951FB009F8B5B /* ASIProgressDelegate.h */,
 			);
 			name = ASIHTTPRequest;
+			path = KobusUI;
 			sourceTree = "<group>";
 		};
 		911AD16414495226009F8B5B /* Reachability */ = {
@@ -308,6 +318,29 @@
 				911AD16614495226009F8B5B /* Reachability.m */,
 			);
 			path = Reachability;
+			sourceTree = "<group>";
+		};
+		D35DF74814527F8E00C79101 /* Hpple */ = {
+			isa = PBXGroup;
+			children = (
+				D35DF73F14527F8200C79101 /* TFHpple.h */,
+				D35DF74014527F8200C79101 /* TFHpple.m */,
+				D35DF74114527F8200C79101 /* TFHppleElement.h */,
+				D35DF74214527F8300C79101 /* TFHppleElement.m */,
+				D35DF74314527F8300C79101 /* XPathQuery.h */,
+				D35DF74414527F8300C79101 /* XPathQuery.m */,
+			);
+			name = Hpple;
+			path = KobusUI;
+			sourceTree = "<group>";
+		};
+		D35DF74E1452816E00C79101 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				D35DF74814527F8E00C79101 /* Hpple */,
+				911AD1461449515F009F8B5B /* ASIHTTPRequest */,
+			);
+			name = Web;
 			sourceTree = "<group>";
 		};
 		D388C44B143C6ECF00DEF523 /* SortedDictionary */ = {
@@ -425,7 +458,6 @@
 		D3C1AE0C14443BDF00C23FC0 /* KobusUI */ = {
 			isa = PBXGroup;
 			children = (
-				911AD1461449515F009F8B5B /* ASIHTTPRequest */,
 				D39D8804144568E100BD9A45 /* SVSegmentedControl */,
 				D3A7D12714448CBE003285B9 /* Kal */,
 				D3C1AE27144443FC00C23FC0 /* StackScroll */,
@@ -466,9 +498,11 @@
 		ED332DF41435C299009A82E5 = {
 			isa = PBXGroup;
 			children = (
+				D35DF74E1452816E00C79101 /* Web */,
 				D3C1AE0C14443BDF00C23FC0 /* KobusUI */,
 				D388C44B143C6ECF00DEF523 /* SortedDictionary */,
 				ED332E0B1435C299009A82E5 /* KobusReservation */,
+				ED332E341435C29A009A82E5 /* KobusReservationTests */,
 				ED332E021435C299009A82E5 /* Frameworks */,
 				ED3D7267143B4BA800775F58 /* KobusReservation.app */,
 				ED3D7269143B4BA800775F58 /* KobusReservationTests.octest */,
@@ -500,14 +534,13 @@
 				ED332E151435C299009A82E5 /* KobusReservationAppDelegate.m */,
 				ED332E1A1435C29A009A82E5 /* MainWindow.xib */,
 				ED332E171435C299009A82E5 /* KobusReservation.xcdatamodeld */,
-				ED332E0C1435C299009A82E5 /* Supporting Files */,
 				D3D943771435D31700568CE0 /* KobusWeb.h */,
 				D3D943781435D31700568CE0 /* KobusWeb.m */,
 				D39D8813144574C600BD9A45 /* KobusReservationObject.h */,
 				D39D8814144574C600BD9A45 /* KobusReservationObject.m */,
-				ED332E341435C29A009A82E5 /* KobusReservationTests */,
 				D39F8A3C144C1904003FAA59 /* KobusRouteWeb.h */,
 				D39F8A3D144C1904003FAA59 /* KobusRouteWeb.m */,
+				ED332E0C1435C299009A82E5 /* Supporting Files */,
 			);
 			path = KobusReservation;
 			sourceTree = "<group>";
@@ -707,6 +740,9 @@
 				911AD163144951FB009F8B5B /* ASINetworkQueue.m in Sources */,
 				911AD16714495226009F8B5B /* Reachability.m in Sources */,
 				D39F8A3E144C1904003FAA59 /* KobusRouteWeb.m in Sources */,
+				D35DF74514527F8300C79101 /* TFHpple.m in Sources */,
+				D35DF74614527F8300C79101 /* TFHppleElement.m in Sources */,
+				D35DF74714527F8300C79101 /* XPathQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -812,9 +848,9 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KobusReservation/KobusReservation-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2/**";
 				INFOPLIST_FILE = "KobusReservation/KobusReservation-Info.plist";
-				OTHER_LDFLAGS = "";
-				"OTHER_LDFLAGS[arch=*]" = "";
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -826,8 +862,9 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KobusReservation/KobusReservation-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2/**";
 				INFOPLIST_FILE = "KobusReservation/KobusReservation-Info.plist";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -23,4 +23,5 @@
 - (void)sendReservationInfoQueryString:(NSString*)params;
 - (void)sendReservationInfoUsingPostMethod:(KobusReservationObject*)resvObj;
 - (void)processReservationInfo;
+- (void)processReservationInfo:(NSData*)responseData;
 @end

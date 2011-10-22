@@ -19,4 +19,5 @@
 	#import "SortedDictionary.h"
 	#import "ASIHTTPRequest.h"
 	#import "ASIFormDataRequest.h"
+	#import "TFHpple.h"
 #endif

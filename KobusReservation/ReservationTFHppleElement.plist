@@ -1,0 +1,446 @@
+nodeAttributeArray =     
+(
+	{
+		attributeName = name;
+		nodeContent = SeatForm0;
+	},
+	{
+		attributeName = method;
+		nodeContent = post;
+	},
+	{
+		attributeName = action;
+		nodeContent = "../reservation/con_notice.jsp";
+	},
+	{
+		attributeName = onsubmit;
+		nodeContent = "return fc_CheckSeat('0','41','1900','H','2')";
+	}
+);
+nodeChildArray =     
+(
+	{
+		nodeChildArray =             
+		(
+			{
+				nodeContent = " \Ub2e4\Uc74c\Ub0a0 \Ubc30\Ucc28 \Uc870\Ud68c ";
+				nodeName = comment;
+			},
+			{
+				nodeContent = "19:00";
+				nodeName = td;
+			},
+			{
+				nodeContent = "\Uc77c\Ubc18\Uace0\Uc18d";
+				nodeName = td;
+			},
+			{
+				nodeContent = "\Ub3d9\Uc591  \Uace0\Uc18d";
+				nodeName = td;
+			},
+			{
+				nodeContent = 41;
+				nodeName = td;
+			},
+			{
+				nodeAttributeArray =                     
+				(
+					{
+						attributeName = type;
+						nodeContent = hidden;
+					},
+					{
+						attributeName = name;
+						nodeContent = "pTic_cod";
+                    },
+					{
+						attributeName = value;
+						nodeContent = false;
+					}
+                );
+                nodeName = input;
+            },
+			{
+				nodeAttributeArray =                     
+				(
+					{
+						attributeName = type;
+						nodeContent = hidden;
+					},
+					{
+						attributeName = name;
+						nodeContent = "pTim_tim_o";
+					},
+					{
+						attributeName = value;
+						nodeContent = 1900;
+					}
+                   );
+				nodeName = input;
+               },
+			{
+				nodeAttributeArray =                     
+				(
+					{
+						attributeName = type;
+						nodeContent = hidden;
+					},
+					{
+						attributeName = name;
+						nodeContent = "pTer_fr_o";
+					},
+					{
+						attributeName = value;
+						nodeContent = 010;
+					}
+				);
+				nodeName = input;
+            },
+			{
+				nodeAttributeArray =                     
+				(
+					{
+						attributeName = type;
+						nodeContent = hidden;
+                    },
+					{
+						attributeName = name;
+						nodeContent = "pTer_to_o";
+                    },
+					{
+						attributeName = value;
+						nodeContent = 130;
+					}
+				);
+				nodeName = input;
+            },
+			{
+				nodeAttributeArray =                     
+				(
+					{
+						attributeName = type;
+						nodeContent = hidden;
+					},
+					{
+						attributeName = name;
+						nodeContent = "pBus_gra_o";
+                    },
+					{
+						attributeName = value;
+						nodeContent = 2;
+                    }
+                );
+				nodeName = input;
+            },
+            {
+            	nodeAttributeArray =                     
+				(
+					{
+						attributeName = type;
+						nodeContent = hidden;
+					},
+					{
+						attributeName = name;
+						nodeContent = "pCor_cod_o";
+                    },
+					{
+						attributeName = value;
+						nodeContent = 03;
+					}
+                );
+				nodeName = input;
+            },
+			{
+				nodeAttributeArray =                     
+				(                        
+					{
+                        attributeName = type;
+                        nodeContent = hidden;
+                    },
+					{
+                        attributeName = name;
+						nodeContent = "pCnt_100";
+					},
+					{
+                        attributeName = value;
+                        nodeContent = 1;
+                    }
+                );
+                nodeName = input;
+            },
+			{
+                nodeAttributeArray =                     
+                (
+					{
+                        attributeName = type;
+                        nodeContent = hidden;
+                    },
+					{
+                        attributeName = name;
+                        nodeContent = "pCnt_050";
+                    },
+					{
+						attributeName = value;
+						nodeContent = 0;
+                    }
+                );
+                nodeName = input;
+            },
+			{
+				nodeAttributeArray =                     
+				(
+					{
+                        attributeName = type;
+                        nodeContent = hidden;
+                    },
+					{
+                        attributeName = name;
+						nodeContent = "pWeb_cnt";
+                    },
+					{
+						attributeName = value;
+						nodeContent = 45;
+                    }
+                );
+                nodeName = input;
+            },
+			{
+                nodeAttributeArray =                     
+                (
+					{
+                        attributeName = type;
+                        nodeContent = hidden;
+                    },
+					{
+                        attributeName = name;
+                        nodeContent = "pTer_sfr";
+                    },
+					{
+                        attributeName = value;
+                        nodeContent = 010;
+                    }
+                );
+                nodeName = input;
+            },
+			{
+                nodeAttributeArray =                     
+                (
+					{
+                        attributeName = type;
+                        nodeContent = hidden;
+                    },
+					{
+                        attributeName = name;
+                        nodeContent = "pTer_sto";
+                    },
+					{
+                        attributeName = value;
+                        nodeContent = 133;
+                    }
+                );
+                nodeName = input;
+			},
+			{
+                nodeContent = " \Ub2e4\Uc74c\Ub0a0 \Ubc30\Ucc28\Uc870\Ud68c ";
+                nodeName = comment;
+			},
+			{
+				nodeAttributeArray =                     
+				(
+					{
+						attributeName = type;
+						nodeContent = hidden;
+                    },
+					{
+						attributeName = name;
+						nodeContent = "pTim_dte";
+                    },
+					{
+						attributeName = value;
+						nodeContent = 20111022;
+                    }
+                );
+                nodeName = input;
+            },
+			{
+                nodeAttributeArray =                     
+				(
+					{
+						attributeName = type;
+						nodeContent = hidden;
+					},
+					{
+						attributeName = name;
+						nodeContent = "pSet_sta";
+                    },
+					{
+                        attributeName = value;
+                        nodeContent = 100000011000100000000000000000000000000000000;
+					}
+                );
+                nodeName = input;
+            },
+			{
+                nodeAttributeArray =                     
+				(
+                    {
+						attributeName = type;
+						nodeContent = hidden;
+                    },
+					{
+                        attributeName = name;
+                        nodeContent = "pTck_pay";
+                    },
+					{
+                        attributeName = value;
+                        nodeContent = H;
+                    }
+                );
+                nodeName = input;
+            },
+			{
+				nodeAttributeArray =                     
+                (
+					{
+                        attributeName = type;
+                        nodeContent = hidden;
+                    },
+					{
+                        attributeName = name;
+                        nodeContent = "pArr_res";
+                    },
+					{
+                        attributeName = value;
+                        nodeContent = true;
+                    }
+                );
+                nodeName = input;
+            },
+			{
+                nodeAttributeArray =                     
+                (
+					{
+                        attributeName = type;
+                        nodeContent = hidden;
+                    },
+					{
+                        attributeName = name;
+                        nodeContent = "pTer_chk";
+                    },
+					{
+                        attributeName = value;
+                        nodeContent = false;
+                    }
+                );
+                nodeName = input;
+            },
+			{
+                nodeContent = " \Uc0c8\Ub85c \Ucd94\Uac00 \Ub418\Ub294 \Ubd80\Ubd84 ";
+				nodeName = comment;
+            },
+			{
+                nodeAttributeArray =                     
+                (
+					{
+                        attributeName = type;
+                        nodeContent = hidden;
+                    },
+					{
+                        attributeName = name;
+                        nodeContent = "pGet_Lin";
+                    },
+					{
+            	        attributeName = value;
+						nodeContent = 1;
+                    }
+                );
+                nodeName = input;
+            },
+			{
+                nodeContent = " \Uc8fc\Ub9d0\Uc8fc\Uc911\Uc694\Uae08\Uad6c\Ubd84 ";
+                nodeName = comment;
+            },
+			{
+                nodeAttributeArray =                     
+                (
+					{
+						attributeName = type;
+						nodeContent = hidden;
+                    },
+					{
+                        attributeName = name;
+                        nodeContent = "pExc_amt";
+                    },
+					{
+                        attributeName = value;
+						nodeContent = 0;
+                    }
+                );
+				nodeName = input;
+            },
+			{
+				nodeAttributeArray =                     
+                (
+					{
+                        attributeName = type;
+                        nodeContent = hidden;
+					},
+					{
+                        attributeName = name;
+						nodeContent = "pExm_amt";
+                    },
+					{
+                        attributeName = value;
+                        nodeContent = 0;
+                    }
+                );
+                nodeName = input;
+            },
+			{
+				nodeContent = " \Ub2e4\Uc74c\Ub0a0 \Ubc30\Ucc28\Uc870\Ud68c ";
+				nodeName = comment;
+            },
+			{
+				nodeChildArray =                     
+                (
+					{
+						nodeAttributeArray =                             
+						(
+							{
+                                attributeName = href;
+								nodeContent = "javascript:SeatForm0.submit();";
+                            },
+							{
+								attributeName = onclick;
+								nodeContent = "javascript : return fc_CheckSeat('0','20111022','41','1900','H','2');";
+							},
+							{
+								attributeName = class;
+								nodeContent = "button button41";
+                            }
+                        );
+                        nodeContent = "\Uc120\Ud0dd";
+                        nodeName = a;
+                    }
+                );
+                nodeName = td;
+            },
+			{
+                nodeContent = "<td><a href=\"javascript:SeatForm0.submit();\" class=\"button button41\">\Uc120\Ud0dd</a></td>";
+                nodeName = comment;
+            },
+			{
+				nodeContent = "<td><input type=\"button\" value=\"\Uc120\Ud0dd\" onclick=\"SeatForm0.submit();\"></a></td>";
+				nodeName = comment;
+			}
+        );
+        nodeContent = "";
+        nodeName = tr;
+    },
+	{
+        nodeContent = "\Uc0c8\Ub85c \Ucd94\Uac00 \Ub418\Ub294 \Ubd80\Ubd84(\Ud568\Uc218\Uc5d0 \Ubcc0\Uc218 \Ucd94\Uac00),\Uc2ec\Uc57c\Uc2dc\Uac04\Ub178\Uc57d\Uc88c\Uc11d\Ud45c\Uc2dc";
+        nodeName = comment;
+	}
+);
+nodeContent = "";
+nodeName = form;
