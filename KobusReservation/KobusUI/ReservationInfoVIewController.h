@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GridTableViewController.h"
 @class KobusReservationInfoList;
-@interface ReservationInfoVIewController : UIViewController
+
+@interface ReservationInfoVIewController : GridTableViewController
 
 @property(nonatomic,copy) KobusReservationInfoList *infolist;
+
+- (id)initWithInfoList:(KobusReservationInfoList*)aInfoList;
 
 @end

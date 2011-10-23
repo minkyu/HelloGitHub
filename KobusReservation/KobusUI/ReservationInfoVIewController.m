@@ -12,20 +12,29 @@
 @implementation ReservationInfoVIewController
 @synthesize infolist;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithInfoList:(KobusReservationInfoList*)aInfoList
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super init];
     if (self) {
         // Custom initialization
 		self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc]
 												   initWithBarButtonSystemItem:UIBarButtonSystemItemDone
 												   target:self
 												   action:@selector(dismissView:)] autorelease];
-		
+		self.infolist = aInfoList;
+		NSMutableArray *gridData = [NSMutableArray arrayWithArray:infolist.infoList];
+		[gridData insertObject:[NSArray arrayWithObjects:@"출발시간",@"등급",@"회사",@"잔여좌석", nil] atIndex:0];
+		self.GridData = gridData;
 		
     }
     return self;
 }
+
+//- (NSArray*)getGridData
+//{
+//	return infolist.infoList;
+//}
+
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -36,8 +45,8 @@
 	[self.view.window addGestureRecognizer:recognizer];
 	[recognizer release];
 	
-	NSLog(@"%@",infolist.infoList);
-	NSLog(@"%@",[infolist getTypeStringAtIndex:0]);
+//	NSLog(@"%@",infolist.infoList);
+//	NSLog(@"%@",[infolist getTypeStringAtIndex:0]);
 }
 
 - (void)handleTapBehind:(UITapGestureRecognizer *)sender
@@ -54,10 +63,23 @@
 			[sender removeTarget:self action:@selector(handleTapBehind:)];
 			[self.view.window removeGestureRecognizer:sender];
 			[self dismissModalViewControllerAnimated:YES];
-			NSLog(@"handleTapBehind recognizer = %@",sender);
         }
 	}
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Navigation logic may go here. Create and push another view controller.
+    /*
+     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     // ...
+     // Pass the selected object to the new view controller.
+     [self.navigationController pushViewController:detailViewController animated:YES];
+     [detailViewController release];
+     */
+	NSLog(@"%@",indexPath);
+}
+
 
 - (void)didReceiveMemoryWarning
 {

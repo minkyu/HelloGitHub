@@ -60,8 +60,7 @@
 
 - (void)showReservationInfoList:(KobusReservationInfoList*)aInfolist;
 {
-	ReservationInfoVIewController *viewcon = [[ReservationInfoVIewController alloc] initWithNibName:@"ReservationInfoVIewController" bundle:nil];
-	viewcon.infolist = aInfolist;
+	ReservationInfoVIewController *viewcon = [[ReservationInfoVIewController alloc] initWithInfoList:aInfolist];
 	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewcon];
 	[viewcon release];
 	navController.modalPresentationStyle = UIModalPresentationFormSheet;
