@@ -7,14 +7,11 @@
 //
 
 #import "KobusWeb.h"
-#import "KobusRouteWeb.h"
+#import "KobusRouteParser.h"
+#import "KobusReservationInfoParser.h"
 
 #define EucKrEncoding -2147481280
 
-#define TimeTagIndex 1
-#define ClassTagIndex 2
-#define CompanyTagIndex 3
-#define TicketCountTagIndex 4
 
 
 @implementation KobusWeb
@@ -84,14 +81,22 @@
 
 -(void) processRouteData
 {
-	KobusRouteWeb *routeWeb = [[[KobusRouteWeb  alloc] init] autorelease];
-	self.Origins = [routeWeb parseOrigins:responseString];
-	self.Destinations = [routeWeb parseDestinations:responseString];
+//	KobusRouteParser *routeWeb = [[[KobusRouteParser  alloc] init] autorelease];
+//	self.Origins = [routeWeb parseOrigins:responseString];
+//	self.Destinations = [routeWeb parseDestinations:responseString];
+//	KobusRouteParser *routeWeb = [[[KobusRouteParser  alloc] init] autorelease];
+	self.Origins = [KobusRouteParser parseOrigins:responseString];
+	self.Destinations = [KobusRouteParser parseDestinations:responseString];
 	NSLog(@"분석끝");
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"html분석이 끝났다." object:nil];
 }
 
 #pragma mark - ReservationQuery
+
+- (void)processReservationInfo
+{
+	NSLog(@"%@", responseString);	
+}
 
 - (void)sendReservationInfoUsingPostMethod:(KobusReservationObject*)resvObj
 {
@@ -149,46 +154,11 @@
 	[request startAsynchronous];
 }
 
-- (void)processReservationInfo
-{
-	NSLog(@"%@", responseString);	
-}
+
 
 - (KobusReservationInfoList*)processReservationInfoList:(NSData*)responseData
 {
-	TFHpple *hpple = [[TFHpple alloc] initWithHTMLData:responseData];
-	KobusReservationInfoList *infolist = [[KobusReservationInfoList alloc] init];
-	int seatformcount = 0;
-	while (42) {
-		//<form name="SeatForm
-		TFHppleElement *seatForm = [hpple peekAtSearchWithXPathQuery:[NSString stringWithFormat:@"//form[@name='SeatForm%d']",seatformcount++]];
-		if (!seatForm) {
-			break;
-		}
-		//<tr ... table row
-		TFHppleElement *tr = [seatForm firstChild];
-		//<td ... table data
-		NSArray *tds = [tr children];
-		NSMutableArray *info = [NSMutableArray new];
-		[info addObject:[[tds objectAtIndex:TimeTagIndex] content]];
-		[info addObject:[[tds objectAtIndex:ClassTagIndex] content]];
-		[info addObject:[[tds objectAtIndex:CompanyTagIndex] content]];
-		[info addObject:[[tds objectAtIndex:TicketCountTagIndex] content]];
-		[infolist addInfoList:info];
-		
-		NSMutableDictionary	*hideinfo = [NSMutableDictionary new];
-		for (int i = TicketCountTagIndex+1; i<[tds count]; i++) {
-			if ([[[tds objectAtIndex:i] tagName] isEqualToString:@"input"]) {
-				[hideinfo setValue:[[tds objectAtIndex:i] objectForKey:@"value"] forKey:[[tds objectAtIndex:i] objectForKey:@"name"]];
-			}
-			else
-				break;
-		}
-		[infolist addHideInfoList:hideinfo];
-		
-	}
-	[hpple release];
-	return infolist;
+	return [KobusReservationInfoParser parsing:responseData];
 }
 
 @end
