@@ -76,20 +76,13 @@
 {
 	if ([[noti object] isEqualToString:@"doReservation"]) {
 
-		NSLog(@"%@",reservationObject);
-		
 		NSString *check = [reservationObject checkValidation];
 		if ([check isEqualToString:@"OK"]) {
-//			[web sendReservationInfoQueryString:[reservationObject toGETParamString]];
+
 			[web sendReservationInfoQueryString:[reservationObject toGETParamString] withInfoList:^(KobusReservationInfoList *infolist) 
 			{
 				[self showReservationInfoList:infolist];
-			}];
-			
-			
-			
-			
-			
+			}];			
 		}
 		else
 		{

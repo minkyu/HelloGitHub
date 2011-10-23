@@ -110,7 +110,6 @@ const int kalViewWidth = 322;
 	[dateFromat setDateFormat:@"yyyy-MM-dd"];
 	NSString *theDate = [dateFromat stringFromDate:kal.selectedDate];
 	NSString *theTime = [dataSource.dates objectAtIndex:indexPath.row];
-	NSLog(@"%@ %@",theDate,theTime);
 	
 	ClassStackViewController *dataViewController = [[ClassStackViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
 	[[KobusReservationAppDelegate stackScrollViewController] addViewInSlider:dataViewController invokeByController:self isStackStartView:FALSE];

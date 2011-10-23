@@ -141,23 +141,7 @@
 	__block ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
 	[request setCompletionBlock:^{
 		self.responseString = [request responseString];
-//		[self processReservationInfo:[request responseData]];
 		infolist([self processReservationInfoList:[request responseData]]);
-	} ];
-	[request setFailedBlock:^{
-		[self failWithError:[request error]];
-	}];
-	[request startAsynchronous];
-}
-
-- (void)sendReservationInfoQueryString:(NSString*)params
-{
-	NSString *usrStr = [NSString stringWithFormat:@"http://m.kobus.co.kr/web/m/reservation/sch_bus.jsp?%@",params];
-	NSURL *url = [NSURL URLWithString:usrStr];
-	__block ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-	[request setCompletionBlock:^{
-		self.responseString = [request responseString];
-		[self processReservationInfo:[request responseData]];
 	} ];
 	[request setFailedBlock:^{
 		[self failWithError:[request error]];
@@ -168,38 +152,6 @@
 - (void)processReservationInfo
 {
 	NSLog(@"%@", responseString);	
-}
-
-- (void)processReservationInfo:(NSData*)responseData
-{
-	TFHpple *hpple = [[TFHpple alloc] initWithHTMLData:responseData];
-	int seatformcount = 0;
-	
-	while (42) {
-		//<form name="SeatForm
-		TFHppleElement *seatForm = [hpple peekAtSearchWithXPathQuery:[NSString stringWithFormat:@"//form[@name='SeatForm%d']",seatformcount++]];
-		if (!seatForm) {
-			break;
-		}
-		//<tr ... table row
-		TFHppleElement *tr = [seatForm firstChild];
-		//<td ... table data
-		NSArray *tds = [tr children];
-		
-		NSLog(@"%@",[[tds objectAtIndex:TimeTagIndex] content]);
-		NSLog(@"%@",[[tds objectAtIndex:ClassTagIndex] content]);
-		NSLog(@"%@",[[tds objectAtIndex:CompanyTagIndex] content]);
-		NSLog(@"%@",[[tds objectAtIndex:TicketCountTagIndex] content]);
-		for (int i = TicketCountTagIndex+1; i<[tds count]; i++) {
-			if ([[[tds objectAtIndex:i] tagName] isEqualToString:@"input"]) {
-				NSLog(@"%@",[[tds objectAtIndex:i] objectForKey:@"name"]);
-				NSLog(@"%@",[[tds objectAtIndex:i] objectForKey:@"value"]);
-			}
-			else
-				break;
-		}
-	}
-	[hpple release];
 }
 
 - (KobusReservationInfoList*)processReservationInfoList:(NSData*)responseData
@@ -234,18 +186,6 @@
 		}
 		[infolist addHideInfoList:hideinfo];
 		
-//		NSLog(@"%@",[[tds objectAtIndex:TimeTagIndex] content]);
-//		NSLog(@"%@",[[tds objectAtIndex:ClassTagIndex] content]);
-//		NSLog(@"%@",[[tds objectAtIndex:CompanyTagIndex] content]);
-//		NSLog(@"%@",[[tds objectAtIndex:TicketCountTagIndex] content]);
-//		for (int i = TicketCountTagIndex+1; i<[tds count]; i++) {
-//			if ([[[tds objectAtIndex:i] tagName] isEqualToString:@"input"]) {
-//				NSLog(@"%@",[[tds objectAtIndex:i] objectForKey:@"name"]);
-//				NSLog(@"%@",[[tds objectAtIndex:i] objectForKey:@"value"]);
-//			}
-//			else
-//				break;
-//		}
 	}
 	[hpple release];
 	return infolist;

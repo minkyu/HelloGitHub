@@ -97,8 +97,6 @@ static const int childrenTag = 200;
 
 - (void)segmentedControlChangedValue:(SVSegmentedControl*)segmentedControl 
 {
-	NSLog(@"segmentedControl %i did select index %i (via UIControl method)", segmentedControl.tag, segmentedControl.selectedIndex);
-	
 	if (segmentedControl.tag == adultTag) {
 		self.adultStr = [NSString stringWithFormat:@"어른:%d",segmentedControl.selectedIndex];
 		self.adultTicketCnt = [[NSNumber numberWithInteger:segmentedControl.selectedIndex] stringValue];

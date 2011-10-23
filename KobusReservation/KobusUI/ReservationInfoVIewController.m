@@ -30,11 +30,10 @@
     return self;
 }
 
-//- (NSArray*)getGridData
-//{
-//	return infolist.infoList;
-//}
-
+- (void)dismissView:(id)sender
+{
+	[self dismissModalViewControllerAnimated:YES];
+}
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -44,9 +43,6 @@
 	recognizer.cancelsTouchesInView = NO; //So the user can still interact with controls in the modal view
 	[self.view.window addGestureRecognizer:recognizer];
 	[recognizer release];
-	
-//	NSLog(@"%@",infolist.infoList);
-//	NSLog(@"%@",[infolist getTypeStringAtIndex:0]);
 }
 
 - (void)handleTapBehind:(UITapGestureRecognizer *)sender
@@ -69,15 +65,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
-	NSLog(@"%@",indexPath);
+	
+	NSLog(@"%@",[infolist getTypeStringAtIndex:indexPath.row]);
 }
 
 
@@ -91,10 +80,6 @@
 
 #pragma mark - View lifecycle
 
-- (void)dismissView:(id)sender
-{
-	[self dismissModalViewControllerAnimated:YES];
-}
 
 - (void)viewDidLoad
 {

@@ -20,11 +20,8 @@ typedef void (^infoList)(KobusReservationInfoList*);
 
 - (void)loadKoBusWeb;
 - (void)processRouteData;
-
-- (void)sendReservationInfoQueryString:(NSString*)params;
-- (void)sendReservationInfoUsingPostMethod:(KobusReservationObject*)resvObj;
 - (void)processReservationInfo;
-- (void)processReservationInfo:(NSData*)responseData;
+- (void)sendReservationInfoUsingPostMethod:(KobusReservationObject*)resvObj;
 - (KobusReservationInfoList*)processReservationInfoList:(NSData*)responseData;
 - (void)sendReservationInfoQueryString:(NSString*)params withInfoList:(infoList)infolist;
 @end
