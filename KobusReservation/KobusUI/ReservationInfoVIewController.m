@@ -65,8 +65,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	
-	NSLog(@"%@",[infolist getTypeStringAtIndex:indexPath.row]);
+	int selectRow = indexPath.row-1;
+	if (selectRow<0) 
+		return;
+	NSLog(@"%@",[infolist getTypeStringAtIndex:selectRow]);
 }
 
 

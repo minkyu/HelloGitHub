@@ -53,10 +53,22 @@ const int padding = 10;
 	return self;
 }
 
+- (void)highlightButton:(UIButton *)b { 
+	
+	for (id subview in self.view.subviews) {
+		if ([subview isKindOfClass:[UIButton class]]) {
+			[subview setHighlighted:NO];
+		}
+	}
+	
+    [b setHighlighted:YES];
+}
+
+
 - (void)selectedButton:(UIButton*)button
 {
 	
-	//stackScrollViewController에 tag버그 있음 1,2,3내부적으로 사용해서 문제가 됨
+	[self performSelector:@selector(highlightButton:) withObject:button afterDelay:0.0];
 	
 	TicketCountStackViewController *dataViewController = [[TicketCountStackViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
 	[[KobusReservationAppDelegate stackScrollViewController] addViewInSlider:dataViewController invokeByController:self isStackStartView:FALSE];
