@@ -11,14 +11,14 @@
 
 @class RootViewController;
 @class KobusWeb;
-@class KobusReservationObject;
+@class KobusReservationQueryData;
 
 
 @interface KobusReservationAppDelegate : NSObject <UIApplicationDelegate>
 
 
 @property (nonatomic, retain) KobusWeb *web;
-@property (nonatomic, retain) KobusReservationObject *reservationObject;
+@property (nonatomic, retain) KobusReservationQueryData *reservationQueryData;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) RootViewController *rootViewController;

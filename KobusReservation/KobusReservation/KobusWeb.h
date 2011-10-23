@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "KobusReservationObject.h"
-#import "KobusReservationInfoList.h"
+#import "KobusReservationQueryData.h"
+
+
+@class KobusReservationInfoList;
 typedef void (^infoList)(KobusReservationInfoList*);
 
 
@@ -20,8 +22,5 @@ typedef void (^infoList)(KobusReservationInfoList*);
 
 - (void)loadKoBusWeb;
 - (void)processRouteData;
-- (void)processReservationInfo;
-- (void)sendReservationInfoUsingPostMethod:(KobusReservationObject*)resvObj;
-- (KobusReservationInfoList*)processReservationInfoList:(NSData*)responseData;
 - (void)sendReservationInfoQueryString:(NSString*)params withInfoList:(infoList)infolist;
 @end

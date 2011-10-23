@@ -9,7 +9,7 @@
 #import "KobusReservationAppDelegate.h"
 #import "RootViewController.h"
 #import "KobusWeb.h"
-#import "KobusReservationObject.h"
+#import "KobusReservationQueryData.h"
 #import "ReservationInfoVIewController.h"
 
 @implementation KobusReservationAppDelegate
@@ -19,7 +19,7 @@
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 @synthesize rootViewController = _rootViewController;
-@synthesize web,reservationObject;
+@synthesize web,reservationQueryData;
 
 + (KobusReservationAppDelegate *) instance {
 	return (KobusReservationAppDelegate *) [[UIApplication sharedApplication] delegate];
@@ -34,7 +34,7 @@
 {
 	web = [[KobusWeb alloc] init];
 	[web loadKoBusWeb];
-	reservationObject = [[KobusReservationObject alloc] init];
+	reservationQueryData = [[KobusReservationQueryData alloc] init];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(KobusReservationObjectNoti:) name:@"KobusReservation" object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ReservationInfoQuery:) name:@"ReservationInfoQuery" object:nil];
@@ -53,7 +53,7 @@
 	NSString *key = [notiDic objectForKey:@"key"];
 	NSString *value = [notiDic objectForKey:@"value"];
 	
-	[reservationObject setValue:value forKey:key];
+	[reservationQueryData setValue:value forKey:key];
 	
 	
 }
@@ -76,10 +76,10 @@
 {
 	if ([[noti object] isEqualToString:@"doReservation"]) {
 
-		NSString *check = [reservationObject checkValidation];
+		NSString *check = [reservationQueryData checkValidation];
 		if ([check isEqualToString:@"OK"]) {
 
-			[web sendReservationInfoQueryString:[reservationObject toGETParamString] withInfoList:^(KobusReservationInfoList *infolist) 
+			[web sendReservationInfoQueryString:[reservationQueryData toGETParamString] withInfoList:^(KobusReservationInfoList *infolist) 
 			{
 				[self showReservationInfoList:infolist];
 			}];			
