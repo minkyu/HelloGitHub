@@ -51,8 +51,7 @@
 {
 	NSDateFormatter *timeFormat = [[[NSDateFormatter alloc] init] autorelease];
 	[timeFormat setDateFormat:@"HH:00"];
-	int row = [dates indexOfObject:[timeFormat stringFromDate:[NSDate date]]]+1;
-	row = MAX(MIN(row, 0), 23);
+	int row = ([dates indexOfObject:[timeFormat stringFromDate:[NSDate date]]]+1)%24;
 	return [NSIndexPath indexPathForRow:row inSection:0];
 }
 

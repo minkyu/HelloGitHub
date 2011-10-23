@@ -43,8 +43,6 @@
 			if ([[[tds objectAtIndex:i] tagName] isEqualToString:@"input"]) {
 				[hideinfo setValue:[[tds objectAtIndex:i] objectForKey:@"value"] forKey:[[tds objectAtIndex:i] objectForKey:@"name"]];
 			}
-			else
-				break;
 		}
 		[infolist addHideInfoList:hideinfo];
 		
