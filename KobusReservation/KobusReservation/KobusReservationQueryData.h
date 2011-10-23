@@ -8,7 +8,7 @@
 
 
 
-@interface KobusReservationObject : NSObject
+@interface KobusReservationQueryData : NSObject
 
 @property (nonatomic,copy) NSString *origin; // 출발지
 @property (nonatomic,copy) NSString *destination; // 도작치

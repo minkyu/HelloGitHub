@@ -6,9 +6,9 @@
 //  Copyright 2011년 앱달. All rights reserved.
 //
 
-#import "KobusReservationObject.h"
+#import "KobusReservationQueryData.h"
 
-@implementation KobusReservationObject
+@implementation KobusReservationQueryData
 
 @synthesize origin,destination,date,busClass,ticketCount;
 //사이트에 사용되는 param
