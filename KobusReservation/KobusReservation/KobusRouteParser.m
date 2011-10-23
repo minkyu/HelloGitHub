@@ -6,14 +6,14 @@
 //  Copyright (c) 2011년 앱달. All rights reserved.
 //
 
-#import "KobusRouteWeb.h"
+#import "KobusRouteParser.h"
 
-@implementation KobusRouteWeb
+@implementation KobusRouteParser
 
 #pragma mark - Origins method
 
 // 출발지를 가져온다
-- (NSArray *) matchesOfOriginsInString:(NSString*)aString
++ (NSArray *) matchesOfOriginsInString:(NSString*)aString
 {
 	NSError *error = NULL;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"<option value=\"([\\d]{3})\" >(.*)</option>"
@@ -22,7 +22,7 @@
 	return [regex matchesInString:aString options:0 range:NSMakeRange(0, [aString length])];	
 }
 
-- (MutableSortedDictionary *)parseOrigins:(NSString*)aStr 
++ (MutableSortedDictionary *)parseOrigins:(NSString*)aStr 
 {
 	MutableSortedDictionary *Origins = [[MutableSortedDictionary alloc] init];
     for (NSTextCheckingResult *match in [self matchesOfOriginsInString:aStr]) {
@@ -41,7 +41,7 @@
 #pragma mark - Destinations method
 
 
-- (NSArray *) matchesOfDestinationsInString:(NSString*)aString
++ (NSArray *) matchesOfDestinationsInString:(NSString*)aString
 {
     NSError *error = NULL;
     NSRegularExpression *regex = [NSRegularExpression 
@@ -52,7 +52,7 @@
 	return [regex matchesInString:aString options:0 range:NSMakeRange(0, [aString length])];	
 }
 
-- (SortedDictionary*)destinationForOrgine:(NSString*)fromCode
++ (SortedDictionary*)destinationForOrgine:(NSString*)fromCode
 {
 	NSError *error = NULL;	
 	NSRegularExpression *subvalueregex = [NSRegularExpression regularExpressionWithPattern:@"].value	= \"([\\d]{3})\"" 
@@ -78,7 +78,7 @@
 	return [destination autorelease];
 }
 
-- (MutableSortedDictionary*)parseDestinations:(NSString*)aStr
++ (MutableSortedDictionary*)parseDestinations:(NSString*)aStr
 {
 	MutableSortedDictionary *Destinations = [[MutableSortedDictionary alloc]init];
 	for (NSTextCheckingResult *match in [self matchesOfDestinationsInString:aStr]) {

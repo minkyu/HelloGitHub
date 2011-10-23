@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface KobusRouteWeb : NSObject
+@interface KobusRouteParser : NSObject
 
-- (MutableSortedDictionary *)parseOrigins:(NSString*)aStr;
-- (MutableSortedDictionary *)parseDestinations:(NSString*)aStr;
++ (MutableSortedDictionary *)parseOrigins:(NSString*)aStr;
++ (MutableSortedDictionary *)parseDestinations:(NSString*)aStr;
 @end
