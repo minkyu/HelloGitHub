@@ -35,14 +35,15 @@
 	NSDictionary *uerinfo = [NSDictionary dictionaryWithObjectsAndKeys:
 							 key,@"key",
 							 value,@"value"
-							 ,nil];	 
-	NSLog(@"%@",uerinfo);
+							 ,nil];	
 	[[NSNotificationCenter defaultCenter] postNotificationName:name object:object userInfo:uerinfo];
+
+
 }
 
-- (void)addButton:(NSString*)title origin:(CGPoint)origin size:(CGSize)size tag:(int)aTag
+- (void)addButton:(NSString*)title origin:(CGPoint)origin size:(CGSize)size tag:(int)aTag Autoresizing:(UIViewAutoresizing)Autoresizing
 {
-	UIButton *button = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
+	UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 	button.tag = aTag;
 	[button addTarget:self action:@selector(selectedButton:) forControlEvents:UIControlEventTouchUpInside];
 	[button setTitle:title forState:UIControlStateNormal];
@@ -50,8 +51,13 @@
 							  origin.y, 
 							  size.width, 
 							  size.height);
+	button.autoresizingMask = Autoresizing;
 	[self.view addSubview:button];
-	[button release];
+}
+
+- (void)addButton:(NSString*)title origin:(CGPoint)origin size:(CGSize)size tag:(int)aTag
+{
+	[self addButton:title origin:origin size:size tag:aTag Autoresizing:UIViewAutoresizingNone];
 }
 
 - (id)initWithFrame:(CGRect)frame {

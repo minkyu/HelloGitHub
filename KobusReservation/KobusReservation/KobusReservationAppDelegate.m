@@ -10,6 +10,7 @@
 #import "RootViewController.h"
 #import "KobusWeb.h"
 #import "KobusReservationObject.h"
+#import "ReservationInfoVIewController.h"
 
 @implementation KobusReservationAppDelegate
 
@@ -57,6 +58,19 @@
 	
 }
 
+- (void)showReservationInfoList:(KobusReservationInfoList*)aInfolist;
+{
+	ReservationInfoVIewController *viewcon = [[ReservationInfoVIewController alloc] initWithNibName:@"ReservationInfoVIewController" bundle:nil];
+	viewcon.infolist = aInfolist;
+	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewcon];
+	[viewcon release];
+	navController.modalPresentationStyle = UIModalPresentationFormSheet;
+	navController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+	
+	[_rootViewController presentModalViewController:navController animated:YES];
+	[navController release];
+}
+
 
 // 예약 가능한 버스 시간, 좌석 수 등을 조회
 - (void)ReservationInfoQuery:(NSNotification*)noti
@@ -67,8 +81,16 @@
 		
 		NSString *check = [reservationObject checkValidation];
 		if ([check isEqualToString:@"OK"]) {
-			[web sendReservationInfoQueryString:[reservationObject toGETParamString]];
-			//[web sendReservationInfoUsingPostMethod:reservationObject];
+//			[web sendReservationInfoQueryString:[reservationObject toGETParamString]];
+			[web sendReservationInfoQueryString:[reservationObject toGETParamString] withInfoList:^(KobusReservationInfoList *infolist) 
+			{
+				[self showReservationInfoList:infolist];
+			}];
+			
+			
+			
+			
+			
 		}
 		else
 		{

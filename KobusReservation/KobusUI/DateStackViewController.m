@@ -83,7 +83,7 @@ const int kalViewWidth = 322;
 		kal.delegate = self;
 		self.dataSource = [[DateDataSource alloc] init];
 		kal.dataSource = dataSource;
-		[dataSource release];
+		
 				
 	}
 	return self;
@@ -91,6 +91,7 @@ const int kalViewWidth = 322;
 
 - (void)dealloc
 {
+	[dataSource release];
 	[kal release];
 	[super dealloc];
 }

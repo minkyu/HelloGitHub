@@ -17,6 +17,7 @@
 
 - (id)initWithFrame:(CGRect)frame;
 - (void)addButton:(NSString*)title origin:(CGPoint)origin size:(CGSize)size tag:(int)aTag;
+- (void)addButton:(NSString*)title origin:(CGPoint)origin size:(CGSize)size tag:(int)aTag Autoresizing:(UIViewAutoresizing)Autoresizing;
 - (void)postNoticationReservation:(NSString*)name object:(NSString*)object;
 - (void)postNoticationReservation:(NSString*)name value:(NSString*)value key:(NSString*)key;
 - (void)postNoticationReservation:(NSString*)name value:(NSString*)value key:(NSString*)key object:(NSString*)object;

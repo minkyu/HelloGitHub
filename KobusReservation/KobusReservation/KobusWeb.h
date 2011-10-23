@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "KobusReservationObject.h"
-//typedef void (^datas)(SortedDictionary*,SortedDictionary*);
+#import "KobusReservationInfoList.h"
+typedef void (^infoList)(KobusReservationInfoList*);
 
 
 @interface KobusWeb : NSObject 
@@ -24,4 +25,6 @@
 - (void)sendReservationInfoUsingPostMethod:(KobusReservationObject*)resvObj;
 - (void)processReservationInfo;
 - (void)processReservationInfo:(NSData*)responseData;
+- (KobusReservationInfoList*)processReservationInfoList:(NSData*)responseData;
+- (void)sendReservationInfoQueryString:(NSString*)params withInfoList:(infoList)infolist;
 @end

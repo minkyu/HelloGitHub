@@ -15,19 +15,6 @@ const int padding = 10;
 @implementation ClassStackViewController
 
 
-- (void)addButton:(NSString*)title origin:(CGPoint)origin size:(CGSize)size tag:(int)aTag
-{
-	UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	button.tag = aTag;
-	[button addTarget:self action:@selector(selectedButton:) forControlEvents:UIControlEventTouchUpInside];
-	[button setTitle:title forState:UIControlStateNormal];
-	button.frame = CGRectMake(origin.x, 
-							  origin.y, 
-							  size.width, 
-							  size.height);
-	[self.view addSubview:button];
-}
-
 - (id)initWithFrame:(CGRect)frame
 {
 	self = [super initWithFrame:frame];
@@ -70,7 +57,6 @@ const int padding = 10;
 {
 	
 	//stackScrollViewController에 tag버그 있음 1,2,3내부적으로 사용해서 문제가 됨
-	NSLog(@"tag:%d",button.tag);
 	
 	TicketCountStackViewController *dataViewController = [[TicketCountStackViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
 	[[KobusReservationAppDelegate stackScrollViewController] addViewInSlider:dataViewController invokeByController:self isStackStartView:FALSE];

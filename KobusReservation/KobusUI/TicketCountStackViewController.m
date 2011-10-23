@@ -88,7 +88,7 @@ static const int childrenTag = 200;
 										   titleHeight+boundaryHeight+labelHeight*2+adultSegmentHeight+childrenSegmentHeight+padding );
 		CGSize buttionsize = CGSizeMake(frame.size.width-padding*2, 
 										frame.size.height-(titleHeight+boundaryHeight+labelHeight*2+adultSegmentHeight+childrenSegmentHeight+padding*2));
-		[self addButton:@"예약하기" origin:bouttonpoint size:buttionsize tag:10];
+		[self addButton:@"예약하기" origin:bouttonpoint size:buttionsize tag:10  Autoresizing:(UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight)];
 		
 	
 	}
@@ -114,14 +114,6 @@ static const int childrenTag = 200;
 
 - (void)selectedButton:(UIButton*)button
 {
-	
-//	NSString *TicketCount = [NSString stringWithFormat:@"%@  %@",adultStr,childrenStr]; 
-//	[self postNoticationReservation:@"KobusReservation" value:TicketCount key:@"ticketCount"];
-	
-	// 사이트 param
-	
-	
-	
 	// TODO 값 Validation 로직 
 	// TODO 예약 값을 사이트로 전송한 후 페이지를 받아옴
 	// TODO 자리 선택하는 View 생성
