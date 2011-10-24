@@ -36,10 +36,11 @@
 	[hideInfoList addObject:objects];
 }
 
-- (int)getBusClass:(NSInteger)index
+- (NSDictionary*)getHideInfo:(NSInteger)index
 {
-	return [[[hideInfoList objectAtIndex:index] objectForKey:@"pWeb_cnt"] intValue];
+	return [hideInfoList objectAtIndex:index];
 }
+
 
 - (NSString*)getTypeStringAtIndex:(NSInteger)index
 {

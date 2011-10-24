@@ -87,7 +87,10 @@
 	[request setCompletionBlock:^{
 //		NSLog(@"%@",[request responseString]);
 		
-		BusSeatSelectViewController *viewcont = [[BusSeatSelectViewController alloc] initWithNibName:@"BusSeatSelectViewController" bundle:nil busClass:[infolist getBusClass:selectRow]];
+		BusSeatSelectViewController *viewcont = [[BusSeatSelectViewController alloc] initWithNibName:@"BusSeatSelectViewController" 
+																							  bundle:nil 
+																							busInfo:[infolist getHideInfo:selectRow]];
+		infolist.hideInfoList;
 		[self.navigationController pushViewController:viewcont animated:YES];
 		[viewcont release];
 		

@@ -9,12 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface BusSeatSelectViewController : UIViewController
-{
-	int busClass;
-}
 @property (retain, nonatomic) IBOutlet UIView *PremiumClassView;
 @property (retain, nonatomic) IBOutlet UIView *NormalClassView;
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil busClass:(int)aBusClass;
+@property (retain, nonatomic) NSDictionary *busInfo;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil busInfo:(NSDictionary*)abusInfo;
 - (IBAction)buttonAction:(id)sender;
 
 @end
