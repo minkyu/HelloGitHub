@@ -69,6 +69,19 @@
 	if (selectRow<0) 
 		return;
 	NSLog(@"%@",[infolist getTypeStringAtIndex:selectRow]);
+	
+	NSString *usrStr = [NSString stringWithFormat:@"https://www.kobus.co.kr/web/03_reservation/reservation01_2.jsp?%@",[infolist getTypeStringAtIndex:selectRow]];
+	NSLog(@"%@",usrStr);
+//	NSString *usrStr = [NSString stringWithFormat:@"http://m.kobus.co.kr/web/m/reservation/sel_seat.jsp?%@",[infolist getTypeStringAtIndex:selectRow]];
+	NSURL *url = [NSURL URLWithString:usrStr];
+	__block ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+	[request setCompletionBlock:^{
+		NSLog(@"%@",[request responseString]);
+	} ];
+	[request setFailedBlock:^{
+		NSLog(@"%@",[request error]);
+	}];
+	[request startAsynchronous];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

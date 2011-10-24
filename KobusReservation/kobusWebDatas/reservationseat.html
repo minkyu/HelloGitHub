@@ -1,0 +1,2744 @@
+<html>
+<head>
+<title>::::: Welcome to KOBUS</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" src="/js/flash.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function goHome()
+{
+		document.location ='http://www.kobus.co.kr/web/index.jsp';
+}
+
+//이용안내
+function go1(chk)
+{
+       if (chk==0) {
+			document.location ='#';
+		}  else if (chk==1) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info01.jsp';
+		} else if (chk==2) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info02.jsp';
+		} else if (chk==3) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info03.jsp';
+		} else if (chk==4) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info04.jsp';
+		} else if (chk==5) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info05.jsp';
+		}else if (chk==6) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info06.jsp';
+		}else if (chk==7) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info07.jsp';
+		}else if (chk==8) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info08.jsp';   //무인발권기 설치장소
+       		}else if (chk==9) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info09.jsp';   //고속버스운송회사안내
+		}else if (chk==10) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info10.jsp';   //터미널안내
+		}else if (chk==11) {
+			window.open("card.asp","new","width=703,height=350,scrollbars=yes");   //신용카드환불안내
+		}else if (chk==12) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info12.jsp';   //현금영수증처리
+		}else if (chk==121) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info12_1.jsp';   //현금영수증승인완료
+		}else if (chk==13) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info13.jsp';   //팝업설정안내
+		}else if (chk==14) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info14.jsp';   //운송 약관안내
+		}else if (chk==15) {
+			document.location ='http://www.kobus.co.kr/web/01_info/info16.jsp';   //고속버스 홈티켓 안내
+		}
+}
+
+
+
+// 고속버스운행정보
+
+function  go2(chk)
+{
+if (chk==0) {
+		document.location = '#';
+		}else if (chk==1) {
+			document.location ='http://www.kobus.co.kr/web/02_bus/bus01.jsp'; //운행정보
+		}else if (chk==11) {
+			document.location ='http://www.kobus.co.kr/web/02_bus/bus01_1.jsp'; //운행정보조회
+		}
+}
+
+// 승차권예약
+function  go3(chk)
+{
+if (chk==0) {
+			document.location ='#';
+		} else if (chk==1) {
+			document.location ='http://www.kobus.co.kr/web/03_reservation/reservation01.jsp';     //승차권에약
+		}else if (chk==11) {
+			document.location ='http://www.kobus.co.kr/web/03_reservation/reservation01_1.jsp';     //버스,좌석선택
+		}else if (chk==12) {
+			document.location ='http://www.kobus.co.kr/web/03_reservation/reservation01_2.jsp';     //좌석선택
+		}else if (chk==13) {
+			document.location ='http://www.kobus.co.kr/web/03_reservation/reservation01_3.jsp';     //결제
+		}else if (chk==14) {
+			document.location ='http://www.kobus.co.kr/web/03_reservation/reservation01_4.jsp';     //결제완료
+		}else if (chk==15) {
+			document.location ='https://www.kobus.co.kr/web/03_reservation/reservation01_5.jsp';     //왕복권예매승차권예약
+		}else if (chk==16) {
+			document.location ='http://www.kobus.co.kr/web/03_reservation/reservation01_6.jsp';     //왕복권예매
+		}else if (chk==2) {
+			document.location ='https://www.kobus.co.kr/web/04_inquiry/inquiry01.jsp'; //예약예매조회
+		}else if (chk ==3){
+			document.location ='https://home.kobus.co.kr/web/10_HomeTicketSearch/HomeTckTax.jsp';
+		}
+ 
+}
+
+
+/// 예약조회/변경/취소
+function  go4(chk)
+{
+if (chk==0) {
+			document.location ='#';
+		}  else if (chk==1) {
+			document.location ='https://www.kobus.co.kr/web/04_inquiry/inquiry01.jsp';   //카드예약조회
+		}else if (chk==11) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry01_1.jsp';   //계좌이체예약조회
+		}  else if (chk==12) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry01_2.jsp';    //카드예약조회
+		} else if (chk==2) {
+			document.location  ='https://www.kobus.co.kr/web/04_inquiry/inquiry01.jsp';   //매수변경
+		}else if (chk==201) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry02_1.jsp';    //매수변경계속
+		}else if (chk==21) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry021.jsp';   //시간변경
+		}else if (chk==211) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry021_1.jsp';   //시간변경계속
+		}else if (chk==212) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry021_2.jsp';   //시간변경
+		}else if (chk==213) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry021_3.jsp';   //시간변경변경
+		}else if (chk==214) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry021_4.jsp';   //시간변경변경 완료
+		}else if (chk==22) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry022.jsp';   //시간/매수변경
+		}else if (chk==221) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry022_1.jsp';   //시간/매수변경계속
+		}else if (chk==222) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry022_2.jsp';   //시간/매수변경
+		}else if (chk==223) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry022_3.jsp';   //시간/매수변경
+		}else if (chk==224) {
+			document.location ='http://www.kobus.co.kr/web/04_inquiry/inquiry022_4.jsp';    //시간/매수변경  완료
+		}else if (chk==3) {
+			document.location ='https://www.kobus.co.kr/web/04_inquiry/inquiry01.jsp';   //예약취소
+	 	}
+}
+
+
+
+
+
+// 고객의소리
+function  go5(chk)
+{
+if (chk==0) {
+			document.location = '#';
+		}  else if (chk==1) {
+			document.location ='http://www.kobus.co.kr/web/05_customer/customer01.jsp';
+		} else if (chk==2) {
+			document.location ='http://www.kobus.co.kr/web/05_customer/customer02.jsp';
+		}else if (chk==21) {
+			document.location ='http://www.kobus.co.kr/web/05_customer/customer02_1.jsp';
+		}else if (chk==22) {
+			document.location ='http://www.kobus.co.kr/web/05_customer/customer02_2.jsp';
+		} else if (chk==3) {
+			document.location ='http://www.kobus.co.kr/web/05_customer/customer03.jsp';
+		} else if (chk==4) {
+			document.location ='http://www.kobus.co.kr/web/05_customer/customer04.jsp';
+		}
+}
+
+
+// 전국고속버스운송사업조합
+function  go6(chk)
+{
+if (chk==0) {
+			document.location ='http://www.kobus.co.kr/web/06_introduction/introduction.jsp';
+		}  else if (chk==1) {
+			document.location ='http://www.kobus.co.kr/web/06_introduction/introduction01.jsp';
+		} else if (chk==2) {
+			document.location ='http://www.kobus.co.kr/web/06_introduction/introduction02.jsp';
+		} else if (chk==3) {
+			document.location ='http://www.kobus.co.kr/web/06_introduction/introduction03.jsp';
+		} else if (chk==4) {
+			document.location ='http://www.kobus.co.kr/web/06_introduction/introduction04.jsp';
+		} else if (chk==5) {
+			document.location ='http://www.kobus.co.kr/web/06_introduction/introduction05.jsp';
+		} else if (chk==6) {
+			document.location ='http://www.kobus.co.kr/web/06_introduction/introduction06.jsp';   //알림마당-공지사항
+		}else if (chk==61) {
+			document.location ='http://www.kobus.co.kr/web/06_introduction/introduction06_1.jsp';     //알림마당-이벤트
+		}else if (chk==62) {
+			document.location ='http://www.kobus.co.kr/web/06_introduction/introduction06_2.jsp';     //알림마당-보도자료
+		}else if (chk==63) {
+			document.location ='http://www.kobus.co.kr/web/06_introduction/introduction06_3.jsp';     //알림마당-채용안내
+		} else if (chk==7) {
+			document.location ='http://www.kobus.co.kr/web/06_introduction/introduction08.jsp';
+		}  else if (chk==8) {
+			document.location ='http://www.kobus.co.kr/web/06_introduction/introduction08.jsp';
+		}
+}
+
+
+//사이트맵
+function  go7(chk)
+{
+		if (chk==1) {
+			document.location ='http://www.kobus.co.kr/web/07_sitemap/sitemap01.jsp';
+		}
+}
+
+
+
+
+
+//공지사항
+function  go8(chk)
+{
+		if (chk==1) {
+			document.location ='http://www.kobus.co.kr/web/08_notice/notice01.jsp';
+		}
+}
+
+//인터넷 승차권
+function  go9(chk)
+{
+		if (chk==1) {
+			document.location = 'http://home.kobus.co.kr/web/09_HomeTicket/HTBusSelect.jsp';
+		} else if (chk==2) {
+			document.location ='https://home.kobus.co.kr/web/10_HomeTicketSearch/HomeTckCanSearch.jsp';
+		} else if (chk==3) {
+			document.location ='https://home.kobus.co.kr/web/10_HomeTicketSearch/HomeTckSearch.jsp';
+		} else if (chk==4) {
+			document.location ='https://home.kobus.co.kr/web/10_HomeTicketSearch/HomeTckTax.jsp';
+		} else if (chk==5) {
+			document.location ='https://home.kobus.co.kr/web/10_HomeTicketSearch/HomeTckTax.jsp';
+		}
+}
+
+
+//기타,,약관등
+
+function  etc(chk)
+{
+		if (chk==1) {
+			document.location ='http://www.kobus.co.kr/web/08_etc/etc01.jsp';
+		} else if (chk==2) {
+			document.location ='http://www.kobus.co.kr/web/eng/index.jsp';
+		}
+}
+
+/// mail
+function mail(chk)
+{
+		if (chk==1) {
+			document.location = 'mailto:@';
+		}
+}
+
+//top_btn
+function GoTop()
+{
+		document.location = '#top';
+}
+
+
+
+// 메인에 스크롤되는 이미지 3개
+function  quick(chk)
+{
+if (chk==0) {
+			document.location = '#';
+		}  else if (chk==1) {
+			window.open("popup.asp","new","width=703,height=350,scrollbars=yes");   //서울-부산 소요시간단축
+		} else if (chk==2) {
+			document.location ='#';   //서울-점촌 노선신설
+		} else if (chk==3) {
+			document.location ='#';   //광주-전주 요금인하
+		}
+}
+
+
+///메인협력사배너
+function banner(chk)
+{
+		if (chk==1) {
+		window.open("http://www.kobus.co.kr/web/etc/chunil.jsp","com","width=532,height=500,scrollbars=yes");   //천일고속
+		}
+}
+//-->
+</script>
+ 
+<script language="JavaScript" src="/js/javascript.js"></script>
+<script language="JavaScript" src="/js/main.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr"></head>
+<body onLoad="fc_Caution(), fc_showSeat(); " leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_preloadImages('/images/image01/t_home_o.gif','/images/image01/t_sitemap_o.gif','/images/image01/t_contactus_o.gif','/images/image01/t_english_o.gif')">
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td background="/images/image01/top_bg.gif"><table width="990" border="0" cellpadding="0" cellspacing="0">
+				<tr> 
+					<td width="200" height="100" rowspan="2" align="center" valign="top">
+						<!--로고-->
+						<script>flashWrite('/flash/flash01/logo.swf','200','100')</script></td>
+					<td align="right" valign="top"><table border="0" cellpadding="0" cellspacing="0">
+							<tr> 
+								<td><a href="javascript:goHome()" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','/images/image01/t_home_o.gif',1)"><img src="/images/image01/t_home.gif" name="Image3" width="45" height="33" border="0"></a></td>
+								<td><a href="javascript:go7(1)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','/images/image01/t_sitemap_o.gif',1)"><img src="/images/image01/t_sitemap.gif" name="Image6" width="57" height="33"  border="0"></a></td>
+								<td><a href="javascript:mail(1)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','/images/image01/t_contactus_o.gif',1)"><img src="/images/image01/t_contactus.gif" name="Image7" width="76" height="33" border="0"></a></td>
+								<td><a href="javascript:etc(2)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','/images/image01/t_english_o.gif',1)"><img src="/images/image01/t_english.gif" name="Image8" width="57" height="33"  border="0"></a></td>
+							</tr>
+						</table></td>
+				</tr>
+				<tr> 
+					<td height="67" valign="top" background="/images/image01/menu_bg.gif" ><script>flashWrite('/flash/flash01/menu.swf?pageNum=3','790','67')</script></td>
+				</tr>
+			</table></td>
+	</tr>
+</table>
+
+
+<script language = "JavaScript">
+<!--
+var check_seat =0;
+
+
+var full_seat = 0 + 1;
+
+function fc_showSeat() {
+
+
+						document.SeatForm.c1.disabled=false;
+
+
+						document.SeatForm.c2.disabled=false;
+
+
+						document.SeatForm.c3.disabled=false;
+
+
+						document.SeatForm.c4.disabled=false;
+
+
+						document.SeatForm.c5.disabled=false;
+
+
+						document.SeatForm.c6.disabled=false;
+
+
+						document.SeatForm.c7.disabled=false;
+
+
+						document.SeatForm.c8.disabled=false;
+
+
+						document.SeatForm.c9.disabled=false;
+
+
+						document.SeatForm.c10.disabled=false;
+
+
+						document.SeatForm.c11.disabled=false;
+
+
+						document.SeatForm.c12.disabled=false;
+
+
+						document.SeatForm.c13.disabled=false;
+
+
+						document.SeatForm.c14.disabled=false;
+
+
+						document.SeatForm.c15.disabled=false;
+
+
+						document.SeatForm.c16.disabled=false;
+
+
+						document.SeatForm.c17.disabled=false;
+
+
+						document.SeatForm.c18.disabled=false;
+
+
+						document.SeatForm.c19.disabled=false;
+
+
+						document.SeatForm.c20.disabled=false;
+
+
+						document.SeatForm.c21.disabled=false;
+
+
+						document.SeatForm.c22.disabled=false;
+
+
+						document.SeatForm.c23.disabled=false;
+
+
+						document.SeatForm.c24.disabled=false;
+
+
+						document.SeatForm.c25.disabled=false;
+
+
+						document.SeatForm.c26.disabled=false;
+
+
+						document.SeatForm.c27.disabled=false;
+
+
+						document.SeatForm.c28.disabled=false;
+
+
+						document.SeatForm.c29.disabled=false;
+
+
+						document.SeatForm.c30.disabled=false;
+
+
+						document.SeatForm.c31.disabled=false;
+
+
+						document.SeatForm.c32.disabled=false;
+
+
+						document.SeatForm.c33.disabled=false;
+
+
+						document.SeatForm.c34.disabled=false;
+
+
+						document.SeatForm.c35.disabled=false;
+
+
+						document.SeatForm.c36.disabled=false;
+
+
+						document.SeatForm.c37.disabled=false;
+
+
+						document.SeatForm.c38.disabled=false;
+
+
+						document.SeatForm.c39.disabled=false;
+
+
+						document.SeatForm.c40.disabled=false;
+
+
+						document.SeatForm.c41.disabled=false;
+
+
+						document.SeatForm.c42.disabled=false;
+
+
+						document.SeatForm.c43.disabled=false;
+
+
+						document.SeatForm.c44.disabled=false;
+
+
+						document.SeatForm.c45.disabled=false;
+
+
+
+
+
+}
+
+function fc_clear() {
+
+
+		document.SeatForm.c1.disabled=true;
+		document.SeatForm.c1.checked=false;
+
+		document.SeatForm.c2.disabled=true;
+		document.SeatForm.c2.checked=false;
+
+		document.SeatForm.c3.disabled=true;
+		document.SeatForm.c3.checked=false;
+
+		document.SeatForm.c4.disabled=true;
+		document.SeatForm.c4.checked=false;
+
+		document.SeatForm.c5.disabled=true;
+		document.SeatForm.c5.checked=false;
+
+		document.SeatForm.c6.disabled=true;
+		document.SeatForm.c6.checked=false;
+
+		document.SeatForm.c7.disabled=true;
+		document.SeatForm.c7.checked=false;
+
+		document.SeatForm.c8.disabled=true;
+		document.SeatForm.c8.checked=false;
+
+		document.SeatForm.c9.disabled=true;
+		document.SeatForm.c9.checked=false;
+
+		document.SeatForm.c10.disabled=true;
+		document.SeatForm.c10.checked=false;
+
+		document.SeatForm.c11.disabled=true;
+		document.SeatForm.c11.checked=false;
+
+		document.SeatForm.c12.disabled=true;
+		document.SeatForm.c12.checked=false;
+
+		document.SeatForm.c13.disabled=true;
+		document.SeatForm.c13.checked=false;
+
+		document.SeatForm.c14.disabled=true;
+		document.SeatForm.c14.checked=false;
+
+		document.SeatForm.c15.disabled=true;
+		document.SeatForm.c15.checked=false;
+
+		document.SeatForm.c16.disabled=true;
+		document.SeatForm.c16.checked=false;
+
+		document.SeatForm.c17.disabled=true;
+		document.SeatForm.c17.checked=false;
+
+		document.SeatForm.c18.disabled=true;
+		document.SeatForm.c18.checked=false;
+
+		document.SeatForm.c19.disabled=true;
+		document.SeatForm.c19.checked=false;
+
+		document.SeatForm.c20.disabled=true;
+		document.SeatForm.c20.checked=false;
+
+		document.SeatForm.c21.disabled=true;
+		document.SeatForm.c21.checked=false;
+
+		document.SeatForm.c22.disabled=true;
+		document.SeatForm.c22.checked=false;
+
+		document.SeatForm.c23.disabled=true;
+		document.SeatForm.c23.checked=false;
+
+		document.SeatForm.c24.disabled=true;
+		document.SeatForm.c24.checked=false;
+
+		document.SeatForm.c25.disabled=true;
+		document.SeatForm.c25.checked=false;
+
+		document.SeatForm.c26.disabled=true;
+		document.SeatForm.c26.checked=false;
+
+		document.SeatForm.c27.disabled=true;
+		document.SeatForm.c27.checked=false;
+
+		document.SeatForm.c28.disabled=true;
+		document.SeatForm.c28.checked=false;
+
+		document.SeatForm.c29.disabled=true;
+		document.SeatForm.c29.checked=false;
+
+		document.SeatForm.c30.disabled=true;
+		document.SeatForm.c30.checked=false;
+
+		document.SeatForm.c31.disabled=true;
+		document.SeatForm.c31.checked=false;
+
+		document.SeatForm.c32.disabled=true;
+		document.SeatForm.c32.checked=false;
+
+		document.SeatForm.c33.disabled=true;
+		document.SeatForm.c33.checked=false;
+
+		document.SeatForm.c34.disabled=true;
+		document.SeatForm.c34.checked=false;
+
+		document.SeatForm.c35.disabled=true;
+		document.SeatForm.c35.checked=false;
+
+		document.SeatForm.c36.disabled=true;
+		document.SeatForm.c36.checked=false;
+
+		document.SeatForm.c37.disabled=true;
+		document.SeatForm.c37.checked=false;
+
+		document.SeatForm.c38.disabled=true;
+		document.SeatForm.c38.checked=false;
+
+		document.SeatForm.c39.disabled=true;
+		document.SeatForm.c39.checked=false;
+
+		document.SeatForm.c40.disabled=true;
+		document.SeatForm.c40.checked=false;
+
+		document.SeatForm.c41.disabled=true;
+		document.SeatForm.c41.checked=false;
+
+		document.SeatForm.c42.disabled=true;
+		document.SeatForm.c42.checked=false;
+
+		document.SeatForm.c43.disabled=true;
+		document.SeatForm.c43.checked=false;
+
+		document.SeatForm.c44.disabled=true;
+		document.SeatForm.c44.checked=false;
+
+		document.SeatForm.c45.disabled=true;
+		document.SeatForm.c45.checked=false;
+
+}
+function  fc_Select() {
+
+
+	var str = "";
+	var d = document.FrmCad;
+    var radiovalue;
+    var sum = 0;
+    var getlist =new Array(10);
+    var chkvalue =new Array("1","3","7","1","3","7","1","3","5");
+    var vencod = "";
+    var odd = 0;
+
+    buf = new Array(7);
+
+    radiovalue = document.FrmCad.koreng.value ;
+    vencod = document.FrmCad.pUSR_JUMIN.value ;
+
+	
+	if(full_seat > check_seat){
+		alert("예약/예매 좌석을 선택해 주십시요!");
+		return false;
+	}// if(full_seat의 끝
+
+	var sSeat= "";
+
+		if((document.SeatForm.c1.checked==true)&&(document.SeatForm.c1.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c1.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c2.checked==true)&&(document.SeatForm.c2.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c2.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c3.checked==true)&&(document.SeatForm.c3.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c3.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c4.checked==true)&&(document.SeatForm.c4.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c4.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c5.checked==true)&&(document.SeatForm.c5.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c5.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c6.checked==true)&&(document.SeatForm.c6.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c6.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c7.checked==true)&&(document.SeatForm.c7.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c7.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c8.checked==true)&&(document.SeatForm.c8.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c8.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c9.checked==true)&&(document.SeatForm.c9.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c9.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c10.checked==true)&&(document.SeatForm.c10.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c10.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c11.checked==true)&&(document.SeatForm.c11.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c11.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c12.checked==true)&&(document.SeatForm.c12.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c12.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c13.checked==true)&&(document.SeatForm.c13.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c13.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c14.checked==true)&&(document.SeatForm.c14.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c14.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c15.checked==true)&&(document.SeatForm.c15.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c15.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c16.checked==true)&&(document.SeatForm.c16.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c16.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c17.checked==true)&&(document.SeatForm.c17.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c17.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c18.checked==true)&&(document.SeatForm.c18.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c18.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c19.checked==true)&&(document.SeatForm.c19.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c19.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c20.checked==true)&&(document.SeatForm.c20.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c20.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c21.checked==true)&&(document.SeatForm.c21.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c21.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c22.checked==true)&&(document.SeatForm.c22.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c22.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c23.checked==true)&&(document.SeatForm.c23.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c23.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c24.checked==true)&&(document.SeatForm.c24.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c24.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c25.checked==true)&&(document.SeatForm.c25.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c25.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c26.checked==true)&&(document.SeatForm.c26.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c26.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c27.checked==true)&&(document.SeatForm.c27.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c27.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c28.checked==true)&&(document.SeatForm.c28.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c28.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c29.checked==true)&&(document.SeatForm.c29.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c29.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c30.checked==true)&&(document.SeatForm.c30.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c30.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c31.checked==true)&&(document.SeatForm.c31.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c31.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c32.checked==true)&&(document.SeatForm.c32.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c32.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c33.checked==true)&&(document.SeatForm.c33.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c33.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c34.checked==true)&&(document.SeatForm.c34.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c34.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c35.checked==true)&&(document.SeatForm.c35.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c35.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c36.checked==true)&&(document.SeatForm.c36.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c36.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c37.checked==true)&&(document.SeatForm.c37.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c37.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c38.checked==true)&&(document.SeatForm.c38.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c38.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c39.checked==true)&&(document.SeatForm.c39.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c39.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c40.checked==true)&&(document.SeatForm.c40.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c40.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c41.checked==true)&&(document.SeatForm.c41.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c41.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c42.checked==true)&&(document.SeatForm.c42.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c42.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c43.checked==true)&&(document.SeatForm.c43.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c43.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c44.checked==true)&&(document.SeatForm.c44.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c44.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c45.checked==true)&&(document.SeatForm.c45.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c45.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+		document.KSPayOForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+
+	if(d.pCAD_NO.value.length == 0 || d.pCAD_NO.value == "") {
+		alert("카드번호를 입력하세요");
+		d.pCAD_NO.value	= "";
+		d.pCAD_NO.focus();
+		return false;
+	} else if(d.pCAD_NO.value.length != 14 && d.pCAD_NO.value.length != 15 && d.pCAD_NO.value.length != 16) {
+		alert("카드번호는 14자리 또는 16자리입니다. 다시 입력하세요");
+		d.pCAD_NO.value	= "";
+		d.pCAD_NO.focus();
+		return false;
+	} else if(!isNum(d.pCAD_NO.value)) {
+		alert("숫자만 입력해 주십시오.");
+		d.pCAD_NO.value	= "";
+		d.pCAD_NO.focus();
+		return false;
+	} else if(d.pCAD_NO.value == "9410802724620007" || d.pCAD_NO.value == "4499141114515002" || d.pCAD_NO.value == "4349760956176557" || d.pCAD_NO.value == "9440321030920101" || d.pCAD_NO.value == "9440114301525885" || d.pCAD_NO.value == "5021233207029126") {
+		alert("사용하실 수 없는 카드입니다.");
+		d.pCAD_NO.value	= "";
+		d.pCAD_NO.focus();
+		return false;
+	} else if(d.pVIL_YEAR.value.length == 0 || d.pVIL_YEAR.value == "") {
+		alert("년도를 선택하세요");
+		d.pVIL_YEAR.focus();
+		return false;
+	} else if(d.pVIL_MONTH.value.length == 0 || d.pVIL_MONTH.value == "") {
+		alert("월을 선택하세요");
+		d.pVIL_MONTH.focus();
+		return false;
+	} else if((d.pVIL_YEAR.value <= 2011)&&(d.pVIL_MONTH.value  < 10)) {
+		alert("신용카드의 유효기간이 만료되었습니다. 확인하여 주십시요.");
+		d.pVIL_YEAR.focus();
+		return false;
+	} else if(d.pUSR_JUMIN.value.length == 0 || d.pUSR_JUMIN.value == "") {
+		alert("주민/사업자등록번호를 입력하세요");
+		d.pUSR_JUMIN.value	= "";
+		d.pUSR_JUMIN.focus();
+		return false;
+	} else if(radiovalue == "0") {
+        for (i = 0; i < 7; i++) buf[i] = parseInt(vencod.charAt(i));
+        odd = buf[1]*10 + buf[2];
+
+        if(!(d.pUSR_JUMIN.value.length == 7)){
+    		alert("주민번호는 7자리입니다. 다시 입력하세요");
+    		d.pUSR_JUMIN.value	= "";
+    		d.pUSR_JUMIN.focus();
+    		return false;
+        }
+        if(!(d.pUSR_JUMIN.value.substr(0,1)==1) && !(d.pUSR_JUMIN.value.substr(0,1)==2)){
+
+            if((odd%2 != 0) && ((buf[5] != 6) && (buf[5] != 7) && (buf[5] != 8) || (buf[5] != 9))){
+        		alert("잘못된 주민등록 번호입니다. 다시 입력해 주십시오.");
+        		d.pUSR_JUMIN.value	= "";
+        		d.pUSR_JUMIN.focus();
+        		return false;
+            }
+	    }
+	    
+	    document.getElementById('p111').style.display = 'none';
+
+    } else if (radiovalue == "1") {
+        if(!(d.pUSR_JUMIN.value.length == 10)){
+    		alert("사업자등록번호는 10자리입니다. 다시 입력하세요");
+    		d.pUSR_JUMIN.value	= "";
+    		d.pUSR_JUMIN.focus();
+    		return false;
+        }
+
+        for (var i=0;i<10;i++){
+          getlist[i] = vencod.substring(i,i+1);
+        }
+
+        for (var i=0;i<9;i++){
+          sum += getlist[i]*chkvalue[i];
+        }
+        sum = sum +parseInt((getlist[8]*5)/10) ;
+        sidliy = sum%10;
+        sidchk = 0;
+
+        if ( sidliy != 0 ) {
+          sidchk = 10 - sidliy;
+        } else {
+          sidchk = 0;
+        }
+        if ( sidchk != getlist[9] ) {
+            alert("잘못된 사업자 등록번호 입니다. 다시 입력해주십시오.");
+            d.pUSR_JUMIN.value	= "";
+		    d.pUSR_JUMIN.focus();
+            return false;
+        }
+        
+        document.getElementById('p111').style.display = 'none';
+			
+	} else if(!isNum(d.pUSR_JUMIN.value)) {
+		alert("숫자만 입력해 주십시오.");
+		d.pUSR_JUMIN.value	= "";
+		d.pUSR_JUMIN.focus();
+		return false;
+
+	} else{
+		return true;
+	}
+}
+
+function updatetitle(str){
+    var frm = document.FrmCad;
+    if (str == 0) {
+        frm.Jumin.value = "주민번호 뒷 7자리" ;
+        frm.pUSR_JUMIN.size = 7 ;
+        frm.pUSR_JUMIN.value = "" ;
+		frm.koreng.value = "0" ;
+		frm.pUsrCard.value = "1" ;
+    } else {
+        frm.Jumin.value = "사업자등록번호 " ;
+        frm.pUSR_JUMIN.size = 10 ;
+        frm.pUSR_JUMIN.value = "" ;
+		frm.koreng.value = "1" ;
+		frm.pUsrCard.value = "2" ;
+    }
+    frm.pCAD_NO.focus() ;
+    return ;
+}
+
+function fc_Checked(){
+
+
+	if(full_seat > check_seat){
+		alert("예약/예매 좌석을 선택해 주십시요!");
+		return false;
+	}// if(full_seat의 끝
+
+	var sSeat= "";
+
+		if((document.SeatForm.c1.checked==true)&&(document.SeatForm.c1.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c1.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c2.checked==true)&&(document.SeatForm.c2.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c2.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c3.checked==true)&&(document.SeatForm.c3.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c3.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c4.checked==true)&&(document.SeatForm.c4.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c4.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c5.checked==true)&&(document.SeatForm.c5.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c5.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c6.checked==true)&&(document.SeatForm.c6.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c6.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c7.checked==true)&&(document.SeatForm.c7.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c7.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c8.checked==true)&&(document.SeatForm.c8.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c8.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c9.checked==true)&&(document.SeatForm.c9.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c9.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c10.checked==true)&&(document.SeatForm.c10.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c10.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c11.checked==true)&&(document.SeatForm.c11.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c11.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c12.checked==true)&&(document.SeatForm.c12.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c12.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c13.checked==true)&&(document.SeatForm.c13.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c13.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c14.checked==true)&&(document.SeatForm.c14.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c14.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c15.checked==true)&&(document.SeatForm.c15.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c15.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c16.checked==true)&&(document.SeatForm.c16.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c16.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c17.checked==true)&&(document.SeatForm.c17.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c17.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c18.checked==true)&&(document.SeatForm.c18.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c18.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c19.checked==true)&&(document.SeatForm.c19.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c19.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c20.checked==true)&&(document.SeatForm.c20.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c20.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c21.checked==true)&&(document.SeatForm.c21.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c21.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c22.checked==true)&&(document.SeatForm.c22.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c22.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c23.checked==true)&&(document.SeatForm.c23.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c23.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c24.checked==true)&&(document.SeatForm.c24.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c24.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c25.checked==true)&&(document.SeatForm.c25.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c25.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c26.checked==true)&&(document.SeatForm.c26.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c26.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c27.checked==true)&&(document.SeatForm.c27.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c27.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c28.checked==true)&&(document.SeatForm.c28.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c28.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c29.checked==true)&&(document.SeatForm.c29.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c29.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c30.checked==true)&&(document.SeatForm.c30.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c30.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c31.checked==true)&&(document.SeatForm.c31.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c31.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c32.checked==true)&&(document.SeatForm.c32.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c32.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c33.checked==true)&&(document.SeatForm.c33.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c33.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c34.checked==true)&&(document.SeatForm.c34.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c34.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c35.checked==true)&&(document.SeatForm.c35.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c35.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c36.checked==true)&&(document.SeatForm.c36.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c36.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c37.checked==true)&&(document.SeatForm.c37.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c37.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c38.checked==true)&&(document.SeatForm.c38.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c38.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c39.checked==true)&&(document.SeatForm.c39.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c39.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c40.checked==true)&&(document.SeatForm.c40.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c40.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c41.checked==true)&&(document.SeatForm.c41.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c41.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c42.checked==true)&&(document.SeatForm.c42.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c42.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c43.checked==true)&&(document.SeatForm.c43.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c43.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c44.checked==true)&&(document.SeatForm.c44.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c44.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+		if((document.SeatForm.c45.checked==true)&&(document.SeatForm.c45.disabled==false)){
+		sSeat = sSeat + document.SeatForm.c45.value;
+		document.FrmCad.pSeat_no.value = sSeat;
+document.KSPayOForm.pSeat_no.value = sSeat;
+document.SeatForm.pSeat_no.value = sSeat;
+
+			}//if((document....의 끝
+
+	return true;
+}
+
+function fc_Check(box) {
+	
+	if(box.checked == true) {
+		check_seat ++;
+		if(full_seat < check_seat) {
+			check_seat = check_seat -1;
+			alert("예매/예약 하실 매수를 초과하였습니다. 예약/예매하고자 하시는 매수는 "+full_seat+"매입니다.");
+			return false;
+		}//if(full...의끝
+		return true;
+	} else {
+		check_seat = check_seat -1;
+	}//if(box.checked....의 끝
+}
+
+// 계좌이체 이중승인의 가능성을 줄이기 위해 몇가지 이벤트를 막는다.
+document.onmousedown=right;
+document.onmousemove=right;
+
+document.onkeypress = processKey;
+document.onkeydown  = processKey;
+
+function processKey() {
+	if((event.ctrlKey == true && (event.keyCode == 8 || event.keyCode == 78 || event.keyCode == 82))
+		|| ((typeof(event.srcElement.type) == "undefined" || typeof(event.srcElement.name) == "undefined" || event.srcElement.type != "text" || event.srcElement.name != "sndEmail") && event.keyCode >= 112 && event.keyCode <= 123)) {
+		event.keyCode = 0;
+		event.cancelBubble = true;
+		event.returnValue = false;
+	}
+	if(event.keyCode == 8 && typeof(event.srcElement.value) == "undefined") {
+		event.keyCode = 0;
+		event.cancelBubble = true;
+		event.returnValue = false;
+	}
+}
+
+function right(e) {
+	if(navigator.appName=='Netscape'&&(e.which==3||e.which==2)){
+		alert('마우스 오른쪽 버튼을 사용할수 없습니다.');
+		return;
+	}else if(navigator.appName=='Microsoft Internet Explorer'&&(event.button==2||event.button==3)) {
+		alert('마우스 오른쪽 버튼을 사용할수 없습니다.');
+		return;
+	}
+}
+
+-->
+</script>
+<!--<script language=javascript src="../js/BankPayEFT.js"></script>-->
+<script language=javascript src="https://www.bankpay.or.kr/BankPayEFT_SSL.js"></script>
+
+<script language=javascript>InstallCertManager()</script>
+
+<script language=javascript>
+	SmartUpdate();
+</script>
+
+<script language="javascript">
+<!--
+	var op;
+	var op_check = false;
+	var submit_end = false;
+
+	function checkOpener()
+	{
+		if (!op_check) return;
+
+		try
+		{
+			if (op != null && !op.closed)
+			{
+				//alert("결제가 완료되지 않았습니다.");
+				return;
+			}else
+			{
+				checkResult();
+				op_check = false;
+			}
+		}catch(e)
+		{
+			checkResult();
+			op_check = false;
+		}
+	}
+
+	function checkResult()
+	{
+		proceed(false, "197");
+	}
+
+	function openBankI()
+	{
+		var ofrm	= document.KSPayOForm;
+
+		var width_ = 360;//450;
+		var height_ = 460;//500;320;
+		var left_ = screen.width;
+		var top_ = screen.height;
+
+		var sSeat= "";
+		
+
+
+		if(full_seat > check_seat){
+			alert("예약/예매 좌석을 선택해 주십시요!");
+			return false;
+		}// if(full_seat의 끝
+
+	
+			if((document.SeatForm.c1.checked==true)&&(document.SeatForm.c1.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c1.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c2.checked==true)&&(document.SeatForm.c2.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c2.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c3.checked==true)&&(document.SeatForm.c3.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c3.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c4.checked==true)&&(document.SeatForm.c4.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c4.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c5.checked==true)&&(document.SeatForm.c5.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c5.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c6.checked==true)&&(document.SeatForm.c6.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c6.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c7.checked==true)&&(document.SeatForm.c7.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c7.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c8.checked==true)&&(document.SeatForm.c8.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c8.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c9.checked==true)&&(document.SeatForm.c9.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c9.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c10.checked==true)&&(document.SeatForm.c10.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c10.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c11.checked==true)&&(document.SeatForm.c11.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c11.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c12.checked==true)&&(document.SeatForm.c12.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c12.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c13.checked==true)&&(document.SeatForm.c13.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c13.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c14.checked==true)&&(document.SeatForm.c14.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c14.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c15.checked==true)&&(document.SeatForm.c15.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c15.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c16.checked==true)&&(document.SeatForm.c16.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c16.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c17.checked==true)&&(document.SeatForm.c17.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c17.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c18.checked==true)&&(document.SeatForm.c18.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c18.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c19.checked==true)&&(document.SeatForm.c19.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c19.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c20.checked==true)&&(document.SeatForm.c20.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c20.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c21.checked==true)&&(document.SeatForm.c21.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c21.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c22.checked==true)&&(document.SeatForm.c22.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c22.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c23.checked==true)&&(document.SeatForm.c23.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c23.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c24.checked==true)&&(document.SeatForm.c24.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c24.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c25.checked==true)&&(document.SeatForm.c25.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c25.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c26.checked==true)&&(document.SeatForm.c26.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c26.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c27.checked==true)&&(document.SeatForm.c27.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c27.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c28.checked==true)&&(document.SeatForm.c28.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c28.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c29.checked==true)&&(document.SeatForm.c29.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c29.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c30.checked==true)&&(document.SeatForm.c30.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c30.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c31.checked==true)&&(document.SeatForm.c31.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c31.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c32.checked==true)&&(document.SeatForm.c32.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c32.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c33.checked==true)&&(document.SeatForm.c33.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c33.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c34.checked==true)&&(document.SeatForm.c34.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c34.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c35.checked==true)&&(document.SeatForm.c35.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c35.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c36.checked==true)&&(document.SeatForm.c36.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c36.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c37.checked==true)&&(document.SeatForm.c37.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c37.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c38.checked==true)&&(document.SeatForm.c38.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c38.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c39.checked==true)&&(document.SeatForm.c39.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c39.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c40.checked==true)&&(document.SeatForm.c40.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c40.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c41.checked==true)&&(document.SeatForm.c41.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c41.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c42.checked==true)&&(document.SeatForm.c42.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c42.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c43.checked==true)&&(document.SeatForm.c43.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c43.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c44.checked==true)&&(document.SeatForm.c44.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c44.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+			if((document.SeatForm.c45.checked==true)&&(document.SeatForm.c45.disabled==false)){
+				sSeat = sSeat + document.SeatForm.c45.value;
+				document.FrmCad.pSeat_no.value = sSeat;
+				document.KSPayOForm.pSeat_no.value = sSeat;
+			}//if((document....의 끝
+	
+
+		left_ = left_/2 - (width_/2);
+		top_ = top_/2 - (height_/2);
+
+		op = window.open('about:blank','BankFrmUp',
+		        'height='+height_+',width='+width_+',status=yes,scrollbars=no,resizable=no,left='+left_+',top='+top_+'');
+
+		if (op == null)
+		{
+			alert("팝업이 차단되어 결제를 진행할 수 없습니다.");
+			return false;
+		}
+		op_check = true;
+		ofrm.target = 'BankFrmUp';
+
+		setInterval('checkOpener()',500);
+
+		ofrm.submit();
+    }
+
+	function setCustInfo(cAccOwner1 ,cRegisterNo, smId, smTId, amt)
+	{
+		var sfrm	= document.KSPaySForm;
+
+		sfrm.cAccOwner1.value	= cAccOwner1;
+		sfrm.cRegisterNo.value		= cRegisterNo;
+
+		// 공통
+		sfrm.smId.value		=	smId;
+		sfrm.smTId.value	=	smTId;
+		sfrm.amt.value		=	amt;
+		// 금결원
+
+		sfrm.tx_amount.value		= amt;
+
+		return true;
+	}
+
+	/* 실제 승인페이지로 넘겨주는 form에 trno, banktrno를 세팅한다 */
+	function paramSet(acct_type ,bank_cd ,trno, banktrno)
+	{
+		op_check = false;
+
+		var sfrm	= document.KSPaySForm;
+		var ofrm	= document.KSPayOForm;
+
+		// 넘겨받은 값
+		sfrm.acct_type.value	= acct_type;
+		sfrm.trno.value			= trno;
+		sfrm.banktrno.value		= banktrno;
+		sfrm.bank_cd.value		= bank_cd;
+
+		// 공통
+		sfrm.injanm.value		=	"KOBUS"	;
+		sfrm.goodname.value		=	"고속버스 티켓"	;
+
+		// 금결원
+		sfrm.hd_serial_no.value		= sfrm.banktrno.value;
+	}
+
+	/* 계좌이체 페이지 호출 */
+	function proceed(arg)
+	{
+		op_check = false;
+
+		var sfrm = document.KSPaySForm;
+		var ofrm	= document.KSPayOForm;
+
+		var trno		= sfrm.trno.value;
+		var banktrno	= sfrm.banktrno.value;
+		var acct_type	= sfrm.acct_type.value;
+
+		op_check = false;
+
+		if ((arg == "TRUE"||arg == "true"||arg == true) && check_param(trno, banktrno))
+		{
+			if (acct_type == "5")
+			{
+				payRequestLink(sfrm);
+			}else
+			if (acct_type == "2")
+			{
+				final_submit();
+			}else
+			{
+				alert("결제유형오류("+acct_type+")") ;
+			}
+		}
+		else
+		{
+			alert("계좌 인증이 실패했습니다.") ;
+			sfrm.action = "./Precan_reservation01.jsp";
+			final_submit();
+
+		}
+	}
+
+	function final_submit()
+	{
+		if (submit_end) return;
+
+		submit_end = true;
+		document.KSPaySForm.submit();
+ 	}
+
+	function check_param(trno, banktrno)
+	{
+
+		var ck_tr = get_cookie("trno_banktrno");
+
+		if (ck_tr == trno + banktrno)
+		{
+			return false;
+		}
+
+		set_cookie("trno_banktrno", trno + banktrno);
+
+		return true;
+	}
+
+
+	function get_cookie(strName)
+	{
+		var strSearch = strName + "=";
+		if ( document.cookie.length > 0 )
+		{
+			iOffset = document.cookie.indexOf( strSearch );
+			if ( iOffset != -1 )
+			{
+				iOffset += strSearch.length;
+				iEnd = document.cookie.indexOf( ";", iOffset );
+				if ( iEnd == -1 )
+					iEnd = document.cookie.length;
+
+				return unescape(document.cookie.substring( iOffset, iEnd ));
+			}
+		}
+
+		return "";
+	}
+
+	function set_cookie(strName, strValue)
+	{
+		var strCookie = strName + "=" + escape(strValue);
+		document.cookie = strCookie;
+	}
+	 
+	function fc_Caution() {
+
+		return true;
+}
+-->
+</script>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td> <script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+<div id="Layer1" style="position:absolute; left:10px; top:100px; width:987px; height:147px; z-index:1">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td><script>flashWrite('/flash/flash01/sub03.swf','990','150')</script>
+</td>
+		</tr>
+	</table>
+</div>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td background="/images/image01/sub3_img_bg.jpg"><img src="/images/image01/sub3_img.jpg" width="990" height="150"></td>
+	</tr>
+</table>
+</td>
+	</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td valign="top" style="background-image:url(/images/image01/con_bg.gif); background-repeat:repeat-x" > <table width="900" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="95" align="center" valign="top"><img src="/images/image01/space.gif" width="8" height="1"> </td>
+					<td width="190" align="center" valign="top" background="/images/image01/left/left_m_bg.gif"> <table width="197" border="0" cellpadding="0" cellspacing="0">
+	<tr> 
+		<td align="center"><img src="/images/image01/left/sub3_m_top.gif" width="197" height="68"></tr>
+	<tr> 
+		<td height="344" align="right" background="/images/image01/left/left_m.gif" style="padding-top:5">&nbsp;</tr>
+</table>
+ <br> 
+<table width="197" border="0" cellpadding="0" cellspacing="0">
+	<tr> 
+		<td width="16">&nbsp;</td>
+		<td width="179"><table width="159" border="0" cellpadding="0" cellspacing="0">
+				<tr> 
+					<td><a href="javascript:go5(4)"><img src="/images/image01/l_b1.gif" width="57" height="71" border="0"></a></td>
+					<td><a href="javascript:go1(1)"><img src="/images/image01/l_b2.gif" width="53" height="71" border="0"></a></td>
+					<td><a href="javascript:go5(1)"><img src="/images/image01/l_b3.gif" width="55" height="71" border="0"></a></td>
+				</tr>
+			</table></td>
+	</tr>
+</table>
+ </td>
+					<td width="700" valign="top"><table width="695" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td width="680" align="right"  style="padding:20 15 0 27"> <table width="650" border="0" cellpadding="0" cellspacing="0" background="/images/image01/title/tit_bg.gif">
+										<tr>
+											<td width="262"><img src="/images/image01/title/sub3_t1.gif" width="261" height="49"></td>
+											<td align="right" ><table border="0" cellpadding="0" cellspacing="0" background="/images/image01/title/tit_bg.gif">
+													<tr>
+														<td height="14" align="right" class=fsize style="padding:5 5 0 0"><img src="/images/image01/home_icon.gif" width="9" height="9"> HOME &gt; 승차권예약 &gt; 배차선택 &gt; <font color="#3399CC"> 좌석선택&카드정보입력</font></td>
+													</tr>
+												</table></td>
+										</tr>
+									</table></td>
+							</tr>
+							<tr>
+								<td align="right" valign="top" style="padding:25 15 30 27" >
+									<!--contents start -->
+									<table width="640" border="0" cellpadding="0" cellspacing="1" bgcolor="#EBEBEB">
+										<tr>
+											<td height="35" valign="top" bgcolor="#FDFDF7" style="padding:10">아래의 <strong>고속버스 좌석 배치도</strong>는 대부분의 고속버스가 갖고 있는것을 보여줍니다.<br>
+												<font color="#6F6F24">따라서 좌우측이 바뀐 일부 고속버스의 경우 여기서 보여지는 배치도와 실제 고속버스의 좌석배치도와 다를수도 있음을 알려드립니다.</font></td>
+										</tr>
+									</table>
+									<br>
+									<table width="640" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<!--심야시간노약좌석표시-->
+											<td height="20" bgcolor="#FDFDF7"><font color="#FF6600"><strong>- 심야 시간대 출발차량의 1번부터 9번 좌석까지는 여성고객 및 노약자를 위한 좌석으로 운영되고 있습니다.</strong></font><br>
+											<font color="#006600">- 교통 약자를 위해 배려해 주시기 바랍니다.</font></td>
+										</tr>
+									</table>
+									<br>
+									<table width="640" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td height="20" bgcolor="#FDFDF7"><font color="#FF6600"><strong>- 스마트폰으로는 예약조회/변경/취소를 하실 수 없습니다.</strong></font><br>
+											<font color="#006600">- 스마트폰으로 예약을 하시게 되면 보안 인증서가 정상적으로 적용되지 않아 비정상적으로 예약이 되실 수 있습니다.<br>
+											<font color="#006600">- 스마트폰에서는 기본적으로 플래쉬 기능을 지원하지 않기때문에 예약 조회/변경/취소 메뉴를 이용하실 수 없습니다.</font><br>
+											<font color="#FF6600"><strong>(현재 스마트폰으로 예약을 진행하시는 고객님은 중지하시고 ARS나 인터넷으로 다시 진행하시기 바랍니다.)</strong></font></td>
+										</tr>
+									</table>
+									<br>
+									<table width="640" border="0" cellspacing="0" cellpadding="0">
+										<tr>
+											<td height="20"><font color="#FF6600"><strong>계좌이체 예약을 실패(예약 조회시 예약 사항이 없을 때) </strong></font>했을경우에는</td>
+										</tr>
+										<tr>
+											<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+													<tr>
+														<td width="3%" align="center"><font color="#006600">-</font></td>
+														<td width="97%"><font color="#006600">미 예약 상태이며 예약시 선택하셨던 좌석은 최소 30분간은 선택 할 수 없습니다.</font></td>
+													</tr>
+													<tr>
+														<td align="center"><font color="#006600">-</font></td>
+														<td><font color="#006600">예약을 하실려면 다른 좌석으로 선택 또는 최소 30분후에 좌석을 선택하시면 됩니다.</font></td>
+													</tr>
+												</table></td>
+										</tr>
+										<tr>
+											<td height="10"></td>
+										</tr>
+										<tr>
+											<td align="center" style="padding:0 0 3 0"><table width=100% border=0 cellpadding=1 cellspacing=1 valign=top dwcopytype="CopyTableCell">
+													<tr bgcolor="#92A9D7">
+														<td width="747" height="3" ></td>
+													</tr>
+													<tr bgcolor="E6EEFE">
+														<td height="27" align="center" class=line_RB><font color="2E71A5">&nbsp;</font> <table width="404" border="0" cellpadding="0" cellspacing="0">
+																<tr>
+																	<td><font color="#1C4462"><strong>2011년 10월 24일 월요일 13:15출발</strong></font></td>
+																	<td><font color="2E71A5"><strong><font color="#1C4462">
+
+																	서울경부
+
+																	--&gt;</font>
+
+																	안성    
+
+
+																	</font></strong></font> </td>
+																</tr>
+															</table></td>
+													</tr>
+													<tr bgcolor="#cccccc">
+														<td height="1" align="center"></td>
+													</tr>
+												</table></td>
+										</tr>
+										<tr>
+											<td align="right" style="padding:0 0 3 0"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+													<tr>
+														<td height="56" align="center" bgcolor="#FFECD2" style="padding:5"><font face="돋움" size="2" color="#5E3500">예약하시려는 승차권 매수는 일반0매, 아동1매 입니다.<br>
+															잔여좌석중1개의 좌석을 지정하세요.&nbsp;&nbsp;(
+															<input type="Checkbox" name="c" disabled>
+															은 예약된 좌석입니다)</font></td>
+													</tr>
+												</table></td>
+										</tr>
+
+										<form name="SeatForm" method="post"  action="https://www.kobus.co.kr/web/03_reservation/reservation01_3.jsp" onSubmit="return fc_Checked()">
+
+										<tr>
+											<td>  
+
+												<table width=640 border=0 cellpadding=1 cellspacing=2 valign=top>
+		<tr> 
+			<td width="47" height="30" rowspan="5" align="center" bgcolor="#D1D1D1"><font face="돋움" size="2" color="#464646"><b>앞</b></font></td>
+			<td width="50" align="center" bgcolor="#D1D1D1" rowspan="2"><font face="돋움" size="2" color="#464646"><b>출입문</b></font></td>
+			<!--<td width="9" align="center" bgcolor="#FFFBE8"><font face="돋움" size="2" color="#5B2900">&nbsp;</font></td>-->
+			<td width="45" align="center" bgcolor="#FFED81"><font face="돋움" size="2" color="#000000">1<br>
+				<input type="Checkbox" name="c1" value ="01" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" align="center" bgcolor="#FFED81"><font face="돋움" size="2" color="#000000">5<br>
+				<input type="Checkbox" name="c5" value ="05" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" align="center" bgcolor="#FFED81"><font face="돋움" size="2" color="#000000">9<br>
+				<input type="Checkbox" name="c9" value ="09" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" align="center" bgcolor="#FFED81"><font face="돋움" size="2" color="#000000">13<br>
+				<input type="Checkbox" name="c13" value ="13" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" align="center" bgcolor="#FFED81"><font face="돋움" size="2" color="#000000">17<br>
+				<input type="Checkbox" name="c17" value ="17" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" align="center" bgcolor="#FFED81"><font face="돋움" size="2" color="#000000">21<br>
+				<input type="Checkbox" name="c21" value ="21" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" align="center" bgcolor="#FFED81"><font face="돋움" size="2" color="#000000">25<br>
+				<input type="Checkbox" name="c25" value ="25"onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" align="center" bgcolor="#FFED81"><font face="돋움" size="2" color="#000000">29<br>
+				<input type="Checkbox" name="c29" value ="29" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" align="center" bgcolor="#FFED81"><font face="돋움" size="2" color="#000000">33<br>
+				<input type="Checkbox" name="c33" value ="33" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" align="center" bgcolor="#FFED81"><font face="돋움" size="2" color="#000000">37<br>
+				<input type="Checkbox" name="c37" value ="37" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" align="center" bgcolor="#FFED81"><font face="돋움" size="2" color="#000000">41<br>
+				<input type="Checkbox" name="c41" value ="41" onClick="return fc_Check(this)" disabled >
+				</font></td>		
+			<td width="47" rowspan="5" align="center" bgcolor="#D1D1D1"><font face="돋움" size="2" color="#464646"><b>뒤</b></font></td>
+		</tr>
+		
+		<tr>	
+			<!--<td width="9" align="center" bgcolor="#FFFBE8"><font face="돋움" size="2" color="#5B2900">&nbsp;</font></td>-->
+			<td width="45" align="center" bgcolor="#FFED81"><font face="돋움" size="2" color="#000000">2<br>
+				<input type="Checkbox" name="c2" value ="02" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" align="center" bgcolor="#FFED81"><font face="돋움" size="2" color="#000000">6<br>
+				<input type="Checkbox" name="c6" value ="06" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" align="center" bgcolor="#FFED81"><font face="돋움" size="2" color="#000000">10<br>
+				<input type="Checkbox" name="c10" value ="10" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" align="center" bgcolor="#FFED81"><font face="돋움" size="2" color="#000000">14<br>
+				<input type="Checkbox" name="c14" value ="14" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" align="center" bgcolor="#FFED81"><font face="돋움" size="2" color="#000000">18<br>
+				<input type="Checkbox" name="c18" value ="18" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" align="center" bgcolor="#FFED81"><font face="돋움" size="2" color="#000000">22<br>
+				<input type="Checkbox" name="c22" value ="22" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" align="center" bgcolor="#FFED81"><font face="돋움" size="2" color="#000000">26<br>
+				<input type="Checkbox" name="c26" value ="26"onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" align="center" bgcolor="#FFED81"><font face="돋움" size="2" color="#000000">30<br>
+				<input type="Checkbox" name="c30" value ="30" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" align="center" bgcolor="#FFED81"><font face="돋움" size="2" color="#000000">34<br>
+				<input type="Checkbox" name="c34" value ="34" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" align="center" bgcolor="#FFED81"><font face="돋움" size="2" color="#000000">38<br>
+				<input type="Checkbox" name="c38" value ="38" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" align="center" bgcolor="#FFED81"><font face="돋움" size="2" color="#000000">42<br>
+				<input type="Checkbox" name="c42" value ="42" onClick="return fc_Check(this)" disabled >
+				</font>
+			</td>		
+		</tr>
+	
+		<tr> 
+			<td width="9" align="center" bgcolor="#FFFBE8"><font face="돋움" size="2" color="#5B2900">&nbsp;</font></td>
+			<td bgcolor="#FFFBE8" align="center" colspan="10"><font face="돋움" size="2" color="#5B2900"><b>통로</b></font></td>
+			<td bgcolor="#FFED81" align="center"><font face="돋움" size="2" color="#000000">45<br>
+			<input type="Checkbox" name="c45" value ="45" onClick="return fc_Check(this)" disabled >
+			</font></td>
+		</tr>
+		
+		<tr> 
+			<td bgcolor="#D1D1D1" align="center" rowspan="2"><font face="돋움" size="2" color="#464646"><b>운전석</b></font></td>
+			<!--<td bgcolor="#FFFBE8" align="center" rowspan="2"><font face="돋움" size="2" color="#000000">&nbsp;</font></td>-->
+			<td width="45" bgcolor="#FFED81" align="center"><font face="돋움" size="2" color="#000000">3<br>
+				<input type="Checkbox" name="c3" value ="03" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" bgcolor="#FFED81" align="center"><font face="돋움" size="2" color="#000000">7<br>
+				<input type="Checkbox" name="c7" value ="07" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" bgcolor="#FFED81" align="center"><font face="돋움" size="2" color="#000000">11<br>
+				<input type="Checkbox" name="c11" value ="11" onClick="return fc_Check(this)" disabled >
+				</font></td>	
+			<td width="45" bgcolor="#FFED81" align="center"><font face="돋움" size="2" color="#000000">15<br>
+				<input type="Checkbox" name="c15" value ="15" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" bgcolor="#FFED81" align="center"><font face="돋움" size="2" color="#000000">19<br>
+				<input type="Checkbox" name="c19" value ="19" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" bgcolor="#FFED81" align="center"><font face="돋움" size="2" color="#000000">23<br>
+				<input type="Checkbox" name="c23" value ="23" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" bgcolor="#FFED81" align="center"><font face="돋움" size="2" color="#000000">27<br>
+				<input type="Checkbox" name="c27" value ="27" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" bgcolor="#FFED81" align="center"><font face="돋움" size="2" color="#000000">31<br>
+				<input type="Checkbox" name="c31" value ="31" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" bgcolor="#FFED81" align="center"><font face="돋움" size="2" color="#000000">35<br>
+				<input type="Checkbox" name="c35" value ="35" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" bgcolor="#FFED81" align="center"><font face="돋움" size="2" color="#000000">39<br>
+				<input type="Checkbox" name="c39" value ="39" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45"bgcolor="#FFED81" align="center"><font face="돋움" size="2" color="#000000">43<br>
+				<input type="Checkbox" name="c43" value ="43" onClick="return fc_Check(this)" disabled >
+				</font></td>	
+		</tr>
+		
+		<tr> 
+			<td width="45" bgcolor="#FFED81" align="center"><font face="돋움" size="2" color="#000000">4<br>
+				<input type="Checkbox" name="c4" value ="04" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" bgcolor="#FFED81" align="center"><font face="돋움" size="2" color="#000000">8<br>
+				<input type="Checkbox" name="c8" value ="08" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" bgcolor="#FFED81" align="center"><font face="돋움" size="2" color="#000000">12<br>
+				<input type="Checkbox" name="c12" value ="12" onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" bgcolor="#FFED81" align="center"><font face="돋움" size="2" color="#000000">16<br>
+				<input type="Checkbox" name="c16" value ="16"onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" bgcolor="#FFED81" align="center"><font face="돋움" size="2" color="#000000">20<br>
+				<input type="Checkbox" name="c20" value ="20"onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" bgcolor="#FFED81" align="center"><font face="돋움" size="2" color="#000000">24<br>
+				<input type="Checkbox" name="c24" value ="24"onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" bgcolor="#FFED81" align="center"><font face="돋움" size="2" color="#000000">28<br>
+				<input type="Checkbox" name="c28" value ="28"onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" bgcolor="#FFED81" align="center"><font face="돋움" size="2" color="#000000">32<br>
+				<input type="Checkbox" name="c32" value ="32"onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" bgcolor="#FFED81" align="center"><font face="돋움" size="2" color="#000000">36<br>
+				<input type="Checkbox" name="c36" value ="36"onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" bgcolor="#FFED81" align="center"><font face="돋움" size="2" color="#000000">40<br>
+				<input type="Checkbox" name="c40" value ="40"onClick="return fc_Check(this)" disabled >
+				</font></td>
+			<td width="45" bgcolor="#FFED81" align="center"><font face="돋움" size="2" color="#000000">44<br>
+				<input type="Checkbox" name="c44" value ="44"onClick="return fc_Check(this)" disabled >
+				</font></td>	
+		</tr>
+		
+	</table>
+										</td>
+										</tr>
+										<tr>
+											<td align="center">&nbsp;</td>
+										</tr>
+										<tr>
+										<td align="center"><font color="FF4300">계좌이체는 홈티켓 발행이 되지 않습니다.</font> 홈티켓을 원하시면 반드시 카드예약/예매를 선택하세요</td>
+										</tr>
+										<tr>
+											<td align="center">본인이 아닌<font color="FF4300"> 타인을 위한 예약은 계좌이체 예약</font> 을 선택하세요</td>
+										</tr>
+
+										<input type="hidden" name= "pTim_tim" value="1315">
+										<input type="hidden" name= "pSeat_no">
+										<input type="hidden" name= "pTic_cod" value="false">
+										<input type="hidden" name= "pTer_fr" value="010">
+										<input type="hidden" name= "pTer_to" value="130">
+										<input type="hidden" name= "pBus_gra" value="2">
+										<input type="hidden" name= "pCor_cod" value="03">
+										<input type="hidden" name= "pTer_sfr" value="010">
+										<input type="hidden" name= "pTer_sto" value="130">
+										<input type="hidden" name= "pTim_dte" value="20111024">
+										<input type="hidden" name= "pCnt_100" value="0">
+										<input type="hidden" name= "pCnt_050" value="1">
+										<input type="hidden" name="pFee_100" value="5400"/>
+										<input type="hidden" name="pFee_050" value="2700"/>
+										<input type="hidden" name="pSer_num" value="0"/>
+										<input type="hidden" name="pCardform" value="yak"/>
+										<input type="hidden" name= "pSev_call" value="true">
+
+	
+
+										</form>
+										<form  name="FrmCad" action="reservation01_4.jsp" method="post"  id="FrmCad" onSubmit="return fc_Select()" autocomplete="off">
+
+											<!--contents start -->
+										<table width="640" height="336" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+								<!-- 심야시간노약좌석표시 -->
+
+											<td height="291" valign="top"><div id="card" style="position:absolute; left:250px; top:1000px; width:640px; height:124px; z-index:1; visibility: visible;">
+
+											<table width="640" border="0" cellspacing="0" cellpadding="0">
+												<tr>
+													<td align="right" valign="top"><table wdith="300" border="0" cellspacing="0" cellpadding="0">
+															<tr>
+																<td valign="top" style="padding-right:8"><a href="#"><img src="/images/img04/tab1_o.gif" width="140" height="30" border="0"></a>
+																</td>
+																<td  valign="top" style="padding-right:8"><a href="javascript:;" onClick="MM_showHideLayers('card','','hide','money','','show')" onMouseOver="MM_swapImage('Image61','','img/tab2_o.gif',0)" onMouseOut="MM_swapImgRestore()" style="cursor:hand;"><img src="/images/img04/tab2.gif" name="Image61" width="140" height="30" border="0" id="Image61"></a>
+																</td>
+															</tr>
+														</table></td>
+														</tr>
+														<tr>
+															<td height="1" bgcolor="7FAF59"></td>
+														</tr>
+														<tr>
+															<td align="left" valign="top" style="border-left:1px solid #7FAF59;border-right:1px solid #7FAF59;border-bottom:1px solid #7FAF59;padding:15px;">
+                                  <table width="100%" border="0" cellpadding="2" cellspacing="0" >
+                                    <tr>
+                                      <td colspan="3"><font color="#FF3300">* 카드정보는 128-bit SSL 암호화되어 전송되어집니다. </font></td>
+                                    </tr>
+                                    <tr>
+                                      <td colspan="3"> </td>
+                                    </tr>
+                                    <tr>
+                                      <td colspan="3"><table width="100%" border="0" cellpadding="3" cellspacing="0" bgcolor="#FFFFFF" >
+                                          <tr>
+                                            <td width="128" height="19" style="padding:0 0 0 10"><strong>카드종류 </strong></td>
+                                            <td width="5" ><strong>:</strong></td>
+                                            <td colspan="2"><input type="radio" name="cad_flag" value="0" onClick="updatetitle(this.value)" checked="checked" />
+                                              일반
+                                              <input type="radio" name="cad_flag" value="1" onClick="updatetitle(this.value)" />
+                                              법인</td>
+                                          </tr>
+                                          <tr>
+                                            <td style="padding:0 0 0 10"><strong>카드번호 입력 </strong></td>
+                                            <td ><strong>:</strong></td>
+                                            <td colspan="2"><input name="pCAD_NO" type="text" style="width:120px" class="box" size="16 autocomplete="off="off" /></td>
+                                          </tr>
+                                          <tr>
+                                            <td style="padding:0 0 0 10"><strong>카드유효 기간</strong></td>
+                                            <td ><strong>:</strong></td>
+                                            <td colspan="2"><select  name="pVIL_YEAR" class="box">
+                                            	<option value="">선택</option>
+                                                
+                                                <option value="2011">2011</option>
+                                                
+                                                <option value="2012">2012</option>
+                                                
+                                                <option value="2013">2013</option>
+                                                
+                                                <option value="2014">2014</option>
+                                                
+                                                <option value="2015">2015</option>
+                                                
+                                                <option value="2016">2016</option>
+                                                
+                                                <option value="2017">2017</option>
+                                                
+                                                <option value="2018">2018</option>
+                                                
+                                                <option value="2019">2019</option>
+                                                
+                                                <option value="2020">2020</option>
+                                                
+                                                <option value="2021">2021</option>
+                                                
+                                                <option value="2022">2022</option>
+                                                
+                                                <option value="2023">2023</option>
+                                                
+                                                <option value="2024">2024</option>
+                                                
+                                                <option value="2025">2025</option>
+                                                
+                                                <option value="2026">2026</option>
+                                                
+                                                <option value="2027">2027</option>
+                                                
+                                                <option value="2028">2028</option>
+                                                
+                                                <option value="2029">2029</option>
+                                                
+                                                <option value="2030">2030</option>
+                                                
+                                              </select>
+                                              년
+                                              <select name="pVIL_MONTH" class="box">
+                                              	<option value="">선택</option>
+                                                
+                                                <option value="01">1</option>
+                                                
+                                                <option value="02">2</option>
+                                                
+                                                <option value="03">3</option>
+                                                
+                                                <option value="04">4</option>
+                                                
+                                                <option value="05">5</option>
+                                                
+                                                <option value="06">6</option>
+                                                
+                                                <option value="07">7</option>
+                                                
+                                                <option value="08">8</option>
+                                                
+                                                <option value="09">9</option>
+                                                
+                                                <option value="10">10</option>
+                                                
+                                                <option value="11">11</option>
+                                                
+                                                <option value="12">12</option>
+                                                
+                                              </select>
+                                              월</td>
+                                          </tr>
+                                          <tr>
+                                            <td height="23" style="padding:0 0 0 10"><strong>
+                                              <input style="font-size:9pt; color:#000000; background-color:rgb(240,241,209); border-width:0; border-color:rgb(155,154,160); border-style:solid; height:19;" type="text" name="Jumin" size="16" maxlength="16" value = "주민번호 뒷 7자리" autocomplete = "off" readonly="readonly" />
+                                              </strong></td>
+                                            <td height="23" ><strong>:</strong></td>
+                                            <td width="222"><input type="password" name="pUSR_JUMIN" class="box" size="7" maxlength="10" /></td>
+                                            <td width="135"><input type="image" id="p111" src="/images/image01/re_btn2.gif"  border="0" /></td>
+                                          </tr>
+                                        </table></td>
+                                    </tr>
+                                    <tr>
+                                      <td colspan="3"><font color="#FF3300">* 발권시 반드시 예약 카드 지참&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(비정상적으로 처리가 될 수 있으니 버튼을 한번만 눌러주세요.)</font></td>
+                                    </tr>
+                                    <tr>
+                                      <td colspan="3"><font color="#FF3300">* 카드 예약은 카드 인증작업입니다.</font></td>
+                                    </tr>
+                                  </table>
+                                  <input type ="hidden" name = "koreng" 	value="0" />
+																	<input type="hidden" name= "pTim_tim" value="1315">
+																	<input type="hidden" name= "pSeat_no">
+																	<input type="hidden" name= "pTic_cod" value="false">
+																	<input type="hidden" name= "pTer_fr" value="010">
+																	<input type="hidden" name= "pTer_to" value="130">
+																	<input type="hidden" name= "pBus_gra" value="2">
+																	<input type="hidden" name= "pCor_cod" value="03">
+																	<input type="hidden" name= "pTer_sfr" value="010">
+																	<input type="hidden" name= "pTer_sto" value="130">
+																	<input type="hidden" name= "pTim_dte" value="20111024">
+																	<input type="hidden" name= "pCnt_100" value="0">
+																	<input type="hidden" name= "pCnt_050" value="1">
+																	<input type="hidden" name="pFee_100" value="5400"/>
+																	<input type="hidden" name="pFee_050" value="2700"/>
+																	<input type="hidden" name="pSer_num" value="0"/>
+																	<input type="hidden" name="pUsrCard" value="1"/>
+																	<input type="hidden" name="pCardform" value="yak"/>
+																	<input type="hidden" name= "pSev_call" value="true">
+																	<!-- 새로 추가되는 변수 -->
+																	<input type = "hidden" name = "pGet_Lin" value="1">
+																	<input type = "hidden" name = "pChg_Ter_To" value="000">
+																	<input type = "hidden" name = "pChg_Tim_Tim" value="0000">
+																	<!-- SMS, 왕복권 소요시간 추가 -->
+																	<input type = "hidden" name = "pLin_tim" value="60">
+																	<!-- 주말주중요금구분 -->
+																	<input type = "hidden" name = "pExc_amt" value="0">
+																	<input type = "hidden" name = "pExm_amt" value="0">
+																	<!-- Tago연계추가 -->
+																	<input type = "hidden" name = "sTago_Gubun" value="">
+ 
+                                </form></td>
+														</tr>
+													</table>
+												<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td height="86" background="/images/image01/bottom_bg.gif" style="padding-left:0"><table width="786" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="16%"><img src="/images/image01/bottom_logo.gif" width="153" height="86"></td>
+					<td width="82%"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+							<tr> 
+								<td style="padding:2 0 2 0"><a href="javascript:go1(14)">고속버스운송약관</a> l <a href="javascript:mail(1)">E-MAIL</a> l <a href="javascript:go7(1)">사이트맵</a></td>
+							</tr>
+							<tr> 
+								<td class=s_txt >주소 : 서울특별시 서초구 신반포로 190 (반포동 19-4)</td>
+							</tr>
+							<tr>
+								<td class=s_txt>통신판매업신고 : 2009-서울서초0587호 | 대표자:이정만</td>
+							</tr>
+							<tr>
+								<td class=s_txt><img src="/images/image01/copy.gif" width="421" height="14" border="0" usemap="#Map"></td>
+							</tr>
+						</table></td>
+					<td width="2%"><script src=https://seal.verisign.com/getseal?host_name=www.kobus.co.kr&size=M&use_flash=NO&use_transparent=NO&lang=ko></script></td>
+				</tr>
+			</table></td>
+	</tr>
+</table>
+<map name="Map">
+    <area shape="rect" coords="284,-2,410,12" href="javascript:mail(1)">
+</map>
+  
+												</div>
+												<tr>
+												  <td>                                                                                                
+												
+													<form name="KSPayOForm" method="POST" action="refund_reg_op_1.jsp">
+										<!-- 심야시간노약좌석표시 -->
+
+												<div id="money" style="position:absolute; left:250px; top:1000px; width:640px; height:440px; z-index:2;visibility: hidden;">
+
+													<!--<div id="money" style="position:absolute; left:280px; top:200px; width:500px; height:124px; z-index:2; visibility: hidden;">-->
+
+													<table width="640" height="440" border="0" cellspacing="0" cellpadding="0">
+														<tr>
+															<td align="right" valign="top"><table wdith="300" border="0" cellspacing="0" cellpadding="0">
+														<tr>
+															<td valign="top" style="padding-right:8"><a href="javascript:;" onClick="MM_showHideLayers('card','','show','money','','hide')" onMouseOver="MM_swapImage('Image60','','img/tab1_o.gif',0)" onMouseOut="MM_swapImgRestore()" style="cursor:hand;"><img src="/images/img04/tab1.gif" name="Image61" width="140" height="30" border="0" id="Image61"></a></td>
+															<td  valign="top" style="padding-right:8"><img src="/images/img04/tab2_o.gif" name="Image61" width="140" height="30" border="0" id="Image61"></td>
+														</tr>
+													</table>
+													</td>
+														</tr>
+														<tr>
+															<td height="1" bgcolor="7FAF59"></td>
+														</tr>
+														<tr>
+															<td align="left" valign="top" style="border-left:1px solid #7FAF59;border-right:1px solid #7FAF59;border-bottom:1px solid #7FAF59;padding:15px;"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+																	<tr>
+																		<td width="640" height="440" align="center" valign="top" ><table width="100%" border="0" cellpadding=0 cellspacing=0>
+																<tr>
+																	<td width="2%" valign="top"> <font color="#ff0000" style="font- color: #ff0000;"> 1.</font> </td>
+																	<td width="98%"><font color="#ff0000">계좌이체 예약(또는 취소)단계에서 회선장애, 기타 통신장애 또는 예약 오류시에도 예약(취소)여부를 꼭 확인하셔야 합니다. </font></font></td>
+																</tr>
+																<tr>
+																	<td height="5" colspan="2" valign="top"></td>
+																</tr>
+																<tr>
+																	<td valign="top"><font color="#ff0000"> 2.</font></td>
+																	<td><font color="#ff0000">계좌이체 예약후 승차권 발권시에는 계좌이체 예약당시 입력하신&nbsp;주민등록증 또는 예약화면(결과페이지의 프린트물)을 소지해야만 발권이 가능합니다 (불지참시 발권불가능) </font></font></td>
+																</tr>
+																<tr>
+																	<td height="5" colspan="2" valign="top"></td>
+																</tr>
+																<tr>
+																	<td valign="top"><font color="#ff0000"> 3.</font> </font></td>
+																	<td><font color="#ff0000">특히 예약 중 계좌에서 출금이 되었어도 예약이 안되는 경우가 발생할 수도 있으니 필히 예약 후 예약조회를 하시기바랍니다. <br>
+																		예약은 안되고 출금만 되었을때는 1시간이내로 다시 입금이 되고&nbsp;&nbsp;좌석은 최소 30분 후에 사용가능한 좌석이 됩니다.(경우에 따라 익일 아침에 입금 가능) </font></font></td>
+																</tr>
+																<tr>
+																	<td height="5" colspan="2" valign="top"></td>
+																</tr>
+																<tr>
+																	<td valign="top"> 4. </td>
+																	<td>인터넷을 이용한 계좌이체예약취소시 즉시 예약당시의 출금계좌로 입금되나 장애 발생시 최대 한시간 입금이 지연될 수도 있습니다. </td>
+																</tr>
+																<tr>
+																	<td height="5" colspan="2" valign="top"></td>
+																</tr>
+																<tr>
+																	<td valign="top"> 5.</td>
+																	<td>최소 30분이내에 계좌이체 예약을 완료해야 합니다.&nbsp;(시간 경과시 계좌이체 예약 불가능)</td>
+																</tr>
+																<tr>
+																	<td height="5" colspan="2" valign="top"></td>
+																</tr>
+																<tr align="center">
+																	<td colspan="2"> <textarea name="textarea" cols="70" rows="5" class=textarea  style="width:510px;height:80px;padding:10">1. 본 서비스의 이용과 관련하여 결제계좌 소유자의 정보는 “정보통신망이용촉진 및 정보보호등에 관한 법률” ,“신용정보의 이용 및 보호에 관한 법률”규정에 따라 타인에게 제공 또는 활용시에는 결제계좌 소유자 본인의 동의를 얻어야 하는 중요 정보임을 명백히 합니다.
+
+																	2. 인증확인서비스제공기관 및 제휴기관은 신청인 본인의 개인신용정보를 관계법령에 의해 철저히 관리, 보관합니다.
+
+																	3.본 신청인은 예약내역의 확인과 서비스 이용을 위하여 결제계좌 소유자의 성명,주민번호 등 개인의 정보를 당 서비스를 제공하는 업체(전국고속버스운송사업조합)에 제공함으로써 원활한 서비스를 제공받는데 동의합니다.
+																</textarea></td>
+																</tr>
+																<tr>
+																	<td height="5" colspan="2" valign="top"><br>&nbsp;&nbsp;<font color="#FF6600"><strong>전자 지갑 수동 설치 : <a href="http://www.bankpay.or.kr/download/BankPayEFT.exe">범용<img src="/images/image01/btn_down.gif" border="0"></a><!--, &nbsp;&nbsp;<a href="http://www.bankpay.or.kr/download/BankPayEFT_vista.exe">vista용<img src="/images/image01/btn_down.gif" border="0"></a>, &nbsp;&nbsp;<a href="http://www.bankpay.or.kr/download/BankPayEFT_win98.exe">Win98용<img src="/images/image01/btn_down.gif" border="0"></a>--><br><font color="#FF6600"><strong>키보드 보안 모듈 설치 : <a href="http://www.bankpay.or.kr/download/CKKeyPro_Installer_3023.exe">범용<img src="/images/image01/btn_down.gif" border="0"></a><!--, &nbsp;&nbsp;<a href="http://www.bankpay.or.kr/download/IncaKeyboard_vista.exe">vista용<img src="/images/image01/btn_down.gif" border="0"></a>-->, &nbsp;&nbsp;<a href="http://www.bankpay.or.kr/download/CKUnInstall.exe">삭제용<img src="/images/image01/btn_down.gif" border="0"></a><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(은행 이체를 통한 예약이므로 공인 인증서가 설치되어 있어야 합니다.)</strong></font></td>
+																</tr>
+																<tr align="center">
+																	<td colspan="2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td align="center">
+
+																					<img name="image"  style="cursor:hand"  src="/images/img03/cash_b.gif" onClick="openBankI()" width="90" height="24" border="0"></td>
+																			</tr>
+																			<tr>
+																				<td height="25" align="center">(비정상적으로 처리가 될 수 있으니 버튼을 한번만 눌러주세요.) </td>
+																			</tr>
+																		</table></td>
+																</tr>
+															</table>
+																	</tr>
+																</table></td>
+														</tr>
+													</table>
+													<input type="hidden" name="pTic_cod" value="false"/>
+													<input type="hidden" name="pSev_call" value="true"/>
+													<input type="hidden" name="pTim_dte" value="20111024"/>
+													<input type="hidden" name="pTer_fr" value="010"/>
+													<input type="hidden" name="pTer_to" value="130"/>
+													<input type="hidden" name="pTim_tim" value="1315"/>
+													<input type="hidden" name="pBus_gra" value="2"/>
+													<input type="hidden" name="pCor_cod" value="03"/>
+													<input type="hidden" name="pCnt_100" value="0"/>
+													<input type="hidden" name="pCnt_050" value="1"/>
+													<input type="hidden" name="pFee_100" value="5400"/>
+													<input type="hidden" name="pFee_050" value="2700"/>
+													<input type="hidden" name="pSeat_no" >
+													<input type="hidden" name="pSer_num" value="0"/>
+													<input type="hidden" name="pCardform" value="noyak"/>
+
+													<input type="hidden" name="pTer_sfr" value="010"/>
+													<input type="hidden" name="pTer_sto" value="130"/>
+													<input type="hidden" name="pUsrCard" value="1"/>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td height="86" background="/images/image01/bottom_bg.gif" style="padding-left:0"><table width="786" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="16%"><img src="/images/image01/bottom_logo.gif" width="153" height="86"></td>
+					<td width="82%"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+							<tr> 
+								<td style="padding:2 0 2 0"><a href="javascript:go1(14)">고속버스운송약관</a> l <a href="javascript:mail(1)">E-MAIL</a> l <a href="javascript:go7(1)">사이트맵</a></td>
+							</tr>
+							<tr> 
+								<td class=s_txt >주소 : 서울특별시 서초구 신반포로 190 (반포동 19-4)</td>
+							</tr>
+							<tr>
+								<td class=s_txt>통신판매업신고 : 2009-서울서초0587호 | 대표자:이정만</td>
+							</tr>
+							<tr>
+								<td class=s_txt><img src="/images/image01/copy.gif" width="421" height="14" border="0" usemap="#Map"></td>
+							</tr>
+						</table></td>
+					<td width="2%"><script src=https://seal.verisign.com/getseal?host_name=www.kobus.co.kr&size=M&use_flash=NO&use_transparent=NO&lang=ko></script></td>
+				</tr>
+			</table></td>
+	</tr>
+</table>
+<map name="Map">
+    <area shape="rect" coords="284,-2,410,12" href="javascript:mail(1)">
+</map>
+
+												</div>
+
+												</form>
+<div style="display:none">
+												<form name=KSPaySForm method=post action="reservation01_4_1.jsp">
+
+													<input type=hidden name="acct_type" 			value="">
+													<input type=hidden name="bank_cd"				value="">
+
+													<input type=hidden name="trno"					value="">
+													<input type=hidden name="banktrno"				value="">
+
+													<input type=hidden name="smId"    			value="">
+  
+													<input type=hidden name="cEmail"					value="">
+													<input type=hidden name="cPhone"				value="">
+													<input type=hidden name="smTId"			value="">
+													<input type=hidden name="cAccOwner1"				value="">
+													<input type=hidden name="cRegisterNo"					value="">
+													<input type=hidden name="goodname"				value="">
+													<input type=hidden name="amt"				value="">
+
+													<input type=hidden name=injanm					value="">
+
+													<!--금결원기본정보------------------------------------------------------>
+
+													<input type=hidden name="hd_pre_msg_type"	value="EFT"						><!-- 전자 지갑의 결제 유형을 설정한다. EFT로 고정 -->
+													<input type=hidden name="hd_msg_code"		value="0200"					><!-- 결제 요청 페이지에서는 0200 으로 고정 -->
+													<input type=hidden name="hd_msg_type"		value="EFT"						><!-- 계좌이체는 EFT로 입력 -->
+													<input type=hidden name="hd_ep_type"		value="SECUCERT"				><!-- 계좌이체는 SECUCERT -->
+													<input type=hidden name="hd_pi"				value=""						><!-- 공백으로 고정 -->
+													<input type=hidden name="hd_approve_no"		value="20000066"				><!-- 업체의 승인 번호 : 금융결제원으로부터 부여받은 승인번호 8 자리를 기입한다.  -->
+													<input type=hidden name="hd_serial_no"		value=""						><!-- 결제 요청 전문의 대한 일련번호 7자리 : 이 페이지가 호출될 경우마다 새로운 번호를 기입한다. 중복거래를 방지 하기위함 -->
+													<input type=hidden name="hd_firm_name"		value="KOBUS"	><!-- 전자지갑에 표시될 기관명을 세팅한다. -->
+
+													<input type=hidden name="tx_amount"			value=""						><!-- 실제로 결제할 금액을 기입한다. -->
+													<input type=hidden name="tx_user_define"	value="KOBUS^1148201186^전국고속버스운송사업조합^025366461"><!-- 예비 필드 80바이트(통장인자용업체명약칭^사업자등록번호^업체명^대표전화번호) -->
+													<input type=hidden name="hd_timeout_yn"		value="Y"						><!-- 전자지갑 타임아웃 설정: 거래 없이 일정시간 지나면 종료되도록 하는 옵션임 -->
+													<input type=hidden name="hd_timeout"		value="300000"					><!-- 전자지갑 타임아웃 시간 설정: 단위는 ms임(디폴트 300000(5분)) -->
+													<input type=hidden name="tx_email_addr"		value=""						><!-- 결제내역이 전송될 이메일주소 : DB에서 고객의 이메일주소를 불러와서 쓸 경우에만 입력, 기본적으로는 사용자가 전자지갑에서 입력하도록 되어있음 -->
+													
+													<input type=hidden name="tx_receipt_acnt"  value="10291000359405" > <!-- 입금계좌번호check : 10291000359405 고정값  -->
+													<input type=hidden name="hd_input_option"   value="22"    > <!-- 입력옵션 : 결제정보 입력 시 화면에 표시되는 방법에 대한 옵션  -->
+													<input type=hidden name="hd_ep_option"     value="222" > <!-- 출력옵션 : 결제결과가 표시되는 방법에 대한 옵션  -->
+												</form>
+												</div>
+									</table>
+									<br> 
+									<!--contents end-->
+				  </td>
+		  </tr>
+						</table></td>
+  </tr>
+</table>
+<br> 
+
+
+</body>
+</html>

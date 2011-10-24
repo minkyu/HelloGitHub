@@ -349,8 +349,8 @@
 		D35DF74E1452816E00C79101 /* Web */ = {
 			isa = PBXGroup;
 			children = (
-				D35DF74814527F8E00C79101 /* Hpple */,
-				911AD1461449515F009F8B5B /* ASIHTTPRequest */,
+				D3A1031014550C8200EC7534 /* Util */,
+				D3637ADD145463E900C1F339 /* KobusWeb */,
 			);
 			name = Web;
 			sourceTree = "<group>";
@@ -382,7 +382,7 @@
 			name = StackViewController;
 			sourceTree = "<group>";
 		};
-		D3637ADC14545E7B00C1F339 /* UIUtil */ = {
+		D3637ADC14545E7B00C1F339 /* Util */ = {
 			isa = PBXGroup;
 			children = (
 				D35DF77A1454327700C79101 /* GridTableView */,
@@ -390,7 +390,7 @@
 				D3A7D12714448CBE003285B9 /* Kal */,
 				D3C1AE27144443FC00C23FC0 /* StackScroll */,
 			);
-			name = UIUtil;
+			name = Util;
 			sourceTree = "<group>";
 		};
 		D3637ADD145463E900C1F339 /* KobusWeb */ = {
@@ -404,7 +404,6 @@
 				D3637ADF1454648200C1F339 /* KobusReservationInfoParser.m */,
 			);
 			name = KobusWeb;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		D388C44B143C6ECF00DEF523 /* SortedDictionary */ = {
@@ -489,6 +488,15 @@
 			path = SVSegmentedControl;
 			sourceTree = "<group>";
 		};
+		D3A1031014550C8200EC7534 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				D35DF74814527F8E00C79101 /* Hpple */,
+				911AD1461449515F009F8B5B /* ASIHTTPRequest */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		D3A7D12714448CBE003285B9 /* Kal */ = {
 			isa = PBXGroup;
 			children = (
@@ -522,7 +530,7 @@
 		D3C1AE0C14443BDF00C23FC0 /* KobusUI */ = {
 			isa = PBXGroup;
 			children = (
-				D3637ADC14545E7B00C1F339 /* UIUtil */,
+				D3637ADC14545E7B00C1F339 /* Util */,
 				D3637ADA14545E6600C1F339 /* StackViewController */,
 				D35DF74F1452DB4200C79101 /* ReservationInfoVIewController.h */,
 				D35DF7501452DB4200C79101 /* ReservationInfoVIewController.m */,
@@ -583,7 +591,6 @@
 		ED332E0B1435C299009A82E5 /* KobusReservation */ = {
 			isa = PBXGroup;
 			children = (
-				D3637ADD145463E900C1F339 /* KobusWeb */,
 				D39D880D1445730A00BD9A45 /* backgroundImage_repeat.png */,
 				ED332E141435C299009A82E5 /* KobusReservationAppDelegate.h */,
 				ED332E151435C299009A82E5 /* KobusReservationAppDelegate.m */,
