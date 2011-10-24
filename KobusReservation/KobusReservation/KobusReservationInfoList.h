@@ -15,5 +15,6 @@
 
 - (void)addInfoList:(NSArray*)str;
 - (void)addHideInfoList:(NSDictionary *)objects;
+- (int)getBusClass:(NSInteger)index;
 - (NSString*)getTypeStringAtIndex:(NSInteger)index;
 @end

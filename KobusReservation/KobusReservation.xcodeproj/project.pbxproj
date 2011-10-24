@@ -49,6 +49,8 @@
 		D39D880C144568E100BD9A45 /* SVSegmentedThumb.m in Sources */ = {isa = PBXBuildFile; fileRef = D39D8809144568E100BD9A45 /* SVSegmentedThumb.m */; };
 		D39D880E1445730A00BD9A45 /* backgroundImage_repeat.png in Resources */ = {isa = PBXBuildFile; fileRef = D39D880D1445730A00BD9A45 /* backgroundImage_repeat.png */; };
 		D39F8A3E144C1904003FAA59 /* KobusRouteParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D39F8A3D144C1904003FAA59 /* KobusRouteParser.m */; };
+		D3A103181455151400EC7534 /* BusSeatSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A103161455151400EC7534 /* BusSeatSelectViewController.m */; };
+		D3A103191455151400EC7534 /* BusSeatSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3A103171455151400EC7534 /* BusSeatSelectViewController.xib */; };
 		D3A5D07D14452569007CF7BD /* TicketCountStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A5D07C14452569007CF7BD /* TicketCountStackViewController.m */; };
 		D3A7D0CC14448199003285B9 /* DateStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A7D0CB14448199003285B9 /* DateStackViewController.m */; };
 		D3A7D0D014448220003285B9 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A7D0CF14448220003285B9 /* DataViewController.m */; };
@@ -193,6 +195,9 @@
 		D39D8813144574C600BD9A45 /* KobusReservationQueryData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KobusReservationQueryData.h; sourceTree = "<group>"; };
 		D39F8A3C144C1904003FAA59 /* KobusRouteParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KobusRouteParser.h; path = KobusReservation/KobusRouteParser.h; sourceTree = "<group>"; };
 		D39F8A3D144C1904003FAA59 /* KobusRouteParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KobusRouteParser.m; path = KobusReservation/KobusRouteParser.m; sourceTree = "<group>"; };
+		D3A103151455151400EC7534 /* BusSeatSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusSeatSelectViewController.h; sourceTree = "<group>"; };
+		D3A103161455151400EC7534 /* BusSeatSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusSeatSelectViewController.m; sourceTree = "<group>"; };
+		D3A103171455151400EC7534 /* BusSeatSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusSeatSelectViewController.xib; sourceTree = "<group>"; };
 		D3A5D07B14452569007CF7BD /* TicketCountStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketCountStackViewController.h; sourceTree = "<group>"; };
 		D3A5D07C14452569007CF7BD /* TicketCountStackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketCountStackViewController.m; sourceTree = "<group>"; };
 		D3A7D0CA14448199003285B9 /* DateStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateStackViewController.h; sourceTree = "<group>"; };
@@ -534,6 +539,9 @@
 				D3637ADA14545E6600C1F339 /* StackViewController */,
 				D35DF74F1452DB4200C79101 /* ReservationInfoVIewController.h */,
 				D35DF7501452DB4200C79101 /* ReservationInfoVIewController.m */,
+				D3A103151455151400EC7534 /* BusSeatSelectViewController.h */,
+				D3A103161455151400EC7534 /* BusSeatSelectViewController.m */,
+				D3A103171455151400EC7534 /* BusSeatSelectViewController.xib */,
 			);
 			path = KobusUI;
 			sourceTree = "<group>";
@@ -711,6 +719,7 @@
 				D3A7D17714449720003285B9 /* Kal.bundle in Resources */,
 				D39D880A144568E100BD9A45 /* SVSegmentedControl.bundle in Resources */,
 				D39D880E1445730A00BD9A45 /* backgroundImage_repeat.png in Resources */,
+				D3A103191455151400EC7534 /* BusSeatSelectViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -807,6 +816,7 @@
 				D35DF7721454269200C79101 /* GridTableViewController.m in Sources */,
 				D3637AE01454648200C1F339 /* KobusReservationInfoParser.m in Sources */,
 				D3637AE214546AA700C1F339 /* KobusReservationQueryData.m in Sources */,
+				D3A103181455151400EC7534 /* BusSeatSelectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

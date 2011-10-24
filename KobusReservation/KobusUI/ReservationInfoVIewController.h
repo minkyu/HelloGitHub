@@ -13,7 +13,8 @@
 @interface ReservationInfoVIewController : GridTableViewController
 
 @property(nonatomic,copy) KobusReservationInfoList *infolist;
+@property(nonatomic,retain) UITapGestureRecognizer *recognizer;
 
 - (id)initWithInfoList:(KobusReservationInfoList*)aInfoList;
-
+- (void)removeRecognizer;
 @end

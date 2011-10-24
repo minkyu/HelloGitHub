@@ -8,9 +8,10 @@
 
 #import "ReservationInfoVIewController.h"
 #import "KobusReservationInfoList.h"
+#import "BusSeatSelectViewController.h"
 
 @implementation ReservationInfoVIewController
-@synthesize infolist;
+@synthesize infolist,recognizer;
 
 - (id)initWithInfoList:(KobusReservationInfoList*)aInfoList
 {
@@ -30,34 +31,43 @@
     return self;
 }
 
+- (void)removeRecognizer
+{
+	[recognizer removeTarget:self action:@selector(handleTapBehind:)];
+	[self.view.window removeGestureRecognizer:recognizer];
+}
+
 - (void)dismissView:(id)sender
 {
+	[self removeRecognizer];
 	[self dismissModalViewControllerAnimated:YES];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
 	[super viewDidAppear:YES];
-	UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapBehind:)];
+	self.recognizer = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapBehind:)] autorelease];
 	[recognizer setNumberOfTapsRequired:1];
 	recognizer.cancelsTouchesInView = NO; //So the user can still interact with controls in the modal view
 	[self.view.window addGestureRecognizer:recognizer];
-	[recognizer release];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+	[super viewDidDisappear:YES];
+	[self removeRecognizer];
 }
 
 - (void)handleTapBehind:(UITapGestureRecognizer *)sender
 {
     if (sender.state == UIGestureRecognizerStateEnded)
 	{
-		CGPoint location = [sender locationInView:nil]; //Passing nil gives us coordinates in the window
 		
-		//Then we convert the tap's location into the local view's coordinate system, and test to see if it's in or outside. If outside, dismiss the view.
+		CGPoint location = [self.view convertPoint:[sender locationInView:nil] fromView:self.view.window]; //Passing nil gives us coordinates in the window
 		
-        if (![self.view pointInside:[self.view convertPoint:location fromView:self.view.window] withEvent:nil]) 
+		if (![self.view pointInside:location withEvent:nil]&& ([self.navigationController topViewController] == self))
         {
-			
-			[sender removeTarget:self action:@selector(handleTapBehind:)];
-			[self.view.window removeGestureRecognizer:sender];
+			[self removeRecognizer];
 			[self dismissModalViewControllerAnimated:YES];
         }
 	}
@@ -68,15 +78,19 @@
 	int selectRow = indexPath.row-1;
 	if (selectRow<0) 
 		return;
-	NSLog(@"%@",[infolist getTypeStringAtIndex:selectRow]);
-	
-	NSString *usrStr = [NSString stringWithFormat:@"https://www.kobus.co.kr/web/03_reservation/reservation01_2.jsp?%@",[infolist getTypeStringAtIndex:selectRow]];
+	NSString *usrStr = [NSString stringWithFormat:@"https://www.kobus.co.kr/web/03_reservation/reservation01_2.jsp?%@",
+						[infolist getTypeStringAtIndex:selectRow]];
 	NSLog(@"%@",usrStr);
 //	NSString *usrStr = [NSString stringWithFormat:@"http://m.kobus.co.kr/web/m/reservation/sel_seat.jsp?%@",[infolist getTypeStringAtIndex:selectRow]];
 	NSURL *url = [NSURL URLWithString:usrStr];
 	__block ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
 	[request setCompletionBlock:^{
-		NSLog(@"%@",[request responseString]);
+//		NSLog(@"%@",[request responseString]);
+		
+		BusSeatSelectViewController *viewcont = [[BusSeatSelectViewController alloc] initWithNibName:@"BusSeatSelectViewController" bundle:nil busClass:[infolist getBusClass:selectRow]];
+		[self.navigationController pushViewController:viewcont animated:YES];
+		[viewcont release];
+		
 	} ];
 	[request setFailedBlock:^{
 		NSLog(@"%@",[request error]);
