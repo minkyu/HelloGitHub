@@ -15,10 +15,10 @@
 
 @synthesize titleLabel = _titleLabel;
 
-#pragma mark -
-
-
-#pragma mark View lifecycle
+- (void)addViewInSliderWithClass:(Class)aClass
+{
+	[NSException raise:@"addViewInSlider 구현해주세요" format:@"%@", self];
+}
 
 - (void)postNoticationReservation:(NSString*)name value:(NSString*)value key:(NSString*)key 
 {
@@ -75,17 +75,7 @@
 		
 	}
     return self;
-}
 
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-	
 }
 
 

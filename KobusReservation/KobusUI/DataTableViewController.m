@@ -62,17 +62,6 @@
 }
 
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-		
-}
-
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Override to allow orientations other than the default portrait orientation.
     return YES;
@@ -115,11 +104,28 @@
 #pragma mark -
 #pragma mark Table view delegate
 
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    DataTableViewController *dataViewController = [[DataTableViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
-	[[KobusReservationAppDelegate instance].rootViewController.stackScrollViewController addViewInSlider:dataViewController invokeByController:self isStackStartView:FALSE];
-	[dataViewController release];
+	[self addViewInSlider];
 }
+
+- (void)addViewInSlider
+{
+	[self addViewInSliderWithClass:[self class]];
+}
+
+- (void)addViewInSliderWithClass:(Class)aClass;
+{
+	[self addViewInSlider:aClass Row:[self.tableView indexPathForSelectedRow].row];
+	
+}
+
+
+- (void)addViewInSlider:(Class)aClass Row:(NSInteger)row
+{
+	[NSException raise:@"addViewInSliderWithRow 구현해주세요" format:@"%@", self];
+}
+
 
 
 #pragma mark -

@@ -100,15 +100,19 @@ const int kalViewWidth = 322;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	[tableView cellForRowAtIndexPath:indexPath].selected = YES;
+	[self addViewInSliderWithClass:[ClassStackViewController class]];
+}
 
+- (void)addViewInSliderWithClass:(Class)aClass
+{
 	
+	[kal.tableView cellForRowAtIndexPath:dataSource.currentTimeIndexPath].selected = YES;
 	NSDateFormatter *dateFromat = [[[NSDateFormatter alloc] init] autorelease];
 	[dateFromat setDateFormat:@"yyyy-MM-dd"];
 	NSString *theDate = [dateFromat stringFromDate:kal.selectedDate];
-	NSString *theTime = [dataSource.dates objectAtIndex:indexPath.row];
+	NSString *theTime = [dataSource.dates objectAtIndex:dataSource.currentTimeIndexPath.row];
 	
-	ClassStackViewController *dataViewController = [[ClassStackViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
+	id dataViewController = [[aClass alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
 	[[KobusReservationAppDelegate stackScrollViewController] addViewInSlider:dataViewController invokeByController:self isStackStartView:FALSE];
 	[dataViewController release];
 	
@@ -167,6 +171,7 @@ const int kalViewWidth = 322;
 	 
 	 */
 }
+
 @end
 
 

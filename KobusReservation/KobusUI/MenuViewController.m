@@ -39,6 +39,7 @@
 #import "MenuViewController.h"
 #import "KobusReservationAppDelegate.h"
 #import "StackViewController.h"
+#import "OriginsStackViewControllerTest.h"
 
 
 @implementation MenuViewController
@@ -53,7 +54,7 @@
 		
 		[self.view setFrame:frame]; 
 		
-		_menus = [[NSArray arrayWithObjects:@"조회하기", @"즐겨찾기",nil] retain];
+		_menus = [[NSArray arrayWithObjects:@"조회하기", @"TEST",nil] retain];
 		
 		_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height/2) style:UITableViewStylePlain];
 		[_tableView setDelegate:self];
@@ -197,11 +198,19 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	OriginsStackViewController *dataViewController = [[OriginsStackViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
-	[[KobusReservationAppDelegate stackScrollViewController] addViewInSlider:dataViewController invokeByController:self isStackStartView:TRUE];
-//	TicketCountStackViewController *dataViewController = [[TicketCountStackViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
-//	[[KobusReservationAppDelegate stackScrollViewController] addViewInSlider:dataViewController invokeByController:self isStackStartView:TRUE];
-	[dataViewController release];
+	if (!indexPath.row) 
+	{
+		OriginsStackViewController *dataViewController = [[OriginsStackViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
+		[[KobusReservationAppDelegate stackScrollViewController] addViewInSlider:dataViewController invokeByController:self isStackStartView:TRUE];
+		[dataViewController release];
+	}
+	else
+	{
+		OriginsStackViewControllerTest *dataViewController = [[OriginsStackViewControllerTest alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
+		[[KobusReservationAppDelegate stackScrollViewController] addViewInSlider:dataViewController invokeByController:self isStackStartView:TRUE];
+		[dataViewController release];
+	}
+	
 }
 
 

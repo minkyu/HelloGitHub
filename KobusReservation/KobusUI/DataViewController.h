@@ -21,4 +21,5 @@
 - (void)postNoticationReservation:(NSString*)name object:(NSString*)object;
 - (void)postNoticationReservation:(NSString*)name value:(NSString*)value key:(NSString*)key;
 - (void)postNoticationReservation:(NSString*)name value:(NSString*)value key:(NSString*)key object:(NSString*)object;
+- (void)addViewInSliderWithClass:(Class)aClass;
 @end

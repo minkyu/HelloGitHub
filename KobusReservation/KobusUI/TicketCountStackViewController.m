@@ -11,8 +11,6 @@
 
 static const int labelHeight = 40;
 static const int padding = 10;
-static const int adultTag = 100;
-static const int childrenTag = 200;
 
 @implementation TicketCountStackViewController
 
@@ -97,17 +95,32 @@ static const int childrenTag = 200;
 
 - (void)segmentedControlChangedValue:(SVSegmentedControl*)segmentedControl 
 {
-	if (segmentedControl.tag == adultTag) {
-		self.adultStr = [NSString stringWithFormat:@"어른:%d",segmentedControl.selectedIndex];
-		self.adultTicketCnt = [[NSNumber numberWithInteger:segmentedControl.selectedIndex] stringValue];
+	[self selectTicket:segmentedControl.tag index:segmentedControl.selectedIndex];
+//	if (segmentedControl.tag == adultTag) {
+//		self.adultStr = [NSString stringWithFormat:@"어른:%d",segmentedControl.selectedIndex];
+//		self.adultTicketCnt = [[NSNumber numberWithInteger:segmentedControl.selectedIndex] stringValue];
+//		[self postNoticationReservation:@"KobusReservation" value:adultTicketCnt key:@"pCnt_100"];
+//		
+//	} else {
+//		self.childrenStr = [NSString stringWithFormat:@"아동:%d",segmentedControl.selectedIndex]; 
+//		self.childTicketCnt = [[NSNumber numberWithInteger:segmentedControl.selectedIndex] stringValue];
+//		[self postNoticationReservation:@"KobusReservation" value:childTicketCnt key:@"pCnt_050"];
+//	}
+	
+}
+
+- (void)selectTicket:(int)tag index:(int)index
+{
+	if (tag == adultTag) {
+		self.adultStr = [NSString stringWithFormat:@"어른:%d",index];
+		self.adultTicketCnt = [[NSNumber numberWithInteger:index] stringValue];
 		[self postNoticationReservation:@"KobusReservation" value:adultTicketCnt key:@"pCnt_100"];
 		
 	} else {
-		self.childrenStr = [NSString stringWithFormat:@"아동:%d",segmentedControl.selectedIndex]; 
-		self.childTicketCnt = [[NSNumber numberWithInteger:segmentedControl.selectedIndex] stringValue];
+		self.childrenStr = [NSString stringWithFormat:@"아동:%d",index]; 
+		self.childTicketCnt = [[NSNumber numberWithInteger:index] stringValue];
 		[self postNoticationReservation:@"KobusReservation" value:childTicketCnt key:@"pCnt_050"];
 	}
-	
 }
 
 - (void)selectedButton:(UIButton*)button
@@ -115,9 +128,16 @@ static const int childrenTag = 200;
 	// TODO 값 Validation 로직 
 	// TODO 예약 값을 사이트로 전송한 후 페이지를 받아옴
 	// TODO 자리 선택하는 View 생성
-	[self postNoticationReservation:@"ReservationInfoQuery" object:@"doReservation"];
+	[self addViewInSliderWithClass:nil];
 	
 
+}
+
+- (void)addViewInSliderWithClass:(Class)aClass
+{
+	[self postNoticationReservation:@"KobusReservation" value:adultTicketCnt key:@"pCnt_100"];
+	[self postNoticationReservation:@"KobusReservation" value:childTicketCnt key:@"pCnt_050"];
+	[self postNoticationReservation:@"ReservationInfoQuery" object:@"doReservation"];
 }
 
 @end

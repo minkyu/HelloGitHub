@@ -14,7 +14,7 @@ const int padding = 10;
 
 @implementation ClassStackViewController
 
-
+@synthesize selectedButton;
 - (id)initWithFrame:(CGRect)frame
 {
 	self = [super initWithFrame:frame];
@@ -65,22 +65,29 @@ const int padding = 10;
 }
 
 
-- (void)selectedButton:(UIButton*)button
+- (void)addViewInSliderWithClass:(Class)aClass
+
 {
+	[self performSelector:@selector(highlightButton:) withObject:selectedButton afterDelay:0.0];
 	
-	[self performSelector:@selector(highlightButton:) withObject:button afterDelay:0.0];
-	
-	TicketCountStackViewController *dataViewController = [[TicketCountStackViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
+	id dataViewController = [[aClass alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
 	[[KobusReservationAppDelegate stackScrollViewController] addViewInSlider:dataViewController invokeByController:self isStackStartView:FALSE];
 	[dataViewController release];
 	
-
-	[self postNoticationReservation:@"KobusReservation" value:button.titleLabel.text key:@"busClass"];
 	
-	NSString *busGrade = [[NSNumber numberWithInt:((button.tag / 10)%5)] stringValue];
-
+	[self postNoticationReservation:@"KobusReservation" value:selectedButton.titleLabel.text key:@"busClass"];
+	
+	NSString *busGrade = [[NSNumber numberWithInt:((selectedButton.tag / 10)%5)] stringValue];
+	
 	// 사이트 param
 	[self postNoticationReservation:@"KobusReservation" value:busGrade key:@"BUS_GRA_I"];
+}
+
+- (void)selectedButton:(UIButton*)button
+{
+	selectedButton = button;
+	[self addViewInSliderWithClass:[TicketCountStackViewController class]];
+	
 }
 
 @end

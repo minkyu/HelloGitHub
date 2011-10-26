@@ -41,8 +41,8 @@
 @interface DataTableViewController : DataViewController <UITableViewDelegate, UITableViewDataSource> 
 
 @property(nonatomic, retain)UITableView* tableView;
-
-
+- (void)addViewInSlider;
+- (void)addViewInSlider:(Class)aClass Row:(NSInteger)row;
 
 
 @end

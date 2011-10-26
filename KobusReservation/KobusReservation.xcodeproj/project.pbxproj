@@ -74,6 +74,11 @@
 		D3C1AE261444415D00C23FC0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C1AE251444415D00C23FC0 /* QuartzCore.framework */; };
 		D3C1AE2F14444DD200C23FC0 /* DestinationsStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C1AE2E14444DD200C23FC0 /* DestinationsStackViewController.m */; };
 		D3D943791435D31700568CE0 /* KobusWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D943781435D31700568CE0 /* KobusWeb.m */; };
+		D3F9345114564CBF00D772A0 /* ClassStackViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F9344814564CB700D772A0 /* ClassStackViewControllerTest.m */; };
+		D3F9345214564CBF00D772A0 /* DateStackViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F9344A14564CB700D772A0 /* DateStackViewControllerTest.m */; };
+		D3F9345314564CBF00D772A0 /* DestinationsStackViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F9344C14564CB900D772A0 /* DestinationsStackViewControllerTest.m */; };
+		D3F9345414564CBF00D772A0 /* OriginsStackViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F9344E14564CBB00D772A0 /* OriginsStackViewControllerTest.m */; };
+		D3F9345514564CBF00D772A0 /* TicketCountStackViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F9345014564CBE00D772A0 /* TicketCountStackViewControllerTest.m */; };
 		D3FB0001143D402D00A5B013 /* EntryEnumerator+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C455143C6ECF00DEF523 /* EntryEnumerator+Private.m */; };
 		D3FB0003143D402D00A5B013 /* EntryEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C457143C6ECF00DEF523 /* EntryEnumerator.m */; };
 		D3FB0005143D402D00A5B013 /* KeyEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D388C459143C6ECF00DEF523 /* KeyEnumerator.m */; };
@@ -244,6 +249,16 @@
 		D3C1AE2E14444DD200C23FC0 /* DestinationsStackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinationsStackViewController.m; sourceTree = "<group>"; };
 		D3D943771435D31700568CE0 /* KobusWeb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KobusWeb.h; path = KobusReservation/KobusWeb.h; sourceTree = "<group>"; };
 		D3D943781435D31700568CE0 /* KobusWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KobusWeb.m; path = KobusReservation/KobusWeb.m; sourceTree = "<group>"; };
+		D3F9344714564CB700D772A0 /* ClassStackViewControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClassStackViewControllerTest.h; path = KobusUITest/ClassStackViewControllerTest.h; sourceTree = "<group>"; };
+		D3F9344814564CB700D772A0 /* ClassStackViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClassStackViewControllerTest.m; path = KobusUITest/ClassStackViewControllerTest.m; sourceTree = "<group>"; };
+		D3F9344914564CB700D772A0 /* DateStackViewControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateStackViewControllerTest.h; path = KobusUITest/DateStackViewControllerTest.h; sourceTree = "<group>"; };
+		D3F9344A14564CB700D772A0 /* DateStackViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateStackViewControllerTest.m; path = KobusUITest/DateStackViewControllerTest.m; sourceTree = "<group>"; };
+		D3F9344B14564CB800D772A0 /* DestinationsStackViewControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DestinationsStackViewControllerTest.h; path = KobusUITest/DestinationsStackViewControllerTest.h; sourceTree = "<group>"; };
+		D3F9344C14564CB900D772A0 /* DestinationsStackViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DestinationsStackViewControllerTest.m; path = KobusUITest/DestinationsStackViewControllerTest.m; sourceTree = "<group>"; };
+		D3F9344D14564CBA00D772A0 /* OriginsStackViewControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OriginsStackViewControllerTest.h; path = KobusUITest/OriginsStackViewControllerTest.h; sourceTree = "<group>"; };
+		D3F9344E14564CBB00D772A0 /* OriginsStackViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OriginsStackViewControllerTest.m; path = KobusUITest/OriginsStackViewControllerTest.m; sourceTree = "<group>"; };
+		D3F9344F14564CBC00D772A0 /* TicketCountStackViewControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TicketCountStackViewControllerTest.h; path = KobusUITest/TicketCountStackViewControllerTest.h; sourceTree = "<group>"; };
+		D3F9345014564CBE00D772A0 /* TicketCountStackViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TicketCountStackViewControllerTest.m; path = KobusUITest/TicketCountStackViewControllerTest.m; sourceTree = "<group>"; };
 		ED332E031435C299009A82E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ED332E051435C299009A82E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ED332E071435C299009A82E5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -535,6 +550,7 @@
 		D3C1AE0C14443BDF00C23FC0 /* KobusUI */ = {
 			isa = PBXGroup;
 			children = (
+				D3F9343614564BCD00D772A0 /* UITest */,
 				D3637ADC14545E7B00C1F339 /* Util */,
 				D3637ADA14545E6600C1F339 /* StackViewController */,
 				D35DF74F1452DB4200C79101 /* ReservationInfoVIewController.h */,
@@ -563,6 +579,24 @@
 				D3C1AE1A14443BDF00C23FC0 /* UIViewWithShadow.m */,
 			);
 			name = StackScroll;
+			sourceTree = "<group>";
+		};
+		D3F9343614564BCD00D772A0 /* UITest */ = {
+			isa = PBXGroup;
+			children = (
+				D3F9344D14564CBA00D772A0 /* OriginsStackViewControllerTest.h */,
+				D3F9344E14564CBB00D772A0 /* OriginsStackViewControllerTest.m */,
+				D3F9344B14564CB800D772A0 /* DestinationsStackViewControllerTest.h */,
+				D3F9344C14564CB900D772A0 /* DestinationsStackViewControllerTest.m */,
+				D3F9344914564CB700D772A0 /* DateStackViewControllerTest.h */,
+				D3F9344A14564CB700D772A0 /* DateStackViewControllerTest.m */,
+				D3F9344714564CB700D772A0 /* ClassStackViewControllerTest.h */,
+				D3F9344814564CB700D772A0 /* ClassStackViewControllerTest.m */,
+				D3F9344F14564CBC00D772A0 /* TicketCountStackViewControllerTest.h */,
+				D3F9345014564CBE00D772A0 /* TicketCountStackViewControllerTest.m */,
+			);
+			name = UITest;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		ED332DF41435C299009A82E5 = {
@@ -817,6 +851,11 @@
 				D3637AE01454648200C1F339 /* KobusReservationInfoParser.m in Sources */,
 				D3637AE214546AA700C1F339 /* KobusReservationQueryData.m in Sources */,
 				D3A103181455151400EC7534 /* BusSeatSelectViewController.m in Sources */,
+				D3F9345114564CBF00D772A0 /* ClassStackViewControllerTest.m in Sources */,
+				D3F9345214564CBF00D772A0 /* DateStackViewControllerTest.m in Sources */,
+				D3F9345314564CBF00D772A0 /* DestinationsStackViewControllerTest.m in Sources */,
+				D3F9345414564CBF00D772A0 /* OriginsStackViewControllerTest.m in Sources */,
+				D3F9345514564CBF00D772A0 /* TicketCountStackViewControllerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

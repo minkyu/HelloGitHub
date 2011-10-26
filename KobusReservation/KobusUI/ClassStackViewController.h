@@ -9,5 +9,5 @@
 #import "DataViewController.h"
 
 @interface ClassStackViewController : DataViewController
-
+@property (nonatomic,assign) UIButton *selectedButton;
 @end

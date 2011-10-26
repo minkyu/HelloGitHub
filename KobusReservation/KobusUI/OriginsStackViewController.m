@@ -72,25 +72,27 @@
 }
 
 
-#pragma mark -
-#pragma mark Table view delegate
+- (void)addViewInSlider
+{
+	[self addViewInSliderWithClass:[DestinationsStackViewController class]];
+}
 
-// 출발지 정보를 저장하고 목적지 선택 뷰를 불러온다
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	DestinationsStackViewController *dataViewController = [[DestinationsStackViewController alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
-	NSString *originCode = [[[[KobusReservationAppDelegate instance] originData] allKeys] objectAtIndex:[indexPath row]];
+
+- (void)addViewInSlider:(Class)aClass Row:(NSInteger)row;
+{
+	id dataViewController = [[aClass alloc] initWithFrame:CGRectMake(0, 0, 477, self.view.frame.size.height)];
+	NSString *originCode = [[[[KobusReservationAppDelegate instance] originData] allKeys] objectAtIndex:row];
 	
-	dataViewController.selectedOrigin = originCode;
+	((DestinationsStackViewController*)dataViewController).selectedOrigin = originCode;
 	[[KobusReservationAppDelegate stackScrollViewController] addViewInSlider:dataViewController invokeByController:self isStackStartView:FALSE];
 	[dataViewController release];
 	
 	// 출발지 
-	id origin = [[[[KobusReservationAppDelegate instance] originData] allValues] objectAtIndex:[indexPath row]];
+	id origin = [[[[KobusReservationAppDelegate instance] originData] allValues] objectAtIndex:row];
 	[self postNoticationReservation:@"KobusReservation" value:origin key:@"origin"];
 	// 출발지 코드
 	//id origin_key = [[[[KobusReservationAppDelegate instance] originData] allKeys] objectAtIndex:[indexPath row]];
 	[self postNoticationReservation:@"KobusReservation" value:originCode key:@"TER_FR"];
 }
-
 
 @end
