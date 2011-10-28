@@ -355,6 +355,7 @@ static NSArray *fileExtensionsToHandleAsHTML = nil;
 		// Look for X-ASIHTTPRequest-Expires header to see if the content is out of date
 		NSNumber *expires = [cachedHeaders objectForKey:@"X-ASIHTTPRequest-Expires"];
 		if (expires) {
+			NSLog(@"이상함: expires(%@)가 NSNumber가 아니고 NSConcreteValue임.", expires);
 			if ([[NSDate dateWithTimeIntervalSince1970:[expires doubleValue]] timeIntervalSinceNow] >= 0) {
 				[[self accessLock] unlock];
 				return YES;
