@@ -54,16 +54,11 @@
 	UIView* viewToReturn=nil;
 	CGPoint pointToReturn;
 	
-	UIView* uiRightView = (UIView*)[[self subviews] objectAtIndex:1];
-	
-	if ([[uiRightView subviews] objectAtIndex:0]) {
+	UIView* uiStackScrollView = [[(UIView*)[[self subviews] objectAtIndex:1] subviews] objectAtIndex:0];
+	if (uiStackScrollView) {
 		
-		UIView* uiStackScrollView = [[uiRightView subviews] objectAtIndex:0];	
-		
-		if ([[uiStackScrollView subviews] objectAtIndex:1]) {	 
-			
-			UIView* uiSlideView = [[uiStackScrollView subviews] objectAtIndex:1];	
-			
+		UIView *uiSlideView = [[uiStackScrollView subviews] objectAtIndex:1];
+		if (uiSlideView) {	 			
 			for (UIView* subView in [uiSlideView subviews]) {
 				CGPoint point  = [subView convertPoint:pt fromView:self];
 				if ([subView pointInside:point withEvent:event]) {
