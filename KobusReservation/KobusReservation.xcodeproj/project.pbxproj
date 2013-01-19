@@ -74,6 +74,7 @@
 		D3C1AE261444415D00C23FC0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C1AE251444415D00C23FC0 /* QuartzCore.framework */; };
 		D3C1AE2F14444DD200C23FC0 /* DestinationsStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C1AE2E14444DD200C23FC0 /* DestinationsStackViewController.m */; };
 		D3D943791435D31700568CE0 /* KobusWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D943781435D31700568CE0 /* KobusWeb.m */; };
+		D3EA169A1458127600C5EB07 /* Reservation.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EA16991458127600C5EB07 /* Reservation.m */; };
 		D3F9345114564CBF00D772A0 /* ClassStackViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F9344814564CB700D772A0 /* ClassStackViewControllerTest.m */; };
 		D3F9345214564CBF00D772A0 /* DateStackViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F9344A14564CB700D772A0 /* DateStackViewControllerTest.m */; };
 		D3F9345314564CBF00D772A0 /* DestinationsStackViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F9344C14564CB900D772A0 /* DestinationsStackViewControllerTest.m */; };
@@ -249,6 +250,8 @@
 		D3C1AE2E14444DD200C23FC0 /* DestinationsStackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinationsStackViewController.m; sourceTree = "<group>"; };
 		D3D943771435D31700568CE0 /* KobusWeb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KobusWeb.h; path = KobusReservation/KobusWeb.h; sourceTree = "<group>"; };
 		D3D943781435D31700568CE0 /* KobusWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KobusWeb.m; path = KobusReservation/KobusWeb.m; sourceTree = "<group>"; };
+		D3EA16981458127600C5EB07 /* Reservation.h */ = {isa = PBXFileReference; fileEncoding = 4; path = Reservation.h; sourceTree = SOURCE_ROOT; };
+		D3EA16991458127600C5EB07 /* Reservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reservation.m; sourceTree = SOURCE_ROOT; };
 		D3F9344714564CB700D772A0 /* ClassStackViewControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClassStackViewControllerTest.h; path = KobusUITest/ClassStackViewControllerTest.h; sourceTree = "<group>"; };
 		D3F9344814564CB700D772A0 /* ClassStackViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClassStackViewControllerTest.m; path = KobusUITest/ClassStackViewControllerTest.m; sourceTree = "<group>"; };
 		D3F9344914564CB700D772A0 /* DateStackViewControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateStackViewControllerTest.h; path = KobusUITest/DateStackViewControllerTest.h; sourceTree = "<group>"; };
@@ -557,6 +560,8 @@
 				D35DF7501452DB4200C79101 /* ReservationInfoVIewController.m */,
 				D3A103151455151400EC7534 /* BusSeatSelectViewController.h */,
 				D3A103161455151400EC7534 /* BusSeatSelectViewController.m */,
+				D3EA16981458127600C5EB07 /* Reservation.h */,
+				D3EA16991458127600C5EB07 /* Reservation.m */,
 				D3A103171455151400EC7534 /* BusSeatSelectViewController.xib */,
 			);
 			path = KobusUI;
@@ -856,6 +861,7 @@
 				D3F9345314564CBF00D772A0 /* DestinationsStackViewControllerTest.m in Sources */,
 				D3F9345414564CBF00D772A0 /* OriginsStackViewControllerTest.m in Sources */,
 				D3F9345514564CBF00D772A0 /* TicketCountStackViewControllerTest.m in Sources */,
+				D3EA169A1458127600C5EB07 /* Reservation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

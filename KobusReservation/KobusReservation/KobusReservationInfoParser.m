@@ -16,37 +16,46 @@
 
 @implementation KobusReservationInfoParser
 
++ (void)extracted_method:(TFHppleElement *)seatForm infolist:(KobusReservationInfoList *)infolist
+{
+    //<tr ... table row
+    TFHppleElement *tr = [seatForm firstChild];
+    //<td ... table data
+    NSArray *tds = [tr children];
+    NSMutableArray *info = [NSMutableArray new];
+    [info addObject:[[tds objectAtIndex:TimeTagIndex] content]];
+    [info addObject:[[tds objectAtIndex:ClassTagIndex] content]];
+    [info addObject:[[tds objectAtIndex:CompanyTagIndex] content]];
+    [info addObject:[[tds objectAtIndex:TicketCountTagIndex] content]];
+    [infolist addInfoList:info];
+    
+    NSMutableDictionary	*hideinfo = [NSMutableDictionary new];
+    for (int i = TicketCountTagIndex+1; i<[tds count]; i++) {
+        if ([[[tds objectAtIndex:i] tagName] isEqualToString:@"input"]) {
+            [hideinfo setValue:[[tds objectAtIndex:i] objectForKey:@"value"] forKey:[[tds objectAtIndex:i] objectForKey:@"name"]];
+        }
+    }
+    [infolist addHideInfoList:hideinfo];
+}
+
 + (KobusReservationInfoList*)parsing:(NSData*)responseData
 {
 	TFHpple *hpple = [[TFHpple alloc] initWithHTMLData:responseData];
 	KobusReservationInfoList *infolist = [[KobusReservationInfoList alloc] init];
 	int seatformcount = 0;
+	
+	
 	while (42) {
 		//<form name="SeatForm
 		TFHppleElement *seatForm = [hpple peekAtSearchWithXPathQuery:[NSString stringWithFormat:@"//form[@name='SeatForm%d']",seatformcount++]];
 		if (!seatForm) {
 			break;
 		}
-		//<tr ... table row
-		TFHppleElement *tr = [seatForm firstChild];
-		//<td ... table data
-		NSArray *tds = [tr children];
-		NSMutableArray *info = [NSMutableArray new];
-		[info addObject:[[tds objectAtIndex:TimeTagIndex] content]];
-		[info addObject:[[tds objectAtIndex:ClassTagIndex] content]];
-		[info addObject:[[tds objectAtIndex:CompanyTagIndex] content]];
-		[info addObject:[[tds objectAtIndex:TicketCountTagIndex] content]];
-		[infolist addInfoList:info];
-		
-		NSMutableDictionary	*hideinfo = [NSMutableDictionary new];
-		for (int i = TicketCountTagIndex+1; i<[tds count]; i++) {
-			if ([[[tds objectAtIndex:i] tagName] isEqualToString:@"input"]) {
-				[hideinfo setValue:[[tds objectAtIndex:i] objectForKey:@"value"] forKey:[[tds objectAtIndex:i] objectForKey:@"name"]];
-			}
-		}
-		[infolist addHideInfoList:hideinfo];
+        [self extracted_method:seatForm infolist:infolist];
 		
 	}
+	
+	
 	[hpple release];
 	return infolist;
 }

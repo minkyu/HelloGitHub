@@ -23,4 +23,5 @@ typedef void (^infoList)(KobusReservationInfoList*);
 - (void)loadKoBusWeb;
 - (void)processRouteData;
 - (void)sendReservationInfoQueryString:(NSString*)params withInfoList:(infoList)infolist;
+- (void)sendReservationInfo:(NSString *)params;
 @end

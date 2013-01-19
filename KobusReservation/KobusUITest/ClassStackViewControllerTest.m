@@ -19,6 +19,7 @@
 }
 - (void)show:(NSTimer*)timer
 {
+	self.selectedButton = [self.view viewWithTag:50];
 	[self addViewInSliderWithClass:[TicketCountStackViewControllerTest class]];
 }
 

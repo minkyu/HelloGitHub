@@ -64,7 +64,7 @@
 
 - (void)loadKoBusWeb
 {
-	NSURL *url = [NSURL URLWithString:@"http://m.kobus.co.kr/web/m/reservation/ins_reservation.jsp"];
+	NSURL *url = [NSURL URLWithString:@"http://kobus.co.kr/web/main/index.jsp"];
 	__block ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
 	[request setCompletionBlock:^{
 		self.responseString = [request responseString];
@@ -102,6 +102,19 @@
 	}];
 	[request startAsynchronous];
 }
-
+#pragma mark - Reservation
+- (void)sendReservationInfo:(NSString *)params 
+{
+	NSString *usrStr = [NSString stringWithFormat:@"http://m.kobus.co.kr/web/m/reservation/reservation01_4.jsp?%@",params];
+	NSURL *url = [NSURL URLWithString:usrStr];
+	__block ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+	[request setCompletionBlock:^{
+		NSLog(@"%@",[request responseString]);
+	} ];
+	[request setFailedBlock:^{
+		[self failWithError:[request error]];
+	}];
+	[request startAsynchronous];
+}
 
 @end
